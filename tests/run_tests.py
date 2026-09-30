@@ -56,7 +56,7 @@ for payload, expected in [
     ('quest:92485:2','A Student of Nature'),
     ('quest:92466:2','Call of Earth'),
     ('quest:7:2','Kobold Camp Cleanup'),
-    ('enchant:2329','Alchemy: Elixir of Minor Strength'),
+    ('enchant:2329','Elixir of Minor Strength'),
     ('trade:Player-1-ABC:2259:171','Alchemy'),
     ('trade:2259:1:300:GUID:bits','Alchemy'),
     ('achievement:49:Player-1-ABC:1:0:0:0:0:0:0:0','Alterac Valley victories'),
@@ -66,6 +66,27 @@ assert actual_ns.Resolve('quest:1:60', 'Задание', None) is None
 assert actual_ns.Resolve('item:6948:0:0:0:0:0:-10:123', 'Суффикс', None) is None
 assert actual_ns.Lookup('spell', 2330, None) is None  # Not present in this Forever export.
 print('Real shipped link smoke checks passed')
+# Reproduce the reported recipe inputs with the actual shipped names. These
+# checks cover our output only; accepting/rendering it requires a live client.
+for recipe_id, localized, english in [
+    (3816, 'Кожевничество: Обработанная легкая шкура', 'Cured Light Hide'),
+    (1229517, 'Снятие шкур: Лагерный стул', 'Camp Chair'),
+]:
+    original = f'|cffffd000|Henchant:{recipe_id}|h[{localized}]|h|r'
+    expected = f'|cffffd000|Henchant:{recipe_id}|h[{english}]|h|r'
+    before, after = 'До ', ' после |cffffffff|Hitem:6948|h[Hearthstone]|h|r'
+    message = before + original + after
+    result, cursor, count = actual_ns.TranslateAll(message, actual_ns.Resolve, len((before + original).encode()))
+    assert result == before + expected + after
+    assert cursor == len((before + expected).encode()) and count == 1
+    assert actual_ns.TranslateAll(result, actual_ns.Resolve, cursor) == (result, cursor, 0)
+    actual_ns.DB.types.enchant = False
+    assert actual_ns.TranslateAll(original, actual_ns.Resolve)[0] == original
+    actual_ns.DB.types.enchant = True
+    actual_ns.DB.typedOverrides.spell[recipe_id] = 'Custom Recipe'
+    assert actual_ns.Resolve(f'enchant:{recipe_id}', localized, None) == 'Custom Recipe'
+    actual_ns.DB.typedOverrides.spell[recipe_id] = None
+print('Recipe label candidates verified; live chat delivery remains unverified')
 if options.data_dir:
     sys.path.insert(0, str(root / 'tools'))
     import build_packs

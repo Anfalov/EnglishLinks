@@ -26,7 +26,7 @@ local function link(payload,label,plain) return '|H'..payload..'|h'..(plain and 
 local function translate(payload,label,plain) return ns.TranslateAll(link(payload,label or 'Русское',plain),ns.Resolve) end
 local cases={
  {'item:10::::::::::::','item English'}, {'spell:10','spell English'},
- {'enchant:10','profession English: spell English'}, {'trade:10:1:300:GUID:bits','spell English'},
+ {'enchant:10','spell English'}, {'trade:10:1:300:GUID:bits','spell English'},
  {'trade:Player-1-AB:99:10','profession English'}, {'quest:10:60','quest English'},
  {'achievement:10:Player-1-A:1:0:0:0:0:0:0:0','achievement English'},
  {'currency:10:42','currency English'},

@@ -111,12 +111,6 @@ function ns.Resolve(payload, label, onMissing)
         local suffix = tonumber(d.fields[8]) or 0
         -- No verified affix dataset: preserve the entire original item label.
         if suffix ~= 0 then return nil end
-    elseif d.rawType == "enchant" then
-        local skill = ns.Relations.recipe and ns.Relations.recipe[d.id]
-        if skill then
-            local profession = ns.Lookup("profession", skill)
-            if profession then name = profession .. ": " .. name end
-        end
     elseif d.rawType == "spell" then
         local subtext = api("C_Spell", "GetSpellSubtext", d.id)
         if not ns.IsSecret(subtext) and type(subtext) == "string" and subtext ~= "" then
