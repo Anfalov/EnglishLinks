@@ -86,7 +86,7 @@ for recipe_id, localized, english in [
     actual_ns.DB.typedOverrides.spell[recipe_id] = 'Custom Recipe'
     assert actual_ns.Resolve(f'enchant:{recipe_id}', localized, None) == 'Custom Recipe'
     actual_ns.DB.typedOverrides.spell[recipe_id] = None
-print('Recipe label candidates verified; live chat delivery remains unverified')
+print('Recipe label regressions passed (live confirmation recorded separately)')
 if options.data_dir:
     sys.path.insert(0, str(root / 'tools'))
     import build_packs

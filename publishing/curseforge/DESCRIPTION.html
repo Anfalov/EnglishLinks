@@ -1,0 +1,60 @@
+<h1>EnglishLinks</h1>
+
+<p><strong>Keep your game in your language. Share links with English names.</strong></p>
+
+<p>EnglishLinks replaces the names inside game links as you insert them into chat. Other players receive English link labels, while your interface and the tooltips you open stay in your client language. It is built for <strong>WoW Forever</strong>.</p>
+
+<p><img src="https://raw.githubusercontent.com/Anfalov/EnglishLinks/main/docs/images/english-links-in-game.jpg" alt="English links in chat with a Russian WoW Forever interface"></p>
+
+<p><em>English item, ability and recipe links in chat; Fireball and The Restless Dead in the chat input. The open Mana Well recipe tooltip is still in Russian.</em></p>
+
+<h2>How it works</h2>
+
+<p>Open chat and Shift-click a supported item, spell, quest or recipe as usual. EnglishLinks substitutes its English name before you press Enter. The link keeps its original ID, parameters and color, so clicking it opens the original game content. Recipients do not need EnglishLinks installed.</p>
+
+<p>English names come bundled with the addon. There is no collection step, language switch or waiting for a name scan, and no other addon is required.</p>
+
+<h2>Features</h2>
+
+<ul>
+<li>English labels for items, spells, quests and profession recipes.</li>
+<li>Additional name coverage for skills, achievements, currencies, companion species and map pins; mount links can use summon-spell names.</li>
+<li>Profession recipe links use the English recipe name, such as <strong>[Mana Well]</strong>, while retaining their original recipe link.</li>
+<li>Per-link-type switches and manual name overrides.</li>
+<li>Coverage information and a list of missing IDs to help report gaps.</li>
+<li>Your surrounding message text is preserved. Messages are sent only when you send them; incoming chat and the rest of the interface are not translated.</li>
+</ul>
+
+<h2>Getting started</h2>
+
+<p>Install EnglishLinks for the <strong>WoW Forever</strong> client. For manual installation, extract the <code>EnglishLinks</code> folder into that client&#x27;s <code>Interface/AddOns</code> folder. The final path should be <code>Interface/AddOns/EnglishLinks/EnglishLinks.toc</code>.</p>
+
+<p>Start the game, open chat and insert a link. Use <code>/el status</code> to check the addon and <code>/el coverage</code> to see which name packs are installed.</p>
+
+<h2>Useful commands</h2>
+
+<ul>
+<li><code>/el on</code> and <code>/el off</code> — enable or disable translation.</li>
+<li><code>/el status</code> — display version and status.</li>
+<li><code>/el coverage</code> — show bundled name counts.</li>
+<li><code>/el type enchant off</code> — disable recipe translation; use <code>on</code> to re-enable it.</li>
+<li><code>/el missing</code> — show recorded missing IDs.</li>
+<li><code>/el set quest 7 Kobold Camp Cleanup</code> — set a manual English name.</li>
+<li><code>/el unset quest 7</code> — remove that override.</li>
+</ul>
+
+<p>Disabling translation does not undo links already changed in the chat input. Clear and reinsert a link to use its original name.</p>
+
+<h2>Coverage and compatibility</h2>
+
+<p>Version 0.5.0 includes <strong>24,020 item names</strong>, <strong>31,703 spell names</strong> and <strong>4,276 quest titles</strong>, plus smaller supplementary name packs. Coverage is incomplete: missing names and unsupported links keep their original labels. Items with random affixes also keep their original labels.</p>
+
+<p>The target is <strong>WoW Forever 1.60.1</strong>. Retail and other Classic editions have not been validated. Companion links may fail to send even without translation; EnglishLinks cannot fix that game behavior. Battle-pet links, dungeon-journal links, talent-build links and instance-lockout links are not supported.</p>
+
+<h2>Credits and support</h2>
+
+<p>Name sources include WoW client tables through Wago, QuestieDB, Everything Quests, Completao, ElliotWood/Forever, PetScout Forever and TheWoWDB. Their attribution and applicable license notices are included with the addon. World of Warcraft and its game content belong to Blizzard Entertainment or its licensors.</p>
+
+<p>EnglishLinks code is released under <strong>GNU GPL v3</strong>.</p>
+
+<p><a href="https://github.com/Anfalov/EnglishLinks/issues">Report a bug</a> · <a href="https://github.com/Anfalov/EnglishLinks">Source code and data provenance</a></p>

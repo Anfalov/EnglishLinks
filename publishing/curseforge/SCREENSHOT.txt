@@ -1,0 +1,4 @@
+File: english-links-in-game.jpg
+Title: English links with a localized interface
+Caption: English item, ability and recipe links in chat, with Fireball and The Restless Dead in the chat input. The WoW Forever interface and the open Mana Well recipe tooltip remain in Russian.
+Image URL: https://raw.githubusercontent.com/Anfalov/EnglishLinks/main/docs/images/english-links-in-game.jpg

@@ -22,5 +22,17 @@
     "received_visible_text": "LHideerworking: Cured Light Hide",
     "received_clickable": false,
     "workaround": "The annotation workaround from 0.4.3 was rejected by the user and reverted. Recipe translation remains unresolved; only an English clickable link satisfies the product requirement."
+  },
+  {
+    "source": "User confirmation and WoWScrnShot_100126_043417.jpg",
+    "confirmed_at": "2026-10-01T04:42:09+05:00",
+    "tested_version": "0.4.4-alpha.1",
+    "included_in_version": "0.5.0",
+    "user_report": "Отлично, работает!",
+    "change": "Recipe label uses English spell name without profession prefix; enchant payload and color unchanged.",
+    "screenshot": "docs/images/english-links-in-game.jpg",
+    "visible_evidence": "Mana Well link in chat with localized recipe tooltip open.",
+    "game_build": null,
+    "other_recipient_verified": false
   }
 ]
