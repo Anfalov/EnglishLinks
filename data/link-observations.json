@@ -21,6 +21,6 @@
     "sent_link": "|cffffd000|Henchant:3816|h[Leatherworking: Cured Light Hide]|h|r",
     "received_visible_text": "LHideerworking: Cured Light Hide",
     "received_clickable": false,
-    "workaround": "0.4.3 preserves the native enchant hyperlink and appends the English name outside it. Automated tests passed; awaiting in-game verification."
+    "workaround": "The annotation workaround from 0.4.3 was rejected by the user and reverted. Recipe translation remains unresolved; only an English clickable link satisfies the product requirement."
   }
 ]

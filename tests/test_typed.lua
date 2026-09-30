@@ -26,7 +26,7 @@ local function link(payload,label,plain) return '|H'..payload..'|h'..(plain and 
 local function translate(payload,label,plain) return ns.TranslateAll(link(payload,label or 'Русское',plain),ns.Resolve) end
 local cases={
  {'item:10::::::::::::','item English'}, {'spell:10','spell English'},
- {'trade:10:1:300:GUID:bits','spell English'},
+ {'enchant:10','profession English: spell English'}, {'trade:10:1:300:GUID:bits','spell English'},
  {'trade:Player-1-AB:99:10','profession English'}, {'quest:10:60','quest English'},
  {'achievement:10:Player-1-A:1:0:0:0:0:0:0:0','achievement English'},
  {'currency:10:42','currency English'},
@@ -34,32 +34,6 @@ local cases={
  {'worldmap:10:1234:5678','Map Pin: uimap English'}, {'mount:10','mount English'},
 }
 for _,c in ipairs(cases) do eq(translate(c[1]),link(c[1],c[2]),c[1]) end
--- Recipes retain the complete native link; English is outside its markup.
-local native = '|cffffd000'..link('enchant:10','Профессия: Рецепт')..'|r'
-local annotation = ' (profession English: spell English)'
-local annotated = native..annotation
-local result, cursor, changed = ns.TranslateAll(native,ns.Resolve,#native)
-eq(result,annotated,'native recipe preserved byte-for-byte')
-eq(cursor,#annotated,'recipe cursor after annotation')
-eq(changed,1,'one recipe annotation')
-local repeated, repeatCursor, repeatCount = ns.TranslateAll(annotated,ns.Resolve,#annotated)
-eq(repeated,annotated,'annotation idempotent');eq(repeatCursor,#annotated);eq(repeatCount,0)
-for _,position in ipairs({0,12,#native-3}) do
-    local _,mapped = ns.TranslateAll(native,ns.Resolve,position)
-    eq(mapped,position,'cursor before annotation stays put')
-end
-local multiple = 'До '..native..' и '..link('spell:10','Заклинание')..' / '..native
-local expected = 'До '..annotated..' и '..link('spell:10','spell English')..' / '..annotated
-local combined,mapped,total = ns.TranslateAll(multiple,ns.Resolve,#multiple)
-eq(combined,expected,'recipes and spells coexist');eq(mapped,#expected);eq(total,3)
-eq(translate('enchant:10','profession English: spell English'),link('enchant:10','profession English: spell English'),'English recipe needs no annotation')
-eq(translate('enchant:10','Рецепт',true),link('enchant:10','Рецепт',true)..annotation,'plain label preserved')
-eq(translate('enchant:999','Рецепт'),link('enchant:999','Рецепт'),'unknown recipe unchanged')
-eq(ns.TranslateAll('|'..native:sub(11),ns.Resolve),'|'..native:sub(11),'escaped recipe unchanged')
-ns.DB.types.enchant=false
-eq(ns.TranslateAll(native,ns.Resolve),native,'recipe switch off')
-ns.DB.types.enchant=true
-
 -- Forever journal emits nonbattlepet:speciesID. No localized API is required.
 C_PetJournal=nil
 eq(translate('nonbattlepet:10'),link('nonbattlepet:10','companion English'),'Forever companion species')

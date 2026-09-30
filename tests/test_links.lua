@@ -135,27 +135,6 @@ equal(petBox.text,petInput,'Companion command off')
 SlashCmdList.ENGLISHLINKS('type nonbattlepet on')
 petBox:SetText(petInput)
 equal(petBox.text,petExpected,'Companion command on')
-ns.Names.spell={[3816]='Cured Light Hide'}
-ns.Names.profession={[165]='Leatherworking'}
-ns.Relations.recipe={[3816]=165}
-local recipeInput='|cffffd000|Henchant:3816|h[Кожевничество: Обработанная легкая шкура]|h|r'
-local recipeExpected=recipeInput..' (Leatherworking: Cured Light Hide)'
-local recipeBox=box()
-ChatFrameUtil.ActivateChat(recipeBox)
-ChatFrameUtil.InsertLink(recipeInput)
-equal(recipeBox.text,recipeExpected,'Native recipe survives chat insertion')
-equal(recipeBox.cursor,#recipeExpected,'Recipe insertion cursor')
-recipeBox:Insert('!')
-equal(recipeBox.text,recipeExpected..'!','Typing does not duplicate annotation')
-local recipeLimited=box()
-recipeLimited.maxBytes=#recipeInput
-ChatFrameUtil.ActivateChat(recipeLimited)
-ChatFrameUtil.InsertLink(recipeInput)
-equal(recipeLimited.text,recipeInput,'Recipe exceeding byte limit stays native')
-SlashCmdList.ENGLISHLINKS('type enchant off')
-recipeBox:SetText(recipeInput)
-equal(recipeBox.text,recipeInput,'Recipe translation disabled')
-SlashCmdList.ENGLISHLINKS('type enchant on')
 SlashCmdList.ENGLISHLINKS("off")
 ChatFrame1.editBox:SetText(russian)
 equal(ChatFrame1.editBox.text, russian, "Disabled")
