@@ -1,0 +1,15 @@
+## Interface: 16001
+## Title: EnglishLinks
+## Notes: English names in outgoing game links. Use /el coverage to check installed name packs.
+## Notes-ruRU: Английские названия в игровых ссылках. Загруженные базы: /el coverage.
+## Author: EnglishLinks project
+## Version: 0.4.2
+## SavedVariables: EnglishLinksDB
+
+ItemNames_enUS.lua
+Names_enUS.lua
+QuestNames_enUS.lua
+LinkText.lua
+Resolver.lua
+SupplementNames_enUS.lua
+EnglishLinks.lua

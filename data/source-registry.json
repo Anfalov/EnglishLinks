@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "addon_version": "0.4.2",
+  "registered_at": "2026-09-30T21:00:23Z",
+  "timestamp_format": "ISO 8601 with explicit timezone; UTC Z preferred",
+  "display_timezone": "Asia/Yekaterinburg",
+  "historical_timestamp_policy": "Never infer retrieved_at from file mtime, commit date, release date, registration time or chat upload time. null means unknown.",
+  "sources": [
+    {
+      "id": "wago",
+      "title": "Wago Tools DB2",
+      "url": "https://wago.tools/db2",
+      "categories": [
+        "item",
+        "spell",
+        "profession",
+        "achievement",
+        "recipe_relation",
+        "quest_id_filter"
+      ],
+      "update": "Указать точную Forever-сборку 1.60.x.x и enUS. Скачать отдельные CSV; не подменять Classic/Era.",
+      "url_template": "https://wago.tools/db2/{table}/csv?build={game_build}&locale=enUS",
+      "status": "used"
+    },
+    {
+      "id": "questiedb",
+      "title": "QuestieDB",
+      "url": "https://github.com/Questie/QuestieDB",
+      "categories": [
+        "quest",
+        "item"
+      ],
+      "update": "Определить актуальный commit репозитория, скачать файлы по полному SHA; проверить, что это слой Forever.",
+      "status": "used"
+    },
+    {
+      "id": "everythingquests",
+      "title": "Everything Quests",
+      "url": "https://github.com/wheelbarrel00/EverythingQuests",
+      "categories": [
+        "quest"
+      ],
+      "update": "Определить актуальный commit репозитория, скачать файлы по полному SHA; проверить, что это слой Forever.",
+      "status": "used"
+    },
+    {
+      "id": "completao",
+      "title": "Completao",
+      "url": "https://github.com/LechuckThePirate/Completao",
+      "categories": [
+        "quest"
+      ],
+      "update": "Определить актуальный commit репозитория, скачать файлы по полному SHA; проверить, что это слой Forever.",
+      "status": "used"
+    },
+    {
+      "id": "forever-sim",
+      "title": "ElliotWood/Forever — Wowhead Forever gear planner snapshot",
+      "url": "https://github.com/ElliotWood/Forever",
+      "categories": [
+        "item"
+      ],
+      "update": "Обновить assets/db_inputs/wowhead_forever_gearplanner.txt по закреплённому commit. Проверить namespace classicplus и versionNum=16001.",
+      "status": "used",
+      "upstream": "Wowhead Forever",
+      "upstream_url": "https://www.wowhead.com/forever/"
+    },
+    {
+      "id": "thewowdb",
+      "title": "TheWoWDB Forever",
+      "url": "https://thewowdb.com/wow-forever/",
+      "categories": [
+        "currency"
+      ],
+      "update": "Проверить сборку на индивидуальной странице каждой валюты. Сохранять URL каждой пары ID/имя и время чтения страницы; это не полный CSV.",
+      "status": "used",
+      "currency_index": "https://thewowdb.com/wow-forever/currencies/"
+    },
+    {
+      "id": "petscout",
+      "title": "PetScout Forever",
+      "url": "https://www.curseforge.com/wow/addons/petscout-forever",
+      "categories": [
+        "companion",
+        "uimap"
+      ],
+      "update": "Выбрать новую версию именно Forever, сохранить release/file ID и SHA-256 ZIP. Извлечь data/locations.lua и data/zones.lua; исходную сборку взять из заголовков.",
+      "status": "used"
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "wago-ItemSparse-70124",
+      "source_id": "wago",
+      "file": "data/ItemSparse.1.60.1.70124.csv",
+      "url": "https://wago.tools/db2/ItemSparse/csv?build=1.60.1.70124&locale=enUS",
+      "source_version": "1.60.1.70124",
+      "game_build": "1.60.1.70124",
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": null,
+      "retrieval_time_status": "not_recorded",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "192f24313ec18d880ac32dfd51bd6bcbe387618dd34195121460e7e2a8c8f33b",
+      "size_bytes": 5324102,
+      "acquisition": "user_supplied_file",
+      "notes": "Время загрузки в чат не равно времени исходной выгрузки с Wago; исходное время неизвестно."
+    },
+    {
+      "id": "wago-SpellName-70124",
+      "source_id": "wago",
+      "file": "data/SpellName.1.60.1.70124.csv",
+      "url": "https://wago.tools/db2/SpellName/csv?build=1.60.1.70124&locale=enUS",
+      "source_version": "1.60.1.70124",
+      "game_build": "1.60.1.70124",
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": null,
+      "retrieval_time_status": "not_recorded",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "b9a0d125fd47e02c13790504e2f10c4e67a3e5d5c4a91295bd96514ba36610a6",
+      "size_bytes": 832295,
+      "acquisition": "user_supplied_file",
+      "notes": "Время загрузки в чат не равно времени исходной выгрузки с Wago; исходное время неизвестно."
+    },
+    {
+      "id": "wago-SkillLine-70124",
+      "source_id": "wago",
+      "file": "data/SkillLine.1.60.1.70124.csv",
+      "url": "https://wago.tools/db2/SkillLine/csv?build=1.60.1.70124&locale=enUS",
+      "source_version": "1.60.1.70124",
+      "game_build": "1.60.1.70124",
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": null,
+      "retrieval_time_status": "not_recorded",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "80e0fee1521678dc218ac5b45c1fd26cb60e34b95258cb2aa8d5cec39c2e449a",
+      "size_bytes": 13668,
+      "acquisition": "user_supplied_file",
+      "notes": "Время загрузки в чат не равно времени исходной выгрузки с Wago; исходное время неизвестно."
+    },
+    {
+      "id": "wago-Achievement-70124",
+      "source_id": "wago",
+      "file": "data/Achievement.1.60.1.70124.csv",
+      "url": "https://wago.tools/db2/Achievement/csv?build=1.60.1.70124&locale=enUS",
+      "source_version": "1.60.1.70124",
+      "game_build": "1.60.1.70124",
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": null,
+      "retrieval_time_status": "not_recorded",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "0da10ee2427fb4f04c771fe8bb27cb743540746072c907b253d5702aa6315c9c",
+      "size_bytes": 55811,
+      "acquisition": "user_supplied_file",
+      "notes": "Время загрузки в чат не равно времени исходной выгрузки с Wago; исходное время неизвестно."
+    },
+    {
+      "id": "wago-SkillLineAbility-70124",
+      "source_id": "wago",
+      "file": "data/SkillLineAbility.1.60.1.70124.csv",
+      "url": "https://wago.tools/db2/SkillLineAbility/csv?build=1.60.1.70124&locale=enUS",
+      "source_version": "1.60.1.70124",
+      "game_build": "1.60.1.70124",
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": null,
+      "retrieval_time_status": "not_recorded",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "55a870d9e414496a167ebff864d16228bfbf9d3c36788c14ac66f75a6fd1857e",
+      "size_bytes": 406104,
+      "acquisition": "user_supplied_file",
+      "notes": "Время загрузки в чат не равно времени исходной выгрузки с Wago; исходное время неизвестно."
+    },
+    {
+      "id": "wago-QuestV2-70124",
+      "source_id": "wago",
+      "file": "data/QuestV2.1.60.1.70124.csv",
+      "url": "https://wago.tools/db2/QuestV2/csv?build=1.60.1.70124&locale=enUS",
+      "source_version": "1.60.1.70124",
+      "game_build": "1.60.1.70124",
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": null,
+      "retrieval_time_status": "not_recorded",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "4e9b81e10068d1077f145ead18bbe44068e30800646702564499e666a04d9319",
+      "size_bytes": 82659,
+      "acquisition": "user_supplied_file",
+      "notes": "Время загрузки в чат не равно времени исходной выгрузки с Wago; исходное время неизвестно."
+    },
+    {
+      "id": "questiedb-foreverQuestDB",
+      "source_id": "questiedb",
+      "file": "data/quest-sources/questiedb/foreverQuestDB.lua",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/f521c36eb72a57d7f205a61ee212ad0ca9f51ed9/data/Forever/foreverQuestDB.lua",
+      "source_version": "f521c36eb72a57d7f205a61ee212ad0ca9f51ed9",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": null,
+      "retrieval_time_status": "not_recorded",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "d5be8516877505334f02073826ea0f22a394ddbf604bb5a33f5a39de5bb1ee87",
+      "size_bytes": 1057548,
+      "version_kind": "git_commit",
+      "repository_path": "data/Forever/foreverQuestDB.lua",
+      "git_blob": "3111554923c22048f037eaa0f9d409cf0d2d1b62",
+      "build_status": "not_declared",
+      "manifest": "data/quest-sources/manifest.json",
+      "notes": "Точная сборка игры не выводится из даты коммита. Базовый foreverQuestDB содержит унаследованные Classic-названия."
+    },
+    {
+      "id": "questiedb-foreverBaseQuest",
+      "source_id": "questiedb",
+      "file": "data/quest-sources/questiedb/foreverBaseQuest.lua",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/f521c36eb72a57d7f205a61ee212ad0ca9f51ed9/src/corrections/Forever/generated/foreverBaseQuest.lua",
+      "source_version": "f521c36eb72a57d7f205a61ee212ad0ca9f51ed9",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": null,
+      "retrieval_time_status": "not_recorded",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "db7845684eac678edb47d8c530fcc0c321b835e257e35795e516aaf6bb674643",
+      "size_bytes": 499107,
+      "version_kind": "git_commit",
+      "repository_path": "src/corrections/Forever/generated/foreverBaseQuest.lua",
+      "git_blob": "bdee2e60abbe9a7c8048865054c54b653298ff30",
+      "build_status": "not_declared",
+      "manifest": "data/quest-sources/manifest.json",
+      "notes": "Точная сборка игры не выводится из даты коммита. Базовый foreverQuestDB содержит унаследованные Classic-названия."
+    },
+    {
+      "id": "everythingquests-QuestAvailable_Forever",
+      "source_id": "everythingquests",
+      "file": "data/quest-sources/EverythingQuests/QuestAvailable_Forever.lua",
+      "url": "https://raw.githubusercontent.com/wheelbarrel00/EverythingQuests/8179e993726567ad26671cf117cc72f9c31140e2/Data/QuestAvailable_Forever.lua",
+      "source_version": "8179e993726567ad26671cf117cc72f9c31140e2",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": null,
+      "retrieval_time_status": "not_recorded",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "bb19c404f88c0bf2eddfcce4718720e5030493276acdce32714ec75153b15d95",
+      "size_bytes": 517185,
+      "version_kind": "git_commit",
+      "repository_path": "Data/QuestAvailable_Forever.lua",
+      "git_blob": "169d5de0285ab69285f291bb1cb904d22f69feeb",
+      "build_status": "not_declared",
+      "manifest": "data/quest-sources/manifest.json",
+      "notes": "Точная сборка игры не выводится из даты коммита. Базовый foreverQuestDB содержит унаследованные Classic-названия."
+    },
+    {
+      "id": "completao-ForeverNew",
+      "source_id": "completao",
+      "file": "data/quest-sources/Completao/ForeverNew.lua",
+      "url": "https://raw.githubusercontent.com/LechuckThePirate/Completao/f4e93cf3fe704aa932521fd67eb0883cb8687a45/Data/Generated/ForeverNew.lua",
+      "source_version": "f4e93cf3fe704aa932521fd67eb0883cb8687a45",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": null,
+      "retrieval_time_status": "not_recorded",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "c82f7097488826ea357d1d0c1cb9d45b8a2c7f13265c17c3c9bf07767865cc65",
+      "size_bytes": 487701,
+      "version_kind": "git_commit",
+      "repository_path": "Data/Generated/ForeverNew.lua",
+      "git_blob": "3a6645fad7c74ded3c217efb9d7d7a9b59d7d7ad",
+      "build_status": "not_declared",
+      "manifest": "data/quest-sources/manifest.json",
+      "notes": "Точная сборка игры не выводится из даты коммита. Базовый foreverQuestDB содержит унаследованные Classic-названия."
+    },
+    {
+      "id": "questiedb-questiedb-foreverBaseItem",
+      "source_id": "questiedb",
+      "file": "data/supplement-sources/questiedb-foreverBaseItem.lua",
+      "url": "https://github.com/Questie/QuestieDB/blob/f521c36eb72a57d7f205a61ee212ad0ca9f51ed9/src/corrections/Forever/generated/foreverBaseItem.lua",
+      "source_version": "f521c36eb72a57d7f205a61ee212ad0ca9f51ed9",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": "2026-09-30",
+      "retrieval_time_status": "date_only",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "e7712eec044cd3e126294673d648c0da8ea419f608fa7a90aca4cb4efbde13eb",
+      "size_bytes": 2471956,
+      "manifest": "data/supplement-sources/manifest.json",
+      "version_kind": "git_commit"
+    },
+    {
+      "id": "forever-sim-wowhead_forever_gearplanner",
+      "source_id": "forever-sim",
+      "file": "data/supplement-sources/wowhead_forever_gearplanner.txt",
+      "url": "https://github.com/ElliotWood/Forever/blob/d91d4afe408363db83a0d35ea444e696092e9a87/assets/db_inputs/wowhead_forever_gearplanner.txt",
+      "source_version": "d91d4afe408363db83a0d35ea444e696092e9a87",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": "2026-09-30",
+      "retrieval_time_status": "date_only",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "c787fa697266d373de876ec83b8eb804850fc1b2c0b3f3efe26993011e3931b0",
+      "size_bytes": 7198299,
+      "manifest": "data/supplement-sources/manifest.json",
+      "version_kind": "git_commit"
+    },
+    {
+      "id": "thewowdb-currencies",
+      "source_id": "thewowdb",
+      "file": "data/supplement-sources/currencies.json",
+      "url": "https://thewowdb.com/wow-forever/currencies/",
+      "source_version": null,
+      "game_build": "1.60.1.70124",
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": "2026-09-30",
+      "retrieval_time_status": "date_only",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "500e2f0af5f8a7677e3dadb7418a431259ee8571eaf5a4983d233366344215a4",
+      "size_bytes": 984,
+      "manifest": "data/supplement-sources/manifest.json",
+      "version_kind": "unversioned_web_pages",
+      "records": [
+        {
+          "id": 515,
+          "url": "https://thewowdb.com/wow-forever/currency/darkmoon-prize-ticket-515/",
+          "observed_date": "2026-09-30"
+        },
+        {
+          "id": 1792,
+          "url": "https://thewowdb.com/wow-forever/currency/honor-points-1792/",
+          "observed_date": "2026-09-30"
+        },
+        {
+          "id": 3402,
+          "url": "https://thewowdb.com/wow-forever/currency/merchant-s-favor-3402/",
+          "observed_date": "2026-09-30"
+        },
+        {
+          "id": 3468,
+          "url": "https://thewowdb.com/wow-forever/currency/rank-points-3468/",
+          "observed_date": "2026-09-30"
+        },
+        {
+          "id": 3469,
+          "url": "https://thewowdb.com/wow-forever/currency/tarnished-undermine-real-3469/",
+          "observed_date": "2026-09-30"
+        }
+      ],
+      "acquisition": "manual_web_transcription"
+    },
+    {
+      "id": "petscout-petscout-locations",
+      "source_id": "petscout",
+      "file": "data/supplement-sources/petscout-locations.lua",
+      "url": "https://www.curseforge.com/wow/addons/petscout-forever/files/8940612",
+      "source_version": "v0.1.1-forever",
+      "game_build": "1.60.1.69913",
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": "2026-09-30",
+      "retrieval_time_status": "date_only",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "f1eb3f56cf2db4dd3a878421c94ef18f79781bb6ad05c395a1eadfbe03eea002",
+      "size_bytes": 22975,
+      "manifest": "data/supplement-sources/manifest.json",
+      "version_kind": "release",
+      "download_url": "https://edge.forgecdn.net/files/8940/612/PetScoutForever-v0.1.1-forever.zip",
+      "archive_sha256": "df8a931ad277f495850f95c4757c6ebe5bc2c772e050084e9d769b50b17c2f38",
+      "release_file_id": "8940612",
+      "published_date": "2026-09-21",
+      "archive_member": "PetScoutForever/data/locations.lua"
+    },
+    {
+      "id": "petscout-petscout-zones",
+      "source_id": "petscout",
+      "file": "data/supplement-sources/petscout-zones.lua",
+      "url": "https://www.curseforge.com/wow/addons/petscout-forever/files/8940612",
+      "source_version": "v0.1.1-forever",
+      "game_build": "1.60.1.69913",
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": "2026-09-30",
+      "retrieval_time_status": "date_only",
+      "registered_at": "2026-09-30T21:00:23Z",
+      "sha256": "d44df6b9dc698e34ff0a8a4975a771e02fd92d507552a4e08bb39b85c77dc70d",
+      "size_bytes": 4681,
+      "manifest": "data/supplement-sources/manifest.json",
+      "version_kind": "release",
+      "download_url": "https://edge.forgecdn.net/files/8940/612/PetScoutForever-v0.1.1-forever.zip",
+      "archive_sha256": "df8a931ad277f495850f95c4757c6ebe5bc2c772e050084e9d769b50b17c2f38",
+      "release_file_id": "8940612",
+      "published_date": "2026-09-21",
+      "archive_member": "PetScoutForever/data/zones.lua"
+    }
+  ],
+  "references": [
+    {
+      "id": "forever-codex",
+      "url": "https://forever-codex.com/sources/",
+      "purpose": "Кандидат для предметов и hotfix; не импортирован в 0.4.0."
+    },
+    {
+      "id": "foreverdb",
+      "url": "https://foreverdb.net/",
+      "purpose": "Альтернативная база; данные не импортированы."
+    },
+    {
+      "id": "wowfwiki",
+      "url": "https://wowfwiki.com/wiki/Datamined_data",
+      "purpose": "Сверка покрытия/сборок и архивов; названия не импортированы."
+    },
+    {
+      "id": "wowforevertalents",
+      "url": "https://wowforevertalents.com/about/",
+      "purpose": "Сверка талантов и происхождения данных; не импортирован."
+    },
+    {
+      "id": "wordhunter",
+      "url": "https://github.com/Ironship/WordHunterWoW-ENPanel",
+      "purpose": "Ранее рассмотренный аддон; не является источником текущих пакетов."
+    },
+    {
+      "id": "blizzard-ui",
+      "url": "https://github.com/Gethe/wow-ui-source/tree/forever",
+      "source_version": "bd2470aed543f72697a044e989285b6c83e63f73",
+      "version_kind": "git_commit",
+      "purpose": "Справочник форматов ссылок/API; не база имён."
+    },
+    {
+      "id": "db2-schemas",
+      "url": "https://github.com/wowdev/WoWDBDefs",
+      "source_version": null,
+      "purpose": "Схемы таблиц; не база имён."
+    },
+    {
+      "id": "forever-companion-link-observation",
+      "purpose": "Подтверждённый пользователем формат ссылки из окна призыва; не источник названий.",
+      "file": "data/link-observations.json"
+    }
+  ],
+  "update_policy": {
+    "preserve_history": true,
+    "archive_old_snapshots": true,
+    "required_new_download_fields": [
+      "source_id",
+      "url",
+      "source_version_or_explicit_null",
+      "game_build_or_explicit_null",
+      "retrieval_started_at",
+      "retrieved_at",
+      "sha256",
+      "size_bytes",
+      "file"
+    ],
+    "timestamp_semantics": "retrieved_at is successful completion of fetching original bytes or reading the source page, not extraction/copying/rebuilding; record parent archive for extracted members"
+  },
+  "updated_at": "2026-09-30T21:32:33Z"
+}

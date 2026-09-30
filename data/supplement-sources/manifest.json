@@ -1,0 +1,46 @@
+[
+  {
+    "file": "questiedb-foreverBaseItem.lua",
+    "url": "https://github.com/Questie/QuestieDB/blob/f521c36eb72a57d7f205a61ee212ad0ca9f51ed9/src/corrections/Forever/generated/foreverBaseItem.lua",
+    "sha256": "e7712eec044cd3e126294673d648c0da8ea419f608fa7a90aca4cb4efbde13eb",
+    "retrieved": "2026-09-30",
+    "edition": "Forever",
+    "exact_client_build": "not asserted by snapshot"
+  },
+  {
+    "file": "wowhead_forever_gearplanner.txt",
+    "url": "https://github.com/ElliotWood/Forever/blob/d91d4afe408363db83a0d35ea444e696092e9a87/assets/db_inputs/wowhead_forever_gearplanner.txt",
+    "sha256": "c787fa697266d373de876ec83b8eb804850fc1b2c0b3f3efe26993011e3931b0",
+    "retrieved": "2026-09-30",
+    "edition": "Forever",
+    "exact_client_build": "not asserted by snapshot"
+  },
+  {
+    "file": "currencies.json",
+    "url": "https://thewowdb.com/wow-forever/currencies/",
+    "sha256": "500e2f0af5f8a7677e3dadb7418a431259ee8571eaf5a4983d233366344215a4",
+    "method": "Five factual ID/name pairs transcribed from individual Forever currency pages; not a full DB2 export"
+  },
+  {
+    "file": "petscout-locations.lua",
+    "sha256": "f1eb3f56cf2db4dd3a878421c94ef18f79781bb6ad05c395a1eadfbe03eea002",
+    "url": "https://www.curseforge.com/wow/addons/petscout-forever/files/8940612",
+    "download_url": "https://edge.forgecdn.net/files/8940/612/PetScoutForever-v0.1.1-forever.zip",
+    "archive_sha256": "df8a931ad277f495850f95c4757c6ebe5bc2c772e050084e9d769b50b17c2f38",
+    "build": "1.60.1.69913",
+    "edition": "Forever",
+    "license": "MIT",
+    "retrieved": "2026-09-30"
+  },
+  {
+    "file": "petscout-zones.lua",
+    "sha256": "d44df6b9dc698e34ff0a8a4975a771e02fd92d507552a4e08bb39b85c77dc70d",
+    "url": "https://www.curseforge.com/wow/addons/petscout-forever/files/8940612",
+    "download_url": "https://edge.forgecdn.net/files/8940/612/PetScoutForever-v0.1.1-forever.zip",
+    "archive_sha256": "df8a931ad277f495850f95c4757c6ebe5bc2c772e050084e9d769b50b17c2f38",
+    "build": "1.60.1.69913",
+    "edition": "Forever",
+    "license": "MIT",
+    "retrieved": "2026-09-30"
+  }
+]

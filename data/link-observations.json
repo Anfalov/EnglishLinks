@@ -1,0 +1,14 @@
+[
+  {
+    "recorded_at": "2026-09-30T21:24:55Z",
+    "source": "User-provided screenshot image(5).png",
+    "source_library_file_id": "libfile_15edfaa9cb1c81919e0353b2fc181835",
+    "source_message_at": "2026-10-01T02:20:54+05:00",
+    "game_edition": "Forever",
+    "game_build": null,
+    "game_build_note": "Точная сборка на скриншоте не видна.",
+    "api": "C_PetJournal.GetNonBattlePetLinkByIndex(1)",
+    "link": "|cffffd200|Hnonbattlepet:5005|h[Музыкальный ветроскок]|h|r",
+    "verified_fix": "Lua 5.1 chat insertion regression; awaiting in-game confirmation of 0.4.1"
+  }
+]

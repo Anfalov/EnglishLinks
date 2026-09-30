@@ -1,0 +1,7 @@
+* text=auto eol=lf
+# Preserve source snapshots byte-for-byte: manifests verify their SHA-256.
+data/** -text -whitespace
+LICENSE -text
+licenses/** -text
+EnglishLinks/LICENSE -text
+EnglishLinks/licenses/** -text

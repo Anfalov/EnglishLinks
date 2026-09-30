@@ -1,0 +1,62 @@
+EnglishLinks 0.4.2
+
+EnglishLinks code and corresponding build/test source are supplied under GNU
+General Public License version 3; see LICENSE. Third-party notices and underlying
+game-content ownership remain applicable.
+
+Quest titles are extracted from the pinned snapshots listed in
+ data/quest-sources/manifest.json.
+
+Questie / QuestieDB contributors
+https://github.com/Questie/QuestieDB
+- data/Forever/foreverQuestDB.lua: inherited Questie Classic database.
+- src/corrections/Forever/generated/foreverBaseQuest.lua: Forever additions.
+Questie's inherited data is distributed as GPLv3 material. The QuestieDB snapshot
+has no separate root LICENSE file; its provenance is retained here, not replaced
+by a claim that EnglishLinks owns the source data.
+
+Everything Quests / wheelbarrel00
+https://github.com/wheelbarrel00/EverythingQuests
+- Data/QuestAvailable_Forever.lua
+MIT license retained in licenses/EverythingQuests-LICENSE.txt.
+Includes data derived from AllTheThings; its MIT notice is retained in
+licenses/AllTheThings-MIT.txt.
+
+Completao!! / LechuckThePirate
+Copyright (C) 2026 LechuckThePirate
+https://github.com/LechuckThePirate/Completao
+- Data/Generated/ForeverNew.lua
+Project GPLv3 license retained in licenses/GPL-3.0.txt. Upstream explicitly
+excludes underlying Blizzard content and names/text/locations compiled from
+public quest databases from its own license grant.
+
+EnglishLinks transformations, 2026-09-30:
+- Extract only quest ID/title pairs, without executing upstream Lua.
+- Filter against user-supplied Forever QuestV2 1.60.1.70124.
+- Remove Completao's display-only chain numbering suffix, e.g. (1/2).
+- Apply the documented source priority and record individual provenance.
+- Omit quest descriptions, objectives, coordinates and conditions from the
+  runtime addon. Original snapshots remain in the corresponding source bundle.
+
+World of Warcraft names, quest text and other game content belong to Blizzard
+Entertainment or its licensors. EnglishLinks is not affiliated with Blizzard,
+Questie, Everything Quests or Completao. No claim of ownership or additional
+license grant is made for their underlying game content.
+
+Additional names in 0.4.0:
+- QuestieDB src/corrections/Forever/generated/foreverBaseItem.lua: ID/name
+  assignments and generated Forever Wowhead title comments. Same Questie
+  attribution and underlying game-content limitations as above.
+- ElliotWood/Forever, assets/db_inputs/wowhead_forever_gearplanner.txt.
+  https://github.com/ElliotWood/Forever (based on https://github.com/wowsims/classic).
+  Copyright (c) 2022 wowsims team; MIT notice in licenses/wowsims-MIT.txt.
+  Only Forever item ID/name pairs are extracted, without executing JavaScript.
+- PetScout Forever / noprog4ming, v0.1.1, CurseForge file 8940612.
+  https://www.curseforge.com/wow/addons/petscout-forever
+  data/locations.lua and data/zones.lua: only speciesID/UiMapID and English names.
+  MIT notice in licenses/PetScoutForever-MIT.txt; source build 1.60.1.69913.
+- TheWoWDB.com Forever currency pages: five factual ID/name pairs, with
+  individual source URLs retained. No full table, descriptions or site code copied.
+Pinned originals, hashes and transformations: data/supplement-sources/manifest.json
+and docs/SUPPLEMENT-SOURCES.md. Third-party software licenses do not imply
+relicensing of the underlying Blizzard names or game content.
