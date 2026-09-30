@@ -10,5 +10,17 @@
     "api": "C_PetJournal.GetNonBattlePetLinkByIndex(1)",
     "link": "|cffffd200|Hnonbattlepet:5005|h[Музыкальный ветроскок]|h|r",
     "verified_fix": "Lua 5.1 chat insertion regression; awaiting in-game confirmation of 0.4.1"
+  },
+  {
+    "source": "User-provided recipe diagnostics (image(9).png and image(10).png)",
+    "source_message_at": "2026-10-01T03:07:23+05:00",
+    "game_edition": "Forever",
+    "game_build": null,
+    "native_link": "|cffffd000|Henchant:3816|h[Кожевничество: Обработанная легкая шкура]|h|r",
+    "send_api": "C_ChatInfo.SendChatMessage",
+    "sent_link": "|cffffd000|Henchant:3816|h[Leatherworking: Cured Light Hide]|h|r",
+    "received_visible_text": "LHideerworking: Cured Light Hide",
+    "received_clickable": false,
+    "workaround": "0.4.3 preserves the native enchant hyperlink and appends the English name outside it. Automated tests passed; awaiting in-game verification."
   }
 ]

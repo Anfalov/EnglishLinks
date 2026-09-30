@@ -128,5 +128,9 @@ function ns.Resolve(payload, label, onMissing)
         -- Coordinates remain byte-for-byte in the payload; avoid guessing their scale.
         name = "Map Pin: " .. name
     end
-    return ns.IsSafeName(name) and name or nil
+    if not ns.IsSafeName(name) then return nil end
+    -- Forever can strip translated enchant links after SendChatMessage even
+    -- when their payload/color survive. Keep the native link and annotate it.
+    if d.rawType == "enchant" then return name, "annotate" end
+    return name
 end

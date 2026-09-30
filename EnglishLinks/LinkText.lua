@@ -74,9 +74,21 @@ function ns.TranslateAll(text, resolve, cursor, onMissing)
         local label = bracketed and display:sub(2, -2) or display
         local p, pipes = first - 1, 0
         while p > 0 and text:sub(p, p) == "|" do p, pipes = p - 1, pipes + 1 end
-        local name = pipes % 2 == 0 and resolve(payload, label, onMissing) or nil
+        local name, mode
+        if pipes % 2 == 0 then name, mode = resolve(payload, label, onMissing) end
         chunks[#chunks + 1] = text:sub(scan, first - 1)
-        if ns.IsSafeName(name) and name ~= label then
+        if ns.IsSafeName(name) and name ~= label and mode == "annotate" then
+            -- Put the annotation outside the complete native hyperlink/color.
+            if text:sub(last + 1, last + 2) == "|r" then last = last + 2 end
+            chunks[#chunks + 1] = text:sub(first, last)
+            local annotation = " (" .. name .. ")"
+            -- OnTextChanged runs again as the player types: never append twice.
+            if text:sub(last + 1, last + #annotation) ~= annotation then
+                chunks[#chunks + 1] = annotation
+                if cursor and cursor >= last then mapped = mapped + #annotation end
+                count = count + 1
+            end
+        elseif ns.IsSafeName(name) and name ~= label then
             local replacement = bracketed and ("[" .. name .. "]") or name
             chunks[#chunks + 1] = "|H" .. payload .. "|h" .. replacement .. "|h"
             local start = first - 1 + 2 + #payload + 2 + (bracketed and 1 or 0)

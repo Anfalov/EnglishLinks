@@ -61,7 +61,8 @@ for payload, expected in [
     ('trade:2259:1:300:GUID:bits','Alchemy'),
     ('achievement:49:Player-1-ABC:1:0:0:0:0:0:0:0','Alterac Valley victories'),
 ]:
-    assert actual_ns.Resolve(payload, 'Русское', None) == expected, payload
+    resolved = actual_ns.Resolve(payload, 'Русское', None)
+    assert (resolved[0] if isinstance(resolved, tuple) else resolved) == expected, payload
 assert actual_ns.Resolve('quest:1:60', 'Задание', None) is None
 assert actual_ns.Resolve('item:6948:0:0:0:0:0:-10:123', 'Суффикс', None) is None
 assert actual_ns.Lookup('spell', 2330, None) is None  # Not present in this Forever export.
@@ -106,3 +107,11 @@ if options.data_dir:
     actual_ns.DB.types.mount = False
     assert actual_ns.Resolve('mount:458:0', 'Лошадь', None) is None
     print('Community names, source hashes, priority and mount/currency links verified')
+
+# Exact native recipe from the user's diagnostics, with the shipped dictionaries.
+recipe = '|cffffd000|Henchant:3816|h[Кожевничество: Обработанная легкая шкура]|h|r'
+expected = recipe + ' (Leatherworking: Cured Light Hide)'
+translated, cursor, changes = actual_ns.TranslateAll(recipe, actual_ns.Resolve, len(recipe.encode()), None)
+assert translated == expected and cursor == len(expected.encode()) and changes == 1
+assert actual_ns.TranslateAll(expected, actual_ns.Resolve, len(expected.encode()), None) == (expected, len(expected.encode()), 0)
+print('Observed enchant:3816 keeps native markup and adds English exactly once')

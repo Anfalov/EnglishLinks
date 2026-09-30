@@ -1,4 +1,4 @@
-# Implementation — EnglishLinks 0.4.2
+# Implementation — EnglishLinks 0.4.3
 
 ## Primary sources inspected
 
@@ -26,7 +26,9 @@ not evidence that every corresponding gameplay feature exists in Forever.
 
 - `LinkText.lua`: pure parser, replacement of plain or bracketed labels only;
   payload, color and surrounding text preserved byte-for-byte. UTF-8 byte cursor
-  remapping; escaped pipes and decorated labels remain unchanged. Legacy pure
+  remapping; enchant recipes keep the original hyperlink/color bytes and append
+  an English annotation outside it. Repeated edits do not duplicate that annotation.
+  Escaped pipes and decorated labels remain unchanged. Legacy pure
   item API retained for regression tests.
 - `Resolver.lua`: whitelist of typed payloads, disjoint ID namespaces, override →
   database. No client name learning or title requests. Old saved learned data is ignored.

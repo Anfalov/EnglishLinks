@@ -3,7 +3,7 @@
 ## Notes: English names in outgoing game links. Use /el coverage to check installed name packs.
 ## Notes-ruRU: Английские названия в игровых ссылках. Загруженные базы: /el coverage.
 ## Author: EnglishLinks project
-## Version: 0.4.2
+## Version: 0.4.3
 ## SavedVariables: EnglishLinksDB
 
 ItemNames_enUS.lua
