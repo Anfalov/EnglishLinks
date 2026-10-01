@@ -1,8 +1,8 @@
-# EnglishLinks
+# English Links
 
 **Share game links in English while playing WoW Forever in your own language.**
 
-EnglishLinks automatically changes the names of links you insert into chat to
+English Links automatically changes the names of links you insert into chat to
 English. Other players receive English link labels, while your interface stays in your client language. They do not need the addon installed.
 
 It is built for **WoW Forever**.
@@ -24,10 +24,10 @@ their own client's language.
 
 ## How to use
 
-Install and enable EnglishLinks, then open chat and Shift-click a link as usual.
+Install and enable English Links, then open chat and Shift-click a link as usual.
 Its name changes to English in the chat input, ready to share.
 
-For manual installation, place the `EnglishLinks` folder in your WoW Forever
+For manual installation, place the `English Links` folder in your WoW Forever
 client's `Interface/AddOns` folder.
 
 ## Main commands
