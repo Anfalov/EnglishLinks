@@ -7,3 +7,4 @@ venv/
 Thumbs.db
 dist/
 *.zip
+!data/wowhead-sources/snapshot.zip

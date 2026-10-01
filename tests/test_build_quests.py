@@ -28,12 +28,13 @@ class Quests(unittest.TestCase):
         csv.write_text('ID\n1\n2\n3\n4\n5\n')
         return csv
 
-    def test_filter_priority_annotations_and_lua(self):
+    def test_coverage_only_priority_annotations_and_lua(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             names, provenance, report = b.compile_quests(root, self.fixture(root))
-            self.assertEqual(names, {1:'Inherited', 2:'New Quest', 3:'Third', 4:'Chain'})
+            self.assertEqual(names, {1:'Inherited', 2:'New Quest', 3:'Third', 4:'Chain', 99:'Outside Forever'})
             self.assertEqual(report['missing_ids'], [5])
+            self.assertEqual(report['outside_reference_ids'], [99])
             self.assertEqual(report['conflicts'][0]['alternative'], 'Alternative')
             runtime = LuaRuntime()
             ns = runtime.table()

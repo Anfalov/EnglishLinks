@@ -1,4 +1,4 @@
-# EnglishLinks 0.5.0
+# EnglishLinks 0.6.0
 
 English names in outgoing game links for WoW Forever 1.60.1.
 
@@ -8,7 +8,9 @@ Open chat and Shift-click an item, spell, quest or profession recipe.
 EnglishLinks changes the link label; you send the message normally.
 
 Names are bundled. No other addon or name-collection step is required.
-Unknown names and items with random affixes keep their original labels.
+Wowhead Forever is the primary name source; other sources fill missing IDs.
+Known item-bonus suffixes are translated. Unknown bonuses and legacy random
+affix IDs keep the original label. New suffix/map-pin behavior needs live testing.
 The addon does not translate incoming chat, tooltips or the game interface.
 
 - /el on, /el off — enable or disable translation.

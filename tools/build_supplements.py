@@ -111,8 +111,7 @@ def compile_supplements(data):
     report = dict(base_count=len(base), added_count=len(additions), total_count=len(merged),
                   source_counts=counts, conflicts=conflicts, manifest=manifest)
     pets = petscout_names(snapshots['petscout-locations.lua'], 'Locations')
-    maps = petscout_names(snapshots['petscout-zones.lua'], 'Zones')
-    return {'item': additions, 'currency': currency, 'companion': pets, 'uimap': maps}, origins, report
+    return {'item': additions, 'currency': currency, 'companion': pets}, origins, report
 
 
 def render(names):

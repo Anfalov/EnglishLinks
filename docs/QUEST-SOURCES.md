@@ -1,21 +1,27 @@
-# Источники заданий — 0.3.0
+# Источники заданий — 0.6.0
 
 Снимки проверены по Git blob SHA и SHA-256. Точные коммиты, пути и хеши находятся
 в `data/quest-sources/manifest.json`; исходные файлы приложены рядом.
 
 | Источник | Выбрано записей | Происхождение |
 | --- | ---: | --- |
-| [QuestieDB Forever](https://github.com/Questie/QuestieDB) — foreverQuestDB.lua | 3 535 | Базовые имена, унаследованные от Classic |
-| QuestieDB Forever — foreverBaseQuest.lua | 720 | Дополнительный слой Forever |
+| [QuestieDB Forever](https://github.com/Questie/QuestieDB) — foreverQuestDB.lua | 4 244 | Базовые имена, унаследованные от Classic |
+| QuestieDB Forever — foreverBaseQuest.lua | 732 | Дополнительный слой Forever |
 | [Everything Quests](https://github.com/wheelbarrel00/EverythingQuests) | 8 | Дополняет предыдущие источники |
-| [Completao](https://github.com/LechuckThePirate/Completao) | 13 | Дополняет предыдущие источники |
+| [Completao](https://github.com/LechuckThePirate/Completao) | 16 | Дополняет предыдущие источники |
 
-Всего 4 276 из 6 605 ID QuestV2 сборки 1.60.1.70124. Остальные 2 329 ID
-перечислены в `data/quest-report.json`; это пробелы нашего словаря, а не
-доказательство того, что все такие задания доступны игрокам.
+Эти дополнительные источники дают 5 000 названий без фильтрации по QuestV2.
+Основной источник — Wowhead Forever: 5 206 названий, которые заменяют любые
+расхождения. Из дополнительных источников остаются 44 отсутствующих у Wowhead
+ID; итоговая база содержит 5 250 заданий.
 
-Порядок выбора: дополнительные имена QuestieDB Forever, его базовый слой,
-Everything Quests, Completao. Берутся только ID, присутствующие в QuestV2.
+`data/wowhead-report.json` проверяет покрытие итоговой базы относительно QuestV2:
+4 465 из 6 605 ID покрыты, 2 140 пока без названий. Все 785 записей вне QuestV2
+тоже включены. `data/quest-report.json` описывает только дополнительный слой.
+QuestV2 ни на одном этапе не служит разрешающим списком.
+
+Внутри дополнительного слоя порядок прежний: Forever-дополнения QuestieDB,
+его базовый слой, Everything Quests, Completao. Wowhead имеет приоритет над всеми.
 Для Completao удаляется добавленная его генератором конечная нумерация этапов
 вида ` (1/2)`. В закреплённых снимках после такой нормализации конфликтов нет.
 При будущих конфликтах сохраняется имя источника с более высоким приоритетом,

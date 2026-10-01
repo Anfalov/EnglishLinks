@@ -3,7 +3,7 @@
 ## Notes: English names in outgoing game links. Use /el coverage to check installed name packs.
 ## Notes-ruRU: Английские названия в игровых ссылках. Загруженные базы: /el coverage.
 ## Author: Anfalov
-## Version: 0.5.0
+## Version: 0.6.0
 ## IconTexture: Interface\AddOns\EnglishLinks\Icon
 ## SavedVariables: EnglishLinksDB
 
@@ -13,4 +13,5 @@ QuestNames_enUS.lua
 LinkText.lua
 Resolver.lua
 SupplementNames_enUS.lua
+WowheadNames_enUS.lua
 EnglishLinks.lua

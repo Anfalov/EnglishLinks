@@ -51,7 +51,7 @@ for payload, expected in [
     ('currency:3402:0',"Merchant's Favor"),
     ('nonbattlepet:5005','Musical Gustjumper'),
     ('mount:458:0','Brown Horse'),
-    ('worldmap:1429:1234:5678','Map Pin: Elwynn Forest'),
+    ('worldmap:1429:1234:5678','Map Pin Location'),
     ('spell:133','Fireball'),
     ('quest:92485:2','A Student of Nature'),
     ('quest:92466:2','Call of Earth'),
@@ -62,7 +62,7 @@ for payload, expected in [
     ('achievement:49:Player-1-ABC:1:0:0:0:0:0:0:0','Alterac Valley victories'),
 ]:
     assert actual_ns.Resolve(payload, 'Русское', None) == expected, payload
-assert actual_ns.Resolve('quest:1:60', 'Задание', None) is None
+assert actual_ns.Resolve('quest:2147483647:60', 'Задание', None) is None
 assert actual_ns.Resolve('item:6948:0:0:0:0:0:-10:123', 'Суффикс', None) is None
 assert actual_ns.Lookup('spell', 2330, None) is None  # Not present in this Forever export.
 print('Real shipped link smoke checks passed')
@@ -99,7 +99,7 @@ if options.data_dir:
     assert dict(actual_ns.Relations.recipe.items()) == compiled[1]['recipe']
     import build_quests
     titles, provenance, report = build_quests.compile_quests(options.data_dir / 'quest-sources', options.data_dir / 'QuestV2.1.60.1.70124.csv')
-    assert len(titles) == 4276
+    assert len(titles) == 5000
     assert report['conflicts'] == []
     assert dict(actual_ns.Names.quest.items()) == titles
     assert (root / 'EnglishLinks/QuestNames_enUS.lua').read_text() == build_quests.render(titles, actual_ns.ItemNamesMeta.build, report)
@@ -115,9 +115,8 @@ if options.data_dir:
     assert dict(actual_ns.Names.item.items()) == dict(ns.ItemNames.items()) | extra['item']
     assert dict(actual_ns.Names.currency.items()) == extra['currency']
     assert dict(actual_ns.Names.companion.items()) == extra['companion']
-    assert dict(actual_ns.Names.uimap.items()) == extra['uimap']
+    assert actual_ns.Names.uimap is None
     assert len(extra['companion']) == 112
-    assert len(extra['uimap']) == 60
     real.execute('C_PetJournal=setmetatable({}, {__index=function() error("Unexpected pet API access") end})')
     assert actual_ns.Resolve('nonbattlepet:39', 'Механическая белка', None) == 'Mechanical Squirrel'
     assert actual_ns.Resolve('battlepet:39:1:2:100:10:10:BattlePet-0', 'Механическая белка', None) is None

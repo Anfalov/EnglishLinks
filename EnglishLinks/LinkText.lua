@@ -68,18 +68,26 @@ function ns.TranslateAll(text, resolve, cursor, onMissing)
     if type(text) ~= "string" then return text, cursor, 0 end
     local chunks, scan, count, mapped = {}, 1, 0, cursor
     while true do
-        local first, last, payload, display = text:find("|H([^|]+)|h([^|]*)|h", scan)
+        local first, last, payload, display = text:find("|H([^|]+)|h(.-)|h", scan)
         if not first then break end
         local bracketed = display:sub(1, 1) == "[" and display:sub(-1) == "]"
         local label = bracketed and display:sub(2, -2) or display
+        -- The native map-pin label contains an atlas escape inside the link.
+        -- Preserve only this known decoration; arbitrary markup remains untouched.
+        local decoration = ""
+        if payload:match("^worldmap:") then
+            decoration = label:match("^(|A:Waypoint%-MapPin%-ChatIcon:[%d:%-]+|a%s*)") or ""
+            label = label:sub(#decoration + 1)
+        end
         local p, pipes = first - 1, 0
         while p > 0 and text:sub(p, p) == "|" do p, pipes = p - 1, pipes + 1 end
-        local name = pipes % 2 == 0 and resolve(payload, label, onMissing) or nil
+        local name = pipes % 2 == 0 and not label:find("|", 1, true) and resolve(payload, label, onMissing) or nil
         chunks[#chunks + 1] = text:sub(scan, first - 1)
         if ns.IsSafeName(name) and name ~= label then
-            local replacement = bracketed and ("[" .. name .. "]") or name
+            local replacement = decoration .. name
+            replacement = bracketed and ("[" .. replacement .. "]") or replacement
             chunks[#chunks + 1] = "|H" .. payload .. "|h" .. replacement .. "|h"
-            local start = first - 1 + 2 + #payload + 2 + (bracketed and 1 or 0)
+            local start = first - 1 + 2 + #payload + 2 + (bracketed and 1 or 0) + #decoration
             local finish = start + #label
             if cursor then
                 if cursor >= finish then mapped = mapped + #name - #label

@@ -1,8 +1,6 @@
 # EnglishLinks
 
-**Keep your game in your language. Share links with English names.**
-
-EnglishLinks replaces the names inside game links as you insert them into chat.
+EnglishLinks changes link labels to English when you insert them into chat.
 Other players receive English link labels, while your interface and the tooltips
 you open stay in your client language. It is built for **WoW Forever**.
 
@@ -57,10 +55,10 @@ Clear and reinsert a link to use its original name.
 
 ## Coverage and compatibility
 
-Version 0.5.0 includes **24,020 item names**, **31,703 spell names** and
-**4,276 quest titles**, plus smaller supplementary name packs. Coverage is
+Version 0.6.0 includes **24,062 item names**, **31,795 spell names** and
+**5,250 quest titles**, plus smaller supplementary name packs. Coverage is
 incomplete: missing names and unsupported links keep their original labels.
-Items with random affixes also keep their original labels.
+Known item-bonus suffixes are translated; unknown bonuses and legacy random-affix IDs keep the original label. New suffix and map-pin behavior needs testing in the live client.
 
 The target is **WoW Forever 1.60.1**. Retail and other Classic editions have not
 been validated. Companion links may fail to send even without translation;
@@ -69,7 +67,7 @@ links, talent-build links and instance-lockout links are not supported.
 
 ## Credits and support
 
-Name sources include WoW client tables through Wago, QuestieDB, Everything Quests,
+Wowhead Forever is the primary name source. Additional sources include WoW client tables through Wago, QuestieDB, Everything Quests,
 Completao, ElliotWood/Forever, PetScout Forever and TheWoWDB. Their attribution
 and applicable license notices are included with the addon. World of Warcraft
 and its game content belong to Blizzard Entertainment or its licensors.

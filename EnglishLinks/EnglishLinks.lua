@@ -1,5 +1,5 @@
 local addonName, ns = ...
-local VERSION = "0.5.0"
+local VERSION = "0.6.0"
 local db, started
 local attached = setmetatable({}, { __mode = "k" })
 local changing = setmetatable({}, { __mode = "k" })
@@ -98,7 +98,12 @@ local function coverage()
             local meta = ns.PackMeta[kind] or {}
             local source = tostring(meta.build or meta.sourceBuild or "community")
             if (meta.communityAdded or 0) > 0 then source = source .. "; community=" .. meta.communityAdded end
-            say(kind .. ": database=" .. count .. "; build=" .. source)
+            if meta.primaryCount then
+                say(kind .. ": database=" .. count .. "; Wowhead Forever=" .. meta.primaryCount
+                    .. "; fallback=" .. meta.fallbackCount .. "; snapshot=" .. meta.sourceDate)
+            else
+                say(kind .. ": database=" .. count .. "; build=" .. source)
+            end
         end
     end
 end

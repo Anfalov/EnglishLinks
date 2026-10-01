@@ -11,6 +11,7 @@ ID,Name,Source
 13,The People's Militia,questiedb/foreverQuestDB.lua
 14,The People's Militia,questiedb/foreverQuestDB.lua
 15,Investigate Echo Ridge,questiedb/foreverQuestDB.lua
+16,Give Gerard a Drink,questiedb/foreverQuestDB.lua
 17,Uldaman Reagent Run,questiedb/foreverQuestDB.lua
 18,Brotherhood of Thieves,questiedb/foreverQuestDB.lua
 19,Tharil'zun,questiedb/foreverQuestDB.lua
@@ -105,6 +106,7 @@ ID,Name,Source
 114,The Escape,questiedb/foreverQuestDB.lua
 115,Shadow Magic,questiedb/foreverQuestDB.lua
 116,Dry Times,questiedb/foreverQuestDB.lua
+117,Thunderbrew Lager,questiedb/foreverQuestDB.lua
 118,The Price of Shoes,questiedb/foreverQuestDB.lua
 119,Return to Verner,questiedb/foreverQuestDB.lua
 120,Messenger to Stormwind,questiedb/foreverQuestDB.lua
@@ -237,6 +239,7 @@ ID,Name,Source
 251,Translate Abercrombie's Note,questiedb/foreverQuestDB.lua
 252,Translation to Ello,questiedb/foreverQuestDB.lua
 253,Bride of the Embalmer,questiedb/foreverQuestDB.lua
+254,Digging Through the Dirt,questiedb/foreverQuestDB.lua
 255,Mercenaries,questiedb/foreverQuestDB.lua
 256,WANTED: Chok'sul,questiedb/foreverQuestDB.lua
 257,A Hunter's Boast,questiedb/foreverQuestDB.lua
@@ -287,6 +290,7 @@ ID,Name,Source
 305,In Search of The Excavation Team,questiedb/foreverQuestDB.lua
 306,In Search of The Excavation Team,questiedb/foreverQuestDB.lua
 307,Filthy Paws,questiedb/foreverQuestDB.lua
+308,Distracting Jarven,questiedb/foreverQuestDB.lua
 309,Protecting the Shipment,questiedb/foreverQuestDB.lua
 310,Bitter Rivals,questiedb/foreverQuestDB.lua
 311,Return to Marleth,questiedb/foreverQuestDB.lua
@@ -324,6 +328,7 @@ ID,Name,Source
 346,Return to Kristoff,questiedb/foreverQuestDB.lua
 347,Rethban Ore,questiedb/foreverQuestDB.lua
 348,Stranglethorn Fever,questiedb/foreverQuestDB.lua
+349,Stranglethorn Fever,questiedb/foreverQuestDB.lua
 350,Look to an Old Friend,questiedb/foreverQuestDB.lua
 351,Find OOX-17/TN!,questiedb/foreverQuestDB.lua
 353,Stormpike's Delivery,questiedb/foreverQuestDB.lua
@@ -374,11 +379,13 @@ ID,Name,Source
 399,Humble Beginnings,questiedb/foreverQuestDB.lua
 400,Tools for Steelgrill,questiedb/foreverQuestDB.lua
 401,Wait for Sirra to Finish,questiedb/foreverQuestDB.lua
+403,Guarded Thunderbrew Barrel,questiedb/foreverQuestDB.lua
 404,A Putrid Task,questiedb/foreverQuestDB.lua
 405,The Prodigal Lich,questiedb/foreverQuestDB.lua
 407,Fields of Grief,questiedb/foreverQuestDB.lua
 408,The Family Crypt,questiedb/foreverQuestDB.lua
 409,Proving Allegiance,questiedb/foreverQuestDB.lua
+410,The Dormant Shade,questiedb/foreverQuestDB.lua
 411,The Prodigal Lich Returns,questiedb/foreverQuestDB.lua
 412,Operation Recombobulation,questiedb/foreverQuestDB.lua
 413,Shimmer Stout,questiedb/foreverQuestDB.lua
@@ -399,6 +406,7 @@ ID,Name,Source
 428,Lost Deathstalkers,questiedb/foreverQuestDB.lua
 429,Wild Hearts,questiedb/foreverQuestDB.lua
 430,Return to Quinn,questiedb/foreverQuestDB.lua
+431,Candles of Beckoning,questiedb/foreverQuestDB.lua
 432,Those Blasted Troggs!,questiedb/foreverQuestDB.lua
 433,The Public Servant,questiedb/foreverQuestDB.lua
 434,The Attack!,questiedb/foreverQuestDB.lua
@@ -541,6 +549,7 @@ ID,Name,Source
 576,Keep An Eye Out,questiedb/foreverQuestDB.lua
 577,Some Assembly Required,questiedb/foreverQuestDB.lua
 578,The Stone of the Tides,questiedb/foreverQuestDB.lua
+579,Stormwind Library,questiedb/foreverQuestDB.lua
 580,Whiskey Slim's Lost Grog,questiedb/foreverQuestDB.lua
 581,Hunt for Yenniku,questiedb/foreverQuestDB.lua
 582,Headhunting,questiedb/foreverQuestDB.lua
@@ -554,6 +563,7 @@ ID,Name,Source
 590,A Rogue's Deal,questiedb/foreverQuestDB.lua
 591,The Mind's Eye,questiedb/foreverQuestDB.lua
 592,Saving Yenniku,questiedb/foreverQuestDB.lua
+593,Filling the Soul Gem,questiedb/foreverQuestDB.lua
 594,Message in a Bottle,questiedb/foreverQuestDB.lua
 595,The Bloodsail Buccaneers,questiedb/foreverQuestDB.lua
 596,Bloody Bone Necklaces,questiedb/foreverQuestDB.lua
@@ -578,6 +588,7 @@ ID,Name,Source
 616,The Haunted Isle,questiedb/foreverQuestDB.lua
 617,Akiris by the Bundle,questiedb/foreverQuestDB.lua
 618,Facing Negolash,questiedb/foreverQuestDB.lua
+619,Enticing Negolash,questiedb/foreverQuestDB.lua
 621,Zanzil's Secret,questiedb/foreverQuestDB.lua
 622,Return to Corporal Kaleb,questiedb/foreverQuestDB.lua
 623,Akiris by the Bundle,questiedb/foreverQuestDB.lua
@@ -734,6 +745,7 @@ ID,Name,Source
 776,Rites of the Earthmother,questiedb/foreverQuestDB.lua
 777,This Is Going to Be Hard,questiedb/foreverQuestDB.lua
 778,This Is Going to Be Hard,questiedb/foreverQuestDB.lua
+779,Seal of the Earth,questiedb/foreverQuestDB.lua
 780,The Battleboars,questiedb/foreverQuestDB.lua
 781,Attack on Camp Narache,questiedb/foreverQuestDB.lua
 782,Broken Alliances,questiedb/foreverQuestDB.lua
@@ -748,18 +760,21 @@ ID,Name,Source
 792,Vile Familiars,questiedb/foreverQuestDB.lua
 793,Broken Alliances,questiedb/foreverQuestDB.lua
 794,Burning Blade Medallion,questiedb/foreverQuestDB.lua
+795,Seal of the Earth,questiedb/foreverQuestDB.lua
 804,Sarkoth,questiedb/foreverQuestDB.lua
 805,Report to Sen'jin Village,questiedb/foreverQuestDB.lua
 806,Dark Storms,questiedb/foreverQuestDB.lua
 808,Minshina's Skull,questiedb/foreverQuestDB.lua
 809,Ak'Zeloth,questiedb/foreverQuestDB.lua
 812,Need for a Cure,questiedb/foreverQuestDB.lua
+813,Finding the Antidote,questiedb/foreverQuestDB.lua
 815,Break a Few Eggs,questiedb/foreverQuestDB.lua
 816,Lost But Not Forgotten,questiedb/foreverQuestDB.lua
 817,Practical Prey,questiedb/foreverQuestDB.lua
 818,A Solvent Spirit,questiedb/foreverQuestDB.lua
 819,Chen's Empty Keg,questiedb/foreverQuestDB.lua
 821,Chen's Empty Keg,questiedb/foreverQuestDB.lua
+822,Chen's Empty Keg,questiedb/foreverQuestDB.lua
 823,Report to Orgnil,questiedb/foreverQuestDB.lua
 824,Je'neu of the Earthen Ring,questiedb/foreverQuestDB.lua
 825,From The Wreckage....,questiedb/foreverQuestDB.lua
@@ -777,6 +792,7 @@ ID,Name,Source
 837,Encroachment,questiedb/foreverQuestDB.lua
 838,Scholomance,questiedb/foreverQuestDB.lua
 840,Conscript of the Horde,questiedb/foreverQuestDB.lua
+841,Another Power Source?,questiedb/foreverQuestDB.lua
 842,Crossroads Conscription,questiedb/foreverQuestDB.lua
 843,Gann's Reclamation,questiedb/foreverQuestDB.lua
 844,Plainstrider Menace,questiedb/foreverQuestDB.lua
@@ -822,6 +838,7 @@ ID,Name,Source
 886,The Barrens Oases,questiedb/foreverQuestDB.lua
 887,Southsea Freebooters,questiedb/foreverQuestDB.lua
 888,Stolen Booty,questiedb/foreverQuestDB.lua
+889,Spirit of the Wind,questiedb/foreverQuestDB.lua
 890,The Missing Shipment,questiedb/foreverQuestDB.lua
 891,The Guns of Northwatch,questiedb/foreverQuestDB.lua
 892,The Missing Shipment,questiedb/foreverQuestDB.lua
@@ -854,6 +871,7 @@ ID,Name,Source
 923,Tumors,questiedb/foreverQuestDB.lua
 924,The Demon Seed,questiedb/foreverQuestDB.lua
 925,Cairne's Hoofprint,questiedb/foreverQuestDB.lua
+926,Flawed Power Stone,questiedb/foreverQuestDB.lua
 927,The Moss-twined Heart,questiedb/foreverQuestDB.lua
 928,Crown of the Earth,questiedb/foreverQuestDB.lua
 929,Crown of the Earth,questiedb/foreverQuestDB.lua
@@ -886,6 +904,7 @@ ID,Name,Source
 957,Bashal'Aran,questiedb/foreverQuestDB.lua
 958,Tools of the Highborne,questiedb/foreverQuestDB.lua
 959,Trouble at the Docks,questiedb/foreverQuestDB.lua
+961,Onu is meditating,questiedb/foreverQuestDB.lua
 962,Serpentbloom,questiedb/foreverQuestDB.lua
 963,For Love Eternal,questiedb/foreverQuestDB.lua
 964,Skeletal Fragments,questiedb/foreverQuestDB.lua
@@ -896,6 +915,7 @@ ID,Name,Source
 969,Luck Be With You,questiedb/foreverQuestDB.lua
 970,The Tower of Althalaxx,questiedb/foreverQuestDB.lua
 971,Knowledge in the Deeps,questiedb/foreverQuestDB.lua
+972,Water Sapta,questiedb/foreverQuestDB.lua
 973,The Tower of Althalaxx,questiedb/foreverQuestDB.lua
 974,Finding the Source,questiedb/foreverQuestDB.lua
 975,Cache of Mau'ari,questiedb/foreverQuestDB.lua
@@ -916,7 +936,9 @@ ID,Name,Source
 993,A Lost Master,questiedb/foreverQuestDB.lua
 994,Escape Through Force,questiedb/foreverQuestDB.lua
 995,Escape Through Stealth,questiedb/foreverQuestDB.lua
+996,Corrupted Windblossom,questiedb/foreverQuestDB.lua
 997,Denalan's Earth,questiedb/foreverQuestDB.lua
+998,Corrupted Windblossom,questiedb/foreverQuestDB.lua
 1000,The New Frontier,questiedb/foreverQuestDB.lua
 1001,Buzzbox 411,questiedb/foreverQuestDB.lua
 1002,Buzzbox 323,questiedb/foreverQuestDB.lua
@@ -1017,6 +1039,7 @@ ID,Name,Source
 1100,Lonebrow's Journal,questiedb/foreverQuestDB.lua
 1101,The Crone of the Kraul,questiedb/foreverQuestDB.lua
 1102,A Vengeful Fate,questiedb/foreverQuestDB.lua
+1103,Call of Water,questiedb/foreverQuestDB.lua
 1104,Salt Flat Venom,questiedb/foreverQuestDB.lua
 1105,Hardened Shells,questiedb/foreverQuestDB.lua
 1106,Martek the Exiled,questiedb/foreverQuestDB.lua
@@ -1040,6 +1063,7 @@ ID,Name,Source
 1124,Wasteland,questiedb/foreverQuestDB.lua
 1125,The Spirits of Southwind,questiedb/foreverQuestDB.lua
 1126,Hive in the Tower,questiedb/foreverQuestDB.lua
+1127,Fool's Stout,questiedb/foreverQuestDB.lua
 1130,Melor Sends Word,questiedb/foreverQuestDB.lua
 1131,Steelsnap,questiedb/foreverQuestDB.lua
 1132,Fiora Longears,questiedb/foreverQuestDB.lua
@@ -1092,6 +1116,9 @@ ID,Name,Source
 1188,Safety First,questiedb/foreverQuestDB.lua
 1189,Safety First,questiedb/foreverQuestDB.lua
 1190,Keeping Pace,questiedb/foreverQuestDB.lua
+1191,Zamek's Distraction,questiedb/foreverQuestDB.lua
+1192,Indurium Ore,questiedb/foreverQuestDB.lua
+1193,A Broken Trap,questiedb/foreverQuestDB.lua
 1194,Rizzle's Schematics,questiedb/foreverQuestDB.lua
 1195,The Sacred Flame,questiedb/foreverQuestDB.lua
 1196,The Sacred Flame,questiedb/foreverQuestDB.lua
@@ -1199,6 +1226,7 @@ ID,Name,Source
 1420,Report to Helgrum,questiedb/foreverQuestDB.lua
 1421,The Lost Caravan,questiedb/foreverQuestDB.lua
 1422,Threat From the Sea,questiedb/foreverQuestDB.lua
+1423,The Lost Supplies,questiedb/foreverQuestDB.lua
 1424,Pool of Tears,questiedb/foreverQuestDB.lua
 1425,Deliver the Shipment,questiedb/foreverQuestDB.lua
 1426,Threat From the Sea,questiedb/foreverQuestDB.lua
@@ -1216,6 +1244,7 @@ ID,Name,Source
 1438,Vahlarriel's Search,questiedb/foreverQuestDB.lua
 1439,Search for Tyranis,questiedb/foreverQuestDB.lua
 1440,Return to Vahlarriel,questiedb/foreverQuestDB.lua
+1442,Seeking the Kor Gem,questiedb/foreverQuestDB.lua
 1444,Return to Fel'Zerul,questiedb/foreverQuestDB.lua
 1445,The Temple of Atal'Hakkar,questiedb/foreverQuestDB.lua
 1446,Jammal'an the Prophet,questiedb/foreverQuestDB.lua
@@ -1232,6 +1261,9 @@ ID,Name,Source
 1457,The Karnitol Shipwreck,questiedb/foreverQuestDB.lua
 1458,Reagents for Reclaimers Inc.,questiedb/foreverQuestDB.lua
 1459,Reagents for Reclaimers Inc.,questiedb/foreverQuestDB.lua
+1462,Earth Sapta,questiedb/foreverQuestDB.lua
+1463,Earth Sapta,questiedb/foreverQuestDB.lua
+1464,Fire Sapta,questiedb/foreverQuestDB.lua
 1465,Vahlarriel's Search,questiedb/foreverQuestDB.lua
 1466,Reagents for Reclaimers Inc.,questiedb/foreverQuestDB.lua
 1467,Reagents for Reclaimers Inc.,questiedb/foreverQuestDB.lua
@@ -1275,6 +1307,7 @@ ID,Name,Source
 1511,Ken'zigla's Draught,questiedb/foreverQuestDB.lua
 1512,Love's Gift,questiedb/foreverQuestDB.lua
 1513,The Binding,questiedb/foreverQuestDB.lua
+1514,Corrupted Windblossom,questiedb/foreverQuestDB.lua
 1515,Dogran's Captivity,questiedb/foreverQuestDB.lua
 1516,Call of Earth,questiedb/foreverQuestDB.lua
 1517,Call of Earth,questiedb/foreverQuestDB.lua
@@ -1310,9 +1343,11 @@ ID,Name,Source
 1638,A Warrior's Training,questiedb/foreverQuestDB.lua
 1639,Bartleby the Drunk,questiedb/foreverQuestDB.lua
 1640,Beat Bartleby,questiedb/foreverQuestDB.lua
+1641,The Tome of Divinity,questiedb/foreverQuestDB.lua
 1642,The Tome of Divinity,questiedb/foreverQuestDB.lua
 1643,The Tome of Divinity,questiedb/foreverQuestDB.lua
 1644,The Tome of Divinity,questiedb/foreverQuestDB.lua
+1645,The Tome of Divinity,questiedb/foreverQuestDB.lua
 1646,The Tome of Divinity,questiedb/foreverQuestDB.lua
 1647,The Tome of Divinity,questiedb/foreverQuestDB.lua
 1648,The Tome of Divinity,questiedb/foreverQuestDB.lua
@@ -1322,6 +1357,7 @@ ID,Name,Source
 1652,The Tome of Valor,questiedb/foreverQuestDB.lua
 1653,The Test of Righteousness,questiedb/foreverQuestDB.lua
 1654,The Test of Righteousness,questiedb/foreverQuestDB.lua
+1655,Bailor's Ore Shipment,questiedb/foreverQuestDB.lua
 1656,A Task Unfinished,questiedb/foreverQuestDB.lua
 1657,Stinking Up Southshore,questiedb/foreverQuestDB.lua
 1658,Crashing the Wickerman Festival (PvP),questiedb/foreverQuestDB.lua
@@ -1361,6 +1397,7 @@ ID,Name,Source
 1711,Mathiel's Armor,questiedb/foreverQuestDB.lua
 1712,Cyclonian,questiedb/foreverQuestDB.lua
 1713,The Summoning,questiedb/foreverQuestDB.lua
+1714,Essence of the Exile,questiedb/foreverQuestDB.lua
 1715,The Slaughtered Lamb,questiedb/foreverQuestDB.lua
 1716,Devourer of Souls,questiedb/foreverQuestDB.lua
 1717,Gakin's Summons,questiedb/foreverQuestDB.lua
@@ -1381,8 +1418,12 @@ ID,Name,Source
 1786,The Tome of Divinity,questiedb/foreverQuestDB.lua
 1787,The Tome of Divinity,questiedb/foreverQuestDB.lua
 1788,The Tome of Divinity,questiedb/foreverQuestDB.lua
+1789,The Symbol of Life,questiedb/foreverQuestDB.lua
+1790,The Symbol of Life,questiedb/foreverQuestDB.lua
 1791,The Windwatcher,questiedb/foreverQuestDB.lua
 1792,Whirlwind Weapon,questiedb/foreverQuestDB.lua
+1793,The Tome of Valor,questiedb/foreverQuestDB.lua
+1794,The Tome of Valor,questiedb/foreverQuestDB.lua
 1795,The Binding,questiedb/foreverQuestDB.lua
 1796,Components for the Enchanted Gold Bloodrobe,questiedb/foreverQuestDB.lua
 1798,Seeking Strahad,questiedb/foreverQuestDB.lua
@@ -1417,6 +1458,7 @@ ID,Name,Source
 1859,Therzok,questiedb/foreverQuestDB.lua
 1860,Speak with Jennea,questiedb/foreverQuestDB.lua
 1861,Mirror Lake,questiedb/foreverQuestDB.lua
+1878,Water Pouch Bounty,questiedb/foreverQuestDB.lua
 1879,Speak with Bink,questiedb/foreverQuestDB.lua
 1880,Mage-tastic Gizmonitor,questiedb/foreverQuestDB.lua
 1881,Speak with Anastasia,questiedb/foreverQuestDB.lua
@@ -1538,13 +1580,20 @@ ID,Name,Source
 2519,The Temple of the Moon,questiedb/foreverQuestDB.lua
 2520,Sathrah's Sacrifice,questiedb/foreverQuestDB.lua
 2521,To Serve Kum'isha,questiedb/foreverQuestDB.lua
+2522,Kum'isha's Endeavors,questiedb/foreverQuestDB.lua
+2523,Corrupted Songflower,questiedb/foreverQuestDB.lua
 2541,The Sleeping Druid,questiedb/foreverQuestDB.lua
 2561,Druid of the Claw,questiedb/foreverQuestDB.lua
 2581,Snickerfang Jowls,questiedb/foreverQuestDB.lua
+2582,Rage of Ages,questiedb/foreverQuestDB.lua
 2583,A Boar's Vitality,questiedb/foreverQuestDB.lua
+2584,Spirit of the Boar,questiedb/foreverQuestDB.lua
 2585,The Decisive Striker,questiedb/foreverQuestDB.lua
+2586,Salt of the Scorpok,questiedb/foreverQuestDB.lua
 2601,The Basilisk's Bite,questiedb/foreverQuestDB.lua
+2602,Infallible Mind,questiedb/foreverQuestDB.lua
 2603,Vulture's Vigor,questiedb/foreverQuestDB.lua
+2604,Spiritual Domination,questiedb/foreverQuestDB.lua
 2605,The Thirsty Goblin,questiedb/foreverQuestDB.lua
 2606,In Good Taste,questiedb/foreverQuestDB.lua
 2607,The Touch of Zanzil,questiedb/foreverQuestDB.lua
@@ -1566,6 +1615,10 @@ ID,Name,Source
 2744,The Demon Hunter,questiedb/foreverQuestDB.lua
 2745,Infiltrating the Castle,questiedb/foreverQuestDB.lua
 2746,Items of Some Consequence,questiedb/foreverQuestDB.lua
+2747,An Extraordinary Egg,questiedb/foreverQuestDB.lua
+2748,A Fine Egg,questiedb/foreverQuestDB.lua
+2749,An Ordinary Egg,questiedb/foreverQuestDB.lua
+2750,A Bad Egg,questiedb/foreverQuestDB.lua
 2751,Barbaric Battlements,questiedb/foreverQuestDB.lua
 2752,On Iron Pauldrons,questiedb/foreverQuestDB.lua
 2753,Trampled Under Foot,questiedb/foreverQuestDB.lua
@@ -1632,8 +1685,11 @@ ID,Name,Source
 2875,WANTED: Andre Firebeard,questiedb/foreverQuestDB.lua
 2876,Ship Schedules,questiedb/foreverQuestDB.lua
 2877,Skulk Rock Clean-up,questiedb/foreverQuestDB.lua
+2878,Corrupted Songflower,questiedb/foreverQuestDB.lua
 2879,The Stave of Equinex,questiedb/foreverQuestDB.lua
 2880,Troll Necklace Bounty,questiedb/foreverQuestDB.lua
+2881,Troll Necklace Bounty,questiedb/foreverQuestDB.lua
+2882,Cuergo's Gold,questiedb/foreverQuestDB.lua
 2902,Woodpaw Investigation,questiedb/foreverQuestDB.lua
 2903,The Battle Plans,questiedb/foreverQuestDB.lua
 2904,A Fine Mess,questiedb/foreverQuestDB.lua
@@ -1668,6 +1724,7 @@ ID,Name,Source
 2950,Nogg's Ring Redo,questiedb/foreverQuestDB.lua
 2951,The Sparklematic 5200!,questiedb/foreverQuestDB.lua
 2952,The Sparklematic 5200!,questiedb/foreverQuestDB.lua
+2953,More Sparklematic Action,questiedb/foreverQuestDB.lua
 2954,The Stone Watcher,questiedb/foreverQuestDB.lua
 2962,The Only Cure is More Green Glow,questiedb/foreverQuestDB.lua
 2963,Portents of Uldum,questiedb/foreverQuestDB.lua
@@ -1775,6 +1832,7 @@ ID,Name,Source
 3341,Bring the End,questiedb/foreverQuestDB.lua
 3361,A Refugee's Quandary,questiedb/foreverQuestDB.lua
 3362,Thistleshrub Valley,questiedb/foreverQuestDB.lua
+3363,Corrupted Songflower,questiedb/foreverQuestDB.lua
 3364,Scalding Mornbrew Delivery,questiedb/foreverQuestDB.lua
 3365,Bring Back the Mug,questiedb/foreverQuestDB.lua
 3367,Suntara Stones,questiedb/foreverQuestDB.lua
@@ -1785,6 +1843,7 @@ ID,Name,Source
 3372,Release Them,questiedb/foreverQuestDB.lua
 3373,The Essence of Eranikus,questiedb/foreverQuestDB.lua
 3374,The Essence of Eranikus,questiedb/foreverQuestDB.lua
+3375,Replacement Phial,questiedb/foreverQuestDB.lua
 3376,Break Sharptusk!,questiedb/foreverQuestDB.lua
 3377,Prayer to Elune,questiedb/foreverQuestDB.lua
 3378,Prayer to Elune,questiedb/foreverQuestDB.lua
@@ -1793,6 +1852,7 @@ ID,Name,Source
 3382,A Crew Under Fire,questiedb/foreverQuestDB.lua
 3385,The Undermarket,questiedb/foreverQuestDB.lua
 3402,The Undermarket,questiedb/foreverQuestDB.lua
+3421,Return Trip,questiedb/foreverQuestDB.lua
 3441,Divine Retribution,questiedb/foreverQuestDB.lua
 3442,The Flawless Flame,questiedb/foreverQuestDB.lua
 3443,Forging the Shaft,questiedb/foreverQuestDB.lua
@@ -1811,7 +1871,10 @@ ID,Name,Source
 3462,Squire Maltrake,questiedb/foreverQuestDB.lua
 3463,Set Them Ablaze!,questiedb/foreverQuestDB.lua
 3481,Trinkets...,questiedb/foreverQuestDB.lua
+3483,Signal for Pickup,questiedb/foreverQuestDB.lua
 3501,Everything Counts In Large Amounts,questiedb/foreverQuestDB.lua
+3502,One Draenei's Junk...,questiedb/foreverQuestDB.lua
+3503,Meeting with the Master,questiedb/foreverQuestDB.lua
 3504,Betrayed,questiedb/foreverQuestDB.lua
 3505,Betrayed,questiedb/foreverQuestDB.lua
 3506,Betrayed,questiedb/foreverQuestDB.lua
@@ -1843,6 +1906,7 @@ ID,Name,Source
 3564,Andron's Payment to Jediga,questiedb/foreverQuestDB.lua
 3565,Xylem's Payment to Jediga,questiedb/foreverQuestDB.lua
 3566,"Rise, Obsidion!",questiedb/foreverQuestDB.lua
+3567,To the Top,questiedb/foreverQuestDB.lua
 3568,Seeping Corruption,questiedb/foreverQuestDB.lua
 3569,Seeping Corruption,questiedb/foreverQuestDB.lua
 3570,Seeping Corruption,questiedb/foreverQuestDB.lua
@@ -1868,6 +1932,10 @@ ID,Name,Source
 3641,Show Your Work,questiedb/foreverQuestDB.lua
 3642,The Pledge of Secrecy,questiedb/foreverQuestDB.lua
 3643,Show Your Work,questiedb/foreverQuestDB.lua
+3644,Membership Card Renewal,questiedb/foreverQuestDB.lua
+3645,Membership Card Renewal,questiedb/foreverQuestDB.lua
+3646,Membership Card Renewal,questiedb/foreverQuestDB.lua
+3647,Membership Card Renewal,questiedb/foreverQuestDB.lua
 3661,Favored of Elune?,questiedb/foreverQuestDB.lua
 3681,Tome of Divinity,questiedb/foreverQuestDB.lua
 3701,The Smoldering Ruins of Thaurissan,questiedb/foreverQuestDB.lua
@@ -1890,8 +1958,11 @@ ID,Name,Source
 3789,Assisting Arch Druid Staghelm,questiedb/foreverQuestDB.lua
 3790,Assisting Arch Druid Staghelm,questiedb/foreverQuestDB.lua
 3791,The Mystery of Morrowgrain,questiedb/foreverQuestDB.lua
+3792,Morrowgrain to Feathermoon Stronghold,questiedb/foreverQuestDB.lua
 3801,Dark Iron Legacy,questiedb/foreverQuestDB.lua
 3802,Dark Iron Legacy,questiedb/foreverQuestDB.lua
+3803,Morrowgrain to Darnassus,questiedb/foreverQuestDB.lua
+3804,Morrowgrain to Thunder Bluff,questiedb/foreverQuestDB.lua
 3821,Dreadmaul Rock,questiedb/foreverQuestDB.lua
 3822,Krom'Grul,questiedb/foreverQuestDB.lua
 3823,Extinguish the Firegut,questiedb/foreverQuestDB.lua
@@ -1902,6 +1973,7 @@ ID,Name,Source
 3843,The Newest Member of the Family,questiedb/foreverQuestDB.lua
 3844,It's a Secret to Everybody,questiedb/foreverQuestDB.lua
 3845,It's a Secret to Everybody,questiedb/foreverQuestDB.lua
+3861,CLUCK!,questiedb/foreverQuestDB.lua
 3881,Expedition Salvation,questiedb/foreverQuestDB.lua
 3882,Roll the Bones,questiedb/foreverQuestDB.lua
 3883,Alien Ecology,questiedb/foreverQuestDB.lua
@@ -1937,6 +2009,7 @@ ID,Name,Source
 4022,A Taste of Flame,questiedb/foreverQuestDB.lua
 4023,A Taste of Flame,questiedb/foreverQuestDB.lua
 4024,A Taste of Flame,questiedb/foreverQuestDB.lua
+4041,The Videre Elixir,questiedb/foreverQuestDB.lua
 4061,The Rise of the Machines,questiedb/foreverQuestDB.lua
 4062,The Rise of the Machines,questiedb/foreverQuestDB.lua
 4063,The Rise of the Machines,questiedb/foreverQuestDB.lua
@@ -1946,6 +2019,23 @@ ID,Name,Source
 4084,Silver Heart,questiedb/foreverQuestDB.lua
 4101,Cleansing Felwood,questiedb/foreverQuestDB.lua
 4102,Cleansing Felwood,questiedb/foreverQuestDB.lua
+4103,Salve via Hunting,questiedb/foreverQuestDB.lua
+4104,Salve via Mining,questiedb/foreverQuestDB.lua
+4105,Salve via Gathering,questiedb/foreverQuestDB.lua
+4106,Salve via Skinning,questiedb/foreverQuestDB.lua
+4107,Salve via Disenchanting,questiedb/foreverQuestDB.lua
+4108,Salve via Hunting,questiedb/foreverQuestDB.lua
+4109,Salve via Mining,questiedb/foreverQuestDB.lua
+4110,Salve via Gathering,questiedb/foreverQuestDB.lua
+4111,Salve via Skinning,questiedb/foreverQuestDB.lua
+4112,Salve via Disenchanting,questiedb/foreverQuestDB.lua
+4113,Corrupted Songflower,questiedb/foreverQuestDB.lua
+4114,Corrupted Songflower,questiedb/foreverQuestDB.lua
+4115,Corrupted Windblossom,questiedb/foreverQuestDB.lua
+4116,Corrupted Songflower,questiedb/foreverQuestDB.lua
+4117,Corrupted Whipper Root,questiedb/foreverQuestDB.lua
+4118,Corrupted Songflower,questiedb/foreverQuestDB.lua
+4119,Corrupted Night Dragon,questiedb/foreverQuestDB.lua
 4120,The Strength of Corruption,questiedb/foreverQuestDB.lua
 4121,Precarious Predicament,questiedb/foreverQuestDB.lua
 4122,Grark Lorkrub,questiedb/foreverQuestDB.lua
@@ -1979,6 +2069,8 @@ ID,Name,Source
 4185,The True Masters,questiedb/foreverQuestDB.lua
 4186,The True Masters,questiedb/foreverQuestDB.lua
 4201,The Love Potion,questiedb/foreverQuestDB.lua
+4221,Corrupted Windblossom,questiedb/foreverQuestDB.lua
+4222,Corrupted Windblossom,questiedb/foreverQuestDB.lua
 4223,The True Masters,questiedb/foreverQuestDB.lua
 4224,The True Masters,questiedb/foreverQuestDB.lua
 4241,Marshal Windsor,questiedb/foreverQuestDB.lua
@@ -2007,6 +2099,7 @@ ID,Name,Source
 4292,The Bait for Lar'korwi,questiedb/foreverQuestDB.lua
 4293,A Sample of Slime...,questiedb/foreverQuestDB.lua
 4294,... and a Batch of Ooze,questiedb/foreverQuestDB.lua
+4295,Rocknot's Ale,questiedb/foreverQuestDB.lua
 4296,Tablet of the Seven,questiedb/foreverQuestDB.lua
 4297,Food for Baby,questiedb/foreverQuestDB.lua
 4298,Becoming a Parent,questiedb/foreverQuestDB.lua
@@ -2017,16 +2110,42 @@ ID,Name,Source
 4324,Yuka Screwspigot,questiedb/foreverQuestDB.lua
 4341,Kharan Mighthammer,questiedb/foreverQuestDB.lua
 4342,Kharan's Tale,questiedb/foreverQuestDB.lua
+4343,Corrupted Windblossom,questiedb/foreverQuestDB.lua
 4361,The Bearer of Bad News,questiedb/foreverQuestDB.lua
 4362,The Fate of the Kingdom,questiedb/foreverQuestDB.lua
 4363,The Princess's Surprise,questiedb/foreverQuestDB.lua
+4381,Crystal Restore,questiedb/foreverQuestDB.lua
+4382,Crystal Force,questiedb/foreverQuestDB.lua
+4383,Crystal Ward,questiedb/foreverQuestDB.lua
+4384,Crystal Yield,questiedb/foreverQuestDB.lua
+4385,Crystal Charge,questiedb/foreverQuestDB.lua
+4386,Crystal Spire,questiedb/foreverQuestDB.lua
+4401,Corrupted Songflower,questiedb/foreverQuestDB.lua
 4402,Galgar's Cactus Apple Surprise,questiedb/foreverQuestDB.lua
+4403,Corrupted Windblossom,questiedb/foreverQuestDB.lua
 4421,The Corruption of the Jadefire,questiedb/foreverQuestDB.lua
 4441,Felbound Ancients,questiedb/foreverQuestDB.lua
 4442,Purified!,questiedb/foreverQuestDB.lua
+4443,Corrupted Whipper Root,questiedb/foreverQuestDB.lua
+4444,Corrupted Whipper Root,questiedb/foreverQuestDB.lua
+4445,Corrupted Whipper Root,questiedb/foreverQuestDB.lua
+4446,Corrupted Whipper Root,questiedb/foreverQuestDB.lua
+4447,Corrupted Night Dragon,questiedb/foreverQuestDB.lua
+4448,Corrupted Night Dragon,questiedb/foreverQuestDB.lua
 4449,Caught!,questiedb/foreverQuestDB.lua
 4450,Ledger from Tanaris,questiedb/foreverQuestDB.lua
 4451,The Key to Freedom,questiedb/foreverQuestDB.lua
+4461,Corrupted Whipper Root,questiedb/foreverQuestDB.lua
+4462,Corrupted Night Dragon,questiedb/foreverQuestDB.lua
+4463,Libram of Rumination,questiedb/foreverQuestDB.lua
+4464,Corrupted Songflower,questiedb/foreverQuestDB.lua
+4465,Corrupted Songflower,questiedb/foreverQuestDB.lua
+4466,Corrupted Windblossom,questiedb/foreverQuestDB.lua
+4467,Corrupted Windblossom,questiedb/foreverQuestDB.lua
+4481,Libram of Constitution,questiedb/foreverQuestDB.lua
+4482,Libram of Tenacity,questiedb/foreverQuestDB.lua
+4483,Libram of Resilience,questiedb/foreverQuestDB.lua
+4484,Libram of Voracity,questiedb/foreverQuestDB.lua
 4485,The Tome of Nobility,questiedb/foreverQuestDB.lua
 4486,The Tome of Nobility,questiedb/foreverQuestDB.lua
 4487,Summon Felsteed,questiedb/foreverQuestDB.lua
@@ -2054,14 +2173,18 @@ ID,Name,Source
 4513,A Little Slime Goes a Long Way,questiedb/foreverQuestDB.lua
 4521,Wild Guardians,questiedb/foreverQuestDB.lua
 4542,Message to Freewind Post,questiedb/foreverQuestDB.lua
+4561,Testing for Impurities - Un'Goro Crater,questiedb/foreverQuestDB.lua
 4581,Kayneth Stillwind,questiedb/foreverQuestDB.lua
 4601,The Sparklematic 5200!,questiedb/foreverQuestDB.lua
 4602,The Sparklematic 5200!,questiedb/foreverQuestDB.lua
+4603,More Sparklematic Action,questiedb/foreverQuestDB.lua
+4604,More Sparklematic Action,questiedb/foreverQuestDB.lua
 4605,The Sparklematic 5200!,questiedb/foreverQuestDB.lua
 4606,The Sparklematic 5200!,questiedb/foreverQuestDB.lua
 4621,"Avast Ye, Admiral!",questiedb/foreverQuestDB.lua
 4641,Your Place In The World,questiedb/foreverQuestDB.lua
 4642,Melding of Influences,questiedb/foreverQuestDB.lua
+4661,Testing for Corruption - Felwood,questiedb/foreverQuestDB.lua
 4681,Washed Ashore,questiedb/foreverQuestDB.lua
 4701,Put Her Down,questiedb/foreverQuestDB.lua
 4721,Wild Guardians,questiedb/foreverQuestDB.lua
@@ -2102,9 +2225,17 @@ ID,Name,Source
 4782,Components for the Enchanted Gold Bloodrobe,questiedb/foreverQuestDB.lua
 4783,Components for the Enchanted Gold Bloodrobe,questiedb/foreverQuestDB.lua
 4784,Components for the Enchanted Gold Bloodrobe,questiedb/foreverQuestDB.lua
+4785,Fine Gold Thread,questiedb/foreverQuestDB.lua
 4786,The Completed Robe,questiedb/foreverQuestDB.lua
 4787,The Ancient Egg,questiedb/foreverQuestDB.lua
 4788,The Final Tablets,questiedb/foreverQuestDB.lua
+4801,Frostsaber E'ko,questiedb/foreverQuestDB.lua
+4802,Winterfall E'ko,questiedb/foreverQuestDB.lua
+4803,Shardtooth E'ko,questiedb/foreverQuestDB.lua
+4804,Chillwind E'ko,questiedb/foreverQuestDB.lua
+4805,Ice Thistle E'ko,questiedb/foreverQuestDB.lua
+4806,Frostmaul E'ko,questiedb/foreverQuestDB.lua
+4807,Wildkin E'ko,questiedb/foreverQuestDB.lua
 4808,Felnok Steelspring,questiedb/foreverQuestDB.lua
 4809,Chillwind Horns,questiedb/foreverQuestDB.lua
 4810,Return to Tinkee,questiedb/foreverQuestDB.lua
@@ -2142,8 +2273,10 @@ ID,Name,Source
 4967,Knowledge of the Orb of Orahil,questiedb/foreverQuestDB.lua
 4968,Knowledge of the Orb of Orahil,questiedb/foreverQuestDB.lua
 4969,Knowledge of the Orb of Orahil,questiedb/foreverQuestDB.lua
+4970,Frostsaber Provisions,questiedb/foreverQuestDB.lua
 4971,A Matter of Time,questiedb/foreverQuestDB.lua
 4972,Counting Out Time,questiedb/foreverQuestDB.lua
+4973,Counting Out Time,questiedb/foreverQuestDB.lua
 4974,For The Horde!,questiedb/foreverQuestDB.lua
 4975,The Completed Orb of Noh'Orahil,questiedb/foreverQuestDB.lua
 4976,Returning the Cleansed Orb,questiedb/foreverQuestDB.lua
@@ -2160,6 +2293,11 @@ ID,Name,Source
 5022,Better Late Than Never,questiedb/foreverQuestDB.lua
 5023,Better Late Than Never,questiedb/foreverQuestDB.lua
 5041,Supplies for the Crossroads,questiedb/foreverQuestDB.lua
+5042,Agamaggan's Strength,questiedb/foreverQuestDB.lua
+5043,Agamaggan's Agility,questiedb/foreverQuestDB.lua
+5044,Wisdom of Agamaggan,questiedb/foreverQuestDB.lua
+5045,Rising Spirit,questiedb/foreverQuestDB.lua
+5046,Razorhide,questiedb/foreverQuestDB.lua
 5047,"Finkle Einhorn, At Your Service!",questiedb/foreverQuestDB.lua
 5048,Good Natured Emma,questiedb/foreverQuestDB.lua
 5049,The Jeremiah Blues,questiedb/foreverQuestDB.lua
@@ -2171,12 +2309,16 @@ ID,Name,Source
 5056,Shy-Rotam,questiedb/foreverQuestDB.lua
 5057,Past Endeavors,questiedb/foreverQuestDB.lua
 5058,Mrs. Dalson's Diary,questiedb/foreverQuestDB.lua
+5059,Locked Away,questiedb/foreverQuestDB.lua
 5060,Locked Away,questiedb/foreverQuestDB.lua
 5061,Aquatic Form,questiedb/foreverQuestDB.lua
 5062,Sacred Fire,questiedb/foreverQuestDB.lua
+5063,Cap of the Scarlet Savant,questiedb/foreverQuestDB.lua
 5064,Grimtotem Spying,questiedb/foreverQuestDB.lua
 5065,The Lost Tablets of Mosh'aru,questiedb/foreverQuestDB.lua
 5066,A Call to Arms: The Plaguelands!,questiedb/foreverQuestDB.lua
+5067,Leggings of Arcana,questiedb/foreverQuestDB.lua
+5068,Breastplate of Bloodthirst,questiedb/foreverQuestDB.lua
 5081,Maxwell's Mission,questiedb/foreverQuestDB.lua
 5082,Threat of the Winterfall,questiedb/foreverQuestDB.lua
 5083,Winterfall Firewater,questiedb/foreverQuestDB.lua
@@ -2198,6 +2340,7 @@ ID,Name,Source
 5102,General Drakkisath's Demise,questiedb/foreverQuestDB.lua
 5103,Hot Fiery Death,questiedb/foreverQuestDB.lua
 5121,High Chief Winterfall,questiedb/foreverQuestDB.lua
+5122,The Medallion of Faith,questiedb/foreverQuestDB.lua
 5123,The Final Piece,questiedb/foreverQuestDB.lua
 5124,Fiery Plate Gauntlets,questiedb/foreverQuestDB.lua
 5125,Aurius' Reckoning,questiedb/foreverQuestDB.lua
@@ -2213,6 +2356,7 @@ ID,Name,Source
 5147,Wanted - Arnak Grimtotem,questiedb/foreverQuestDB.lua
 5148,Tribal Leatherworking,questiedb/foreverQuestDB.lua
 5149,Pamela's Doll,questiedb/foreverQuestDB.lua
+5150,Dadanga is Hungry!,questiedb/foreverQuestDB.lua
 5151,Hypercapacitor Gizmo,questiedb/foreverQuestDB.lua
 5152,Auntie Marlene,questiedb/foreverQuestDB.lua
 5153,A Strange Historian,questiedb/foreverQuestDB.lua
@@ -2232,6 +2376,7 @@ ID,Name,Source
 5167,Legplates of the Chromatic Defier,questiedb/foreverQuestDB.lua
 5168,Heroes of Darrowshire,questiedb/foreverQuestDB.lua
 5181,Villains of Darrowshire,questiedb/foreverQuestDB.lua
+5201,Winterfall Intrusion,questiedb/foreverQuestDB.lua
 5202,A Strange Red Key,questiedb/foreverQuestDB.lua
 5203,Rescue From Jaedenar,questiedb/foreverQuestDB.lua
 5204,Retribution of the Light,questiedb/foreverQuestDB.lua
@@ -2244,12 +2389,16 @@ ID,Name,Source
 5215,The Scourge Cauldrons,questiedb/foreverQuestDB.lua
 5216,Target: Felstone Field,questiedb/foreverQuestDB.lua
 5217,Return to Chillwind Camp,questiedb/foreverQuestDB.lua
+5218,Felstone Field Cauldron,questiedb/foreverQuestDB.lua
 5219,Target: Dalson's Tears,questiedb/foreverQuestDB.lua
 5220,Return to Chillwind Camp,questiedb/foreverQuestDB.lua
+5221,Dalson's Tears Cauldron,questiedb/foreverQuestDB.lua
 5222,Target: Writhing Haunt,questiedb/foreverQuestDB.lua
 5223,Return to Chillwind Camp,questiedb/foreverQuestDB.lua
+5224,Writhing Haunt Cauldron,questiedb/foreverQuestDB.lua
 5225,Target: Gahrron's Withering,questiedb/foreverQuestDB.lua
 5226,Return to Chillwind Point,questiedb/foreverQuestDB.lua
+5227,Gahrron's Withering Cauldron,questiedb/foreverQuestDB.lua
 5228,The Scourge Cauldrons,questiedb/foreverQuestDB.lua
 5229,Target: Felstone Field,questiedb/foreverQuestDB.lua
 5230,Return to the Bulwark,questiedb/foreverQuestDB.lua
@@ -2300,7 +2449,14 @@ ID,Name,Source
 5385,The Remains of Trey Lightforge,questiedb/foreverQuestDB.lua
 5386,Catch of the Day,questiedb/foreverQuestDB.lua
 5401,Argent Dawn Commission,questiedb/foreverQuestDB.lua
+5402,Minion's Scourgestones,questiedb/foreverQuestDB.lua
+5403,Invader's Scourgestones,questiedb/foreverQuestDB.lua
+5404,Corruptor's Scourgestones,questiedb/foreverQuestDB.lua
 5405,Argent Dawn Commission,questiedb/foreverQuestDB.lua
+5406,Corruptor's Scourgestones,questiedb/foreverQuestDB.lua
+5407,Invader's Scourgestones,questiedb/foreverQuestDB.lua
+5408,Minion's Scourgestones,questiedb/foreverQuestDB.lua
+5421,Fish in a Bucket,questiedb/foreverQuestDB.lua
 5441,Lazy Peons,questiedb/foreverQuestDB.lua
 5461,"The Human, Ras Frostwhisper",questiedb/foreverQuestDB.lua
 5462,"The Dying, Ras Frostwhisper",questiedb/foreverQuestDB.lua
@@ -2316,12 +2472,16 @@ ID,Name,Source
 5504,Mantles of the Dawn,questiedb/foreverQuestDB.lua
 5505,The Key to Scholomance,questiedb/foreverQuestDB.lua
 5507,Mantles of the Dawn,questiedb/foreverQuestDB.lua
+5508,Corruptor's Scourgestones,questiedb/foreverQuestDB.lua
+5509,Invader's Scourgestones,questiedb/foreverQuestDB.lua
+5510,Minion's Scourgestones,questiedb/foreverQuestDB.lua
 5511,The Key to Scholomance,questiedb/foreverQuestDB.lua
 5513,Mantles of the Dawn,questiedb/foreverQuestDB.lua
 5514,Mold Rhymes With...,questiedb/foreverQuestDB.lua
 5515,Krastinov's Bag of Horrors,questiedb/foreverQuestDB.lua
 5517,Chromatic Mantle of the Dawn,questiedb/foreverQuestDB.lua
 5518,The Gordok Ogre Suit,questiedb/foreverQuestDB.lua
+5519,The Gordok Ogre Suit,questiedb/foreverQuestDB.lua
 5521,Chromatic Mantle of the Dawn,questiedb/foreverQuestDB.lua
 5522,Leonid Barthalomew,questiedb/foreverQuestDB.lua
 5524,Chromatic Mantle of the Dawn,questiedb/foreverQuestDB.lua
@@ -2344,6 +2504,7 @@ ID,Name,Source
 5545,A Bundle of Trouble,questiedb/foreverQuestDB.lua
 5561,Kodo Roundup,questiedb/foreverQuestDB.lua
 5581,Portals of the Legion,questiedb/foreverQuestDB.lua
+5582,Healthy Dragon Scale,questiedb/foreverQuestDB.lua
 5601,Sister Pamela,questiedb/foreverQuestDB.lua
 5621,Garments of the Moon,questiedb/foreverQuestDB.lua
 5622,In Favor of Elune,questiedb/foreverQuestDB.lua
@@ -2439,6 +2600,8 @@ ID,Name,Source
 5889,Salve via Gathering,questiedb/foreverQuestDB.lua
 5890,Salve via Skinning,questiedb/foreverQuestDB.lua
 5891,Salve via Disenchanting,questiedb/foreverQuestDB.lua
+5892,Irondeep Supplies,questiedb/foreverQuestDB.lua
+5893,Coldtooth Supplies,questiedb/foreverQuestDB.lua
 5901,A Plague Upon Thee,questiedb/foreverQuestDB.lua
 5902,A Plague Upon Thee,questiedb/foreverQuestDB.lua
 5903,A Plague Upon Thee,questiedb/foreverQuestDB.lua
@@ -2460,6 +2623,7 @@ ID,Name,Source
 5943,Gizelton Caravan,questiedb/foreverQuestDB.lua
 5944,In Dreams,questiedb/foreverQuestDB.lua
 5961,The Champion of the Banshee Queen,questiedb/foreverQuestDB.lua
+5981,Rampaging Giants,questiedb/foreverQuestDB.lua
 6001,Body and Heart,questiedb/foreverQuestDB.lua
 6002,Body and Heart,questiedb/foreverQuestDB.lua
 6004,Unfinished Business,questiedb/foreverQuestDB.lua
@@ -2595,6 +2759,9 @@ ID,Name,Source
 6542,Report to Kadrak,questiedb/foreverQuestDB.lua
 6543,The Warsong Reports,questiedb/foreverQuestDB.lua
 6544,Torek's Assault,questiedb/foreverQuestDB.lua
+6545,Warsong Runner Update,questiedb/foreverQuestDB.lua
+6546,Warsong Outrider Update,questiedb/foreverQuestDB.lua
+6547,Warsong Scout Update,questiedb/foreverQuestDB.lua
 6548,Avenge My Village,questiedb/foreverQuestDB.lua
 6561,Blackfathom Villainy,questiedb/foreverQuestDB.lua
 6562,Trouble in the Deeps,questiedb/foreverQuestDB.lua
@@ -2607,6 +2774,7 @@ ID,Name,Source
 6569,Oculus Illusions,questiedb/foreverQuestDB.lua
 6570,Emberstrife,questiedb/foreverQuestDB.lua
 6571,Warsong Supplies,questiedb/foreverQuestDB.lua
+6581,Warsong Saw Blades,questiedb/foreverQuestDB.lua
 6582,"The Test of Skulls, Scryer",questiedb/foreverQuestDB.lua
 6583,"The Test of Skulls, Somnus",questiedb/foreverQuestDB.lua
 6584,"The Test of Skulls, Chronalis",questiedb/foreverQuestDB.lua
@@ -2633,36 +2801,64 @@ ID,Name,Source
 6628,Test of Lore,questiedb/foreverQuestDB.lua
 6629,Kill Grundig Darkcloud,questiedb/foreverQuestDB.lua
 6641,Vorsha the Lasher,questiedb/foreverQuestDB.lua
+6642,"Favor Amongst the Brotherhood, Dark Iron Ore",questiedb/foreverQuestDB.lua
+6643,"Favor Amongst the Brotherhood, Fiery Core",questiedb/foreverQuestDB.lua
+6644,"Favor Amongst the Brotherhood, Lava Core",questiedb/foreverQuestDB.lua
+6645,"Favor Amongst the Brotherhood, Core Leather",questiedb/foreverQuestDB.lua
+6646,"Favor Amongst the Brotherhood, Blood of the Mountain",questiedb/foreverQuestDB.lua
 6661,Deeprun Rat Roundup,questiedb/foreverQuestDB.lua
 6662,"Me Brother, Nipsy",questiedb/foreverQuestDB.lua
 6681,"The Manor, Ravenholdt",questiedb/foreverQuestDB.lua
+6701,Syndicate Emblems,questiedb/foreverQuestDB.lua
 6721,The Hunter's Path,questiedb/foreverQuestDB.lua
 6722,The Hunter's Path,questiedb/foreverQuestDB.lua
+6741,More Booty!,questiedb/foreverQuestDB.lua
 6761,The New Frontier,questiedb/foreverQuestDB.lua
 6762,Rabine Saturna,questiedb/foreverQuestDB.lua
+6781,More Armor Scraps,questiedb/foreverQuestDB.lua
+6801,Lokholar the Ice Lord,questiedb/foreverQuestDB.lua
 6804,Poisoned Water,questiedb/foreverQuestDB.lua
 6805,Stormers and Rumblers,questiedb/foreverQuestDB.lua
 6821,Eye of the Emberseer,questiedb/foreverQuestDB.lua
 6822,The Molten Core,questiedb/foreverQuestDB.lua
 6823,Agent of Hydraxis,questiedb/foreverQuestDB.lua
 6824,Hands of the Enemy,questiedb/foreverQuestDB.lua
+6825,Call of Air - Guse's Fleet,questiedb/foreverQuestDB.lua
+6826,Call of Air - Jeztor's Fleet,questiedb/foreverQuestDB.lua
+6827,Call of Air - Mulverick's Fleet,questiedb/foreverQuestDB.lua
 6844,"Umber, Archivist",questiedb/foreverQuestDB.lua
 6845,Uncovering Past Secrets,questiedb/foreverQuestDB.lua
+6846,Begin the Attack!,questiedb/foreverQuestDB.lua
+6847,Master Ryson's All Seeing Eye,questiedb/foreverQuestDB.lua
+6848,Master Ryson's All Seeing Eye,questiedb/foreverQuestDB.lua
+6861,Zinfizzlex's Portable Shredder Unit,questiedb/foreverQuestDB.lua
+6862,Zinfizzlex's Portable Shredder Unit,questiedb/foreverQuestDB.lua
+6881,Ivus the Forest Lord,questiedb/foreverQuestDB.lua
+6901,Launch the Attack!,questiedb/foreverQuestDB.lua
 6921,Amongst the Ruins,questiedb/foreverQuestDB.lua
 6922,Baron Aquanis,questiedb/foreverQuestDB.lua
+6941,Call of Air - Vipore's Fleet,questiedb/foreverQuestDB.lua
+6942,Call of Air - Slidore's Fleet,questiedb/foreverQuestDB.lua
+6943,Call of Air - Ichman's Fleet,questiedb/foreverQuestDB.lua
 6961,Great-father Winter is Here!,questiedb/foreverQuestDB.lua
 6962,Treats for Great-father Winter,questiedb/foreverQuestDB.lua
 6963,Stolen Winter Veil Treats,questiedb/foreverQuestDB.lua
 6964,The Reason for the Season,questiedb/foreverQuestDB.lua
 6981,The Glowing Shard,questiedb/foreverQuestDB.lua
+6982,Coldtooth Supplies,questiedb/foreverQuestDB.lua
 6983,You're a Mean One...,questiedb/foreverQuestDB.lua
 6984,A Smokywood Pastures Thank You!,questiedb/foreverQuestDB.lua
+6985,Irondeep Supplies,questiedb/foreverQuestDB.lua
+7001,Empty Stables,questiedb/foreverQuestDB.lua
+7002,Ram Hide Harnesses,questiedb/foreverQuestDB.lua
 7003,Zapped Giants,questiedb/foreverQuestDB.lua
 7021,Great-father Winter is Here!,questiedb/foreverQuestDB.lua
 7022,Greatfather Winter is Here!,questiedb/foreverQuestDB.lua
 7023,Greatfather Winter is Here!,questiedb/foreverQuestDB.lua
 7024,Great-father Winter is Here!,questiedb/foreverQuestDB.lua
 7025,Treats for Greatfather Winter,questiedb/foreverQuestDB.lua
+7026,Ram Riding Harnesses,questiedb/foreverQuestDB.lua
+7027,Empty Stables,questiedb/foreverQuestDB.lua
 7028,Twisted Evils,questiedb/foreverQuestDB.lua
 7029,Vyletongue Corruption,questiedb/foreverQuestDB.lua
 7041,Vyletongue Corruption,questiedb/foreverQuestDB.lua
@@ -2716,6 +2912,8 @@ ID,Name,Source
 7301,Fallen Sky Lords,questiedb/foreverQuestDB.lua
 7302,Fallen Sky Lords,questiedb/foreverQuestDB.lua
 7321,Soothing Turtle Bisque,questiedb/foreverQuestDB.lua
+7341,A Fair Trade,questiedb/foreverQuestDB.lua
+7342,Arrows Are For Sissies,questiedb/foreverQuestDB.lua
 7361,Favor Amongst the Darkspear,questiedb/foreverQuestDB.lua
 7362,Ally of the Tauren,questiedb/foreverQuestDB.lua
 7363,The Human Condition,questiedb/foreverQuestDB.lua
@@ -2724,15 +2922,31 @@ ID,Name,Source
 7366,The Archbishop's Mercy,questiedb/foreverQuestDB.lua
 7367,Defusing the Threat,questiedb/foreverQuestDB.lua
 7368,Defusing the Threat,questiedb/foreverQuestDB.lua
+7381,The Return of Korrak,questiedb/foreverQuestDB.lua
+7382,Korrak the Everliving,questiedb/foreverQuestDB.lua
 7383,Crown of the Earth,questiedb/foreverQuestDB.lua
+7385,A Gallon of Blood,questiedb/foreverQuestDB.lua
+7386,Crystal Cluster,questiedb/foreverQuestDB.lua
 7401,Wanted: DWARVES!,questiedb/foreverQuestDB.lua
 7402,Wanted: ORCS!,questiedb/foreverQuestDB.lua
+7421,Darkspear Defense,questiedb/foreverQuestDB.lua
+7422,Tuft it Out,questiedb/foreverQuestDB.lua
+7423,I've Got A Fever For More Bone Chips,questiedb/foreverQuestDB.lua
+7424,What the Hoof?,questiedb/foreverQuestDB.lua
+7425,Staghelm's Mojo Jamboree,questiedb/foreverQuestDB.lua
+7426,One Man's Love,questiedb/foreverQuestDB.lua
+7427,Wanted: MORE DWARVES!,questiedb/foreverQuestDB.lua
+7428,Wanted: MORE ORCS!,questiedb/foreverQuestDB.lua
+7429,Free Knot!,questiedb/foreverQuestDB.lua
 7441,Pusillin and the Elder Azj'Tordin,questiedb/foreverQuestDB.lua
 7461,The Madness Within,questiedb/foreverQuestDB.lua
 7462,The Treasure of the Shen'dralar,questiedb/foreverQuestDB.lua
 7463,Arcane Refreshment,questiedb/foreverQuestDB.lua
 7481,Elven Legends,questiedb/foreverQuestDB.lua
 7482,Elven Legends,questiedb/foreverQuestDB.lua
+7483,Libram of Rapidity,questiedb/foreverQuestDB.lua
+7484,Libram of Focus,questiedb/foreverQuestDB.lua
+7485,Libram of Protection,questiedb/foreverQuestDB.lua
 7486,A Hero's Reward,questiedb/foreverQuestDB.lua
 7488,Lethtendris's Web,questiedb/foreverQuestDB.lua
 7489,Lethtendris's Web,questiedb/foreverQuestDB.lua
@@ -2806,7 +3020,22 @@ ID,Name,Source
 7657,Imperial Plate Helm,questiedb/foreverQuestDB.lua
 7658,Imperial Plate Leggings,questiedb/foreverQuestDB.lua
 7659,Imperial Plate Shoulders,questiedb/foreverQuestDB.lua
+7660,Wolf Swapping - Arctic Wolf,questiedb/foreverQuestDB.lua
+7661,Wolf Swapping - Red Wolf,questiedb/foreverQuestDB.lua
+7662,New Kodo - Teal,questiedb/foreverQuestDB.lua
+7663,New Kodo - Green,questiedb/foreverQuestDB.lua
+7664,Ivory Raptor Replacement,questiedb/foreverQuestDB.lua
+7665,Red Raptor Replacement,questiedb/foreverQuestDB.lua
+7666,Again Into the Great Ossuary,questiedb/foreverQuestDB.lua
 7667,Material Assistance,questiedb/foreverQuestDB.lua
+7671,Frostsaber Replacement,questiedb/foreverQuestDB.lua
+7672,Nightsaber Replacement,questiedb/foreverQuestDB.lua
+7673,Frost Ram Exchange,questiedb/foreverQuestDB.lua
+7674,Black Ram Exchange,questiedb/foreverQuestDB.lua
+7675,Icy Blue Mechanostrider Replacement,questiedb/foreverQuestDB.lua
+7676,White Mechanostrider Replacement,questiedb/foreverQuestDB.lua
+7677,White Stallion Exchange,questiedb/foreverQuestDB.lua
+7678,Palomino Exchange,questiedb/foreverQuestDB.lua
 7701,WANTED: Overseer Maltorius,questiedb/foreverQuestDB.lua
 7703,Unfinished Gordok Business,questiedb/foreverQuestDB.lua
 7704,Look at the Size of It!,questiedb/foreverQuestDB.lua
@@ -2814,6 +3043,8 @@ ID,Name,Source
 7722,What the Flux?,questiedb/foreverQuestDB.lua
 7723,Curse These Fat Fingers,questiedb/foreverQuestDB.lua
 7724,Fiery Menace!,questiedb/foreverQuestDB.lua
+7725,Again With the Zapped Giants,questiedb/foreverQuestDB.lua
+7726,Refuel for the Zapping,questiedb/foreverQuestDB.lua
 7727,Incendosaurs? Whateverosaur is More Like It,questiedb/foreverQuestDB.lua
 7728,STOLEN: Smithing Tuyere and Lookout's Spyglass,questiedb/foreverQuestDB.lua
 7729,JOB OPPORTUNITY: Culling the Competition,questiedb/foreverQuestDB.lua
@@ -2822,6 +3053,10 @@ ID,Name,Source
 7732,Zukk'ash Report,questiedb/foreverQuestDB.lua
 7733,Improved Quality,questiedb/foreverQuestDB.lua
 7734,Improved Quality,questiedb/foreverQuestDB.lua
+7735,Pristine Yeti Hide,questiedb/foreverQuestDB.lua
+7736,Restoring Fiery Flux Supplies via Kingsblood,questiedb/foreverQuestDB.lua
+7737,Gaining Acceptance,questiedb/foreverQuestDB.lua
+7738,Perfect Yeti Hide,questiedb/foreverQuestDB.lua
 7761,Blackhand's Command,questiedb/foreverQuestDB.lua
 7781,The Lord of Blackrock,questiedb/foreverQuestDB.lua
 7782,The Lord of Blackrock,questiedb/foreverQuestDB.lua
@@ -2837,39 +3072,48 @@ ID,Name,Source
 7793,A Donation of Silk,questiedb/foreverQuestDB.lua
 7794,A Donation of Mageweave,questiedb/foreverQuestDB.lua
 7795,A Donation of Runecloth,questiedb/foreverQuestDB.lua
+7796,Additional Runecloth,questiedb/foreverQuestDB.lua
 7798,A Donation of Silk,questiedb/foreverQuestDB.lua
 7799,A Donation of Mageweave,questiedb/foreverQuestDB.lua
 7800,A Donation of Runecloth,questiedb/foreverQuestDB.lua
+7801,Additional Runecloth,questiedb/foreverQuestDB.lua
 7802,A Donation of Wool,questiedb/foreverQuestDB.lua
 7803,A Donation of Silk,questiedb/foreverQuestDB.lua
 7804,A Donation of Mageweave,questiedb/foreverQuestDB.lua
 7805,A Donation of Runecloth,questiedb/foreverQuestDB.lua
+7806,Additional Runecloth,questiedb/foreverQuestDB.lua
 7807,A Donation of Wool,questiedb/foreverQuestDB.lua
 7808,A Donation of Silk,questiedb/foreverQuestDB.lua
 7809,A Donation of Mageweave,questiedb/foreverQuestDB.lua
 7810,Arena Master,questiedb/foreverQuestDB.lua
 7811,A Donation of Runecloth,questiedb/foreverQuestDB.lua
+7812,Additional Runecloth,questiedb/foreverQuestDB.lua
 7813,A Donation of Wool,questiedb/foreverQuestDB.lua
 7814,A Donation of Silk,questiedb/foreverQuestDB.lua
 7815,"Snapjaws, Mon!",questiedb/foreverQuestDB.lua
 7816,"Gammerita, Mon!",questiedb/foreverQuestDB.lua
 7817,A Donation of Mageweave,questiedb/foreverQuestDB.lua
 7818,A Donation of Runecloth,questiedb/foreverQuestDB.lua
+7819,Additional Runecloth,questiedb/foreverQuestDB.lua
 7820,A Donation of Wool,questiedb/foreverQuestDB.lua
 7821,A Donation of Silk,questiedb/foreverQuestDB.lua
 7822,A Donation of Mageweave,questiedb/foreverQuestDB.lua
 7823,A Donation of Runecloth,questiedb/foreverQuestDB.lua
 7824,A Donation of Runecloth,questiedb/foreverQuestDB.lua
+7825,Additional Runecloth,questiedb/foreverQuestDB.lua
 7826,A Donation of Wool,questiedb/foreverQuestDB.lua
 7827,A Donation of Silk,questiedb/foreverQuestDB.lua
 7828,Stalking the Stalkers,questiedb/foreverQuestDB.lua
 7829,Hunt the Savages,questiedb/foreverQuestDB.lua
 7830,Avenging the Fallen,questiedb/foreverQuestDB.lua
 7831,A Donation of Mageweave,questiedb/foreverQuestDB.lua
+7832,Additional Runecloth,questiedb/foreverQuestDB.lua
 7833,A Donation of Wool,questiedb/foreverQuestDB.lua
 7834,A Donation of Silk,questiedb/foreverQuestDB.lua
 7835,A Donation of Mageweave,questiedb/foreverQuestDB.lua
 7836,A Donation of Runecloth,questiedb/foreverQuestDB.lua
+7837,Additional Runecloth,questiedb/foreverQuestDB.lua
+7838,Arena Grandmaster,questiedb/foreverQuestDB.lua
 7839,Vilebranch Hooligans,questiedb/foreverQuestDB.lua
 7840,Lard Lost His Lunch,questiedb/foreverQuestDB.lua
 7841,Message to the Wildhammer,questiedb/foreverQuestDB.lua
@@ -2897,8 +3141,58 @@ ID,Name,Source
 7875,Quell the Silverwing Usurpers,questiedb/foreverQuestDB.lua
 7876,Quell the Silverwing Usurpers,questiedb/foreverQuestDB.lua
 7877,The Treasure of the Shen'dralar,questiedb/foreverQuestDB.lua
+7881,Carnival Boots,questiedb/foreverQuestDB.lua
+7882,Carnival Jerkins,questiedb/foreverQuestDB.lua
+7883,The World's Largest Gnome!,questiedb/foreverQuestDB.lua
+7884,Crocolisk Boy and the Bearded Murloc,questiedb/foreverQuestDB.lua
+7885,Armor Kits,questiedb/foreverQuestDB.lua
+7886,Talismans of Merit,questiedb/foreverQuestDB.lua
+7887,Talismans of Merit,questiedb/foreverQuestDB.lua
+7888,Talismans of Merit,questiedb/foreverQuestDB.lua
+7889,Coarse Weightstone,questiedb/foreverQuestDB.lua
+7890,Heavy Grinding Stone,questiedb/foreverQuestDB.lua
+7891,Green Iron Bracers,questiedb/foreverQuestDB.lua
+7892,Big Black Mace,questiedb/foreverQuestDB.lua
+7893,Rituals of Strength,questiedb/foreverQuestDB.lua
+7894,Copper Modulator,questiedb/foreverQuestDB.lua
+7895,Whirring Bronze Gizmo,questiedb/foreverQuestDB.lua
+7896,Green Fireworks,questiedb/foreverQuestDB.lua
+7897,Mechanical Repair Kits,questiedb/foreverQuestDB.lua
+7898,Thorium Widget,questiedb/foreverQuestDB.lua
+7899,Small Furry Paws,questiedb/foreverQuestDB.lua
+7900,Torn Bear Pelts,questiedb/foreverQuestDB.lua
+7901,Soft Bushy Tails,questiedb/foreverQuestDB.lua
+7902,Vibrant Plumes,questiedb/foreverQuestDB.lua
+7903,Evil Bat Eyes,questiedb/foreverQuestDB.lua
 7905,The Darkmoon Faire,questiedb/foreverQuestDB.lua
+7907,Darkmoon Beast Deck,questiedb/foreverQuestDB.lua
+7921,Talismans of Merit,questiedb/foreverQuestDB.lua
+7922,Mark of Honor,questiedb/foreverQuestDB.lua
+7923,Mark of Honor,questiedb/foreverQuestDB.lua
+7924,Mark of Honor,questiedb/foreverQuestDB.lua
+7925,Mark of Honor,questiedb/foreverQuestDB.lua
 7926,The Darkmoon Faire,questiedb/foreverQuestDB.lua
+7927,Darkmoon Portals Deck,questiedb/foreverQuestDB.lua
+7928,Darkmoon Warlords Deck,questiedb/foreverQuestDB.lua
+7929,Darkmoon Elementals Deck,questiedb/foreverQuestDB.lua
+7930,5 Tickets - Darkmoon Flower,questiedb/foreverQuestDB.lua
+7931,5 Tickets - Minor Darkmoon Prize,questiedb/foreverQuestDB.lua
+7932,12 Tickets - Lesser Darkmoon Prize,questiedb/foreverQuestDB.lua
+7933,40 Tickets - Greater Darkmoon Prize,questiedb/foreverQuestDB.lua
+7934,50 Tickets - Darkmoon Storage Box,questiedb/foreverQuestDB.lua
+7935,10 Tickets - Last Month's Mutton,questiedb/foreverQuestDB.lua
+7936,50 Tickets - Last Year's Mutton,questiedb/foreverQuestDB.lua
+7937,Your Fortune Awaits You...,questiedb/foreverQuestDB.lua
+7938,Your Fortune Awaits You...,questiedb/foreverQuestDB.lua
+7939,More Dense Grinding Stones,questiedb/foreverQuestDB.lua
+7940,1200 Tickets - Orb of the Darkmoon,questiedb/foreverQuestDB.lua
+7941,More Armor Kits,questiedb/foreverQuestDB.lua
+7942,More Thorium Widgets,questiedb/foreverQuestDB.lua
+7943,More Bat Eyes,questiedb/foreverQuestDB.lua
+7944,Your Fortune Awaits You...,questiedb/foreverQuestDB.lua
+7945,Your Fortune Awaits You...,questiedb/foreverQuestDB.lua
+7946,Spawn of Jubjub,questiedb/foreverQuestDB.lua
+7981,1200 Tickets - Amulet of the Darkmoon,questiedb/foreverQuestDB.lua
 8041,Strength of Mount Mugamba,questiedb/foreverQuestDB.lua
 8042,Strength of Mount Mugamba,questiedb/foreverQuestDB.lua
 8043,Strength of Mount Mugamba,questiedb/foreverQuestDB.lua
@@ -2939,6 +3233,7 @@ ID,Name,Source
 8078,Paragons of Power: The Vindicator's Belt,questiedb/foreverQuestDB.lua
 8079,Paragons of Power: The Vindicator's Breastplate,questiedb/foreverQuestDB.lua
 8080,Arathi Basin Resources!,questiedb/foreverQuestDB.lua
+8081,More Resource Crates,questiedb/foreverQuestDB.lua
 8101,The Pebble of Kajaro,questiedb/foreverQuestDB.lua
 8102,The Pebble of Kajaro,questiedb/foreverQuestDB.lua
 8103,The Pebble of Kajaro,questiedb/foreverQuestDB.lua
@@ -2962,6 +3257,7 @@ ID,Name,Source
 8121,Take Four Bases,questiedb/foreverQuestDB.lua
 8122,Take Five Bases,questiedb/foreverQuestDB.lua
 8123,Cut Arathor Supply Lines,questiedb/foreverQuestDB.lua
+8124,More Resource Crates,questiedb/foreverQuestDB.lua
 8141,Zandalarian Shadow Talisman,questiedb/foreverQuestDB.lua
 8142,Zandalarian Shadow Talisman,questiedb/foreverQuestDB.lua
 8143,Zandalarian Shadow Talisman,questiedb/foreverQuestDB.lua
@@ -2977,9 +3273,15 @@ ID,Name,Source
 8154,Arathi Basin Resources!,questiedb/foreverQuestDB.lua
 8155,Arathi Basin Resources!,questiedb/foreverQuestDB.lua
 8156,Arathi Basin Resources!,questiedb/foreverQuestDB.lua
+8157,More Resource Crates,questiedb/foreverQuestDB.lua
+8158,More Resource Crates,questiedb/foreverQuestDB.lua
+8159,More Resource Crates,questiedb/foreverQuestDB.lua
 8160,Cut Arathor Supply Lines,questiedb/foreverQuestDB.lua
 8161,Cut Arathor Supply Lines,questiedb/foreverQuestDB.lua
 8162,Cut Arathor Supply Lines,questiedb/foreverQuestDB.lua
+8163,More Resource Crates,questiedb/foreverQuestDB.lua
+8164,More Resource Crates,questiedb/foreverQuestDB.lua
+8165,More Resource Crates,questiedb/foreverQuestDB.lua
 8166,The Battle for Arathi Basin!,questiedb/foreverQuestDB.lua
 8167,The Battle for Arathi Basin!,questiedb/foreverQuestDB.lua
 8168,The Battle for Arathi Basin!,questiedb/foreverQuestDB.lua
@@ -2989,16 +3291,41 @@ ID,Name,Source
 8181,Confront Yeh'kinya,questiedb/foreverQuestDB.lua
 8182,The Hand of Rastakhan,questiedb/foreverQuestDB.lua
 8183,The Heart of Hakkar,questiedb/foreverQuestDB.lua
+8184,Presence of Might,questiedb/foreverQuestDB.lua
+8185,Syncretist's Sigil,questiedb/foreverQuestDB.lua
+8186,Death's Embrace,questiedb/foreverQuestDB.lua
+8187,Falcon's Call,questiedb/foreverQuestDB.lua
+8188,Vodouisant's Vigilant Embrace,questiedb/foreverQuestDB.lua
+8189,Presence of Sight,questiedb/foreverQuestDB.lua
+8190,Hoodoo Hex,questiedb/foreverQuestDB.lua
+8191,Prophetic Aura,questiedb/foreverQuestDB.lua
+8192,Animist's Caress,questiedb/foreverQuestDB.lua
 8193,Master Angler,questiedb/foreverQuestDB.lua
+8194,Apprentice Angler,questiedb/foreverQuestDB.lua
+8195,"Zulian, Razzashi, and Hakkari Coins",questiedb/foreverQuestDB.lua
+8196,Essence Mangoes,questiedb/foreverQuestDB.lua
 8201,A Collection of Heads,questiedb/foreverQuestDB.lua
+8221,Rare Fish - Keefer's Angelfish,questiedb/foreverQuestDB.lua
+8222,Glowing Scorpid Blood,questiedb/foreverQuestDB.lua
+8223,More Glowing Scorpid Blood,questiedb/foreverQuestDB.lua
+8224,Rare Fish - Dezian Queenfish,questiedb/foreverQuestDB.lua
+8225,Rare Fish - Brownell's Blue Striped Racer,questiedb/foreverQuestDB.lua
 8227,Nat's Measuring Tape,questiedb/foreverQuestDB.lua
+8228,Could I get a Fishing Flier?,questiedb/foreverQuestDB.lua
+8229,Could I get a Fishing Flier?,questiedb/foreverQuestDB.lua
 8231,Wavethrashing,questiedb/foreverQuestDB.lua
 8232,The Green Drake,questiedb/foreverQuestDB.lua
 8233,A Simple Request,questiedb/foreverQuestDB.lua
 8234,Sealed Azure Bag,questiedb/foreverQuestDB.lua
 8235,Encoded Fragments,questiedb/foreverQuestDB.lua
 8236,The Azure Key,questiedb/foreverQuestDB.lua
+8238,"Gurubashi, Vilebranch, and Witherbark Coins",questiedb/foreverQuestDB.lua
+8239,"Sandfury, Skullsplitter, and Bloodscalp Coins",questiedb/foreverQuestDB.lua
 8240,A Bijou for Zanza,questiedb/foreverQuestDB.lua
+8241,Restoring Fiery Flux Supplies via Iron,questiedb/foreverQuestDB.lua
+8242,Restoring Fiery Flux Supplies via Heavy Leather,questiedb/foreverQuestDB.lua
+8243,Zanza's Potent Potables,questiedb/foreverQuestDB.lua
+8246,Signets of the Zandalar,questiedb/foreverQuestDB.lua
 8249,Junkboxes Needed,questiedb/foreverQuestDB.lua
 8250,Magecraft,questiedb/foreverQuestDB.lua
 8251,Magic Dust,questiedb/foreverQuestDB.lua
@@ -3016,7 +3343,9 @@ ID,Name,Source
 8264,Defiler's Standard Care Package,questiedb/foreverQuestDB.lua
 8265,Defiler's Advanced Care Package,questiedb/foreverQuestDB.lua
 8266,Ribbons of Sacrifice,questiedb/foreverQuestDB.lua
+8267,Ribbons of Sacrifice,questiedb/foreverQuestDB.lua
 8268,Ribbons of Sacrifice,questiedb/foreverQuestDB.lua
+8269,Ribbons of Sacrifice,questiedb/foreverQuestDB.lua
 8271,Hero of the Stormpike,questiedb/foreverQuestDB.lua
 8272,Hero of the Frostwolf,questiedb/foreverQuestDB.lua
 8273,Oran's Gratitude,questiedb/foreverQuestDB.lua
@@ -3034,13 +3363,20 @@ ID,Name,Source
 8286,What Tomorrow Brings,questiedb/foreverQuestDB.lua
 8287,A Terrible Purpose,questiedb/foreverQuestDB.lua
 8288,Only One May Rise,questiedb/foreverQuestDB.lua
+8289,Talismans of Merit,questiedb/foreverQuestDB.lua
 8290,Vanquish the Invaders,questiedb/foreverQuestDB.lua
 8291,Vanquish the Invaders!,questiedb/foreverQuestDB.lua
+8292,Talismans of Merit,questiedb/foreverQuestDB.lua
+8293,Mark of Honor,questiedb/foreverQuestDB.lua
 8294,Quell the Silverwing Usurpers,questiedb/foreverQuestDB.lua
 8295,Quell the Silverwing Usurpers,questiedb/foreverQuestDB.lua
+8296,Mark of Honor,questiedb/foreverQuestDB.lua
 8297,Arathi Basin Resources!,questiedb/foreverQuestDB.lua
+8298,More Resource Crates,questiedb/foreverQuestDB.lua
 8299,Cut Arathor Supply Lines,questiedb/foreverQuestDB.lua
+8300,More Resource Crates,questiedb/foreverQuestDB.lua
 8301,The Path of the Righteous,questiedb/foreverQuestDB.lua
+8302,The Hand of the Righteous,questiedb/foreverQuestDB.lua
 8303,Anachronos,questiedb/foreverQuestDB.lua
 8304,Dearest Natalia,questiedb/foreverQuestDB.lua
 8305,Long Forgotten Memories,questiedb/foreverQuestDB.lua
@@ -3057,19 +3393,34 @@ ID,Name,Source
 8316,Armaments of War,questiedb/foreverQuestDB.lua
 8317,Kitchen Assistance,questiedb/foreverQuestDB.lua
 8318,Secret Communication,questiedb/foreverQuestDB.lua
+8319,Encrypted Twilight Texts,questiedb/foreverQuestDB.lua
 8320,Twilight Geolords,questiedb/foreverQuestDB.lua
 8321,Vyral the Vile,questiedb/foreverQuestDB.lua
 8322,Rotten Eggs,questiedb/foreverQuestDB.lua
 8323,True Believers,questiedb/foreverQuestDB.lua
+8324,Still Believing,questiedb/foreverQuestDB.lua
 8331,Aurel Goldleaf,questiedb/foreverQuestDB.lua
 8332,Dukes of the Council,questiedb/foreverQuestDB.lua
+8333,Medallion of Station,questiedb/foreverQuestDB.lua
 8341,Lords of the Council,questiedb/foreverQuestDB.lua
+8342,Twilight Ring of Lordship,questiedb/foreverQuestDB.lua
 8343,Goldleaf's Discovery,questiedb/foreverQuestDB.lua
 8348,Signet of the Dukes,questiedb/foreverQuestDB.lua
 8349,Bor Wildmane,questiedb/foreverQuestDB.lua
 8351,Bor Wishes to Speak,questiedb/foreverQuestDB.lua
 8352,Scepter of the Council,questiedb/foreverQuestDB.lua
+8353,Chicken Clucking for a Mint,questiedb/foreverQuestDB.lua
+8354,Chicken Clucking for a Mint,questiedb/foreverQuestDB.lua
+8355,Incoming Gumdrop,questiedb/foreverQuestDB.lua
+8356,Flexing for Nougat,questiedb/foreverQuestDB.lua
+8357,Dancing for Marzipan,questiedb/foreverQuestDB.lua
+8358,Incoming Gumdrop,questiedb/foreverQuestDB.lua
+8359,Flexing for Nougat,questiedb/foreverQuestDB.lua
+8360,Dancing for Marzipan,questiedb/foreverQuestDB.lua
 8361,Abyssal Contacts,questiedb/foreverQuestDB.lua
+8362,Abyssal Crests,questiedb/foreverQuestDB.lua
+8363,Abyssal Signets,questiedb/foreverQuestDB.lua
+8364,Abyssal Scepters,questiedb/foreverQuestDB.lua
 8365,Pirate Hats Ahoy!,questiedb/foreverQuestDB.lua
 8366,Southsea Shakedown,questiedb/foreverQuestDB.lua
 8367,For Great Honor,questiedb/foreverQuestDB.lua
@@ -3088,15 +3439,32 @@ ID,Name,Source
 8380,Armaments of War,questiedb/foreverQuestDB.lua
 8381,Armaments of War,questiedb/foreverQuestDB.lua
 8382,Armaments of War,questiedb/foreverQuestDB.lua
+8383,Remember Alterac Valley!,questiedb/foreverQuestDB.lua
+8384,Claiming Arathi Basin,questiedb/foreverQuestDB.lua
+8385,Concerted Efforts,questiedb/foreverQuestDB.lua
+8386,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
+8387,Invaders of Alterac Valley,questiedb/foreverQuestDB.lua
+8388,For Great Honor,questiedb/foreverQuestDB.lua
+8389,Battle of Warsong Gulch,questiedb/foreverQuestDB.lua
+8390,Conquering Arathi Basin,questiedb/foreverQuestDB.lua
+8391,Claiming Arathi Basin,questiedb/foreverQuestDB.lua
+8392,Claiming Arathi Basin,questiedb/foreverQuestDB.lua
 8393,Claiming Arathi Basin,questiedb/foreverQuestDB.lua
 8394,Claiming Arathi Basin,questiedb/foreverQuestDB.lua
 8395,Claiming Arathi Basin,questiedb/foreverQuestDB.lua
 8396,Claiming Arathi Basin,questiedb/foreverQuestDB.lua
+8397,Claiming Arathi Basin,questiedb/foreverQuestDB.lua
+8398,Claiming Arathi Basin,questiedb/foreverQuestDB.lua
 8399,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
 8400,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
 8401,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
 8402,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
 8403,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
+8404,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
+8405,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
+8406,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
+8407,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
+8408,Fight for Warsong Gulch,questiedb/foreverQuestDB.lua
 8409,Ruined Kegs,questiedb/foreverQuestDB.lua
 8410,Elemental Mastery,questiedb/foreverQuestDB.lua
 8411,Mastering the Elements,questiedb/foreverQuestDB.lua
@@ -3119,10 +3487,19 @@ ID,Name,Source
 8428,Battle of Warsong Gulch,questiedb/foreverQuestDB.lua
 8429,Battle of Warsong Gulch,questiedb/foreverQuestDB.lua
 8430,Battle of Warsong Gulch,questiedb/foreverQuestDB.lua
+8431,Battle of Warsong Gulch,questiedb/foreverQuestDB.lua
+8432,Battle of Warsong Gulch,questiedb/foreverQuestDB.lua
+8433,Battle of Warsong Gulch,questiedb/foreverQuestDB.lua
+8434,Battle of Warsong Gulch,questiedb/foreverQuestDB.lua
+8435,Battle of Warsong Gulch,questiedb/foreverQuestDB.lua
 8436,Conquering Arathi Basin,questiedb/foreverQuestDB.lua
 8437,Conquering Arathi Basin,questiedb/foreverQuestDB.lua
 8438,Conquering Arathi Basin,questiedb/foreverQuestDB.lua
 8439,Conquering Arathi Basin,questiedb/foreverQuestDB.lua
+8440,Conquering Arathi Basin,questiedb/foreverQuestDB.lua
+8441,Conquering Arathi Basin,questiedb/foreverQuestDB.lua
+8442,Conquering Arathi Basin,questiedb/foreverQuestDB.lua
+8443,Conquering Arathi Basin,questiedb/foreverQuestDB.lua
 8446,Shrouded in Nightmare,questiedb/foreverQuestDB.lua
 8447,Waking Legends,questiedb/foreverQuestDB.lua
 8460,Timbermaw Ally,questiedb/foreverQuestDB.lua
@@ -3130,31 +3507,70 @@ ID,Name,Source
 8462,Speak to Nafien,questiedb/foreverQuestDB.lua
 8464,Winterfall Activity,questiedb/foreverQuestDB.lua
 8465,Speak to Salfa,questiedb/foreverQuestDB.lua
+8466,Feathers for Grazle,questiedb/foreverQuestDB.lua
+8467,Feathers for Nafien,questiedb/foreverQuestDB.lua
+8469,Beads for Salfa,questiedb/foreverQuestDB.lua
 8470,Deadwood Ritual Totem,questiedb/foreverQuestDB.lua
 8471,Winterfall Ritual Totem,questiedb/foreverQuestDB.lua
 8481,The Root of All Evil,questiedb/foreverQuestDB.lua
 8484,The Brokering of Peace,questiedb/foreverQuestDB.lua
 8485,The Brokering of Peace,questiedb/foreverQuestDB.lua
 8492,The Alliance Needs Copper Bars!,questiedb/foreverQuestDB.lua
+8493,The Alliance Needs More Copper Bars!,questiedb/foreverQuestDB.lua
 8494,The Alliance Needs Iron Bars!,questiedb/foreverQuestDB.lua
+8495,The Alliance Needs More Iron Bars!,questiedb/foreverQuestDB.lua
+8496,Bandages for the Field,questiedb/foreverQuestDB.lua
+8497,Desert Survival Kits,questiedb/foreverQuestDB.lua
+8498,Twilight Battle Orders,questiedb/foreverQuestDB.lua
 8499,The Alliance Needs Thorium Bars!,questiedb/foreverQuestDB.lua
+8500,The Alliance Needs More Thorium Bars!,questiedb/foreverQuestDB.lua
+8501,Target: Hive'Ashi Stingers,questiedb/foreverQuestDB.lua
+8502,Target: Hive'Ashi Workers,questiedb/foreverQuestDB.lua
 8503,The Alliance Needs Stranglekelp!,questiedb/foreverQuestDB.lua
+8504,The Alliance Needs More Stranglekelp!,questiedb/foreverQuestDB.lua
 8505,The Alliance Needs Purple Lotus!,questiedb/foreverQuestDB.lua
+8506,The Alliance Needs More Purple Lotus!,questiedb/foreverQuestDB.lua
+8507,Field Duty,questiedb/foreverQuestDB.lua
+8508,Field Duty Papers,questiedb/foreverQuestDB.lua
 8509,The Alliance Needs Arthas' Tears!,questiedb/foreverQuestDB.lua
+8510,The Alliance Needs More Arthas' Tears!,questiedb/foreverQuestDB.lua
 8511,The Alliance Needs Light Leather!,questiedb/foreverQuestDB.lua
+8512,The Alliance Needs Light Leather!,questiedb/foreverQuestDB.lua
 8513,The Alliance Needs Medium Leather!,questiedb/foreverQuestDB.lua
+8514,The Alliance Needs More Medium Leather!,questiedb/foreverQuestDB.lua
 8515,The Alliance Needs Thick Leather!,questiedb/foreverQuestDB.lua
+8516,The Alliance Needs More Thick Leather!,questiedb/foreverQuestDB.lua
 8517,The Alliance Needs Linen Bandages!,questiedb/foreverQuestDB.lua
+8518,The Alliance Needs More Linen Bandages!,questiedb/foreverQuestDB.lua
 8519,A Pawn on the Eternal Board,questiedb/foreverQuestDB.lua
 8520,The Alliance Needs Silk Bandages!,questiedb/foreverQuestDB.lua
+8521,The Alliance Needs More Silk Bandages!,questiedb/foreverQuestDB.lua
 8522,The Alliance Needs Runecloth Bandages!,questiedb/foreverQuestDB.lua
+8523,The Alliance Needs More Runecloth Bandages!,questiedb/foreverQuestDB.lua
 8524,The Alliance Needs Rainbow Fin Albacore!,questiedb/foreverQuestDB.lua
+8525,The Alliance Needs More Rainbow Fin Albacore!,questiedb/foreverQuestDB.lua
 8526,The Alliance Needs Roast Raptor!,questiedb/foreverQuestDB.lua
+8527,The Alliance Needs More Roast Raptor!,questiedb/foreverQuestDB.lua
 8528,The Alliance Needs Spotted Yellowtail!,questiedb/foreverQuestDB.lua
+8529,The Alliance Needs More Spotted Yellowtail!,questiedb/foreverQuestDB.lua
 8532,The Horde Needs Copper Bars!,questiedb/foreverQuestDB.lua
+8533,The Horde Needs More Copper Bars!,questiedb/foreverQuestDB.lua
+8534,Hive'Zora Scout Report,questiedb/foreverQuestDB.lua
+8535,Hoary Templar,questiedb/foreverQuestDB.lua
+8536,Earthen Templar,questiedb/foreverQuestDB.lua
+8537,Crimson Templar,questiedb/foreverQuestDB.lua
+8538,The Four Dukes,questiedb/foreverQuestDB.lua
+8539,Target: Hive'Zora Hive Sisters,questiedb/foreverQuestDB.lua
+8540,Boots for the Guard,questiedb/foreverQuestDB.lua
+8541,Grinding Stones for the Guard,questiedb/foreverQuestDB.lua
 8542,The Horde Needs Tin Bars!,questiedb/foreverQuestDB.lua
+8543,The Horde Needs More Tin Bars!,questiedb/foreverQuestDB.lua
+8544,Conqueror's Spaulders,questiedb/foreverQuestDB.lua
 8545,The Horde Needs Mithril Bars!,questiedb/foreverQuestDB.lua
+8546,The Horde Needs More Mithril Bars!,questiedb/foreverQuestDB.lua
+8548,Volunteer's Battlegear,questiedb/foreverQuestDB.lua
 8549,The Horde Needs Peacebloom!,questiedb/foreverQuestDB.lua
+8550,The Horde Needs Peacebloom!,questiedb/foreverQuestDB.lua
 8551,The Captain's Chest,questiedb/foreverQuestDB.lua
 8552,The Monogrammed Sash,questiedb/foreverQuestDB.lua
 8553,The Captain's Cutlass,questiedb/foreverQuestDB.lua
@@ -3163,34 +3579,84 @@ ID,Name,Source
 8556,Signet of Unyielding Strength,questiedb/foreverQuestDB.lua
 8557,Drape of Unyielding Strength,questiedb/foreverQuestDB.lua
 8558,Sickle of Unyielding Strength,questiedb/foreverQuestDB.lua
+8559,Conqueror's Greaves,questiedb/foreverQuestDB.lua
+8560,Conqueror's Legguards,questiedb/foreverQuestDB.lua
+8561,Conqueror's Crown,questiedb/foreverQuestDB.lua
+8562,Conqueror's Breastplate,questiedb/foreverQuestDB.lua
+8565,Past Victories in Arathi,questiedb/foreverQuestDB.lua
+8566,Past Victories in Arathi,questiedb/foreverQuestDB.lua
+8567,Past Victories in Warsong Gulch,questiedb/foreverQuestDB.lua
+8568,Past Victories in Warsong Gulch,questiedb/foreverQuestDB.lua
+8569,Past Efforts in Warsong Gulch,questiedb/foreverQuestDB.lua
+8570,Past Efforts in Warsong Gulch,questiedb/foreverQuestDB.lua
+8572,Veteran's Battlegear,questiedb/foreverQuestDB.lua
+8573,Champion's Battlegear,questiedb/foreverQuestDB.lua
+8574,Stalwart's Battlegear,questiedb/foreverQuestDB.lua
 8575,Azuregos's Magical Ledger,questiedb/foreverQuestDB.lua
 8576,Translating the Ledger,questiedb/foreverQuestDB.lua
 8577,"Stewvul, Ex-B.F.F.",questiedb/foreverQuestDB.lua
 8578,Scrying Goggles? No Problem!,questiedb/foreverQuestDB.lua
 8579,Mortal Champions,questiedb/foreverQuestDB.lua
 8580,The Horde Needs Firebloom!,questiedb/foreverQuestDB.lua
+8581,The Horde Needs More Firebloom!,questiedb/foreverQuestDB.lua
 8582,The Horde Needs Purple Lotus!,questiedb/foreverQuestDB.lua
+8583,The Horde Needs More Purple Lotus!,questiedb/foreverQuestDB.lua
 8584,Never Ask Me About My Business,questiedb/foreverQuestDB.lua
 8585,The Isle of Dread!,questiedb/foreverQuestDB.lua
 8586,Dirge's Kickin' Chimaerok Chops,questiedb/foreverQuestDB.lua
 8587,Return to Narain,questiedb/foreverQuestDB.lua
 8588,The Horde Needs Heavy Leather!,questiedb/foreverQuestDB.lua
+8589,The Horde Needs More Heavy Leather!,questiedb/foreverQuestDB.lua
 8590,The Horde Needs Thick Leather!,questiedb/foreverQuestDB.lua
+8591,The Horde Needs More Thick Leather!,questiedb/foreverQuestDB.lua
+8592,Tiara of the Oracle,questiedb/foreverQuestDB.lua
+8593,Trousers of the Oracle,questiedb/foreverQuestDB.lua
+8594,Mantle of the Oracle,questiedb/foreverQuestDB.lua
+8595,Mortal Champions,questiedb/foreverQuestDB.lua
+8596,Footwraps of the Oracle,questiedb/foreverQuestDB.lua
 8597,Draconic for Dummies,questiedb/foreverQuestDB.lua
 8598,rAnS0m,questiedb/foreverQuestDB.lua
 8599,Love Song for Narain,questiedb/foreverQuestDB.lua
 8600,The Horde Needs Rugged Leather!,questiedb/foreverQuestDB.lua
+8601,The Horde Needs More Rugged Leather!,questiedb/foreverQuestDB.lua
+8602,Stormcaller's Pauldrons,questiedb/foreverQuestDB.lua
+8603,Vestments of the Oracle,questiedb/foreverQuestDB.lua
 8604,The Horde Needs Wool Bandages!,questiedb/foreverQuestDB.lua
+8605,The Horde Needs More Wool Bandages!,questiedb/foreverQuestDB.lua
 8606,Decoy!,questiedb/foreverQuestDB.lua
 8607,The Horde Needs Mageweave Bandages!,questiedb/foreverQuestDB.lua
+8608,The Horde Needs More Mageweave Bandages!,questiedb/foreverQuestDB.lua
 8609,The Horde Needs Runecloth Bandages!,questiedb/foreverQuestDB.lua
+8610,The Horde Needs More Runecloth Bandages!,questiedb/foreverQuestDB.lua
 8611,The Horde Needs Lean Wolf Steaks!,questiedb/foreverQuestDB.lua
+8612,The Horde Needs More Lean Wolf Steaks!,questiedb/foreverQuestDB.lua
 8613,The Horde Needs Spotted Yellowtail!,questiedb/foreverQuestDB.lua
+8614,The Horde Needs More Spotted Yellowtail!,questiedb/foreverQuestDB.lua
 8615,The Horde Needs Baked Salmon!,questiedb/foreverQuestDB.lua
+8616,The Horde Needs More Baked Salmon!,questiedb/foreverQuestDB.lua
 8619,Morndeep the Elder,questiedb/foreverQuestDB.lua
 8620,The Only Prescription,questiedb/foreverQuestDB.lua
+8621,Stormcaller's Footguards,questiedb/foreverQuestDB.lua
+8622,Stormcaller's Hauberk,questiedb/foreverQuestDB.lua
+8623,Stormcaller's Diadem,questiedb/foreverQuestDB.lua
+8624,Stormcaller's Leggings,questiedb/foreverQuestDB.lua
+8625,Enigma Shoulderpads,questiedb/foreverQuestDB.lua
+8626,Striker's Footguards,questiedb/foreverQuestDB.lua
+8627,Avenger's Breastplate,questiedb/foreverQuestDB.lua
+8628,Avenger's Crown,questiedb/foreverQuestDB.lua
+8629,Avenger's Legguards,questiedb/foreverQuestDB.lua
+8630,Avenger's Pauldrons,questiedb/foreverQuestDB.lua
+8631,Enigma Leggings,questiedb/foreverQuestDB.lua
+8632,Enigma Circlet,questiedb/foreverQuestDB.lua
+8633,Enigma Robes,questiedb/foreverQuestDB.lua
+8634,Enigma Boots,questiedb/foreverQuestDB.lua
 8635,Splitrock the Elder,questiedb/foreverQuestDB.lua
 8636,Rumblerock the Elder,questiedb/foreverQuestDB.lua
+8637,Deathdealer's Boots,questiedb/foreverQuestDB.lua
+8638,Deathdealer's Vest,questiedb/foreverQuestDB.lua
+8639,Deathdealer's Helm,questiedb/foreverQuestDB.lua
+8640,Deathdealer's Leggings,questiedb/foreverQuestDB.lua
+8641,Deathdealer's Spaulders,questiedb/foreverQuestDB.lua
 8642,Silvervein the Elder,questiedb/foreverQuestDB.lua
 8643,Highpeak the Elder,questiedb/foreverQuestDB.lua
 8644,Stonefort the Elder,questiedb/foreverQuestDB.lua
@@ -3204,6 +3670,21 @@ ID,Name,Source
 8652,Graveborn the Elder,questiedb/foreverQuestDB.lua
 8653,Goldwell the Elder,questiedb/foreverQuestDB.lua
 8654,Primestone the Elder,questiedb/foreverQuestDB.lua
+8655,Avenger's Greaves,questiedb/foreverQuestDB.lua
+8656,Striker's Hauberk,questiedb/foreverQuestDB.lua
+8657,Striker's Diadem,questiedb/foreverQuestDB.lua
+8658,Striker's Leggings,questiedb/foreverQuestDB.lua
+8659,Striker's Pauldrons,questiedb/foreverQuestDB.lua
+8660,Doomcaller's Footwraps,questiedb/foreverQuestDB.lua
+8661,Doomcaller's Robes,questiedb/foreverQuestDB.lua
+8662,Doomcaller's Circlet,questiedb/foreverQuestDB.lua
+8663,Doomcaller's Trousers,questiedb/foreverQuestDB.lua
+8664,Doomcaller's Mantle,questiedb/foreverQuestDB.lua
+8665,Genesis Boots,questiedb/foreverQuestDB.lua
+8666,Genesis Vest,questiedb/foreverQuestDB.lua
+8667,Genesis Helm,questiedb/foreverQuestDB.lua
+8668,Genesis Trousers,questiedb/foreverQuestDB.lua
+8669,Genesis Shoulderpads,questiedb/foreverQuestDB.lua
 8670,Runetotem the Elder,questiedb/foreverQuestDB.lua
 8671,Ragetotem the Elder,questiedb/foreverQuestDB.lua
 8672,Stonespire the Elder,questiedb/foreverQuestDB.lua
@@ -3221,6 +3702,7 @@ ID,Name,Source
 8684,Dreamseer the Elder,questiedb/foreverQuestDB.lua
 8685,Mistwalker the Elder,questiedb/foreverQuestDB.lua
 8686,High Mountain the Elder,questiedb/foreverQuestDB.lua
+8687,Target: Hive'Zora Tunnelers,questiedb/foreverQuestDB.lua
 8688,Windrun the Elder,questiedb/foreverQuestDB.lua
 8689,Shroud of Infinite Wisdom,questiedb/foreverQuestDB.lua
 8690,Cloak of the Gathering Storm,questiedb/foreverQuestDB.lua
@@ -3264,10 +3746,16 @@ ID,Name,Source
 8728,The Good News and The Bad News,questiedb/foreverQuestDB.lua
 8729,The Wrath of Neptulon,questiedb/foreverQuestDB.lua
 8730,Nefarius's Corruption,questiedb/foreverQuestDB.lua
+8731,Field Duty,questiedb/foreverQuestDB.lua
+8732,Field Duty Papers,questiedb/foreverQuestDB.lua
 8733,"Eranikus, Tyrant of the Dream",questiedb/foreverQuestDB.lua
 8734,Tyrande and Remulos,questiedb/foreverQuestDB.lua
 8735,The Nightmare's Corruption,questiedb/foreverQuestDB.lua
 8736,The Nightmare Manifests,questiedb/foreverQuestDB.lua
+8737,Azure Templar,questiedb/foreverQuestDB.lua
+8738,Hive'Regal Scout Report,questiedb/foreverQuestDB.lua
+8739,Hive'Ashi Scout Report,questiedb/foreverQuestDB.lua
+8740,Twilight Marauders,questiedb/foreverQuestDB.lua
 8741,The Champion Returns,questiedb/foreverQuestDB.lua
 8742,The Might of Kalimdor,questiedb/foreverQuestDB.lua
 8743,Bang a Gong!,questiedb/foreverQuestDB.lua
@@ -3291,10 +3779,33 @@ ID,Name,Source
 8761,The Grand Invoker,questiedb/foreverQuestDB.lua
 8762,Metzen the Reindeer,questiedb/foreverQuestDB.lua
 8763,The Hero of the Day,questiedb/foreverQuestDB.lua
+8764,The Changing of Paths - Protector No More,questiedb/foreverQuestDB.lua
+8765,The Changing of Paths - Invoker No More,questiedb/foreverQuestDB.lua
+8766,The Changing of Paths - Conqueror No More,questiedb/foreverQuestDB.lua
 8767,A Gently Shaken Gift,questiedb/foreverQuestDB.lua
 8768,A Gaily Wrapped Present,questiedb/foreverQuestDB.lua
 8769,A Ticking Present,questiedb/foreverQuestDB.lua
+8770,Target: Hive'Ashi Defenders,questiedb/foreverQuestDB.lua
+8771,Target: Hive'Ashi Sandstalkers,questiedb/foreverQuestDB.lua
+8772,Target: Hive'Zora Waywatchers,questiedb/foreverQuestDB.lua
+8773,Target: Hive'Zora Reavers,questiedb/foreverQuestDB.lua
+8774,Target: Hive'Regal Ambushers,questiedb/foreverQuestDB.lua
+8775,Target: Hive'Regal Spitfires,questiedb/foreverQuestDB.lua
+8776,Target: Hive'Regal Slavemakers,questiedb/foreverQuestDB.lua
+8777,Target: Hive'Regal Burrowers,questiedb/foreverQuestDB.lua
+8778,The Ironforge Brigade Needs Explosives!,questiedb/foreverQuestDB.lua
+8779,Scrying Materials,questiedb/foreverQuestDB.lua
+8780,Armor Kits for the Field,questiedb/foreverQuestDB.lua
+8781,Arms for the Field,questiedb/foreverQuestDB.lua
+8782,Uniform Supplies,questiedb/foreverQuestDB.lua
+8783,Extraordinary Materials,questiedb/foreverQuestDB.lua
+8784,Secrets of the Qiraji,questiedb/foreverQuestDB.lua
+8785,The Orgrimmar Legion Needs Mojo!,questiedb/foreverQuestDB.lua
+8786,Arms for the Field,questiedb/foreverQuestDB.lua
+8787,Armor Kits for the Field,questiedb/foreverQuestDB.lua
 8788,A Gently Shaken Gift,questiedb/foreverQuestDB.lua
+8789,Imperial Qiraji Armaments,questiedb/foreverQuestDB.lua
+8790,Imperial Qiraji Regalia,questiedb/foreverQuestDB.lua
 8791,The Fall of Ossirian,questiedb/foreverQuestDB.lua
 8792,The Horde Needs Your Help!,questiedb/foreverQuestDB.lua
 8793,The Horde Needs Your Help!,questiedb/foreverQuestDB.lua
@@ -3308,14 +3819,68 @@ ID,Name,Source
 8801,C'Thun's Legacy,questiedb/foreverQuestDB.lua
 8802,The Savior of Kalimdor,questiedb/foreverQuestDB.lua
 8803,A Festive Gift,questiedb/foreverQuestDB.lua
+8804,Desert Survival Kits,questiedb/foreverQuestDB.lua
+8805,Boots for the Guard,questiedb/foreverQuestDB.lua
+8806,Grinding Stones for the Guard,questiedb/foreverQuestDB.lua
+8807,Scrying Materials,questiedb/foreverQuestDB.lua
+8808,Uniform Supplies,questiedb/foreverQuestDB.lua
+8809,Extraordinary Materials,questiedb/foreverQuestDB.lua
+8810,Bandages for the Field,questiedb/foreverQuestDB.lua
+8811,One Commendation Signet,questiedb/foreverQuestDB.lua
+8812,One Commendation Signet,questiedb/foreverQuestDB.lua
+8813,One Commendation Signet,questiedb/foreverQuestDB.lua
+8814,One Commendation Signet,questiedb/foreverQuestDB.lua
+8815,One Commendation Signet,questiedb/foreverQuestDB.lua
+8816,One Commendation Signet,questiedb/foreverQuestDB.lua
+8817,One Commendation Signet,questiedb/foreverQuestDB.lua
+8818,One Commendation Signet,questiedb/foreverQuestDB.lua
+8819,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8820,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8821,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8822,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8823,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8824,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8825,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8826,Ten Commendation Signets,questiedb/foreverQuestDB.lua
 8827,Winter's Presents,questiedb/foreverQuestDB.lua
 8828,Winter's Presents,questiedb/foreverQuestDB.lua
+8829,The Ultimate Deception,questiedb/foreverQuestDB.lua
+8830,One Commendation Signet,questiedb/foreverQuestDB.lua
+8831,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8832,One Commendation Signet,questiedb/foreverQuestDB.lua
+8833,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8834,One Commendation Signet,questiedb/foreverQuestDB.lua
+8835,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8836,One Commendation Signet,questiedb/foreverQuestDB.lua
+8837,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8838,One Commendation Signet,questiedb/foreverQuestDB.lua
+8839,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8840,One Commendation Signet,questiedb/foreverQuestDB.lua
+8841,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8842,One Commendation Signet,questiedb/foreverQuestDB.lua
+8843,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8844,One Commendation Signet,questiedb/foreverQuestDB.lua
+8845,Ten Commendation Signets,questiedb/foreverQuestDB.lua
+8846,Five Signets for War Supplies,questiedb/foreverQuestDB.lua
+8847,Ten Signets for War Supplies,questiedb/foreverQuestDB.lua
+8848,Fifteen Signets for War Supplies,questiedb/foreverQuestDB.lua
+8849,Twenty Signets for War Supplies,questiedb/foreverQuestDB.lua
+8850,Thirty Signets for War Supplies,questiedb/foreverQuestDB.lua
+8851,Five Signets for War Supplies,questiedb/foreverQuestDB.lua
+8852,Ten Signets for War Supplies,questiedb/foreverQuestDB.lua
+8853,Fifteen Signets for War Supplies,questiedb/foreverQuestDB.lua
+8854,Twenty Signets for War Supplies,questiedb/foreverQuestDB.lua
+8855,Thirty Signets for War Supplies,questiedb/foreverQuestDB.lua
+8856,Desert Survival Kits,questiedb/foreverQuestDB.lua
 8857,Secrets of the Colossus - Ashi,questiedb/foreverQuestDB.lua
 8858,Secrets of the Colossus - Regal,questiedb/foreverQuestDB.lua
 8859,Secrets of the Colossus - Zora,questiedb/foreverQuestDB.lua
 8860,New Year Celebrations!,questiedb/foreverQuestDB.lua
 8861,New Year Celebrations!,questiedb/foreverQuestDB.lua
 8862,Elune's Candle,questiedb/foreverQuestDB.lua
+8863,Festival Dumplings,questiedb/foreverQuestDB.lua
+8864,Festive Lunar Dresses,questiedb/foreverQuestDB.lua
+8865,Festive Lunar Pant Suits,questiedb/foreverQuestDB.lua
 8866,Bronzebeard the Elder,questiedb/foreverQuestDB.lua
 8867,Lunar Fireworks,questiedb/foreverQuestDB.lua
 8868,Elune's Blessing,questiedb/foreverQuestDB.lua
@@ -3326,7 +3891,15 @@ ID,Name,Source
 8873,The Lunar Festival,questiedb/foreverQuestDB.lua
 8874,The Lunar Festival,questiedb/foreverQuestDB.lua
 8875,The Lunar Festival,questiedb/foreverQuestDB.lua
+8876,Small Rockets,questiedb/foreverQuestDB.lua
+8877,Firework Launcher,questiedb/foreverQuestDB.lua
+8878,Festive Recipes,questiedb/foreverQuestDB.lua
+8879,Large Rockets,questiedb/foreverQuestDB.lua
+8880,Cluster Rockets,questiedb/foreverQuestDB.lua
+8881,Large Cluster Rockets,questiedb/foreverQuestDB.lua
+8882,Cluster Launcher,questiedb/foreverQuestDB.lua
 8883,Valadar Starsong,questiedb/foreverQuestDB.lua
+8893,The Super Egg-O-Matic,questiedb/foreverQuestDB.lua
 8897,"Dearest Colara,",questiedb/foreverQuestDB.lua
 8898,"Dearest Colara,",questiedb/foreverQuestDB.lua
 8899,"Dearest Colara,",questiedb/foreverQuestDB.lua
@@ -3405,6 +3978,7 @@ ID,Name,Source
 8978,Return to Mokvar,questiedb/foreverQuestDB.lua
 8979,Fenstad's Hunch,questiedb/foreverQuestDB.lua
 8980,Zinge's Assessment,questiedb/foreverQuestDB.lua
+8981,Gift Giving,questiedb/foreverQuestDB.lua
 8982,Tracing the Source,questiedb/foreverQuestDB.lua
 8983,Tracing the Source,questiedb/foreverQuestDB.lua
 8984,The Source Revealed,questiedb/foreverQuestDB.lua
@@ -3416,6 +3990,7 @@ ID,Name,Source
 8990,The Right Piece of Lord Valthalak's Amulet,questiedb/foreverQuestDB.lua
 8991,The Right Piece of Lord Valthalak's Amulet,questiedb/foreverQuestDB.lua
 8992,The Right Piece of Lord Valthalak's Amulet,questiedb/foreverQuestDB.lua
+8993,Gift Giving,questiedb/foreverQuestDB.lua
 8994,Final Preparations,questiedb/foreverQuestDB.lua
 8995,"Mea Culpa, Lord Valthalak",questiedb/foreverQuestDB.lua
 8996,Return to Bodley,questiedb/foreverQuestDB.lua
@@ -3454,23 +4029,140 @@ ID,Name,Source
 9029,A Bubbling Cauldron,questiedb/foreverQuestDB.lua
 9032,Bodley's Unfortunate Fate,questiedb/foreverQuestDB.lua
 9033,Echoes of War,questiedb/foreverQuestDB.lua
+9034,Dreadnaught Breastplate,questiedb/foreverQuestDB.lua
+9036,Dreadnaught Legplates,questiedb/foreverQuestDB.lua
+9037,Dreadnaught Helmet,questiedb/foreverQuestDB.lua
+9038,Dreadnaught Pauldrons,questiedb/foreverQuestDB.lua
+9039,Dreadnaught Sabatons,questiedb/foreverQuestDB.lua
+9040,Dreadnaught Gauntlets,questiedb/foreverQuestDB.lua
+9041,Dreadnaught Waistguard,questiedb/foreverQuestDB.lua
+9042,Dreadnaught Bracers,questiedb/foreverQuestDB.lua
+9043,Redemption Tunic,questiedb/foreverQuestDB.lua
+9044,Redemption Legguards,questiedb/foreverQuestDB.lua
+9045,Redemption Headpiece,questiedb/foreverQuestDB.lua
+9046,Redemption Spaulders,questiedb/foreverQuestDB.lua
+9047,Redemption Boots,questiedb/foreverQuestDB.lua
+9048,Redemption Handguards,questiedb/foreverQuestDB.lua
+9049,Redemption Girdle,questiedb/foreverQuestDB.lua
+9050,Redemption Wristguards,questiedb/foreverQuestDB.lua
 9051,Toxic Test,questiedb/foreverQuestDB.lua
 9052,Bloodpetal Poison,questiedb/foreverQuestDB.lua
 9053,A Better Ingredient,questiedb/foreverQuestDB.lua
+9054,Cryptstalker Tunic,questiedb/foreverQuestDB.lua
+9055,Cryptstalker Legguards,questiedb/foreverQuestDB.lua
+9056,Cryptstalker Headpiece,questiedb/foreverQuestDB.lua
+9057,Cryptstalker Spaulders,questiedb/foreverQuestDB.lua
+9058,Cryptstalker Boots,questiedb/foreverQuestDB.lua
+9059,Cryptstalker Handguards,questiedb/foreverQuestDB.lua
+9060,Cryptstalker Girdle,questiedb/foreverQuestDB.lua
+9061,Cryptstalker Wristguards,questiedb/foreverQuestDB.lua
 9063,Torwa Pathfinder,questiedb/foreverQuestDB.lua
+9068,Earthshatter Tunic,questiedb/foreverQuestDB.lua
+9069,Earthshatter Legguards,questiedb/foreverQuestDB.lua
+9070,Earthshatter Headpiece,questiedb/foreverQuestDB.lua
+9071,Earthshatter Spaulders,questiedb/foreverQuestDB.lua
+9072,Earthshatter Boots,questiedb/foreverQuestDB.lua
+9073,Earthshatter Handguards,questiedb/foreverQuestDB.lua
+9074,Earthshatter Girdle,questiedb/foreverQuestDB.lua
+9075,Earthshatter Wristguards,questiedb/foreverQuestDB.lua
+9077,Bonescythe Breastplate,questiedb/foreverQuestDB.lua
+9078,Bonescythe Legplates,questiedb/foreverQuestDB.lua
+9079,Bonescythe Helmet,questiedb/foreverQuestDB.lua
+9080,Bonescythe Pauldrons,questiedb/foreverQuestDB.lua
+9081,Bonescythe Sabatons,questiedb/foreverQuestDB.lua
+9082,Bonescythe Gauntlets,questiedb/foreverQuestDB.lua
+9083,Bonescythe Waistguard,questiedb/foreverQuestDB.lua
+9084,Bonescythe Bracers,questiedb/foreverQuestDB.lua
 9085,Shadows of Doom,questiedb/foreverQuestDB.lua
+9086,Dreamwalker Tunic,questiedb/foreverQuestDB.lua
+9087,Dreamwalker Legguards,questiedb/foreverQuestDB.lua
+9088,Dreamwalker Headpiece,questiedb/foreverQuestDB.lua
+9089,Dreamwalker Spaulders,questiedb/foreverQuestDB.lua
+9090,Dreamwalker Boots,questiedb/foreverQuestDB.lua
+9091,Dreamwalker Handguards,questiedb/foreverQuestDB.lua
+9092,Dreamwalker Girdle,questiedb/foreverQuestDB.lua
+9093,Dreamwalker Wristguards,questiedb/foreverQuestDB.lua
+9094,Argent Dawn Gloves,questiedb/foreverQuestDB.lua
+9095,Frostfire Robe,questiedb/foreverQuestDB.lua
+9096,Frostfire Leggings,questiedb/foreverQuestDB.lua
+9097,Frostfire Circlet,questiedb/foreverQuestDB.lua
+9098,Frostfire Shoulderpads,questiedb/foreverQuestDB.lua
+9099,Frostfire Sandals,questiedb/foreverQuestDB.lua
+9100,Frostfire Gloves,questiedb/foreverQuestDB.lua
+9101,Frostfire Belt,questiedb/foreverQuestDB.lua
+9102,Frostfire Bindings,questiedb/foreverQuestDB.lua
+9103,Plagueheart Robe,questiedb/foreverQuestDB.lua
+9104,Plagueheart Leggings,questiedb/foreverQuestDB.lua
+9105,Plagueheart Circlet,questiedb/foreverQuestDB.lua
+9106,Plagueheart Shoulderpads,questiedb/foreverQuestDB.lua
+9107,Plagueheart Sandals,questiedb/foreverQuestDB.lua
+9108,Plagueheart Gloves,questiedb/foreverQuestDB.lua
+9109,Plagueheart Belt,questiedb/foreverQuestDB.lua
+9110,Plagueheart Bindings,questiedb/foreverQuestDB.lua
+9111,Robe of Faith,questiedb/foreverQuestDB.lua
+9112,Leggings of Faith,questiedb/foreverQuestDB.lua
+9113,Circlet of Faith,questiedb/foreverQuestDB.lua
+9114,Shoulderpads of Faith,questiedb/foreverQuestDB.lua
+9115,Sandals of Faith,questiedb/foreverQuestDB.lua
+9116,Gloves of Faith,questiedb/foreverQuestDB.lua
+9117,Belt of Faith,questiedb/foreverQuestDB.lua
+9118,Bindings of Faith,questiedb/foreverQuestDB.lua
 9120,The Fall of Kel'Thuzad,questiedb/foreverQuestDB.lua
 9121,The Dread Citadel - Naxxramas,questiedb/foreverQuestDB.lua
 9122,The Dread Citadel - Naxxramas,questiedb/foreverQuestDB.lua
 9123,The Dread Citadel - Naxxramas,questiedb/foreverQuestDB.lua
 9124,Cryptstalker Armor Doesn't Make Itself...,questiedb/foreverQuestDB.lua
+9125,Crypt Fiend Parts,questiedb/foreverQuestDB.lua
 9126,Bonescythe Digs,questiedb/foreverQuestDB.lua
+9127,Bone Fragments,questiedb/foreverQuestDB.lua
 9128,The Elemental Equation,questiedb/foreverQuestDB.lua
+9129,Core of Elements,questiedb/foreverQuestDB.lua
 9131,Binding the Dreadnaught,questiedb/foreverQuestDB.lua
+9132,Dark Iron Scraps,questiedb/foreverQuestDB.lua
 9136,Savage Flora,questiedb/foreverQuestDB.lua
+9137,Savage Fronds,questiedb/foreverQuestDB.lua
 9141,"They Call Me ""The Rooster""",questiedb/foreverQuestDB.lua
+9142,Craftsman's Writ,questiedb/foreverQuestDB.lua
 9153,Under the Shadow,questiedb/foreverQuestDB.lua
 9154,Light's Hope Chapel,questiedb/foreverQuestDB.lua
+9165,Writ of Safe Passage,questiedb/foreverQuestDB.lua
+9178,Craftsman's Writ - Dense Weightstone,questiedb/foreverQuestDB.lua
+9179,Craftsman's Writ - Imperial Plate Chest,questiedb/foreverQuestDB.lua
+9181,Craftsman's Writ - Volcanic Hammer,questiedb/foreverQuestDB.lua
+9182,Craftsman's Writ - Huge Thorium Battleaxe,questiedb/foreverQuestDB.lua
+9183,Craftsman's Writ - Radiant Circlet,questiedb/foreverQuestDB.lua
+9184,Craftsman's Writ - Wicked Leather Headband,questiedb/foreverQuestDB.lua
+9185,Craftsman's Writ - Rugged Armor Kit,questiedb/foreverQuestDB.lua
+9186,Craftsman's Writ - Wicked Leather Belt,questiedb/foreverQuestDB.lua
+9187,Craftsman's Writ - Runic Leather Pants,questiedb/foreverQuestDB.lua
+9188,Craftsman's Writ - Brightcloth Pants,questiedb/foreverQuestDB.lua
+9190,Craftsman's Writ - Runecloth Boots,questiedb/foreverQuestDB.lua
+9191,Craftsman's Writ - Runecloth Bag,questiedb/foreverQuestDB.lua
+9194,Craftsman's Writ - Runecloth Robe,questiedb/foreverQuestDB.lua
+9195,Craftsman's Writ - Goblin Sapper Charge,questiedb/foreverQuestDB.lua
+9196,Craftsman's Writ - Thorium Grenade,questiedb/foreverQuestDB.lua
+9197,Craftsman's Writ - Gnomish Battle Chicken,questiedb/foreverQuestDB.lua
+9198,Craftsman's Writ - Thorium Tube,questiedb/foreverQuestDB.lua
+9200,Craftsman's Writ - Major Mana Potion,questiedb/foreverQuestDB.lua
+9201,Craftsman's Writ - Greater Arcane Protection Potion,questiedb/foreverQuestDB.lua
+9202,Craftsman's Writ - Major Healing Potion,questiedb/foreverQuestDB.lua
+9203,Craftsman's Writ - Flask of Petrification,questiedb/foreverQuestDB.lua
+9204,Craftsman's Writ - Stonescale Eel,questiedb/foreverQuestDB.lua
+9205,Craftsman's Writ - Plated Armorfish,questiedb/foreverQuestDB.lua
+9206,Craftsman's Writ - Lightning Eel,questiedb/foreverQuestDB.lua
+9208,The Savage Guard - Arcanum of Protection,questiedb/foreverQuestDB.lua
+9209,The Savage Guard - Arcanum of Rapidity,questiedb/foreverQuestDB.lua
+9210,The Savage Guard - Arcanum of Focus,questiedb/foreverQuestDB.lua
+9211,The Ice Guard,questiedb/foreverQuestDB.lua
+9213,The Shadow Guard,questiedb/foreverQuestDB.lua
+9221,Superior Armaments of Battle - Friend of the Dawn,questiedb/foreverQuestDB.lua
+9222,Epic Armaments of Battle - Friend of the Dawn,questiedb/foreverQuestDB.lua
+9223,Superior Armaments of Battle - Honored Amongst the Dawn,questiedb/foreverQuestDB.lua
+9224,Epic Armaments of Battle - Honored Amongst the Dawn,questiedb/foreverQuestDB.lua
+9225,Epic Armaments of Battle - Revered Amongst the Dawn,questiedb/foreverQuestDB.lua
+9226,Superior Armaments of Battle - Revered Amongst the Dawn,questiedb/foreverQuestDB.lua
+9227,Superior Armaments of Battle - Exalted Amongst the Dawn,questiedb/foreverQuestDB.lua
+9228,Epic Armaments of Battle - Exalted Amongst the Dawn,questiedb/foreverQuestDB.lua
 9229,The Fate of Ramaladni,questiedb/foreverQuestDB.lua
 9230,Ramaladni's Icy Grasp,questiedb/foreverQuestDB.lua
 9232,The Only Song I Know...,questiedb/foreverQuestDB.lua
@@ -3493,12 +4185,16 @@ ID,Name,Source
 9250,Frame of Atiesh,questiedb/foreverQuestDB.lua
 9251,"Atiesh, the Befouled Greatstaff",questiedb/foreverQuestDB.lua
 9257,"Atiesh, Greatstaff of the Guardian",questiedb/foreverQuestDB.lua
+9259,Traitor to the Bloodsail,questiedb/foreverQuestDB.lua
 9260,Investigate the Scourge of Stormwind,questiedb/foreverQuestDB.lua
 9261,Investigate the Scourge of Ironforge,questiedb/foreverQuestDB.lua
 9262,Investigate the Scourge of Darnassus,questiedb/foreverQuestDB.lua
 9263,Investigate the Scourge of Orgrimmar,questiedb/foreverQuestDB.lua
 9264,Investigate the Scourge of Thunder Bluff,questiedb/foreverQuestDB.lua
 9265,Investigate the Scourge of the Undercity,questiedb/foreverQuestDB.lua
+9266,Making Amends,questiedb/foreverQuestDB.lua
+9267,Mending Old Wounds,questiedb/foreverQuestDB.lua
+9268,War at Sea,questiedb/foreverQuestDB.lua
 9269,"Atiesh, Greatstaff of the Guardian",questiedb/foreverQuestDB.lua
 9270,"Atiesh, Greatstaff of the Guardian",questiedb/foreverQuestDB.lua
 9271,"Atiesh, Greatstaff of the Guardian",questiedb/foreverQuestDB.lua
@@ -3511,7 +4207,11 @@ ID,Name,Source
 9302,Missive from the Front,questiedb/foreverQuestDB.lua
 9304,Document from the Front,questiedb/foreverQuestDB.lua
 9310,Faint Necrotic Crystal,questiedb/foreverQuestDB.lua
+9317,Consecrated Sharpening Stones,questiedb/foreverQuestDB.lua
+9318,Blessed Wizard Oil,questiedb/foreverQuestDB.lua
 9319,A Light in Dark Places,questiedb/foreverQuestDB.lua
+9320,Major Mana Potion,questiedb/foreverQuestDB.lua
+9321,Major Healing Potion,questiedb/foreverQuestDB.lua
 9322,Wild Fires in Kalimdor,questiedb/foreverQuestDB.lua
 9323,Wild Fires in the Eastern Kingdoms,questiedb/foreverQuestDB.lua
 9324,Stealing Orgrimmar's Flame,questiedb/foreverQuestDB.lua
@@ -3520,13 +4220,22 @@ ID,Name,Source
 9330,Stealing Stormwind's Flame,questiedb/foreverQuestDB.lua
 9331,Stealing Ironforge's Flame,questiedb/foreverQuestDB.lua
 9332,Stealing Darnassus's Flame,questiedb/foreverQuestDB.lua
+9333,Argent Dawn Gloves,questiedb/foreverQuestDB.lua
+9334,Blessed Wizard Oil,questiedb/foreverQuestDB.lua
+9335,Consecrated Sharpening Stones,questiedb/foreverQuestDB.lua
+9336,Major Healing Potion,questiedb/foreverQuestDB.lua
+9337,Major Mana Potion,questiedb/foreverQuestDB.lua
+9338,Allegiance to Cenarion Circle,questiedb/foreverQuestDB.lua
 9339,A Thief's Reward,questiedb/foreverQuestDB.lua
+9341,Tabard of the Argent Dawn,questiedb/foreverQuestDB.lua
+9343,Tabard of the Argent Dawn,questiedb/foreverQuestDB.lua
 9362,Warlord Krellian,questiedb/foreverQuestDB.lua
 9364,Fragmented Magic,questiedb/foreverQuestDB.lua
 9365,A Thief's Reward,questiedb/foreverQuestDB.lua
 9367,The Festival of Fire,questiedb/foreverQuestDB.lua
 9368,The Festival of Fire,questiedb/foreverQuestDB.lua
 9378,DND FLAG The Dread Citadel - Naxxramas,questiedb/foreverQuestDB.lua
+9386,A Light in Dark Places,questiedb/foreverQuestDB.lua
 9388,Flickering Flames in Kalimdor,questiedb/foreverQuestDB.lua
 9389,Flickering Flames in the Eastern Kingdoms,questiedb/foreverQuestDB.lua
 9415,Report to Marshal Bluewall,questiedb/foreverQuestDB.lua
@@ -3585,6 +4294,7 @@ ID,Name,Source
 91725,Stolen Enchanting Supplies,questiedb/foreverBaseQuest.lua
 91732,Good Steel,questiedb/foreverBaseQuest.lua
 91733,Downstream,questiedb/foreverBaseQuest.lua
+91736,Applejack Still,questiedb/foreverBaseQuest.lua
 91738,An Apple Treat,questiedb/foreverBaseQuest.lua
 91740,Croaky's Head,questiedb/foreverBaseQuest.lua
 91741,Nibbled-On Book,questiedb/foreverBaseQuest.lua
@@ -3603,6 +4313,10 @@ ID,Name,Source
 91860,A Grim Fate,questiedb/foreverBaseQuest.lua
 91861,Into Fenris Keep,questiedb/foreverBaseQuest.lua
 91862,Lumina Windsinger,questiedb/foreverBaseQuest.lua
+91899,A Sealed Crate,questiedb/foreverBaseQuest.lua
+91900,A Sealed Crate,questiedb/foreverBaseQuest.lua
+91904,A Sealed Crate,questiedb/foreverBaseQuest.lua
+91905,A Sealed Crate,questiedb/foreverBaseQuest.lua
 91920,Wild Eyes,questiedb/foreverBaseQuest.lua
 91921,Return to Quinn (Again),questiedb/foreverBaseQuest.lua
 92109,My First Alchemy Set,questiedb/foreverBaseQuest.lua
@@ -3708,6 +4422,7 @@ ID,Name,Source
 93318,WANTED: Vulgara the Insatiable,questiedb/foreverBaseQuest.lua
 93319,Pilfered Windstones,questiedb/foreverBaseQuest.lua
 93320,Tower Defense,questiedb/foreverBaseQuest.lua
+93459,More Al'Aketh Ears,questiedb/foreverBaseQuest.lua
 93461,Welcome to Shen'dar Village,questiedb/foreverBaseQuest.lua
 93552,Harvesting Windstones,questiedb/foreverBaseQuest.lua
 93735,The Broken Construct,questiedb/foreverBaseQuest.lua
@@ -3721,6 +4436,7 @@ ID,Name,Source
 93797,Boughs in the Wind,questiedb/foreverBaseQuest.lua
 93835,Confront Lorthuna,questiedb/foreverBaseQuest.lua
 93836,The Fate of Zephras,questiedb/foreverBaseQuest.lua
+93862,Crate Return,questiedb/foreverBaseQuest.lua
 93926,The Western Watch,questiedb/foreverBaseQuest.lua
 93927,A Last Request,questiedb/foreverBaseQuest.lua
 93928,Of Mice and Milk,questiedb/foreverBaseQuest.lua
@@ -3903,6 +4619,8 @@ ID,Name,Source
 94466,Call of Fire,questiedb/foreverBaseQuest.lua
 94467,Call of Fire,questiedb/foreverBaseQuest.lua
 94468,Call of Fire,questiedb/foreverBaseQuest.lua
+94472,Earth Sapta,questiedb/foreverBaseQuest.lua
+94473,Fire Sapta,questiedb/foreverBaseQuest.lua
 94484,Unnerving Silence,questiedb/foreverBaseQuest.lua
 94485,Tears of the Lady,questiedb/foreverBaseQuest.lua
 94486,Feathers for Binding,questiedb/foreverBaseQuest.lua
@@ -3923,6 +4641,7 @@ ID,Name,Source
 94505,Call of Water,questiedb/foreverBaseQuest.lua
 94559,UNUSED,Completao/ForeverNew.lua
 94568,The Cult's True Plans,questiedb/foreverBaseQuest.lua
+94616,Water Sapta,questiedb/foreverBaseQuest.lua
 94638,Strength and Mercy,questiedb/foreverBaseQuest.lua
 94773,Divine Grace,questiedb/foreverBaseQuest.lua
 94774,Divine Grace,questiedb/foreverBaseQuest.lua
@@ -3961,6 +4680,7 @@ ID,Name,Source
 95034,The Debt,questiedb/foreverBaseQuest.lua
 95036,A Moon-Kissed Blade,questiedb/foreverBaseQuest.lua
 95041,Data Hoarders,questiedb/foreverBaseQuest.lua
+95042,Seeking the Kor Gem,questiedb/foreverBaseQuest.lua
 95065,Fishin' Time,questiedb/foreverBaseQuest.lua
 95111,An Underrated Talent,questiedb/foreverBaseQuest.lua
 95125,Ott's Masterwork,questiedb/foreverBaseQuest.lua
@@ -4057,6 +4777,9 @@ ID,Name,Source
 96899,Bandarion Keep,questiedb/foreverBaseQuest.lua
 97003,Chol'aruk the Ravener,questiedb/foreverBaseQuest.lua
 97005,Chol'aruk the Ravener,questiedb/foreverBaseQuest.lua
+97065,Tip the Scales - Keefer's Angelfish,Completao/ForeverNew.lua
+97066,Tip the Scales - Brownell's Blue Striped Racer,Completao/ForeverNew.lua
+97067,Tip the Scales - Dezian Queenfish,Completao/ForeverNew.lua
 97220,Philmor's Favor,questiedb/foreverBaseQuest.lua
 97222,Gatehouse Goods,questiedb/foreverBaseQuest.lua
 97223,Bloodtalon Matriarch,questiedb/foreverBaseQuest.lua
@@ -4089,6 +4812,7 @@ ID,Name,Source
 97485,Traditions of the Bluff,questiedb/foreverBaseQuest.lua
 97538,Pigments for Paints,questiedb/foreverBaseQuest.lua
 97558,Hides for the Forsaken,questiedb/foreverBaseQuest.lua
+97583,WRIGGLE.,questiedb/foreverBaseQuest.lua
 97891,Prompt Potion Runner,questiedb/foreverBaseQuest.lua
 97894,Business in Auberdine,questiedb/foreverBaseQuest.lua
 97899,Camping 101: Alchemy,questiedb/foreverBaseQuest.lua

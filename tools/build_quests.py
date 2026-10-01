@@ -66,8 +66,6 @@ def compile_quests(source_dir, quest_csv):
     names, provenance, conflicts = {}, {}, []
     for source in priority:
         for key, title in sorted(data[source].items()):
-            if key not in ids:
-                continue
             if key in names:
                 if names[key] != title:
                     conflicts.append(dict(id=key, selected=names[key], selected_source=provenance[key],
@@ -76,7 +74,7 @@ def compile_quests(source_dir, quest_csv):
             names[key], provenance[key] = title, source
     return names, provenance, dict(manifest=manifest, questv2_sha256=quest_hash,
         questv2_count=len(ids), count=len(names), source_counts=dict(Counter(provenance.values())),
-        missing_ids=sorted(ids - names.keys()), conflicts=conflicts)
+        missing_ids=sorted(ids - names.keys()), outside_reference_ids=sorted(names.keys() - ids), conflicts=conflicts)
 
 
 def render(names, build, report):

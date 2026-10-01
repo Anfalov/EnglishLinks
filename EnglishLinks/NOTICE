@@ -1,4 +1,4 @@
-EnglishLinks 0.5.0
+EnglishLinks 0.6.0
 
 EnglishLinks code and corresponding build/test source are supplied under GNU
 General Public License version 3; see LICENSE. Third-party notices and underlying
@@ -32,7 +32,7 @@ public quest databases from its own license grant.
 
 EnglishLinks transformations, 2026-09-30:
 - Extract only quest ID/title pairs, without executing upstream Lua.
-- Filter against user-supplied Forever QuestV2 1.60.1.70124.
+- Use user-supplied Forever QuestV2 1.60.1.70124 for coverage diagnostics only.
 - Remove Completao's display-only chain numbering suffix, e.g. (1/2).
 - Apply the documented source priority and record individual provenance.
 - Omit quest descriptions, objectives, coordinates and conditions from the
@@ -60,3 +60,11 @@ Additional names in 0.4.0:
 Pinned originals, hashes and transformations: data/supplement-sources/manifest.json
 and docs/SUPPLEMENT-SOURCES.md. Third-party software licenses do not imply
 relicensing of the underlying Blizzard names or game content.
+
+Primary source added in 0.6.0:
+Wowhead Forever — https://www.wowhead.com/forever/
+ID/name pairs and item-bonus suffix mappings, retrieved 2026-10-01.
+Primary names override supplemental sources; unseen IDs remain available.
+Raw snapshots, source URLs and hashes: data/wowhead-sources/manifest.json.
+The addon ships factual names/mappings, not website JavaScript or HTML.
+No additional license is asserted for Wowhead or Blizzard content.

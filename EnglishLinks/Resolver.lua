@@ -1,6 +1,6 @@
 local _, ns = ...
 ns.Kinds = {"item", "spell", "profession", "quest", "achievement", "currency",
-    "companion", "talent", "uimap", "mount"}
+    "companion", "talent", "mount"}
 ns.ValidKind = {}
 for _, kind in ipairs(ns.Kinds) do ns.ValidKind[kind] = true end
 ns.Names = ns.Names or {}
@@ -92,6 +92,8 @@ end
 function ns.Resolve(payload, label, onMissing)
     local d = ns.Describe(payload)
     if not d or ns.DB.types[d.rawType] == false then return nil end
+    -- UiMapID identifies the coordinate system, not a visible zone title.
+    if d.rawType == "worldmap" then return "Map Pin Location" end
     local name = ns.DB.typedOverrides[d.kind][d.id]
     if not ns.IsSafeName(name) then name = nil end
     -- mount: uses the summon SPELL ID, not the Mount DB2 row ID.
@@ -108,9 +110,29 @@ function ns.Resolve(payload, label, onMissing)
     name = name or ns.Lookup(d.kind, d.id, onMissing)
     if not name then return nil end
     if d.kind == "item" then
-        local suffix = tonumber(d.fields[8]) or 0
-        -- No verified affix dataset: preserve the entire original item label.
-        if suffix ~= 0 then return nil end
+        -- Legacy random-property IDs are a different namespace from bonuses.
+        local legacy = d.fields[8]
+        if legacy and legacy ~= "" and legacy ~= "0" then return nil end
+        -- Field 14 includes the leading "item" field in our split table.
+        local rawCount = d.fields[14]
+        local count = 0
+        if rawCount and rawCount ~= "" then
+            if not rawCount:match("^%d+$") then return nil end
+            count = tonumber(rawCount)
+            if count > 64 or #d.fields < 14 + count then return nil end
+        end
+        local suffix
+        for i = 15, 14 + count do
+            local bonusID = positive(d.fields[i])
+            local value = bonusID and ns.ItemBonusSuffixes and ns.ItemBonusSuffixes[bonusID]
+            -- Unknown bonuses might change the name. Never drop an unknown suffix.
+            if value == nil then return nil end
+            if value ~= "" then
+                if suffix and suffix ~= value then return nil end
+                suffix = value
+            end
+        end
+        if suffix then name = name .. " " .. suffix end
     elseif d.rawType == "spell" then
         local subtext = api("C_Spell", "GetSpellSubtext", d.id)
         if not ns.IsSecret(subtext) and type(subtext) == "string" and subtext ~= "" then
@@ -118,9 +140,6 @@ function ns.Resolve(payload, label, onMissing)
             local rank = subtext:match("(%d+)%s*$")
             if rank and label:sub(-#tail) == tail then name = name .. " (Rank " .. rank .. ")" end
         end
-    elseif d.rawType == "worldmap" then
-        -- Coordinates remain byte-for-byte in the payload; avoid guessing their scale.
-        name = "Map Pin: " .. name
     end
     return ns.IsSafeName(name) and name or nil
 end

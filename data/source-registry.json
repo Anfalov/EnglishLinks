@@ -1,11 +1,30 @@
 {
   "schema_version": 1,
-  "addon_version": "0.4.2",
+  "addon_version": "0.6.0",
   "registered_at": "2026-09-30T21:00:23Z",
   "timestamp_format": "ISO 8601 with explicit timezone; UTC Z preferred",
   "display_timezone": "Asia/Yekaterinburg",
   "historical_timestamp_policy": "Never infer retrieved_at from file mtime, commit date, release date, registration time or chat upload time. null means unknown.",
   "sources": [
+    {
+      "id": "wowhead-forever",
+      "title": "Wowhead Forever live database",
+      "url": "https://www.wowhead.com/forever/",
+      "categories": [
+        "item",
+        "spell",
+        "quest",
+        "profession",
+        "achievement",
+        "currency",
+        "companion",
+        "mount",
+        "item_bonus_suffix"
+      ],
+      "priority_role": "primary",
+      "status": "used",
+      "update": "Retrieve Forever only; archive responses and timestamps; partition capped lists; primary names overwrite fallback conflicts."
+    },
     {
       "id": "wago",
       "title": "Wago Tools DB2",
@@ -16,11 +35,12 @@
         "profession",
         "achievement",
         "recipe_relation",
-        "quest_id_filter"
+        "quest_coverage_reference"
       ],
       "update": "Указать точную Forever-сборку 1.60.x.x и enUS. Скачать отдельные CSV; не подменять Classic/Era.",
       "url_template": "https://wago.tools/db2/{table}/csv?build={game_build}&locale=enUS",
-      "status": "used"
+      "status": "used",
+      "priority_role": "fallback"
     },
     {
       "id": "questiedb",
@@ -31,7 +51,8 @@
         "item"
       ],
       "update": "Определить актуальный commit репозитория, скачать файлы по полному SHA; проверить, что это слой Forever.",
-      "status": "used"
+      "status": "used",
+      "priority_role": "fallback"
     },
     {
       "id": "everythingquests",
@@ -41,7 +62,8 @@
         "quest"
       ],
       "update": "Определить актуальный commit репозитория, скачать файлы по полному SHA; проверить, что это слой Forever.",
-      "status": "used"
+      "status": "used",
+      "priority_role": "fallback"
     },
     {
       "id": "completao",
@@ -51,7 +73,8 @@
         "quest"
       ],
       "update": "Определить актуальный commit репозитория, скачать файлы по полному SHA; проверить, что это слой Forever.",
-      "status": "used"
+      "status": "used",
+      "priority_role": "fallback"
     },
     {
       "id": "forever-sim",
@@ -63,7 +86,8 @@
       "update": "Обновить assets/db_inputs/wowhead_forever_gearplanner.txt по закреплённому commit. Проверить namespace classicplus и versionNum=16001.",
       "status": "used",
       "upstream": "Wowhead Forever",
-      "upstream_url": "https://www.wowhead.com/forever/"
+      "upstream_url": "https://www.wowhead.com/forever/",
+      "priority_role": "fallback"
     },
     {
       "id": "thewowdb",
@@ -74,7 +98,8 @@
       ],
       "update": "Проверить сборку на индивидуальной странице каждой валюты. Сохранять URL каждой пары ID/имя и время чтения страницы; это не полный CSV.",
       "status": "used",
-      "currency_index": "https://thewowdb.com/wow-forever/currencies/"
+      "currency_index": "https://thewowdb.com/wow-forever/currencies/",
+      "priority_role": "fallback"
     },
     {
       "id": "petscout",
@@ -85,7 +110,8 @@
         "uimap"
       ],
       "update": "Выбрать новую версию именно Forever, сохранить release/file ID и SHA-256 ZIP. Извлечь data/locations.lua и data/zones.lua; исходную сборку взять из заголовков.",
-      "status": "used"
+      "status": "used",
+      "priority_role": "fallback"
     }
   ],
   "snapshots": [
@@ -397,6 +423,23 @@
       "release_file_id": "8940612",
       "published_date": "2026-09-21",
       "archive_member": "PetScoutForever/data/zones.lua"
+    },
+    {
+      "id": "wowhead-forever-2026-10-01",
+      "source_id": "wowhead-forever",
+      "file": "data/wowhead-sources/snapshot.zip",
+      "manifest": "data/wowhead-sources/manifest.json",
+      "url": "https://www.wowhead.com/forever/",
+      "source_version": "Forever dataEnv=16",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieved_at": null,
+      "retrieved_date": "2026-10-01",
+      "retrieval_time_status": "per-response timestamps in manifest where recorded; null otherwise",
+      "registered_at": "2026-10-01T16:27:28.218674+00:00",
+      "sha256": "4e6e819b2330e0b508182f4d401b3890c79681122d47f1098cf1bbce8a5dffd3",
+      "size_bytes": 6466136,
+      "acquisition": "public Wowhead Forever pages and data endpoints"
     }
   ],
   "references": [
@@ -460,5 +503,5 @@
     ],
     "timestamp_semantics": "retrieved_at is successful completion of fetching original bytes or reading the source page, not extraction/copying/rebuilding; record parent archive for extracted members"
   },
-  "updated_at": "2026-09-30T21:32:33Z"
+  "updated_at": "2026-10-01T16:27:28.218674+00:00"
 }

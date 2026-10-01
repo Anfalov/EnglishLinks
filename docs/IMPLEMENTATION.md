@@ -1,4 +1,4 @@
-# Implementation — EnglishLinks 0.4.2
+# Implementation — EnglishLinks 0.6.0
 
 ## Primary sources inspected
 
@@ -26,7 +26,8 @@ not evidence that every corresponding gameplay feature exists in Forever.
 
 - `LinkText.lua`: pure parser, replacement of plain or bracketed labels only;
   payload, color and surrounding text preserved byte-for-byte. UTF-8 byte cursor
-  remapping; escaped pipes and decorated labels remain unchanged. Legacy pure
+  remapping; escaped pipes and decorated labels remain unchanged except the
+  exact native map-pin atlas decoration, preserved around Map Pin Location. Legacy pure
   item API retained for regression tests.
 - `Resolver.lua`: whitelist of typed payloads, disjoint ID namespaces, override →
   database. No client name learning or title requests. Old saved learned data is ignored.
@@ -35,10 +36,11 @@ not evidence that every corresponding gameplay feature exists in Forever.
   Legacy talent IDs are resolved through explicit Talent-to-Spell relations.
   Forever nonbattlepet links resolve species IDs through companion.
   Battlepet/battlePetAbil formats are unsupported and unchanged; no pet API is called. Items with a nonzero random-affix field are left
-  entirely unchanged; no affix database adapter is shipped. Rank suffixes are retained when
+  entirely unchanged. Modern field-14 bonus lists use verified Wowhead effect-5
+  suffix names; unknown or conflicting bonus names preserve the entire label. Rank suffixes are retained when
   recognizable. Player/service/custom hyperlink types are not treated as game data.
 - `QuestNames_enUS.lua`: offline title dictionary. `build_quests.py` parses pinned
-  source snapshots as text, checks SHA-256, filters IDs against QuestV2, removes
+  source snapshots as text, checks SHA-256, reports coverage against QuestV2 without filtering, removes
   Completao's chain-step display annotations, and records per-ID provenance.
   No external Lua is executed. Source conflicts are reported, never merged silently.
 - `EnglishLinks.lua`: instance `OnTextChanged` hooks on discovered chat edit boxes;
@@ -52,15 +54,19 @@ not evidence that every corresponding gameplay feature exists in Forever.
 
 ## Data shipped and gaps
 
-All six user-provided CSVs are for Forever 1.60.1.70124 / enUS and are preserved
-unchanged in `data/`. ItemSparse contains 19,224 names, identical by ID/name to the
-previous 70009 export; the current source hash and build metadata were regenerated.
-SpellName contains 31,716 rows / 31,703 nonempty names. SkillLine contains 154 skill
-names (not only professions). Achievement contains 433 achievement/statistic names.
-SkillLineAbility supplies unambiguous spell-to-skill relations. QuestV2 supplies
-6,605 IDs, no titles. Community sources supply 4,276 titles: 3,535 inherited
-Classic names, 720 from QuestieDB Forever additions and 21 from two other sources.
-See QUEST-SOURCES.md for the boundaries of this coverage. No test fixtures ship as data.
+Wowhead Forever is authoritative for all observed ID/name pairs. The final
+`WowheadNames_enUS.lua` overlay loads after all fallback packs and overwrites
+conflicts. Manual user overrides still win. Raw downloaded pages/scripts are
+archived with URLs and SHA-256 in data/wowhead-sources. The offline importer
+parses data literals without executing downloaded code. Exact Wowhead build is
+unknown; its metadata is never labeled with a Wago build.
+
+The six original Wago CSVs and pinned community sources are preserved. They
+fill ID gaps only. QuestV2 is an optional comparison reference conceptually;
+its current CSV is used for reporting, never to remove names. Final counts
+and remaining coverage gaps are in data/wowhead-report.json and README.md.
+SkillLineAbility relations remain archived/generated but are unused by recipe
+translation. UiMap names are no longer shipped; worldmap uses a generic label.
 
 Removed features and rejected sources are recorded in DECISIONS.md.
 Other optional datasets remain missing; coverage is reported per category.
@@ -71,7 +77,7 @@ The legacy Talent adapter does not establish compatibility of new Forever trees.
 Python unittest and Lua 5.1 via lupa cover schema joins, build rejection,
 Lua generation roundtrip, labels, payloads, ranks, ID namespaces, overrides,
 pet nicknames, UTF-8 cursor, UI hook simulation, caps, secrets and full item parity.
-Quest tests cover source checksums, source priority/conflicts, ID filtering and
+Quest tests cover source checksums, source priority/conflicts, non-filtering coverage and
 annotation removal. Integration tests reject any quest API access and verify
 old learned data is ignored in English as well as Russian clients.
 User confirmed item behavior in game. The new offline quest dictionary has not

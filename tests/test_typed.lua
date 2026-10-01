@@ -31,7 +31,7 @@ local cases={
  {'achievement:10:Player-1-A:1:0:0:0:0:0:0:0','achievement English'},
  {'currency:10:42','currency English'},
  {'talent:20:0','spell English'}, {'talent:20:1','Second rank'},
- {'worldmap:10:1234:5678','Map Pin: uimap English'}, {'mount:10','mount English'},
+ {'worldmap:10:1234:5678','Map Pin Location'}, {'mount:10','mount English'},
 }
 for _,c in ipairs(cases) do eq(translate(c[1]),link(c[1],c[2]),c[1]) end
 -- Forever journal emits nonbattlepet:speciesID. No localized API is required.

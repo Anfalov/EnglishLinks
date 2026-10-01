@@ -1,0 +1,7 @@
+{
+  "url": "https://nether.wowhead.com/forever/tooltip/item/10378?bonus=12722",
+  "retrieved_date": "2026-10-01",
+  "retrieved_at": null,
+  "sha256": "61ace96c0de3084e805012761c36c3eb47c3f0186832dd11e85bebc81aa1fcc0",
+  "raw_response": "{\"name\":\"Commander's Armor\",\"quality\":2,\"icon\":\"inv_chest_plate06\",\"tooltip\":\"<table><tr><td><!--nstart--><b class=\\\"q2\\\">Commander's Armor of the Bear</b><!--nend--><!--ndstart--><!--ndend--><span class=\\\"q\\\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when equipped<!--ue--><!--ue--><table width=\\\"100%\\\"><tr><td>Chest</td><th><!--scstart4:4--><span class=\\\"q1\\\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->597 Armor</span><br><span><!--stat4-->+19 Strength</span><br><span><!--stat7-->+19 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 115 / 115</td></tr></table><table><tr><td>Requires Level <!--rlvl-->58<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\\\"whtt-sellprice\\\">Sell Price: <span class=\\\"moneygold\\\">1</span> <span class=\\\"moneysilver\\\">94</span> <span class=\\\"moneycopper\\\">66</span></div></td></tr></table>\",\"spells\":[]}"
+}

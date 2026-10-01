@@ -1,5 +1,53 @@
 # История решений
 
+## 0.6.0 — 2026-10-01
+
+### Правило обновления названий
+
+1. Сначала Wowhead Forever: добавляем новые ID, для существующих заменяем
+   прежнее название названием Wowhead при любом расхождении.
+2. Затем остальные источники: добавляем только отсутствующие ID; уже выбранные
+   названия не перезаписываем. При конфликте с Wowhead всегда побеждает Wowhead.
+3. Не удаляем запись только потому, что её нет в Wowhead или QuestV2.
+   QuestV2 служит только проверкой полноты, а не фильтром допустимых ID.
+
+Это правило применяется к встроенной базе. Явные ручные переименования игрока
+через `/el set` сохраняют приоритет. В текущей реализации дополнительные пакеты
+загружаются раньше пакета Wowhead; итоговая база эквивалентна указанному порядку.
+Правило проверяется в `tests/test_build_wowhead.py` и описано подробнее
+в `docs/WOWHEAD-SOURCES.md`.
+
+### Окончания предметов и версии
+
+Для найденных в Forever окончаний ItemRandomSuffix/ItemRandomProperties не
+нужны: используется проверенный источник Wowhead item-bonuses (345 бонусов,
+50 окончаний). Например, bonus ID 12722 даёт `of the Bear`.
+Отдельно восстанавливать импорт двух старых таблиц для этого пути не требуется.
+Их отсутствие во всех возможных форматах ссылок Forever не доказано;
+проверка ненулевого старого поля остаётся защитой от потери окончания.
+Это не означает, что найденные бонусные окончания остаются непереведёнными.
+
+По просьбе пользователя текущая и следующие версии имеют обычный номер
+без `alpha`: текущая версия — `0.6.0`, тип файла CurseForge — `Release`.
+Номер версии сам по себе не утверждает прохождение проверки в игровом клиенте.
+
+### Изменения
+
+- Wowhead Forever is the primary source for names; all other sources fill gaps.
+- QuestV2 now checks coverage only. No names are discarded by this reference.
+- Includes 24,062 items, 31,795 spells, 5,250 quests, 154 skills, 434 achievements,
+  9 currencies, 113 companion species and 217 summon-spell mount names.
+- Translates 345 known item bonuses with 50 distinct English suffixes. Unknown
+  bonuses and legacy random-property/suffix IDs preserve the original label.
+- Map pins use Map Pin Location, retaining the atlas icon and coordinate payload.
+  Removed the unnecessary UiMap name dictionary.
+- Archived Wowhead source snapshots and added deterministic import/regression tests.
+
+New suffix/map-pin behavior is verified offline, not yet in the live client.
+Target: WoW Forever 1.60.1, Interface 16001.
+
+
+
 ## 0.5.0 — английские ссылки рецептов
 
 После проверки 0.4.4-alpha.1 пользователь подтвердил работу в Forever.
