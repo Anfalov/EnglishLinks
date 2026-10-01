@@ -9,7 +9,7 @@ It is built for **WoW Forever**.
 
 ![English item, spell and recipe links in WoW Forever chat](https://raw.githubusercontent.com/Anfalov/EnglishLinks/main/docs/images/english-links-in-game.jpg)
 
-*English links in chat. Ttranslated links are clickable.*
+*English links in chat. Translated links are clickable.*
 
 ## Supported links
 
