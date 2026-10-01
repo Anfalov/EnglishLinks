@@ -1,0 +1,95 @@
+{
+  "edition": "Wowhead Forever",
+  "locale": "enUS",
+  "exact_build": null,
+  "table": "wow.gearPlanner.classicplus.randomEnchant",
+  "files": [
+    {
+      "file": "gear-planner.js",
+      "url": "https://nether.wowhead.com/forever/data/gear-planner?dv=59&db=1790292378",
+      "parser": "randomEnchant",
+      "retrieved_at": "2026-10-01T17:35:13.691669+00:00",
+      "bytes": 7204634,
+      "sha256": "a510982db093ccb90e257b631291443b03863c3fc54f85f25aa38022d62bc5c3",
+      "retrieval_started_at": null
+    },
+    {
+      "file": "tooltip-6614-None.json",
+      "url": "https://nether.wowhead.com/forever/tooltip/item/6614",
+      "parser": "tooltip",
+      "retrieved_at": "2026-10-01T17:35:19.805198+00:00",
+      "bytes": 731,
+      "sha256": "37e403af1d5b2f0e8b19343a29a23586667a9ae866c8360379bd164dab33d8da",
+      "item_id": 6614,
+      "rand_id": null,
+      "retrieval_started_at": null
+    },
+    {
+      "file": "tooltip-6614-763.json",
+      "url": "https://nether.wowhead.com/forever/tooltip/item/6614?rand=763",
+      "parser": "tooltip",
+      "retrieved_at": "2026-10-01T17:35:26.862212+00:00",
+      "bytes": 753,
+      "sha256": "bfbc28cbfba3ad830b389f6d92a146a13ac2d7eb569b43bda996c8901b4c7c0a",
+      "item_id": 6614,
+      "rand_id": 763,
+      "retrieval_started_at": null
+    },
+    {
+      "file": "tooltip-10378-None.json",
+      "url": "https://nether.wowhead.com/forever/tooltip/item/10378",
+      "parser": "tooltip",
+      "retrieved_at": "2026-10-01T17:35:31.715324+00:00",
+      "bytes": 872,
+      "sha256": "c1aa78d9329cfbc526024f441ce9742b453f5085ae3010b3e3b53e3d66034290",
+      "item_id": 10378,
+      "rand_id": null,
+      "retrieval_started_at": null
+    },
+    {
+      "file": "tooltip-10378-1215.json",
+      "url": "https://nether.wowhead.com/forever/tooltip/item/10378?rand=1215",
+      "parser": "tooltip",
+      "retrieved_at": "2026-10-01T17:35:36.158571+00:00",
+      "bytes": 896,
+      "sha256": "1df8b68f62eb8fb887ca42402b7e3708a2c0057d995463e8bedeed22d3cf6fdd",
+      "item_id": 10378,
+      "rand_id": 1215,
+      "retrieval_started_at": null
+    },
+    {
+      "file": "tooltip-10378--68.json",
+      "url": "https://nether.wowhead.com/forever/tooltip/item/10378?rand=-68",
+      "parser": "tooltip",
+      "retrieved_at": "2026-10-01T17:35:40.885963+00:00",
+      "bytes": 896,
+      "sha256": "1df8b68f62eb8fb887ca42402b7e3708a2c0057d995463e8bedeed22d3cf6fdd",
+      "item_id": 10378,
+      "rand_id": -68,
+      "retrieval_started_at": null
+    },
+    {
+      "file": "tooltip-6614--9.json",
+      "url": "https://nether.wowhead.com/forever/tooltip/item/6614?rand=-9",
+      "parser": "tooltip",
+      "retrieved_at": "2026-10-01T17:35:47.938283+00:00",
+      "bytes": 753,
+      "sha256": "bfbc28cbfba3ad830b389f6d92a146a13ac2d7eb569b43bda996c8901b4c7c0a",
+      "item_id": 6614,
+      "rand_id": -9,
+      "retrieval_started_at": null
+    },
+    {
+      "file": "tooltip-10378--7.json",
+      "url": "https://nether.wowhead.com/forever/tooltip/item/10378?rand=-7",
+      "parser": "tooltip",
+      "retrieved_at": "2026-10-01T17:35:53.154738+00:00",
+      "bytes": 872,
+      "sha256": "c1aa78d9329cfbc526024f441ce9742b453f5085ae3010b3e3b53e3d66034290",
+      "item_id": 10378,
+      "rand_id": -7,
+      "retrieval_started_at": null
+    }
+  ],
+  "archive_sha256": "4243dc64f5b8750da6f50f82ac44506f981d02d935fec761a23ecf3c3b2231fb"
+}

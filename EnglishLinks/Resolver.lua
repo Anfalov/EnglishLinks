@@ -110,9 +110,18 @@ function ns.Resolve(payload, label, onMissing)
     name = name or ns.Lookup(d.kind, d.id, onMissing)
     if not name then return nil end
     if d.kind == "item" then
-        -- Legacy random-property IDs are a different namespace from bonuses.
-        local legacy = d.fields[8]
-        if legacy and legacy ~= "" and legacy ~= "0" then return nil end
+        -- rand IDs are signed and use a separate namespace from bonus IDs.
+        local suffix
+        local rawRandom = d.fields[8]
+        if rawRandom and rawRandom ~= "" then
+            if not rawRandom:match("^%-?%d+$") then return nil end
+            local randomID = tonumber(rawRandom)
+            if not randomID or math.abs(randomID) > 2147483647 then return nil end
+            if randomID ~= 0 then
+                suffix = ns.ItemRandomAffixes and ns.ItemRandomAffixes[randomID]
+                if not ns.IsSafeName(suffix) then return nil end
+            end
+        end
         -- Field 14 includes the leading "item" field in our split table.
         local rawCount = d.fields[14]
         local count = 0
@@ -121,7 +130,6 @@ function ns.Resolve(payload, label, onMissing)
             count = tonumber(rawCount)
             if count > 64 or #d.fields < 14 + count then return nil end
         end
-        local suffix
         for i = 15, 14 + count do
             local bonusID = positive(d.fields[i])
             local value = bonusID and ns.ItemBonusSuffixes and ns.ItemBonusSuffixes[bonusID]

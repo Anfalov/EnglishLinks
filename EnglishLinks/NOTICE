@@ -1,4 +1,4 @@
-EnglishLinks 0.6.0
+EnglishLinks 0.6.1
 
 EnglishLinks code and corresponding build/test source are supplied under GNU
 General Public License version 3; see LICENSE. Third-party notices and underlying
@@ -68,3 +68,8 @@ Primary names override supplemental sources; unseen IDs remain available.
 Raw snapshots, source URLs and hashes: data/wowhead-sources/manifest.json.
 The addon ships factual names/mappings, not website JavaScript or HTML.
 No additional license is asserted for Wowhead or Blizzard content.
+Random-property source added in 0.6.1:
+Wowhead Forever gear-planner randomEnchant table (2,039 signed IDs).
+Raw response and tooltip evidence: data/random-affix-sources/manifest.json.
+Only ID/name mappings are shipped in RandomAffixes_enUS.lua; the source
+response remains a build input, not executable addon code.

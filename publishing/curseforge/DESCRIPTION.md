@@ -55,10 +55,10 @@ Clear and reinsert a link to use its original name.
 
 ## Coverage and compatibility
 
-Version 0.6.0 includes **24,062 item names**, **31,795 spell names** and
+Version 0.6.1 includes **24,062 item names**, **31,795 spell names** and
 **5,250 quest titles**, plus smaller supplementary name packs. Coverage is
 incomplete: missing names and unsupported links keep their original labels.
-Known item-bonus suffixes are translated; unknown bonuses and legacy random-affix IDs keep the original label. New suffix and map-pin behavior needs testing in the live client.
+Known item-bonus suffixes and 2,039 signed random-property IDs are translated. Matching rand/bonus suffixes appear once; unknown IDs or conflicting suffixes keep the original label. New suffix and map-pin behavior needs testing in the live client.
 
 The target is **WoW Forever 1.60.1**. Retail and other Classic editions have not
 been validated. Companion links may fail to send even without translation;

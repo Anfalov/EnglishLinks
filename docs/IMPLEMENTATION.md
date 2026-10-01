@@ -1,4 +1,4 @@
-# Implementation — EnglishLinks 0.6.0
+# Implementation — EnglishLinks 0.6.1
 
 ## Primary sources inspected
 
@@ -35,10 +35,12 @@ not evidence that every corresponding gameplay feature exists in Forever.
   Their saved settings, overrides and missing IDs are cleaned on load.
   Legacy talent IDs are resolved through explicit Talent-to-Spell relations.
   Forever nonbattlepet links resolve species IDs through companion.
-  Battlepet/battlePetAbil formats are unsupported and unchanged; no pet API is called. Items with a nonzero random-affix field are left
-  entirely unchanged. Modern field-14 bonus lists use verified Wowhead effect-5
-  suffix names; unknown or conflicting bonus names preserve the entire label. Rank suffixes are retained when
+  Battlepet/battlePetAbil formats are unsupported and unchanged; no pet API is called. Signed field-8 rand IDs use `RandomAffixes_enUS.lua`. Field-14 bonus lists
+  use verified Wowhead effect-5 suffix names. Matching suffixes from both
+  sources are appended once; unknown or conflicting IDs preserve the entire label. Rank suffixes are retained when
   recognizable. Player/service/custom hyperlink types are not treated as game data.
+- `RandomAffixes_enUS.lua`: all 2,039 signed rand IDs in the archived Forever
+  gear-planner table. The builder verifies hashes and saved tooltip responses.
 - `QuestNames_enUS.lua`: offline title dictionary. `build_quests.py` parses pinned
   source snapshots as text, checks SHA-256, reports coverage against QuestV2 without filtering, removes
   Completao's chain-step display annotations, and records per-ID provenance.

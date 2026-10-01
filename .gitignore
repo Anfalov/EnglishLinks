@@ -8,3 +8,4 @@ Thumbs.db
 dist/
 *.zip
 !data/wowhead-sources/snapshot.zip
+!data/random-affix-sources/snapshot.zip

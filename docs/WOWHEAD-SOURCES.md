@@ -44,21 +44,48 @@ Wowhead's own core.js defines effect 5 as `EFFECT_TYPE_NAME_SUFFIX`; effect 4 is
 The snapshot supplies 345 suffix-bearing bonuses, 50 distinct suffix strings,
 and 20 known bonuses without suffixes.
 
-Resolver splits a modern item payload including the leading `item` token:
-field 8 is the legacy random-affix ID; field 14 is bonus count; fields 15 onward
+Resolver splits an item payload including the leading `item` token:
+field 8 is the signed random-property ID; field 14 is bonus count; fields 15 onward
 are bonus IDs. Known effect-5 text is appended to the English base item name.
 Example: item 10378 + bonus 12722 → Commander's Armor of the Bear.
 This matches Wowhead's actual tooltip response saved in bonus-example.json.
-Unknown/malformed bonuses, competing suffixes and nonzero legacy random-affix
-IDs preserve the complete original label. Legacy ItemRandomSuffix and
-ItemRandomProperties IDs are not assumed to equal bonus/description IDs.
-The discovered Forever suffixes do not require ItemRandomSuffix or
-ItemRandomProperties: their names are already resolved through the verified
-bonus data above. Restoring those two legacy importers is not a prerequisite
-for this feature. This does not prove that no Forever link can ever contain a
-legacy ID; rejecting such an unverified variant is a defensive fallback, not
-a claim that the discovered bonus suffixes remain untranslated.
+Unknown/malformed IDs and competing suffixes preserve the complete original
+label. Random-property IDs are never assumed to equal bonus/description IDs.
 New behavior is tested offline and awaits a real client link.
+
+### Signed random properties (`rand`), added in 0.6.1
+
+The earlier 0.6.0 investigation was incomplete. The Forever tooltip service
+also resolves random-property names, and the Forever gear-planner response
+contains a complete `wow.gearPlanner.classicplus.randomEnchant` table.
+Its internal namespace is `classicplus`, but the source URL is `/forever/`.
+The archived response supplies 2,039 IDs: 2,012 positive and 27 negative,
+with 46 distinct suffix strings. All entries are retained, including unusual
+source labels. No Classic/Retail names or IDs are guessed or substituted.
+
+`tools/build_random_affixes.py` verifies archive/response SHA-256 hashes,
+extracts only JSON literals without executing downloaded code, validates signed
+IDs and safe names, checks saved tooltip evidence, and generates
+`EnglishLinks/RandomAffixes_enUS.lua`. The separate raw snapshot and exact
+retrieval completion timestamps are in `data/random-affix-sources`.
+Run `python tools/build_random_affixes.py` for an offline rebuild.
+
+Verified tooltip examples:
+- item 6614 + rand 763 or -9: Sage's Cloak of the Owl.
+- item 10378 + rand 1215 or -68: Commander's Armor of the Bear.
+- rand -7 is absent from this Forever table and its saved tooltip leaves the
+  base name unchanged. A generic Wowhead guide mentioning -7 does not establish
+  a Forever mapping, so the addon keeps such an unknown link unchanged.
+
+The sign is significant. A known nonzero rand ID now supplies an English suffix
+instead of preventing translation. If both rand and bonus IDs supply the same
+suffix it is appended once; different suffixes, unknown IDs or malformed fields
+preserve the original label. Payload, including the variant ID and unique ID,
+color and surrounding text remain unchanged; cursor offsets are adjusted.
+The same behavior works for shorter links without a bonus-count field.
+Direct ItemRandomProperties/ItemRandomSuffix DB2 exports are not needed for this
+implementation: the signed mapping comes from the verified Wowhead response.
+These response checks do not establish which variants the live client emits.
 
 ## Map pins
 

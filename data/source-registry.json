@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "addon_version": "0.6.0",
+  "addon_version": "0.6.1",
   "registered_at": "2026-09-30T21:00:23Z",
   "timestamp_format": "ISO 8601 with explicit timezone; UTC Z preferred",
   "display_timezone": "Asia/Yekaterinburg",
@@ -19,7 +19,8 @@
         "currency",
         "companion",
         "mount",
-        "item_bonus_suffix"
+        "item_bonus_suffix",
+        "item_random_affix"
       ],
       "priority_role": "primary",
       "status": "used",
@@ -440,6 +441,21 @@
       "sha256": "4e6e819b2330e0b508182f4d401b3890c79681122d47f1098cf1bbce8a5dffd3",
       "size_bytes": 6466136,
       "acquisition": "public Wowhead Forever pages and data endpoints"
+    },
+    {
+      "id": "wowhead-forever-random-affixes-2026-10-01",
+      "source_id": "wowhead-forever",
+      "file": "data/random-affix-sources/snapshot.zip",
+      "url": "https://nether.wowhead.com/forever/data/gear-planner?dv=59&db=1790292378",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": null,
+      "retrieved_at": "2026-10-01T17:35:53.154738+00:00",
+      "sha256": "4243dc64f5b8750da6f50f82ac44506f981d02d935fec761a23ecf3c3b2231fb",
+      "size_bytes": 903634,
+      "manifest": "data/random-affix-sources/manifest.json",
+      "notes": "Archive of raw gear-planner response and seven tooltip responses. Per-response retrieval completion timestamps and hashes are in the manifest. Request start times were not recorded."
     }
   ],
   "references": [
@@ -503,5 +519,5 @@
     ],
     "timestamp_semantics": "retrieved_at is successful completion of fetching original bytes or reading the source page, not extraction/copying/rebuilding; record parent archive for extracted members"
   },
-  "updated_at": "2026-10-01T16:27:28.218674+00:00"
+  "updated_at": "2026-10-01T17:38:06.970627+00:00"
 }
