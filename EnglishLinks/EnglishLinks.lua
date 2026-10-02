@@ -1,5 +1,5 @@
 local addonName, ns = ...
-local VERSION = "0.6.1"
+local VERSION = "0.6.3"
 local db, started
 local attached = setmetatable({}, { __mode = "k" })
 local changing = setmetatable({}, { __mode = "k" })
