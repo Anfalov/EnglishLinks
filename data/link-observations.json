@@ -47,7 +47,12 @@
     "bonus_id": 3524,
     "observed": "Bag Linen Bandage translates; profession result and wardrobe item links contain bonus 3524 and do not translate. Both links are item links, not transmogappearance.",
     "fix": "Recognize bonus 3524 as contributing no name suffix. Keep all payload bytes and retain protection for other unknown/conflicting bonuses.",
-    "verification": "Reproduced against prepared addon in Lua 5.1. Wowhead Forever tooltip titles unchanged by 3524, including combination with suffix bonus 12722. Fixed build awaits live-client confirmation.",
-    "evidence": "data/client-link-evidence/preview-bonus-3524.json"
+    "verification": "Reproduced against prepared addon in Lua 5.1. Wowhead Forever tooltip titles unchanged by 3524, including combination with suffix bonus 12722. User confirmed the fixed build works in the live client.",
+    "evidence": "data/client-link-evidence/preview-bonus-3524.json",
+    "confirmed_at": "2026-10-03T01:48:58+05:00",
+    "tested_version": "0.6.5-preview.1",
+    "included_in_version": "0.6.6",
+    "user_report": "Да, работает",
+    "other_recipient_verified": false
   }
 ]

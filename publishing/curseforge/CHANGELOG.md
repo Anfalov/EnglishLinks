@@ -1,3 +1,7 @@
+## 0.6.6 — 2026-10-03
+
+- Fixed untranslated item links from profession windows and appearance collections.
+
 ## 0.6.5 — 2026-10-02
 
 - Remove Wago downloads, CSVs and importers, QuestV2 coverage checks, unused

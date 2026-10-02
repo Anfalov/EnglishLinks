@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.6.6 — 2026-10-03
 
 - Translate item links inserted from profession output icons and wardrobe
   previews when they contain bonus 3524. Preserve the link payload, color and

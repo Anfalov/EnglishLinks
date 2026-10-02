@@ -109,5 +109,6 @@ tooltip responses in `data/client-link-evidence/preview-bonus-3524.json` show no
 name change for either item or for Commander's Armor with suffix bonus 12722.
 The original bonus remains in the outgoing payload. Other unknown bonuses
 remain guarded; the updater retains this entry when absent from fresh sources
-and will prefer an explicit future Wowhead definition. In-game confirmation of
-the fixed build remains pending.
+and will prefer an explicit future Wowhead definition. The user confirmed the fix
+in the live client with build `0.6.5-preview.1` on 2026-10-03
+(Asia/Yekaterinburg); the fix is included in 0.6.6.
