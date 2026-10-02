@@ -56,6 +56,11 @@ UiMapID и координаты сохраняются. База названи�
 
 ## Установка и обновление
 
+Готовые установочные ZIP автоматически появляются в
+[GitHub Releases](https://github.com/Anfalov/EnglishLinks/releases) после push в `main`.
+Выбирай `EnglishLinks-<версия>.zip` в Assets. Нумерация и повторный запуск:
+[автоматические выпуски](docs/RELEASES.md).
+
 Скачать проект: **Code → Download ZIP** в [репозитории GitHub](https://github.com/Anfalov/EnglishLinks).
 Из распакованного архива нужна вложенная папка `EnglishLinks`.
 
