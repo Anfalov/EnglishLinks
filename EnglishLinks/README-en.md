@@ -1,4 +1,4 @@
-# EnglishLinks 0.6.1
+# EnglishLinks
 
 English names in outgoing game links for WoW Forever 1.60.1.
 
@@ -9,7 +9,7 @@ EnglishLinks changes the link label; you send the message normally.
 
 Names are bundled. No other addon or name-collection step is required.
 Wowhead Forever is the primary name source; other sources fill missing IDs.
-Known item-bonus suffixes and 2,039 signed random-property IDs are translated.
+Known item-bonus suffixes and 2,062 signed random-property IDs are translated.
 Matching rand/bonus suffixes appear once. Unknown IDs or conflicting suffixes
 keep the original label. New suffix/map-pin behavior needs live testing.
 The addon does not translate incoming chat, tooltips or the game interface.

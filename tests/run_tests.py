@@ -106,9 +106,13 @@ if options.data_dir:
     print('All typed names, quest titles, recipe relations and source hashes match their inputs')
     import build_supplements
     extra, origins, report = build_supplements.compile_supplements(options.data_dir)
-    assert report['total_count'] == 24020
-    assert report['conflicts'] == []
-    assert actual_ns.PackMeta.item.count == 24020
+    assert report['total_count'] == 24037
+    # The newer supplemental planner disagrees with older fallback names.
+    # Supplements must not overwrite those; the primary Wowhead overlay does.
+    assert {row['id'] for row in report['conflicts']} == {254696, 263411, 263412, 274749}
+    for row in report['conflicts']:
+        assert actual_ns.Names.item[row['id']] == row['selected']
+    assert actual_ns.PackMeta.item.count == 24037
     assert actual_ns.ItemNamesMeta.count == 19224  # Original Wago metadata stays intact.
     assert actual_ns.PackMeta.currency.count == 5
     assert (root / 'EnglishLinks/SupplementNames_enUS.lua').read_text() == build_supplements.render(extra)

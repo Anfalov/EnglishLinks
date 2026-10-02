@@ -1,0 +1,37 @@
+[
+  {
+    "id": 515,
+    "name": "Darkmoon Prize Ticket",
+    "build": "1.60.1.70124",
+    "url": "https://thewowdb.com/wow-forever/currency/darkmoon-prize-ticket-515/",
+    "retrieved": "2026-09-30"
+  },
+  {
+    "id": 1792,
+    "name": "Honor Points",
+    "build": "1.60.1.70124",
+    "url": "https://thewowdb.com/wow-forever/currency/honor-points-1792/",
+    "retrieved": "2026-09-30"
+  },
+  {
+    "id": 3402,
+    "name": "Merchant's Favor",
+    "build": "1.60.1.70124",
+    "url": "https://thewowdb.com/wow-forever/currency/merchant-s-favor-3402/",
+    "retrieved": "2026-09-30"
+  },
+  {
+    "id": 3468,
+    "name": "Rank Points",
+    "build": "1.60.1.70124",
+    "url": "https://thewowdb.com/wow-forever/currency/rank-points-3468/",
+    "retrieved": "2026-09-30"
+  },
+  {
+    "id": 3469,
+    "name": "Tarnished Undermine Real",
+    "build": "1.60.1.70124",
+    "url": "https://thewowdb.com/wow-forever/currency/tarnished-undermine-real-3469/",
+    "retrieved": "2026-09-30"
+  }
+]

@@ -20,7 +20,7 @@ class ReleaseTests(unittest.TestCase):
             ".github/release-version.json": json.dumps({"base_version": "0.6.1", "run_number_offset": 0}),
             "EnglishLinks/EnglishLinks.toc": "## Version: 0.6.1\nEnglishLinks.lua\n",
             "EnglishLinks/EnglishLinks.lua": 'local VERSION = "0.6.1"\n',
-            "README.md": "# EnglishLinks 0.6.1\nHistory: added rand in 0.6.1.\n",
+            "README.md": "# EnglishLinks\nHistory: added rand in 0.6.1.\n",
             "NOTICE": "EnglishLinks 0.6.1\nSource added in 0.6.1.\n",
             "EnglishLinks/NOTICE": "EnglishLinks 0.6.1\nSource added in 0.6.1.\n",
             "EnglishLinks/README-en.md": "# EnglishLinks 0.6.1\nInstall.\n",
@@ -63,7 +63,7 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual(metadata["upload_file"], "EnglishLinks-0.6.2.zip")
         self.assertEqual(metadata["game_versions"], ["1.60.1"])
         self.assertEqual((self.root / "README.md").read_text(),
-                         "# EnglishLinks 0.6.2\nHistory: added rand in 0.6.1.\n")
+                         "# EnglishLinks\nHistory: added rand in 0.6.1.\n")
         self.assertIn("## 0.6.1", (self.root / "CHANGELOG.md").read_text())
 
     def test_retry_uses_existing_tag_and_does_not_change_main(self):

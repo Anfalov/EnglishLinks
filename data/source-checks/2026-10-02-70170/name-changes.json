@@ -1,0 +1,581 @@
+{
+  "item": {
+    "before": 24062,
+    "after": 24102,
+    "added": {
+      "756": "Tunnel Pick",
+      "4476": "Beastwalker Robe",
+      "4643": "Grimsteel Cape",
+      "6694": "Heart of Agamaggan",
+      "6749": "Tiger Band",
+      "6751": "Mourning Shawl",
+      "7747": "Vile Protector",
+      "7750": "Mantle of Woe",
+      "7751": "Vorrel's Boots",
+      "7753": "Bloodspiller",
+      "9487": "Hi-Tech Supergun",
+      "16887": "Witch's Finger",
+      "282716": "Imbued Scaled Cuffs",
+      "251965": "Undead Knight's Bracers",
+      "287416": "Truskis' Cheesecake Slice",
+      "287505": "Tender Strider Meat",
+      "279835": "Vine Pruner's Cloak",
+      "279836": "Thorn Protecting Girdle",
+      "279847": "Unstable Power Core",
+      "279848": "Construct Cloak",
+      "17508": "Forcestone Buckler",
+      "16886": "Outlaw Sabre",
+      "270054": "Cultist's Chestguard",
+      "270043": "Dreamer's Chestguard",
+      "273024": "Glinteye Slippers",
+      "273026": "Garb of Florid Feathers",
+      "284459": "Dendweller's Hammer",
+      "282710": "Dun Garok Rifle",
+      "286977": "Sword of the Fallen",
+      "251963": "Gravewalker Boots",
+      "17042": "Nail Spitter",
+      "286981": "Death Bindings",
+      "286140": "Monster - Shield, Paladin",
+      "280805": "Serrated Raptor Claw",
+      "17043": "Zealot's Robe",
+      "273023": "Saltscale Girdle",
+      "273029": "Golemsight Long Gun",
+      "273030": "Ring of Power Regulation",
+      "274078": "Boar Signet",
+      "270047": "Sentinel's Boots"
+    },
+    "renamed": {
+      "13503": {
+        "before": "Alchemists' Stone",
+        "after": "Alchemist's Stone"
+      },
+      "13517": {
+        "before": "Recipe: Alchemists' Stone",
+        "after": "Recipe: Alchemist's Stone"
+      },
+      "274749": {
+        "before": "Souvenier Sea Shell",
+        "after": "Souvenir Sea Shell"
+      },
+      "254696": {
+        "before": "Reverance",
+        "after": "Reverence"
+      },
+      "271937": {
+        "before": "Guerilla's Jagged Mace",
+        "after": "Guerrilla's Jagged Mace"
+      },
+      "272025": {
+        "before": "Dathrohan's Correspondance",
+        "after": "Dathrohan's Correspondence"
+      },
+      "280797": {
+        "before": "Rabbit Crate (Artic)",
+        "after": "Rabbit Crate (Arctic)"
+      },
+      "280839": {
+        "before": "Stolen Supplies",
+        "after": "Blackrock Supplies"
+      },
+      "277059": {
+        "before": "Al'aketh Chain",
+        "after": "Al'Aketh Chain"
+      },
+      "277061": {
+        "before": "Al'aketh Greaves",
+        "after": "Al'Aketh Greaves"
+      },
+      "277062": {
+        "before": "Al'aketh Harness",
+        "after": "Al'Aketh Harness"
+      },
+      "277078": {
+        "before": "Al'aketh Leggings",
+        "after": "Al'Aketh Leggings"
+      },
+      "284192": {
+        "before": "Furblog Loincloth",
+        "after": "Furbolg Loincloth"
+      },
+      "286639": {
+        "before": "Ambassdor's Bloodrobes",
+        "after": "Ambassador's Bloodrobes"
+      },
+      "281014": {
+        "before": "Vine Wrapped Scroll",
+        "after": "Vine-Wrapped Scroll"
+      },
+      "277056": {
+        "before": "Al'aketh Chainmail",
+        "after": "Al'Aketh Chainmail"
+      },
+      "277057": {
+        "before": "Al'aketh Wristguards",
+        "after": "Al'Aketh Wristguards"
+      },
+      "277058": {
+        "before": "Al'aketh Gauntlets",
+        "after": "Al'Aketh Gauntlets"
+      },
+      "277063": {
+        "before": "Al'aketh Bracers",
+        "after": "Al'Aketh Bracers"
+      },
+      "277064": {
+        "before": "Al'aketh Gloves",
+        "after": "Al'Aketh Gloves"
+      },
+      "277065": {
+        "before": "Al'aketh Belt",
+        "after": "Al'Aketh Belt"
+      },
+      "277066": {
+        "before": "Al'aketh Trousers",
+        "after": "Al'Aketh Trousers"
+      },
+      "277067": {
+        "before": "Al'aketh Boots",
+        "after": "Al'Aketh Boots"
+      },
+      "277068": {
+        "before": "Al'aketh Jerkin",
+        "after": "Al'Aketh Jerkin"
+      },
+      "277069": {
+        "before": "Al'aketh Armguards",
+        "after": "Al'Aketh Armguards"
+      },
+      "277070": {
+        "before": "Al'aketh Mitts",
+        "after": "Al'Aketh Mitts"
+      },
+      "277071": {
+        "before": "Al'aketh Strap",
+        "after": "Al'Aketh Strap"
+      },
+      "277072": {
+        "before": "Al'aketh Pants",
+        "after": "Al'Aketh Pants"
+      },
+      "277073": {
+        "before": "Al'aketh Footwraps",
+        "after": "Al'Aketh Footwraps"
+      },
+      "277074": {
+        "before": "Al'aketh Vestments",
+        "after": "Al'Aketh Vestments"
+      },
+      "277079": {
+        "before": "Al'aketh Shoes",
+        "after": "Al'Aketh Shoes"
+      },
+      "277128": {
+        "before": "Bloodtalon Martriarch Eggs",
+        "after": "Bloodtalon Matriarch Eggs"
+      },
+      "285344": {
+        "before": "Guard Captains Barrier",
+        "after": "Guard Captain's Barrier"
+      },
+      "273115": {
+        "before": "Blueprint: Baker's Oven",
+        "after": "Blueprint: Iron Oven"
+      },
+      "277077": {
+        "before": "Al'aketh Cord",
+        "after": "Al'Aketh Cord"
+      },
+      "277076": {
+        "before": "Al'aketh Handwraps",
+        "after": "Al'Aketh Handwraps"
+      },
+      "277075": {
+        "before": "Al'aketh Cuffs",
+        "after": "Al'Aketh Cuffs"
+      },
+      "277060": {
+        "before": "Al'aketh Legguards",
+        "after": "Al'Aketh Legguards"
+      },
+      "286978": {
+        "before": "Rotmender's Robes",
+        "after": "Rotmender's Garb"
+      },
+      "251320": {
+        "before": "Satchet of Spirit Powder",
+        "after": "Sachet of Spirit Powder"
+      },
+      "273310": {
+        "before": "Alchemey Ward - Fel Ash Experimentation Notes",
+        "after": "Alchemy Ward - Fel Ash Experimentation Notes"
+      },
+      "271939": {
+        "before": "Guerilla's Jagged Mace",
+        "after": "Guerrilla's Jagged Mace"
+      },
+      "271938": {
+        "before": "Guerilla's Jagged Mace",
+        "after": "Guerrilla's Jagged Mace"
+      },
+      "271936": {
+        "before": "Guerilla's Jagged Mace",
+        "after": "Guerrilla's Jagged Mace"
+      },
+      "263411": {
+        "before": "Windcharged Leaf",
+        "after": "Idol of Shifting Tides"
+      },
+      "277533": {
+        "before": "Fel Tained Journal",
+        "after": "Fel Tainted Journal"
+      },
+      "263412": {
+        "before": "Windcarved Effigy",
+        "after": "Totem of Charged Flames"
+      },
+      "276158": {
+        "before": "Crystalized Shard",
+        "after": "Crystallized Shard"
+      }
+    },
+    "removed": {}
+  },
+  "spell": {
+    "before": 31795,
+    "after": 31839,
+    "added": {
+      "1322054": "Summon Skeletal Servant",
+      "1322065": "[DNT]Avatar of Hakkar Player Checker",
+      "1322067": "[DNT]Avatar of Hakkar Player Checker Ping",
+      "1322218": "Holy Forgefire",
+      "1322296": "Ritual Circle",
+      "1322297": "(DNT) Mod Armor No Mods",
+      "1322299": "(DNT) Mod Resistance by Bonus Defense",
+      "1322304": "Crystal Breaker",
+      "1322311": "Recently Siphoned the Grave",
+      "1322312": "Cookie's Stirring Rod",
+      "1322318": "Twilight Empowerment",
+      "1322574": "Rule of Rage (DND)",
+      "1322605": "Shifting Power",
+      "1322629": "Capturing",
+      "1322935": "Dummy",
+      "1323184": "Shark Attack",
+      "1323209": "War Stomp",
+      "1323243": "Rain of Arrows",
+      "1323377": "Revelation",
+      "1323390": "Tapped",
+      "1323392": "Revelation",
+      "1323400": "Revelation",
+      "1323410": "Revelation",
+      "1323418": "Revelation",
+      "1323420": "Totemic Recall",
+      "1323963": "Furious Precision",
+      "1323964": "Lingering Rage",
+      "1323966": "Lingering Rage",
+      "1323967": "Gore Drinker",
+      "1323968": "Gore Drinker",
+      "1322287": "Shadow Channeling",
+      "1322295": "Firebolt",
+      "1322303": "Corpse Chopper",
+      "1322305": "Corpse Chopper",
+      "1322587": "Yay",
+      "1322670": "Improved Shifting Power",
+      "1322901": "Dummy",
+      "1323075": "Lunch for Kyle",
+      "1323240": "Rain of Arrows",
+      "1323246": "Shoot",
+      "1323289": "Enrage",
+      "1323419": "Revelation",
+      "1323965": "Lingering Rage",
+      "1323969": "Gore Drinker"
+    },
+    "renamed": {
+      "1313291": {
+        "before": "Dual Wield Specialization",
+        "after": "Rule of Rage (DND)"
+      },
+      "1309588": {
+        "before": "[DNT] Play Sound - Spawn Virtulent Blood",
+        "after": "[DNT] Play Sound - Spawn Virulent Blood"
+      },
+      "1317038": {
+        "before": "Increase Strength 20",
+        "after": "Increase Strength 22"
+      },
+      "1301247": {
+        "before": "1.60.0 - Item - Tier 1 - Druid - Feral 5P Bonus - Tiger's Fury",
+        "after": "1.60.0 - Item - Tier 1 - Druid - Feral 5P Bonus - Shifting Power"
+      },
+      "1300952": {
+        "before": "Heal Health 1.0 Coeffecient Over Time",
+        "after": "Heal Health 1.0 Coefficient Over Time"
+      },
+      "1255255": {
+        "before": " First Aid Kit",
+        "after": "First Aid Kit"
+      },
+      "1291816": {
+        "before": "Recently Siphoned the Grave",
+        "after": "Recently Embraced"
+      },
+      "1291059": {
+        "before": "Tiger's Fury Cooldown Reduction",
+        "after": "Shifting Power Cooldown Reduction"
+      },
+      "1255950": {
+        "before": "Sit A While..",
+        "after": "Sit A While..."
+      },
+      "3222": {
+        "before": "Regeneration",
+        "after": "Lesser Troll's Blood Elixir"
+      },
+      "1286699": {
+        "before": "Twilight Ritual",
+        "after": "Twilight Empowerment"
+      },
+      "437032": {
+        "before": "Soul Harvesting",
+        "after": "Soul Harvest"
+      },
+      "3223": {
+        "before": "Regeneration",
+        "after": "Troll's Blood Elixir"
+      },
+      "1256875": {
+        "before": "Sit A While..",
+        "after": "Sit A While..."
+      },
+      "1255951": {
+        "before": "Sit A While..",
+        "after": "Sit A While..."
+      },
+      "1292972": {
+        "before": "Spiritcaller Boots",
+        "after": "Spiritcaller Treads"
+      },
+      "24361": {
+        "before": "Regeneration",
+        "after": "Major Troll's Blood Elixir"
+      },
+      "1299917": {
+        "before": "Spiritcaller Treads",
+        "after": "Spiritcaller Boots"
+      },
+      "1301947": {
+        "before": "Mischevious Zephyr",
+        "after": "Mischievous Zephyr"
+      },
+      "1270478": {
+        "before": "Charged Lightning",
+        "after": "Flame Charged"
+      },
+      "1272216": {
+        "before": "Mithil Lode",
+        "after": "Mithril Lode"
+      },
+      "471": {
+        "before": "Palamino Stallion",
+        "after": "Palomino Stallion"
+      },
+      "400624": {
+        "before": "Hot Streak",
+        "after": "Heating Up"
+      },
+      "400625": {
+        "before": "Hot Streak",
+        "after": "Heating Up"
+      }
+    },
+    "removed": {}
+  },
+  "quest": {
+    "before": 5250,
+    "after": 5331,
+    "added": {
+      "95646": "Horrors in the Highland",
+      "95647": "Lost in the Thicket Things",
+      "95663": "Dragonmaw Rumors",
+      "95697": "Changing Tastes",
+      "98283": "Carnage",
+      "96241": "Talkin' bout Toxins, Mon",
+      "95737": "Seeking Caitlin",
+      "98297": "Stopping the Cycle",
+      "96259": "Defending the Dead",
+      "98310": "Gleaning Our Future",
+      "98823": "Earthen Echo",
+      "98824": "Prehistoric Prism",
+      "98313": "For Further Study",
+      "96779": "Syndicate Sabotage",
+      "96786": "The Syndicate Sting",
+      "95772": "Songblade Search",
+      "96294": "A Darker Truth",
+      "95795": "Fallen in the Fen",
+      "95810": "Lost Relic Carry",
+      "98417": "Vengeful Trail",
+      "98418": "Shared Fury",
+      "88756": "Bring Back a Bang",
+      "96986": "The Grave Knight",
+      "96987": "Opportunistic Education",
+      "96988": "Source of Power",
+      "86757": "Slowing the Orc Advance",
+      "98027": "Gleaming Crescent Necklace",
+      "78089": "Advice From Stormwind",
+      "78916": "The Heart of the Void",
+      "81731": "Duskwood Mission II: Defeat Ogres",
+      "81734": "Duskwood Mission V: Worgen Intelligence",
+      "81735": "Duskwood Mission VI: Dragon Intelligence",
+      "81736": "Duskwood Mission VII: Recover Shadowscythe",
+      "81737": "Duskwood Mission VIII: Recover Ogre Magi text",
+      "81738": "Duskwood Mission IX: Recover Dragon Egg",
+      "81739": "Duskwood Mission X: Nightmare Moss",
+      "81741": "Duskwood Mission XII: Dream-Touched Dragonscale",
+      "81743": "Duskwood Mission XIV: Defeat Vvarc'zul",
+      "81745": "Duskwood Mission XVI: Rescue Kroll Mountainshade",
+      "81746": "Duskwood Mission XVII: Rescue Alara Grovemender",
+      "87491": "Spark of Freedom",
+      "88757": "Accessories of the Lost",
+      "88758": "Sentiments of the Lost",
+      "98059": "Hillsbrad's Hoard",
+      "81740": "Duskwood Mission XI: Cold Iron Ore",
+      "92489": "Power Overwhelming",
+      "81730": "Duskwood Mission I: Defeat Worgen",
+      "95682": "Open the Maw",
+      "95809": "Heartwoven",
+      "96260": "Stronger than Steel",
+      "96261": "The Broodmother",
+      "96781": "What's the Big Idea?",
+      "96783": "A Way In",
+      "96784": "Master of Disguise",
+      "96785": "Ain't No Telling",
+      "87318": "Hearts of the Lost",
+      "97328": "Anything of Value",
+      "97985": "Thundering Hearts",
+      "98069": "Stolen Freewind Supplies",
+      "95664": "Elder Knowledge",
+      "81742": "Duskwood Mission XIII: Defeat Ylanthrius",
+      "98209": "Bloom of the Heavens",
+      "98216": "Understanding Our Present",
+      "98221": "From the Ashes",
+      "98223": "Old Habits",
+      "98230": "This Land Was Their Land",
+      "78091": "Earning Your Salt",
+      "98291": "Death to the Dragonmaw",
+      "78090": "A Second Opinion",
+      "98463": "Talk of the Town",
+      "98815": "Highland Hides",
+      "99197": "A Donation of Silk",
+      "99411": "Kyle's Gone Missing!",
+      "98070": "Stop the Screeching",
+      "98071": "Brewer's Trade",
+      "82208": "Greater Friend of the Library",
+      "92456": "A Green Sample",
+      "81732": "Duskwood Mission III: Defeat Dragonkin",
+      "81733": "Duskwood Mission IV: Ogre Intelligence",
+      "81744": "Duskwood Mission XV: Defeat Amokarok",
+      "81747": "Duskwood Mission XVIII: Rescue Elenora Marshwalker"
+    },
+    "renamed": {},
+    "removed": {}
+  },
+  "profession": {
+    "before": 154,
+    "after": 154,
+    "added": {},
+    "renamed": {},
+    "removed": {}
+  },
+  "achievement": {
+    "before": 434,
+    "after": 434,
+    "added": {},
+    "renamed": {
+      "63570": {
+        "before": "Edwin Vancleef Kills (Deadmines)",
+        "after": "Edwin VanCleef Kills (Deadmines)"
+      },
+      "64019": {
+        "before": "Conquerer of the Wilds",
+        "after": "Conqueror of the Wilds"
+      },
+      "64181": {
+        "before": "Darkspear Island Killing Blows",
+        "after": "Darkspear Islands Killing Blows"
+      },
+      "64020": {
+        "before": "Conquerer of the Deeps",
+        "after": "Conqueror of the Deeps"
+      },
+      "62035": {
+        "before": "Conquerer of the Deeps",
+        "after": "Conqueror of the Deeps"
+      },
+      "62034": {
+        "before": "Conquerer of the Wilds",
+        "after": "Conqueror of the Wilds"
+      },
+      "64176": {
+        "before": "Darkspear Island victories",
+        "after": "Darkspear Islands victories"
+      }
+    },
+    "removed": {}
+  },
+  "currency": {
+    "before": 9,
+    "after": 9,
+    "added": {},
+    "renamed": {},
+    "removed": {}
+  },
+  "companion": {
+    "before": 113,
+    "after": 113,
+    "added": {},
+    "renamed": {},
+    "removed": {}
+  },
+  "mount": {
+    "before": 217,
+    "after": 217,
+    "added": {},
+    "renamed": {
+      "471": {
+        "before": "Palamino Stallion",
+        "after": "Palomino Stallion"
+      }
+    },
+    "removed": {}
+  },
+  "rand": {
+    "before": 2039,
+    "after": 2062,
+    "added": {
+      "-601": "of the Necromancer",
+      "2324": "of Striking",
+      "2332": "of Sorcery",
+      "2340": "of Plagues",
+      "2325": "of Sorcery",
+      "2333": "of Restoration",
+      "2341": "of Fevers",
+      "2326": "of Restoration",
+      "2342": "of Blood",
+      "-602": "of Grasping",
+      "2328": "of Sorcery",
+      "2336": "of Restoration",
+      "2329": "of Restoration",
+      "2337": "of Striking",
+      "2330": "of Striking",
+      "2338": "of Strangulation",
+      "2343": "of Obliteration",
+      "2339": "of Grasping",
+      "2335": "of Sorcery",
+      "2334": "of Striking",
+      "2327": "of Striking",
+      "2323": "of Restoration",
+      "2315": "of Sorcery"
+    },
+    "renamed": {},
+    "removed": {}
+  }
+}

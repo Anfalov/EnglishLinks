@@ -43,7 +43,7 @@ class Wowhead(unittest.TestCase):
         with (ROOT / 'data/QuestV2.1.60.1.70124.csv').open() as f:
             reference = {int(r['ID']) for r in csv.DictReader(f)}
         outside = self.names['quest'].keys() - reference
-        self.assertEqual(len(outside), 751)
+        self.assertEqual(len(outside), 752)
         self.assertTrue(all(ns.Names.quest[i] == self.names['quest'][i] for i in outside))
         self.assertEqual(ns.Names.uimap, None)
 
@@ -75,6 +75,16 @@ class Wowhead(unittest.TestCase):
             self.assertIsNone(ns.Resolve(payload, 'Старый суффикс'))
         ns.DB.types.item = False
         self.assertIsNone(ns.Resolve(base + '1:12722', 'Русское'))
+
+    def test_refresh_keeps_previous_ids_and_prefers_new_names(self):
+        previous = ROOT / 'data/source-history/2026-10-01/wowhead-sources'
+        old, _, _ = b.compile_snapshot(previous)
+        for kind, rows in old.items():
+            self.assertTrue(rows.keys() <= self.names[kind].keys(), kind)
+        self.assertEqual(self.names['spell'][1253378], 'Adaptation')
+        self.assertEqual(old['item'][263411], 'Windcharged Leaf')
+        self.assertEqual(self.names['item'][263411], 'Idol of Shifting Tides')
+        self.assertEqual(self.names['spell'][1322218], 'Holy Forgefire')
 
     def test_map_pin_icon_coordinates_cursor_and_switch(self):
         _, ns = self.runtime()

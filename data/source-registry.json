@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "addon_version": "0.6.1",
+  "addon_version": "0.6.3",
   "registered_at": "2026-09-30T21:00:23Z",
   "timestamp_format": "ISO 8601 with explicit timezone; UTC Z preferred",
   "display_timezone": "Asia/Yekaterinburg",
@@ -322,7 +322,7 @@
     {
       "id": "forever-sim-wowhead_forever_gearplanner",
       "source_id": "forever-sim",
-      "file": "data/supplement-sources/wowhead_forever_gearplanner.txt",
+      "file": "data/source-history/2026-10-01/supplement-sources/wowhead_forever_gearplanner.txt",
       "url": "https://github.com/ElliotWood/Forever/blob/d91d4afe408363db83a0d35ea444e696092e9a87/assets/db_inputs/wowhead_forever_gearplanner.txt",
       "source_version": "d91d4afe408363db83a0d35ea444e696092e9a87",
       "game_build": null,
@@ -333,7 +333,7 @@
       "registered_at": "2026-09-30T21:00:23Z",
       "sha256": "c787fa697266d373de876ec83b8eb804850fc1b2c0b3f3efe26993011e3931b0",
       "size_bytes": 7198299,
-      "manifest": "data/supplement-sources/manifest.json",
+      "manifest": "data/source-history/2026-10-01/supplement-sources/manifest.json",
       "version_kind": "git_commit"
     },
     {
@@ -428,8 +428,8 @@
     {
       "id": "wowhead-forever-2026-10-01",
       "source_id": "wowhead-forever",
-      "file": "data/wowhead-sources/snapshot.zip",
-      "manifest": "data/wowhead-sources/manifest.json",
+      "file": "data/source-history/2026-10-01/wowhead-sources/snapshot.zip",
+      "manifest": "data/source-history/2026-10-01/wowhead-sources/manifest.json",
       "url": "https://www.wowhead.com/forever/",
       "source_version": "Forever dataEnv=16",
       "game_build": null,
@@ -445,7 +445,7 @@
     {
       "id": "wowhead-forever-random-affixes-2026-10-01",
       "source_id": "wowhead-forever",
-      "file": "data/random-affix-sources/snapshot.zip",
+      "file": "data/source-history/2026-10-01/random-affix-sources/snapshot.zip",
       "url": "https://nether.wowhead.com/forever/data/gear-planner?dv=59&db=1790292378",
       "source_version": null,
       "game_build": null,
@@ -454,8 +454,52 @@
       "retrieved_at": "2026-10-01T17:35:53.154738+00:00",
       "sha256": "4243dc64f5b8750da6f50f82ac44506f981d02d935fec761a23ecf3c3b2231fb",
       "size_bytes": 903634,
-      "manifest": "data/random-affix-sources/manifest.json",
+      "manifest": "data/source-history/2026-10-01/random-affix-sources/manifest.json",
       "notes": "Archive of raw gear-planner response and seven tooltip responses. Per-response retrieval completion timestamps and hashes are in the manifest. Request start times were not recorded."
+    },
+    {
+      "id": "wowhead-forever-wowhead-sources-2026-10-02",
+      "source_id": "wowhead-forever",
+      "file": "data/wowhead-sources/snapshot.zip",
+      "manifest": "data/wowhead-sources/manifest.json",
+      "locale": "enUS",
+      "url": "https://www.wowhead.com/forever/",
+      "source_version": null,
+      "game_build": null,
+      "retrieval_started_at": "2026-10-02T16:22:00.654189+00:00",
+      "retrieved_at": "2026-10-02T16:25:16.840386+00:00",
+      "sha256": "a448cf918f6ec59c4a6af45dc39f767473ddf4235967f6dd2a4c7bf02908a6f0",
+      "size_bytes": 6491690,
+      "notes": "Archive assembled from responses; individual URLs, retrieval times, sizes and hashes in manifest. Exact client build not asserted."
+    },
+    {
+      "id": "wowhead-forever-random-affix-sources-2026-10-02",
+      "source_id": "wowhead-forever",
+      "file": "data/random-affix-sources/snapshot.zip",
+      "manifest": "data/random-affix-sources/manifest.json",
+      "locale": "enUS",
+      "url": "https://www.wowhead.com/forever/",
+      "source_version": null,
+      "game_build": null,
+      "retrieval_started_at": "2026-10-02T16:22:23.143570+00:00",
+      "retrieved_at": "2026-10-02T16:25:17.230999+00:00",
+      "sha256": "ac750bc4aed758cece11388ced7022289d78a16c3984b6c4aee2b64baff7f807",
+      "size_bytes": 905576,
+      "notes": "Archive assembled from responses; individual URLs, retrieval times, sizes and hashes in manifest. Exact client build not asserted."
+    },
+    {
+      "id": "forever-sim-2026-10-02",
+      "source_id": "forever-sim",
+      "file": "data/supplement-sources/wowhead_forever_gearplanner.txt",
+      "manifest": "data/supplement-sources/manifest.json",
+      "url": "https://raw.githubusercontent.com/ElliotWood/Forever/1e0474d94dc0ce7b38b4bf15f09416d20f797688/assets/db_inputs/wowhead_forever_gearplanner.txt",
+      "source_version": "1e0474d94dc0ce7b38b4bf15f09416d20f797688",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-02T16:22:27.023017+00:00",
+      "retrieved_at": "2026-10-02T16:22:27.610044+00:00",
+      "sha256": "30a4accc59e35df5a1fb731f09527a1c1f61f0ad7826bca36e34e713ded83cdb",
+      "size_bytes": 7216400
     }
   ],
   "references": [
@@ -519,5 +563,12 @@
     ],
     "timestamp_semantics": "retrieved_at is successful completion of fetching original bytes or reading the source page, not extraction/copying/rebuilding; record parent archive for extracted members"
   },
-  "updated_at": "2026-10-01T17:38:06.970627+00:00"
+  "updated_at": "2026-10-02T16:28:23.865732+00:00",
+  "update_checks": [
+    {
+      "target_game_build": "1.60.1.70170",
+      "checked_at": "2026-10-02T16:28:23.865732+00:00",
+      "report": "data/source-checks/2026-10-02-70170/checks.json"
+    }
+  ]
 }

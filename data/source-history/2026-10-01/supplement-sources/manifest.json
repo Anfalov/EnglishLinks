@@ -9,15 +9,11 @@
   },
   {
     "file": "wowhead_forever_gearplanner.txt",
-    "url": "https://raw.githubusercontent.com/ElliotWood/Forever/1e0474d94dc0ce7b38b4bf15f09416d20f797688/assets/db_inputs/wowhead_forever_gearplanner.txt",
-    "sha256": "30a4accc59e35df5a1fb731f09527a1c1f61f0ad7826bca36e34e713ded83cdb",
-    "retrieved": "2026-10-02",
+    "url": "https://github.com/ElliotWood/Forever/blob/d91d4afe408363db83a0d35ea444e696092e9a87/assets/db_inputs/wowhead_forever_gearplanner.txt",
+    "sha256": "c787fa697266d373de876ec83b8eb804850fc1b2c0b3f3efe26993011e3931b0",
+    "retrieved": "2026-09-30",
     "edition": "Forever",
-    "exact_client_build": "not asserted by snapshot",
-    "retrieval_started_at": "2026-10-02T16:22:27.023017+00:00",
-    "retrieved_at": "2026-10-02T16:22:27.610044+00:00",
-    "source_version": "1e0474d94dc0ce7b38b4bf15f09416d20f797688",
-    "size_bytes": 7216400
+    "exact_client_build": "not asserted by snapshot"
   },
   {
     "file": "currencies.json",

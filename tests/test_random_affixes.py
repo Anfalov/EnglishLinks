@@ -25,8 +25,8 @@ class RandomAffixes(unittest.TestCase):
 
     def test_every_shipped_signed_id_and_reproducibility(self):
         ns = self.runtime()
-        self.assertEqual(len(self.names), 2039)
-        self.assertEqual(sum(i < 0 for i in self.names), 27)
+        self.assertEqual(len(self.names), 2062)
+        self.assertEqual(sum(i < 0 for i in self.names), 29)
         self.assertEqual(dict(ns.ItemRandomAffixes.items()), self.names)
         self.assertEqual((ROOT / 'EnglishLinks/RandomAffixes_enUS.lua').read_text(),
                          b.render(self.names, self.manifest))
@@ -36,6 +36,9 @@ class RandomAffixes(unittest.TestCase):
         self.assertEqual(ns.Resolve('item:6614:0:0:0:0:0:763:123', 'Плащ'),
                          "Sage's Cloak of the Owl")
         self.assertNotIn(-7, self.names)  # A generic tooltip guide is not a Forever mapping.
+        for rid in (-597, -598, -599, -600):
+            self.assertNotIn(rid, self.names)
+            self.assertIsNone(ns.Resolve(f'item:10378:0:0:0:0:0:{rid}:123', 'Предмет'))
 
     def test_payload_cursor_duplicates_conflicts_and_unknown_ids(self):
         ns = self.runtime()
@@ -76,12 +79,15 @@ class RandomAffixes(unittest.TestCase):
         def parse(rows):
             return b.parse('WH.setPageData(' + json.dumps(b.TABLE) + ',' + rows + ');')
         self.assertEqual(parse('{"-9":{"id":-9,"name":"of the Owl"}}'), {-9: 'of the Owl'})
+        self.assertEqual(parse('{"-9":{"id":-9,"name":"of the Owl"},"-597":{"id":-597,"name":null}}'), {-9: 'of the Owl'})
         for rows in [
             '{}', '{"0":{"id":0,"name":"Empty"}}',
             '{"9":{"id":-9,"name":"Wrong sign"}}',
             '{"-9":{"id":-9,"name":"A"},"-9":{"id":-9,"name":"B"}}',
             '{"9":{"id":9,"name":"|Hunsafe"}}',
             '{"9":{"id":9,"name":""}}',
+            '{"-597":{"id":-597,"name":null}}',
+            '{"9":{"id":9}}',
         ]:
             with self.assertRaises(ValueError):
                 parse(rows)

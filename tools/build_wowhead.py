@@ -100,7 +100,12 @@ def parse_bonuses(text):
     return result
 
 
-def compile_snapshot(directory):
+def compile_snapshot(directory, _seen=None):
+    directory = directory.resolve()
+    seen = set() if _seen is None else set(_seen)
+    if directory in seen:
+        raise ValueError('Cyclic Wowhead snapshot history')
+    seen.add(directory)
     manifest = json.loads((directory / 'manifest.json').read_text())
     archive = directory / 'snapshot.zip'
     if hashlib.sha256(archive.read_bytes()).hexdigest() != manifest['archive_sha256']:
@@ -153,6 +158,15 @@ def compile_snapshot(directory):
             raise ValueError('Incomplete or overlapping ranges: ' + category)
     if any(not values for values in names.values()) or not bonuses:
         raise ValueError('Empty Wowhead category')
+    # A missing row is not evidence that a name was removed from the game.
+    # Keep previously observed Wowhead names, while every fresh name wins.
+    if manifest.get('previous_snapshot'):
+        previous, old_bonuses, _ = compile_snapshot(directory / manifest['previous_snapshot'], seen)
+        for kind, rows in previous.items():
+            for key, value in rows.items():
+                names[kind].setdefault(key, value)
+        for key, value in old_bonuses.items():
+            bonuses.setdefault(key, value)
     return names, bonuses, manifest
 
 

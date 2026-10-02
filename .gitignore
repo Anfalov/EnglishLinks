@@ -9,3 +9,5 @@ dist/
 *.zip
 !data/wowhead-sources/snapshot.zip
 !data/random-affix-sources/snapshot.zip
+!data/source-history/**/snapshot.zip
+!data/source-checks/**/evidence.zip

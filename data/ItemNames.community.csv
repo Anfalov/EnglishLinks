@@ -61,6 +61,7 @@ ID,Name,Source
 1314,Ghoul Fingers,questiedb-foreverBaseItem.lua
 1317,Hardened Root Staff,questiedb-foreverBaseItem.lua
 1318,Night Reaver,wowhead_forever_gearplanner.txt
+1351,Fingerbone Bracers,wowhead_forever_gearplanner.txt
 1355,Buckskin Cape,questiedb-foreverBaseItem.lua
 1387,Ghoulfang,questiedb-foreverBaseItem.lua
 1391,Riverpaw Mystic Staff,wowhead_forever_gearplanner.txt
@@ -211,6 +212,7 @@ ID,Name,Source
 2549,Staff of the Shade,wowhead_forever_gearplanner.txt
 2564,Elven Spirit Claws,wowhead_forever_gearplanner.txt
 2565,Rod of Molten Fire,wowhead_forever_gearplanner.txt
+2566,Sacrificial Robes,wowhead_forever_gearplanner.txt
 2567,Evocator's Blade,questiedb-foreverBaseItem.lua
 2620,Augural Shroud,wowhead_forever_gearplanner.txt
 2622,Nimar's Tribal Headdress,questiedb-foreverBaseItem.lua
@@ -501,6 +503,7 @@ ID,Name,Source
 4771,Harvest Cloak,questiedb-foreverBaseItem.lua
 4772,Warm Cloak,questiedb-foreverBaseItem.lua
 4785,Brimstone Belt,questiedb-foreverBaseItem.lua
+4810,Boulder Pads,wowhead_forever_gearplanner.txt
 4861,Sleek Feathered Tunic,questiedb-foreverBaseItem.lua
 4949,Orcish Cleaver,wowhead_forever_gearplanner.txt
 4998,Blood Ring,wowhead_forever_gearplanner.txt
@@ -759,6 +762,7 @@ ID,Name,Source
 6686,Tusken Helm,questiedb-foreverBaseItem.lua
 6687,Corpsemaker,wowhead_forever_gearplanner.txt
 6688,Whisperwind Headdress,wowhead_forever_gearplanner.txt
+6689,Wind Spirit Staff,wowhead_forever_gearplanner.txt
 6690,Ferine Leggings,wowhead_forever_gearplanner.txt
 6691,Swinetusk Shank,wowhead_forever_gearplanner.txt
 6692,Pronged Reaver,questiedb-foreverBaseItem.lua
@@ -1897,6 +1901,7 @@ ID,Name,Source
 13072,Stonegrip Gauntlets,wowhead_forever_gearplanner.txt
 13073,Mugthol's Helm,wowhead_forever_gearplanner.txt
 13074,Golem Shard Leggings,wowhead_forever_gearplanner.txt
+13075,Direwing Legguards,wowhead_forever_gearplanner.txt
 13076,Giantslayer Bracers,wowhead_forever_gearplanner.txt
 13077,Girdle of Uther,wowhead_forever_gearplanner.txt
 13079,Shield of Thorsen,wowhead_forever_gearplanner.txt
@@ -3196,6 +3201,7 @@ ID,Name,Source
 212586,Legionnaire's Sword,wowhead_forever_gearplanner.txt
 212587,Scout's Blade,wowhead_forever_gearplanner.txt
 212723,Rumbling Essence,questiedb-foreverBaseItem.lua
+215373,Silver Hand Training Hammer,wowhead_forever_gearplanner.txt
 215374,Ancestral Sword,wowhead_forever_gearplanner.txt
 215375,Tactician's Staff,wowhead_forever_gearplanner.txt
 215376,Crusader's Mace,wowhead_forever_gearplanner.txt
@@ -4398,6 +4404,7 @@ ID,Name,Source
 274155,Geomancer Headdress,questiedb-foreverBaseItem.lua
 274158,Death Prophet Spine,questiedb-foreverBaseItem.lua
 274159,Thorncursed Grips,questiedb-foreverBaseItem.lua
+274160,Quilrager Throwing Axe,wowhead_forever_gearplanner.txt
 274161,Quillord Mail Leggings,questiedb-foreverBaseItem.lua
 274265,Brush Cutter,questiedb-foreverBaseItem.lua
 274270,Weed Whacker,questiedb-foreverBaseItem.lua
@@ -4627,10 +4634,12 @@ ID,Name,Source
 281600,Wail of Death,wowhead_forever_gearplanner.txt
 281648,Gul'gash's Greathammer,questiedb-foreverBaseItem.lua
 281665,Twilight Forgehammer,questiedb-foreverBaseItem.lua
+281750,Murloc Oracle's Dagger,wowhead_forever_gearplanner.txt
 281891,Fishscale Hauberk,wowhead_forever_gearplanner.txt
 281925,Whelpfire Wand,questiedb-foreverBaseItem.lua
 281926,Bound Bracers,questiedb-foreverBaseItem.lua
 281993,Gnoll Hide Boots,questiedb-foreverBaseItem.lua
+282003,Lost Chieftain's Greatsword,wowhead_forever_gearplanner.txt
 282007,Emerald Watcher's Dreamstaff,questiedb-foreverBaseItem.lua
 282008,Wyrmak's Cuirass,questiedb-foreverBaseItem.lua
 282012,Corsepickers,questiedb-foreverBaseItem.lua
@@ -4645,12 +4654,14 @@ ID,Name,Source
 282551,Golem Fist,questiedb-foreverBaseItem.lua
 282556,Groundshaker's Bindings,questiedb-foreverBaseItem.lua
 282557,Broken Tooth's Flayed Hide,questiedb-foreverBaseItem.lua
+282558,Firebird's Cowl,wowhead_forever_gearplanner.txt
 282560,Earth-Infused Rockguards,questiedb-foreverBaseItem.lua
 282561,Siegebreaker's Blaster,questiedb-foreverBaseItem.lua
 282636,Silkspun Gloves,questiedb-foreverBaseItem.lua
 282637,Shaking Egg,questiedb-foreverBaseItem.lua
 282639,"Emogg's ""Crusher""",questiedb-foreverBaseItem.lua
 282642,Feather-Stitched Moccasins,questiedb-foreverBaseItem.lua
+282653,Dissolved Locket,wowhead_forever_gearplanner.txt
 282654,Gnawed Bone,questiedb-foreverBaseItem.lua
 282655,Bog Pickers,questiedb-foreverBaseItem.lua
 282658,Dragonmaw Battle Shroud,questiedb-foreverBaseItem.lua
@@ -4712,6 +4723,7 @@ ID,Name,Source
 284573,Ursol'lok's Paws,wowhead_forever_gearplanner.txt
 284574,Snapped Branch Wand,wowhead_forever_gearplanner.txt
 284666,Wolf Whistle,questiedb-foreverBaseItem.lua
+284667,Flame Seared Sword,wowhead_forever_gearplanner.txt
 284668,Apothecary's Concoction,questiedb-foreverBaseItem.lua
 284696,Carved Furbolg Tooth,questiedb-foreverBaseItem.lua
 284697,Arcane Charged Robes,wowhead_forever_gearplanner.txt
@@ -4719,8 +4731,10 @@ ID,Name,Source
 284700,Den Guardian's Crusher,questiedb-foreverBaseItem.lua
 284702,Slimy Sword,questiedb-foreverBaseItem.lua
 284704,Frostbitten Staff,questiedb-foreverBaseItem.lua
+284707,Basilisk Sinew Belt,wowhead_forever_gearplanner.txt
 284715,First Mate Band,questiedb-foreverBaseItem.lua
 284716,Band of the Better Half,questiedb-foreverBaseItem.lua
+284717,Royal Satyr Slicer,wowhead_forever_gearplanner.txt
 285043,Snarling Fang,questiedb-foreverBaseItem.lua
 285104,Windle's Lighter,questiedb-foreverBaseItem.lua
 285190,Wyvern Heart Band,wowhead_forever_gearplanner.txt
@@ -4760,6 +4774,7 @@ ID,Name,Source
 285359,Warm Apple Juice,questiedb-foreverBaseItem.lua
 285362,Red Wine Glass,questiedb-foreverBaseItem.lua
 285366,Whirleygig's Supply Stash,questiedb-foreverBaseItem.lua
+286140,"Monster - Shield, Paladin",wowhead_forever_gearplanner.txt
 286533,Cheetah Hide Grips,questiedb-foreverBaseItem.lua
 286534,Silithid Piercer,questiedb-foreverBaseItem.lua
 286535,Sludge-Stained Band,questiedb-foreverBaseItem.lua
@@ -4769,6 +4784,8 @@ ID,Name,Source
 286541,Bael'dun Tankard,questiedb-foreverBaseItem.lua
 286554,Warleader's Signet,questiedb-foreverBaseItem.lua
 286556,Winds of Tanaris,wowhead_forever_gearplanner.txt
+286568,Blisterpaw Bones,wowhead_forever_gearplanner.txt
+286639,Ambassdor's Bloodrobes,wowhead_forever_gearplanner.txt
 286728,Kolkar Hammer,questiedb-foreverBaseItem.lua
 286729,Kolkar Bow,questiedb-foreverBaseItem.lua
 286730,Pristine Orcish Dagger,questiedb-foreverBaseItem.lua

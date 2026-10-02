@@ -42,6 +42,10 @@ def parse(text):
         if abs(rid) > 2147483647 or type(row.get('id')) is not int or row['id'] != rid:
             raise ValueError('Mismatched rand ID')
         name = row.get('name')
+        # Current Forever data also contains explicitly unnamed placeholders.
+        # They cannot supply a label; leave those IDs unsupported at runtime.
+        if 'name' in row and name is None:
+            continue
         if not isinstance(name, str) or not name_ok(name):
             raise ValueError('Unsafe rand name')
         names[rid] = name

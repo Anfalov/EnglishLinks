@@ -2,20 +2,21 @@
 
 Единый машинный реестр: [`data/source-registry.json`](../data/source-registry.json).
 Он хранится в архиве проекта вместе с исходными выгрузками и сборщиками.
-Текущий срез: 0.6.1. Wowhead Forever — основной источник; остальные
-дополняют отсутствующие ID. Новый снимок Wowhead получен 1 октября 2026.
+Последняя проверка: 2 октября 2026 после выхода 1.60.1.70170.
+Wowhead Forever — основной источник; остальные дополняют отсутствующие ID.
+Результаты и ограничения: [SOURCE-UPDATE-70170.md](SOURCE-UPDATE-70170.md).
 Старые снимки сохранены, их версии и даты не изменены.
 
 ## Используемые источники
 
 | Источник | Что берём | Версия текущего источника | Сборка игры | Дата получения |
 | --- | --- | --- | --- | --- |
-| [Wowhead Forever](https://www.wowhead.com/forever/) | Названия всех поддерживаемых категорий и бонусные окончания | dataEnv=16; 132 ответов в архиве | Точная сборка неизвестна | 2026-10-01, время по отдельным ответам в manifest |
+| [Wowhead Forever](https://www.wowhead.com/forever/) | Названия всех поддерживаемых категорий и бонусные окончания | dataEnv=16; 132 ответов в архиве | Точная сборка неизвестна | 2026-10-02, время по отдельным ответам в manifest |
 | [Wago Tools](https://wago.tools/db2) | ItemSparse, SpellName, SkillLine, Achievement, SkillLineAbility, QuestV2 | Точная сборка CSV | 1.60.1.70124 / enUS | Исходная дата выгрузки пользователем неизвестна |
 | [QuestieDB](https://github.com/Questie/QuestieDB) | Названия заданий и дополнительные предметы Forever | commit `f521c36eb72a57d7f205a61ee212ad0ca9f51ed9` | Точная сборка не заявлена | Предметы: 2026-09-30; для снимков заданий не записана |
 | [Everything Quests](https://github.com/wheelbarrel00/EverythingQuests) | Дополнительные названия заданий | commit `8179e993726567ad26671cf117cc72f9c31140e2` | Точная сборка не заявлена | Не записана |
 | [Completao](https://github.com/LechuckThePirate/Completao) | Дополнительные названия заданий | commit `f4e93cf3fe704aa932521fd67eb0883cb8687a45` | Точная сборка не заявлена | Не записана |
-| [ElliotWood/Forever](https://github.com/ElliotWood/Forever) | Снимок Wowhead Forever gear planner: ID/имя предмета | commit `d91d4afe408363db83a0d35ea444e696092e9a87` | `versionNum=16001`, точная сборка не заявлена | 2026-09-30 |
+| [ElliotWood/Forever](https://github.com/ElliotWood/Forever) | Снимок Wowhead Forever gear planner: ID/имя предмета | commit `1e0474d94dc0ce7b38b4bf15f09416d20f797688` | `versionNum=16001`, точная сборка не заявлена | 2026-10-02 |
 | [TheWoWDB Forever](https://thewowdb.com/wow-forever/currencies/) | Пять валют, индивидуальные страницы ID/имя | Страницы без собственной версии | На страницах 1.60.1.70124 | 2026-09-30 |
 | [PetScout Forever](https://www.curseforge.com/wow/addons/petscout-forever/files/8940612) | 112 видов питомцев и 60 карт | `v0.1.1-forever`, CurseForge file `8940612`; опубликован 2026-09-21 | 1.60.1.69913 | 2026-09-30 |
 
@@ -113,12 +114,12 @@ Wago CSV:
 Наблюдения форматов ссылок пользователя: `data/link-observations.json`.
 Они хранятся отдельно от источников английских названий.
 
-## Случайные свойства rand — 0.6.1
+## Случайные свойства rand
 
 `data/random-affix-sources/manifest.json` содержит URL, время завершения загрузки
-и хеш каждого ответа Wowhead Forever. Точное время начала этих запросов не записано.
+и хеш каждого ответа Wowhead Forever. У текущего снимка записано и время начала запросов.
 Сохранены gear-planner и семь проверочных ответов tooltip. Полная таблица
-`wow.gearPlanner.classicplus.randomEnchant` содержит 2 039 знаковых ID.
+`wow.gearPlanner.classicplus.randomEnchant` содержит 2 062 именованных знаковых ID; четыре записи без имени пропущены.
 Несмотря на внутреннее имя classicplus, ответ получен из `/forever/`; данные
 другого издания игры не подставляются.
 

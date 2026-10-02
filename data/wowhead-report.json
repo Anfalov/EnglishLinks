@@ -2,9 +2,9 @@
   "policy": "Wowhead Forever wins every name conflict; other sources fill missing IDs only.",
   "categories": {
     "item": {
-      "wowhead": 24062,
+      "wowhead": 24102,
       "fallback": 0,
-      "total": 24062,
+      "total": 24102,
       "overwritten": [
         {
           "id": 10612,
@@ -12,17 +12,272 @@
           "wowhead": "Monster - Axe, Horde Badass 02"
         },
         {
+          "id": 13503,
+          "fallback": "Alchemists' Stone",
+          "wowhead": "Alchemist's Stone"
+        },
+        {
+          "id": 13517,
+          "fallback": "Recipe: Alchemists' Stone",
+          "wowhead": "Recipe: Alchemist's Stone"
+        },
+        {
           "id": 18763,
           "fallback": "TEST GUN Alliance20 ",
           "wowhead": "TEST GUN Alliance20"
+        },
+        {
+          "id": 251320,
+          "fallback": "Satchet of Spirit Powder",
+          "wowhead": "Sachet of Spirit Powder"
+        },
+        {
+          "id": 254696,
+          "fallback": "Reverance",
+          "wowhead": "Reverence"
+        },
+        {
+          "id": 263411,
+          "fallback": "Windcharged Leaf",
+          "wowhead": "Idol of Shifting Tides"
+        },
+        {
+          "id": 263412,
+          "fallback": "Windcarved Effigy",
+          "wowhead": "Totem of Charged Flames"
+        },
+        {
+          "id": 271936,
+          "fallback": "Guerilla's Jagged Mace",
+          "wowhead": "Guerrilla's Jagged Mace"
+        },
+        {
+          "id": 271937,
+          "fallback": "Guerilla's Jagged Mace",
+          "wowhead": "Guerrilla's Jagged Mace"
+        },
+        {
+          "id": 271938,
+          "fallback": "Guerilla's Jagged Mace",
+          "wowhead": "Guerrilla's Jagged Mace"
+        },
+        {
+          "id": 271939,
+          "fallback": "Guerilla's Jagged Mace",
+          "wowhead": "Guerrilla's Jagged Mace"
+        },
+        {
+          "id": 272025,
+          "fallback": "Dathrohan's Correspondance",
+          "wowhead": "Dathrohan's Correspondence"
+        },
+        {
+          "id": 273115,
+          "fallback": "Blueprint: Baker's Oven",
+          "wowhead": "Blueprint: Iron Oven"
+        },
+        {
+          "id": 273310,
+          "fallback": "Alchemey Ward - Fel Ash Experimentation Notes",
+          "wowhead": "Alchemy Ward - Fel Ash Experimentation Notes"
+        },
+        {
+          "id": 274749,
+          "fallback": "Souvenier Sea Shell",
+          "wowhead": "Souvenir Sea Shell"
+        },
+        {
+          "id": 276158,
+          "fallback": "Crystalized Shard",
+          "wowhead": "Crystallized Shard"
+        },
+        {
+          "id": 277056,
+          "fallback": "Al'aketh Chainmail",
+          "wowhead": "Al'Aketh Chainmail"
+        },
+        {
+          "id": 277057,
+          "fallback": "Al'aketh Wristguards",
+          "wowhead": "Al'Aketh Wristguards"
+        },
+        {
+          "id": 277058,
+          "fallback": "Al'aketh Gauntlets",
+          "wowhead": "Al'Aketh Gauntlets"
+        },
+        {
+          "id": 277059,
+          "fallback": "Al'aketh Chain",
+          "wowhead": "Al'Aketh Chain"
+        },
+        {
+          "id": 277060,
+          "fallback": "Al'aketh Legguards",
+          "wowhead": "Al'Aketh Legguards"
+        },
+        {
+          "id": 277061,
+          "fallback": "Al'aketh Greaves",
+          "wowhead": "Al'Aketh Greaves"
+        },
+        {
+          "id": 277062,
+          "fallback": "Al'aketh Harness",
+          "wowhead": "Al'Aketh Harness"
+        },
+        {
+          "id": 277063,
+          "fallback": "Al'aketh Bracers",
+          "wowhead": "Al'Aketh Bracers"
+        },
+        {
+          "id": 277064,
+          "fallback": "Al'aketh Gloves",
+          "wowhead": "Al'Aketh Gloves"
+        },
+        {
+          "id": 277065,
+          "fallback": "Al'aketh Belt",
+          "wowhead": "Al'Aketh Belt"
+        },
+        {
+          "id": 277066,
+          "fallback": "Al'aketh Trousers",
+          "wowhead": "Al'Aketh Trousers"
+        },
+        {
+          "id": 277067,
+          "fallback": "Al'aketh Boots",
+          "wowhead": "Al'Aketh Boots"
+        },
+        {
+          "id": 277068,
+          "fallback": "Al'aketh Jerkin",
+          "wowhead": "Al'Aketh Jerkin"
+        },
+        {
+          "id": 277069,
+          "fallback": "Al'aketh Armguards",
+          "wowhead": "Al'Aketh Armguards"
+        },
+        {
+          "id": 277070,
+          "fallback": "Al'aketh Mitts",
+          "wowhead": "Al'Aketh Mitts"
+        },
+        {
+          "id": 277071,
+          "fallback": "Al'aketh Strap",
+          "wowhead": "Al'Aketh Strap"
+        },
+        {
+          "id": 277072,
+          "fallback": "Al'aketh Pants",
+          "wowhead": "Al'Aketh Pants"
+        },
+        {
+          "id": 277073,
+          "fallback": "Al'aketh Footwraps",
+          "wowhead": "Al'Aketh Footwraps"
+        },
+        {
+          "id": 277074,
+          "fallback": "Al'aketh Vestments",
+          "wowhead": "Al'Aketh Vestments"
+        },
+        {
+          "id": 277075,
+          "fallback": "Al'aketh Cuffs",
+          "wowhead": "Al'Aketh Cuffs"
+        },
+        {
+          "id": 277076,
+          "fallback": "Al'aketh Handwraps",
+          "wowhead": "Al'Aketh Handwraps"
+        },
+        {
+          "id": 277077,
+          "fallback": "Al'aketh Cord",
+          "wowhead": "Al'Aketh Cord"
+        },
+        {
+          "id": 277078,
+          "fallback": "Al'aketh Leggings",
+          "wowhead": "Al'Aketh Leggings"
+        },
+        {
+          "id": 277079,
+          "fallback": "Al'aketh Shoes",
+          "wowhead": "Al'Aketh Shoes"
+        },
+        {
+          "id": 277128,
+          "fallback": "Bloodtalon Martriarch Eggs",
+          "wowhead": "Bloodtalon Matriarch Eggs"
+        },
+        {
+          "id": 277533,
+          "fallback": "Fel Tained Journal",
+          "wowhead": "Fel Tainted Journal"
+        },
+        {
+          "id": 280797,
+          "fallback": "Rabbit Crate (Artic)",
+          "wowhead": "Rabbit Crate (Arctic)"
+        },
+        {
+          "id": 280839,
+          "fallback": "Stolen Supplies",
+          "wowhead": "Blackrock Supplies"
+        },
+        {
+          "id": 281014,
+          "fallback": "Vine Wrapped Scroll",
+          "wowhead": "Vine-Wrapped Scroll"
+        },
+        {
+          "id": 284192,
+          "fallback": "Furblog Loincloth",
+          "wowhead": "Furbolg Loincloth"
+        },
+        {
+          "id": 285344,
+          "fallback": "Guard Captains Barrier",
+          "wowhead": "Guard Captain's Barrier"
+        },
+        {
+          "id": 286639,
+          "fallback": "Ambassdor's Bloodrobes",
+          "wowhead": "Ambassador's Bloodrobes"
+        },
+        {
+          "id": 286978,
+          "fallback": "Rotmender's Robes",
+          "wowhead": "Rotmender's Garb"
         }
       ]
     },
     "spell": {
-      "wowhead": 31795,
+      "wowhead": 31839,
       "fallback": 0,
-      "total": 31795,
+      "total": 31839,
       "overwritten": [
+        {
+          "id": 471,
+          "fallback": "Palamino Stallion",
+          "wowhead": "Palomino Stallion"
+        },
+        {
+          "id": 3222,
+          "fallback": "Regeneration",
+          "wowhead": "Lesser Troll's Blood Elixir"
+        },
+        {
+          "id": 3223,
+          "fallback": "Regeneration",
+          "wowhead": "Troll's Blood Elixir"
+        },
         {
           "id": 6606,
           "fallback": "Self Visual - Sleep Until Cancelled  (DND)",
@@ -32,6 +287,11 @@
           "id": 23897,
           "fallback": "Horde Flag Taken From Base  (Event)",
           "wowhead": "Horde Flag Taken From Base (Event)"
+        },
+        {
+          "id": 24361,
+          "fallback": "Regeneration",
+          "wowhead": "Major Troll's Blood Elixir"
         },
         {
           "id": 27663,
@@ -64,6 +324,16 @@
           "wowhead": "Holiday - Scourge Invasion, Despawn Summoners"
         },
         {
+          "id": 400624,
+          "fallback": "Hot Streak",
+          "wowhead": "Heating Up"
+        },
+        {
+          "id": 400625,
+          "fallback": "Hot Streak",
+          "wowhead": "Heating Up"
+        },
+        {
           "id": 420493,
           "fallback": "Ferocious  Idol",
           "wowhead": "Ferocious Idol"
@@ -72,6 +342,11 @@
           "id": 429593,
           "fallback": "Libram of Banishment Turn Undead  Dummy",
           "wowhead": "Libram of Banishment Turn Undead Dummy"
+        },
+        {
+          "id": 437032,
+          "fallback": "Soul Harvesting",
+          "wowhead": "Soul Harvest"
         },
         {
           "id": 444651,
@@ -147,13 +422,98 @@
           "id": 1249114,
           "fallback": "Dormant  Heart of the Mountain",
           "wowhead": "Dormant Heart of the Mountain"
+        },
+        {
+          "id": 1255255,
+          "fallback": " First Aid Kit",
+          "wowhead": "First Aid Kit"
+        },
+        {
+          "id": 1255950,
+          "fallback": "Sit A While..",
+          "wowhead": "Sit A While..."
+        },
+        {
+          "id": 1255951,
+          "fallback": "Sit A While..",
+          "wowhead": "Sit A While..."
+        },
+        {
+          "id": 1256875,
+          "fallback": "Sit A While..",
+          "wowhead": "Sit A While..."
+        },
+        {
+          "id": 1270478,
+          "fallback": "Charged Lightning",
+          "wowhead": "Flame Charged"
+        },
+        {
+          "id": 1272216,
+          "fallback": "Mithil Lode",
+          "wowhead": "Mithril Lode"
+        },
+        {
+          "id": 1286699,
+          "fallback": "Twilight Ritual",
+          "wowhead": "Twilight Empowerment"
+        },
+        {
+          "id": 1291059,
+          "fallback": "Tiger's Fury Cooldown Reduction",
+          "wowhead": "Shifting Power Cooldown Reduction"
+        },
+        {
+          "id": 1291816,
+          "fallback": "Recently Siphoned the Grave",
+          "wowhead": "Recently Embraced"
+        },
+        {
+          "id": 1292972,
+          "fallback": "Spiritcaller Boots",
+          "wowhead": "Spiritcaller Treads"
+        },
+        {
+          "id": 1299917,
+          "fallback": "Spiritcaller Treads",
+          "wowhead": "Spiritcaller Boots"
+        },
+        {
+          "id": 1300952,
+          "fallback": "Heal Health 1.0 Coeffecient Over Time",
+          "wowhead": "Heal Health 1.0 Coefficient Over Time"
+        },
+        {
+          "id": 1301247,
+          "fallback": "1.60.0 - Item - Tier 1 - Druid - Feral 5P Bonus - Tiger's Fury",
+          "wowhead": "1.60.0 - Item - Tier 1 - Druid - Feral 5P Bonus - Shifting Power"
+        },
+        {
+          "id": 1301947,
+          "fallback": "Mischevious Zephyr",
+          "wowhead": "Mischievous Zephyr"
+        },
+        {
+          "id": 1309588,
+          "fallback": "[DNT] Play Sound - Spawn Virtulent Blood",
+          "wowhead": "[DNT] Play Sound - Spawn Virulent Blood"
+        },
+        {
+          "id": 1313291,
+          "fallback": "Dual Wield Specialization",
+          "wowhead": "Rule of Rage (DND)"
+        },
+        {
+          "id": 1317038,
+          "fallback": "Increase Strength 20",
+          "wowhead": "Increase Strength 22"
         }
       ]
     },
     "quest": {
-      "wowhead": 5206,
+      "wowhead": 5287,
       "fallback": 44,
-      "total": 5250,
+      "total": 5331,
       "overwritten": [
         {
           "id": 117,
@@ -403,7 +763,43 @@
       "wowhead": 434,
       "fallback": 0,
       "total": 434,
-      "overwritten": []
+      "overwritten": [
+        {
+          "id": 62034,
+          "fallback": "Conquerer of the Wilds",
+          "wowhead": "Conqueror of the Wilds"
+        },
+        {
+          "id": 62035,
+          "fallback": "Conquerer of the Deeps",
+          "wowhead": "Conqueror of the Deeps"
+        },
+        {
+          "id": 63570,
+          "fallback": "Edwin Vancleef Kills (Deadmines)",
+          "wowhead": "Edwin VanCleef Kills (Deadmines)"
+        },
+        {
+          "id": 64019,
+          "fallback": "Conquerer of the Wilds",
+          "wowhead": "Conqueror of the Wilds"
+        },
+        {
+          "id": 64020,
+          "fallback": "Conquerer of the Deeps",
+          "wowhead": "Conqueror of the Deeps"
+        },
+        {
+          "id": 64176,
+          "fallback": "Darkspear Island victories",
+          "wowhead": "Darkspear Islands victories"
+        },
+        {
+          "id": 64181,
+          "fallback": "Darkspear Island Killing Blows",
+          "wowhead": "Darkspear Islands Killing Blows"
+        }
+      ]
     },
     "currency": {
       "wowhead": 9,
@@ -426,7 +822,7 @@
   },
   "questv2": {
     "reference_count": 6605,
-    "covered": 4465,
+    "covered": 4545,
     "missing_ids": [
       260,
       534,
@@ -581,9 +977,6 @@
       77690,
       78023,
       78024,
-      78089,
-      78090,
-      78091,
       78092,
       78093,
       78114,
@@ -638,7 +1031,6 @@
       78909,
       78910,
       78914,
-      78916,
       78917,
       78919,
       78920,
@@ -760,24 +1152,6 @@
       81573,
       81682,
       81697,
-      81730,
-      81731,
-      81732,
-      81733,
-      81734,
-      81735,
-      81736,
-      81737,
-      81738,
-      81739,
-      81740,
-      81741,
-      81742,
-      81743,
-      81744,
-      81745,
-      81746,
-      81747,
       81762,
       81764,
       81765,
@@ -922,7 +1296,6 @@
       82115,
       82132,
       82135,
-      82208,
       82304,
       82305,
       82306,
@@ -1336,7 +1709,6 @@
       86725,
       86746,
       86752,
-      86757,
       86777,
       86791,
       86792,
@@ -1361,7 +1733,6 @@
       86971,
       87283,
       87295,
-      87318,
       87346,
       87360,
       87361,
@@ -1382,7 +1753,6 @@
       87444,
       87451,
       87459,
-      87491,
       87492,
       87493,
       87494,
@@ -1404,9 +1774,6 @@
       88745,
       88748,
       88749,
-      88756,
-      88757,
-      88758,
       88759,
       88760,
       88761,
@@ -1646,11 +2013,9 @@
       92434,
       92446,
       92449,
-      92456,
       92457,
       92458,
       92459,
-      92489,
       92490,
       92500,
       92519,
@@ -2058,16 +2423,9 @@
       95615,
       95642,
       95643,
-      95646,
-      95647,
-      95663,
-      95664,
-      95682,
-      95697,
       95726,
       95730,
       95736,
-      95737,
       95738,
       95739,
       95748,
@@ -2076,7 +2434,6 @@
       95766,
       95769,
       95770,
-      95772,
       95773,
       95775,
       95776,
@@ -2088,11 +2445,8 @@
       95791,
       95792,
       95793,
-      95795,
       95798,
       95799,
-      95809,
-      95810,
       95817,
       95818,
       95820,
@@ -2197,7 +2551,6 @@
       96203,
       96209,
       96222,
-      96241,
       96247,
       96248,
       96249,
@@ -2208,15 +2561,11 @@
       96256,
       96257,
       96258,
-      96259,
-      96260,
-      96261,
       96262,
       96263,
       96264,
       96265,
       96266,
-      96294,
       96296,
       96301,
       96302,
@@ -2303,13 +2652,7 @@
       96774,
       96775,
       96776,
-      96779,
-      96781,
       96782,
-      96783,
-      96784,
-      96785,
-      96786,
       96796,
       96797,
       96798,
@@ -2342,9 +2685,6 @@
       96982,
       96983,
       96984,
-      96986,
-      96987,
-      96988,
       96989,
       96991,
       96992,
@@ -2411,7 +2751,6 @@
       97287,
       97319,
       97327,
-      97328,
       97329,
       97331,
       97332,
@@ -2447,15 +2786,9 @@
       97883,
       97884,
       97984,
-      97985,
       97986,
       97987,
       97988,
-      98027,
-      98059,
-      98069,
-      98070,
-      98071,
       98096,
       98109,
       98155,
@@ -2464,31 +2797,18 @@
       98192,
       98203,
       98205,
-      98209,
       98215,
-      98216,
-      98221,
-      98223,
       98224,
       98225,
-      98230,
       98231,
       98233,
-      98283,
       98289,
-      98291,
       98294,
-      98297,
       98300,
-      98310,
-      98313,
       98325,
       98338,
       98395,
-      98417,
-      98418,
       98426,
-      98463,
       98465,
       98466,
       98467,
@@ -2499,9 +2819,6 @@
       98472,
       98477,
       98520,
-      98815,
-      98823,
-      98824,
       98830,
       98887,
       98889,
@@ -2542,7 +2859,6 @@
       99192,
       99193,
       99194,
-      99197,
       99198,
       99199,
       99201,
@@ -3354,7 +3670,8 @@
       97066,
       97067,
       97583,
-      99267
+      99267,
+      99411
     ]
   },
   "item_bonuses": {
