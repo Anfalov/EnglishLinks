@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Translate item links inserted from profession output icons and wardrobe
+  previews when they contain bonus 3524. Preserve the link payload, color and
+  genuine random suffixes; other unknown bonuses still keep the original label.
+
 ## 0.6.5 — 2026-10-02
 
 - Remove Wago downloads, CSVs and importers, QuestV2 coverage checks, unused

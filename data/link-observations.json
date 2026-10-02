@@ -34,5 +34,20 @@
     "visible_evidence": "Mana Well link in chat with localized recipe tooltip open.",
     "game_build": null,
     "other_recipient_verified": false
+  },
+  {
+    "source": "User screenshots image(20261002-203642).png and image(20261002-203702).png",
+    "source_message_at": "2026-10-03T01:37:07+05:00",
+    "game_edition": "Forever",
+    "game_build": null,
+    "item_ids": [
+      1251,
+      271097
+    ],
+    "bonus_id": 3524,
+    "observed": "Bag Linen Bandage translates; profession result and wardrobe item links contain bonus 3524 and do not translate. Both links are item links, not transmogappearance.",
+    "fix": "Recognize bonus 3524 as contributing no name suffix. Keep all payload bytes and retain protection for other unknown/conflicting bonuses.",
+    "verification": "Reproduced against prepared addon in Lua 5.1. Wowhead Forever tooltip titles unchanged by 3524, including combination with suffix bonus 12722. Fixed build awaits live-client confirmation.",
+    "evidence": "data/client-link-evidence/preview-bonus-3524.json"
   }
 ]

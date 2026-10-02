@@ -95,3 +95,19 @@ map that coordinates belong to. It does not imply a zone name in visible text.
 The standard English label is `Map Pin Location`; the native
 `Waypoint-MapPin-ChatIcon` atlas escape is retained. UiMap names are no longer
 needed or shipped. The original worldmap payload and coordinates are unchanged.
+
+## Client preview bonus 3524
+
+User screenshots on 2026-10-03 (Asia/Yekaterinburg) show `item` links from the
+profession output icon (Linen Bandage, 1251) and wardrobe (Spiritwraith Drape,
+271097), both with bonus 3524. The bag link has no such bonus. It is absent from
+the saved Wowhead bonus table, so the unknown-bonus guard suppressed translation.
+
+`NameData.lua` now records 3524 as an empty suffix. This is a client-observed
+addition, not a row from the Wowhead bonus export. The paired English Forever
+tooltip responses in `data/client-link-evidence/preview-bonus-3524.json` show no
+name change for either item or for Commander's Armor with suffix bonus 12722.
+The original bonus remains in the outgoing payload. Other unknown bonuses
+remain guarded; the updater retains this entry when absent from fresh sources
+and will prefer an explicit future Wowhead definition. In-game confirmation of
+the fixed build remains pending.

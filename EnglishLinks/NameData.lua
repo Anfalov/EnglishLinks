@@ -62218,6 +62218,7 @@ ns.Names = {
     },
 }
 ns.ItemBonusSuffixes = {
+    [3524] = "",
     [11036] = "",
     [12672] = "",
     [12688] = "of Intellect",

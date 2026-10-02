@@ -1,0 +1,65 @@
+[
+  {
+    "item_id": 1251,
+    "bonus_ids": [],
+    "url": "https://nether.wowhead.com/forever/tooltip/item/1251",
+    "retrieved_at": "2026-10-02T20:39:14.533355+00:00",
+    "sha256": "74f93dc193fa25b0b65811da7460e6831101081f5f16e2389e7994ed8bd8c242",
+    "tooltip_title": "Linen Bandage",
+    "raw_response": "{\"name\":\"Linen Bandage\",\"quality\":1,\"icon\":\"inv_misc_bandage_15\",\"tooltip\":\"<table><tr><td><!--nstart--><b class=\\\"q1\\\">Linen Bandage</b><!--nend--><!--ndstart--><!--ndend--><span class=\\\"q whtt-extra whtt-ilvl\\\"><br>Item Level <!--ilvl-->1</span><!--bo--><!--ue--><!--ue--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--></td></tr></table><table><tr><td>Requires <a href=\\\"/forever/skill=2942/first-aid\\\" class=\\\"q1\\\">First Aid</a> (1)<br><br><!--useText:0:1--><span id=\\\"useText1\\\" class=\\\"q2\\\">Use: <!--useEffect:0:1--><a href=\\\"/forever/spell=746/first-aid\\\" class=\\\"q2\\\">Heals 66 damage over 6 sec.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\\\"whtt-extra whtt-maxstack\\\">Max Stack: 20</div><div class=\\\"whtt-sellprice\\\">Sell Price: <span class=\\\"moneycopper\\\">10</span></div></td></tr></table>\",\"spells\":[]}"
+  },
+  {
+    "item_id": 1251,
+    "bonus_ids": [
+      3524
+    ],
+    "url": "https://nether.wowhead.com/forever/tooltip/item/1251?bonus=3524",
+    "retrieved_at": "2026-10-02T20:39:14.584162+00:00",
+    "sha256": "74f93dc193fa25b0b65811da7460e6831101081f5f16e2389e7994ed8bd8c242",
+    "tooltip_title": "Linen Bandage",
+    "raw_response": "{\"name\":\"Linen Bandage\",\"quality\":1,\"icon\":\"inv_misc_bandage_15\",\"tooltip\":\"<table><tr><td><!--nstart--><b class=\\\"q1\\\">Linen Bandage</b><!--nend--><!--ndstart--><!--ndend--><span class=\\\"q whtt-extra whtt-ilvl\\\"><br>Item Level <!--ilvl-->1</span><!--bo--><!--ue--><!--ue--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--></td></tr></table><table><tr><td>Requires <a href=\\\"/forever/skill=2942/first-aid\\\" class=\\\"q1\\\">First Aid</a> (1)<br><br><!--useText:0:1--><span id=\\\"useText1\\\" class=\\\"q2\\\">Use: <!--useEffect:0:1--><a href=\\\"/forever/spell=746/first-aid\\\" class=\\\"q2\\\">Heals 66 damage over 6 sec.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\\\"whtt-extra whtt-maxstack\\\">Max Stack: 20</div><div class=\\\"whtt-sellprice\\\">Sell Price: <span class=\\\"moneycopper\\\">10</span></div></td></tr></table>\",\"spells\":[]}"
+  },
+  {
+    "item_id": 271097,
+    "bonus_ids": [],
+    "url": "https://nether.wowhead.com/forever/tooltip/item/271097",
+    "retrieved_at": "2026-10-02T20:39:14.477708+00:00",
+    "sha256": "55495176ae13cff742b5cf090a17baf78b20b3c507b94d1f72cbc24fb753ae3d",
+    "tooltip_title": "Spiritwraith Drape",
+    "raw_response": "{\"name\":\"Spiritwraith Drape\",\"quality\":3,\"icon\":\"inv_misc_cape_12\",\"tooltip\":\"<table><tr><td><!--nstart--><b class=\\\"q3\\\">Spiritwraith Drape</b><!--nend--><!--ndstart--><!--ndend--><span class=\\\"q\\\"><br>Item Level <!--ilvl-->18</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\\\"100%\\\"><tr><td>Back</td></tr></table><!--rf--><span><!--amr-->17 Armor</span><br><span><!--stat3-->+4 Agility</span><br><span><!--stat6-->+3 Spirit</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->13<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\\\"whtt-sellprice\\\">Sell Price: <span class=\\\"moneysilver\\\">4</span> <span class=\\\"moneycopper\\\">74</span></div><div class=\\\"whtt-extra whtt-droppedby\\\">Dropped by: Faldrim Anvilmar</div><div class=\\\"whtt-extra whtt-dropchance\\\">Drop Chance: 54.55%</div></td></tr></table>\",\"spells\":[]}"
+  },
+  {
+    "item_id": 271097,
+    "bonus_ids": [
+      3524
+    ],
+    "url": "https://nether.wowhead.com/forever/tooltip/item/271097?bonus=3524",
+    "retrieved_at": "2026-10-02T20:39:14.750199+00:00",
+    "sha256": "478f491893d4f03cb1ce8eb2b517002d1b6c4fca337dd35a17bcc3d263487b5c",
+    "tooltip_title": "Spiritwraith Drape",
+    "raw_response": "{\"name\":\"Spiritwraith Drape\",\"quality\":3,\"icon\":\"inv_misc_cape_12\",\"tooltip\":\"<table><tr><td><!--nstart--><b class=\\\"q3\\\">Spiritwraith Drape</b><!--nend--><!--ndstart--><!--ndend--><span class=\\\"q\\\"><br>Item Level <!--ilvl-->18</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\\\"100%\\\"><tr><td>Back</td></tr></table><!--rf--><span><!--amr-->17 Armor</span><br><span><!--stat3-->+3 Agility</span><br><span><!--stat6-->+4 Spirit</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->13<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\\\"whtt-sellprice\\\">Sell Price: <span class=\\\"moneysilver\\\">4</span> <span class=\\\"moneycopper\\\">74</span></div><div class=\\\"whtt-extra whtt-droppedby\\\">Dropped by: Faldrim Anvilmar</div><div class=\\\"whtt-extra whtt-dropchance\\\">Drop Chance: 54.55%</div></td></tr></table>\",\"spells\":[]}"
+  },
+  {
+    "item_id": 10378,
+    "bonus_ids": [
+      12722
+    ],
+    "url": "https://nether.wowhead.com/forever/tooltip/item/10378?bonus=12722",
+    "retrieved_at": "2026-10-02T20:39:14.752561+00:00",
+    "sha256": "61ace96c0de3084e805012761c36c3eb47c3f0186832dd11e85bebc81aa1fcc0",
+    "tooltip_title": "Commander's Armor of the Bear",
+    "raw_response": "{\"name\":\"Commander's Armor\",\"quality\":2,\"icon\":\"inv_chest_plate06\",\"tooltip\":\"<table><tr><td><!--nstart--><b class=\\\"q2\\\">Commander's Armor of the Bear</b><!--nend--><!--ndstart--><!--ndend--><span class=\\\"q\\\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when equipped<!--ue--><!--ue--><table width=\\\"100%\\\"><tr><td>Chest</td><th><!--scstart4:4--><span class=\\\"q1\\\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->597 Armor</span><br><span><!--stat4-->+19 Strength</span><br><span><!--stat7-->+19 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 115 / 115</td></tr></table><table><tr><td>Requires Level <!--rlvl-->58<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\\\"whtt-sellprice\\\">Sell Price: <span class=\\\"moneygold\\\">1</span> <span class=\\\"moneysilver\\\">94</span> <span class=\\\"moneycopper\\\">66</span></div></td></tr></table>\",\"spells\":[]}"
+  },
+  {
+    "item_id": 10378,
+    "bonus_ids": [
+      3524,
+      12722
+    ],
+    "url": "https://nether.wowhead.com/forever/tooltip/item/10378?bonus=3524:12722",
+    "retrieved_at": "2026-10-02T20:39:14.899204+00:00",
+    "sha256": "61ace96c0de3084e805012761c36c3eb47c3f0186832dd11e85bebc81aa1fcc0",
+    "tooltip_title": "Commander's Armor of the Bear",
+    "raw_response": "{\"name\":\"Commander's Armor\",\"quality\":2,\"icon\":\"inv_chest_plate06\",\"tooltip\":\"<table><tr><td><!--nstart--><b class=\\\"q2\\\">Commander's Armor of the Bear</b><!--nend--><!--ndstart--><!--ndend--><span class=\\\"q\\\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when equipped<!--ue--><!--ue--><table width=\\\"100%\\\"><tr><td>Chest</td><th><!--scstart4:4--><span class=\\\"q1\\\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->597 Armor</span><br><span><!--stat4-->+19 Strength</span><br><span><!--stat7-->+19 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 115 / 115</td></tr></table><table><tr><td>Requires Level <!--rlvl-->58<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\\\"whtt-sellprice\\\">Sell Price: <span class=\\\"moneygold\\\">1</span> <span class=\\\"moneysilver\\\">94</span> <span class=\\\"moneycopper\\\">66</span></div></td></tr></table>\",\"spells\":[]}"
+  }
+]
