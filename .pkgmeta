@@ -1,0 +1,29 @@
+# CurseForge packages the repository itself, independently of the GitHub ZIP.
+package-as: EnglishLinks
+enable-nolib-creation: no
+
+# Lift the addon directory into the package root (no EnglishLinks/EnglishLinks).
+move-folders:
+  EnglishLinks/EnglishLinks: EnglishLinks
+
+# Read release notes from the repository without shipping publishing files.
+manual-changelog:
+  filename: publishing/curseforge/CHANGELOG.md
+  markup-type: markdown
+
+# Keep the same installable files as tools/package_release.py.
+# Dot-prefixed files/directories and .pkgmeta are ignored by the packager.
+ignore:
+  - AGENTS.md
+  - CHANGELOG.md
+  - LICENSE
+  - NOTICE
+  - README.md
+  - data
+  - docs
+  - licenses
+  - publishing
+  - tests
+  - tools
+  - EnglishLinks/README-en.md
+  - EnglishLinks/README-ru.md
