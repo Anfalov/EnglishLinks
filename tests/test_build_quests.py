@@ -24,17 +24,12 @@ class Quests(unittest.TestCase):
             path.write_text(text)
             manifest.append(dict(file=file, sha256=hashlib.sha256(text.encode()).hexdigest()))
         (root / 'manifest.json').write_text(json.dumps(manifest))
-        csv = root / 'QuestV2.csv'
-        csv.write_text('ID\n1\n2\n3\n4\n5\n')
-        return csv
-
-    def test_coverage_only_priority_annotations_and_lua(self):
+    def test_priority_annotations_and_lua(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
-            names, provenance, report = b.compile_quests(root, self.fixture(root))
+            self.fixture(root)
+            names, provenance, report = b.compile_quests(root)
             self.assertEqual(names, {1:'Inherited', 2:'New Quest', 3:'Third', 4:'Chain', 99:'Outside Forever'})
-            self.assertEqual(report['missing_ids'], [5])
-            self.assertEqual(report['outside_reference_ids'], [99])
             self.assertEqual(report['conflicts'][0]['alternative'], 'Alternative')
             runtime = LuaRuntime()
             ns = runtime.table()
@@ -44,10 +39,10 @@ class Quests(unittest.TestCase):
     def test_source_tampering_rejected(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
-            csv = self.fixture(root)
+            self.fixture(root)
             (root / 'Completao/ForeverNew.lua').write_text('changed')
             with self.assertRaisesRegex(ValueError, 'checksum'):
-                b.compile_quests(root, csv)
+                b.compile_quests(root)
 
     def test_escaped_title_and_markup_rejection(self):
         title = 'Quest "quoted" \\ é'

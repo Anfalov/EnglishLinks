@@ -1,3 +1,12 @@
+## 0.6.5 — 2026-10-02
+
+- Remove Wago downloads, CSVs and importers, QuestV2 coverage checks, unused
+  spell-to-profession/map tables and obsolete generated source packs.
+- Preserve every installed name and item suffix; test the prepared addon directly.
+- Download PetScout ZIPs from ForgeCDN; discover new versions on CurseForge and
+  report explicitly when only the pinned fallback archive is available.
+- Check sources twice weekly: Monday and Thursday, 09:00 Asia/Yekaterinburg.
+
 ## 0.6.4 — 2026-10-02
 
 - Load one prepared name dictionary instead of merging source packs in the game.

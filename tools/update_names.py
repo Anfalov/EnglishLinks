@@ -3,7 +3,6 @@
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
-import csv
 import hashlib
 import html
 import io
@@ -20,8 +19,7 @@ import build_wowhead as wh
 import build_random_affixes as rand
 import build_supplements as supplements
 import build_quests as quests
-import build_names
-from build_packs import name_ok
+from data_format import name_ok
 import name_data
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -106,7 +104,7 @@ def parse_wowhead(entry, raw):
         result['random_affixes'] = rand.parse(text)
     else:
         raise ValueError('Unknown Wowhead parser')
-    name_data.validate(dict(result, relations={}))
+    name_data.validate(result)
     return result
 
 
@@ -186,41 +184,85 @@ def wowhead(fetcher, current, root, outcomes):
 
 def named(kind, rows):
     result = dict(empty(), names={kind: rows})
-    name_data.validate(dict(result, relations={}))
+    name_data.validate(result)
     return result
 
 
-def latest_forever_build(raw):
-    # Restrict to exact Forever versions, regardless of the API's product names.
-    payload = json.loads(raw)
-    versions = set(re.findall(r'\b1\.60\.\d+\.\d+\b', json.dumps(payload)))
-    return max(versions, key=lambda value: tuple(map(int, value.split('.')))) if versions else None
+def petscout_archive(raw):
+    if not zipfile.is_zipfile(io.BytesIO(raw)):
+        raise ValueError('PetScout download is not a ZIP archive')
+    with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+        member = 'PetScoutForever/data/locations.lua'
+        if archive.namelist().count(member) != 1:
+            raise ValueError('PetScout archive must contain one locations.lua')
+        info = archive.getinfo(member)
+        if info.file_size > 10 * 1024 * 1024:
+            raise ValueError('PetScout member exceeds limit')
+        text = archive.read(info).decode('utf-8')
+    build = re.search(r'build (1\.60\.\d+\.\d+)', text)
+    if not build:
+        raise ValueError('Not a Forever PetScout source')
+    return named('companion', supplements.petscout_names(text, 'Locations', build[1]))
 
 
-def wago_names(raw, table):
-    if table == 'ItemSparse':
-        return named('item', build_names.collect(raw, 'csv'))
-    fields = {'SpellName': ('spell', 'Name_lang'), 'SkillLine': ('profession', 'DisplayName_lang'),
-              'Achievement': ('achievement', 'Title_lang')}
-    reader = csv.DictReader(io.StringIO(raw.decode('utf-8-sig')))
-    if not reader.fieldnames or 'ID' not in reader.fieldnames:
-        raise ValueError('Not a Wago CSV')
-    rows = list(reader)
-    if not rows or any(None in row or any(v is None for v in row.values()) for row in rows):
-        raise ValueError('Empty or malformed Wago CSV')
-    seen = set()
-    names = {}
-    for row in rows:
-        key = int(row['ID'])
-        if key in seen or not 0 <= key <= 2147483647:
-            raise ValueError('Invalid or duplicate Wago ID')
-        seen.add(key)
-        if table in fields and key and row[fields[table][1]].strip():
-            wh.insert(names, key, row[fields[table][1]])
-    return named(fields[table][0], names) if table in fields else empty()
+def petscout_file_url(page, file_id):
+    # The file detail page publishes the actual ZIP name. Never infer a version
+    # from the display title or accept an arbitrary download host from HTML.
+    page = html.unescape(page).replace('\\"', '"')
+    match = re.search(r'"fileName"\s*:\s*"(PetScoutForever-[^"<>/\\]+\.zip)"', page)
+    if not match:
+        visible = re.sub(r'<[^>]+>', ' ', page)
+        match = re.search(r'File name\s+(PetScoutForever-[^\s<>/\\]+\.zip)', visible)
+    if not match:
+        raise ValueError('PetScout file page has no ZIP filename')
+    filename = urllib.parse.quote(match[1], safe='')
+    return f'https://edge.forgecdn.net/files/{file_id // 1000}/{file_id % 1000:03d}/{filename}'
 
 
-def other_sources(fetcher, root, outcomes, build=None):
+def petscout(fetcher, root, outcomes):
+    manifest = json.loads((root / 'data/supplement-sources/manifest.json').read_text())
+    pinned = next(e for e in manifest if e['file'] == 'petscout-locations.lua')
+    pinned_id = int(pinned['url'].rstrip('/').rsplit('/', 1)[1])
+    candidates = []
+    discovered = False
+    try:
+        page = fetcher.get('https://www.curseforge.com/wow/addons/petscout-forever/files/all',
+                           'petscout-discovery').decode('utf-8').replace('\\/', '/')
+        ids = re.findall(r'/wow/addons/petscout-forever/files/(\d+)', page)
+        if not ids:
+            raise ValueError('PetScout file list is empty or unavailable')
+        latest = max(map(int, ids))
+        if latest < pinned_id:
+            raise ValueError('PetScout file list is older than the pinned release')
+        if latest == pinned_id:
+            candidates.append((latest, pinned['download_url']))
+        else:
+            detail = fetcher.get(f'https://www.curseforge.com/wow/addons/petscout-forever/files/{latest}',
+                                 'petscout-discovery', str(latest)).decode('utf-8')
+            candidates.append((latest, petscout_file_url(detail, latest)))
+        discovered = True
+    except Exception as error:
+        outcomes.append(dict(source='petscout-discovery', status='skipped', reason=str(error)))
+
+    # Keep the known official archive usable even when CurseForge's web pages
+    # are unavailable. The report distinguishes fallback data from a fresh check.
+    if not candidates or candidates[0][0] != pinned_id:
+        candidates.append((pinned_id, pinned['download_url']))
+    for index, (file_id, url) in enumerate(candidates):
+        try:
+            raw = fetcher.get(url, 'petscout', str(file_id))
+            if file_id == pinned_id and hashlib.sha256(raw).hexdigest() != pinned['archive_sha256']:
+                raise ValueError('Pinned PetScout archive checksum mismatch')
+            parsed = petscout_archive(raw)
+            outcomes.append(dict(source='petscout', url=url, version=str(file_id), status='parsed',
+                                 freshness='latest-listed' if discovered and index == 0 else 'pinned-fallback'))
+            return parsed
+        except Exception as error:
+            outcomes.append(dict(source='petscout', url=url, version=str(file_id), status='skipped', reason=str(error)))
+    return None
+
+
+def other_sources(fetcher, root, outcomes):
     result = []
     def attempt(source, url, parser, version=None, game_build=None):
         try:
@@ -229,17 +271,6 @@ def other_sources(fetcher, root, outcomes, build=None):
             outcomes.append(dict(source=source, url=url, status='parsed'))
         except Exception as error:
             outcomes.append(dict(source=source, url=url, status='skipped', reason=str(error)))
-
-    if not build:
-        try:
-            build = latest_forever_build(fetcher.get('https://wago.tools/api/builds', 'wago-builds'))
-        except Exception as error:
-            outcomes.append(dict(source='wago-builds', status='skipped', reason=str(error)))
-        # The known exact build is a fallback, not a claim to be the newest.
-        build = build or json.loads((root / 'data/auto-update-config.json').read_text())['wago_fallback_build']
-    for table in ('ItemSparse', 'SpellName', 'SkillLine', 'Achievement', 'SkillLineAbility', 'QuestV2'):
-        url = f'https://wago.tools/db2/{table}/csv?build={build}&locale=enUS'
-        attempt('wago-' + table, url, lambda raw, t=table: wago_names(raw, t), game_build=build)
 
     entries = json.loads((root / 'data/quest-sources/manifest.json').read_text())
     priority = ['questiedb/foreverBaseQuest.lua', 'questiedb/foreverQuestDB.lua',
@@ -283,24 +314,9 @@ def other_sources(fetcher, root, outcomes, build=None):
     except Exception as error:
         outcomes.append(dict(source='thewowdb', status='skipped', reason=str(error)))
 
-    try:
-        page = fetcher.get('https://www.curseforge.com/wow/addons/petscout-forever/files/all', 'petscout').decode('utf-8')
-        ids = re.findall(r'/wow/addons/petscout-forever/files/(\d+)', page)
-        file_id = max(map(int, ids))
-        url = f'https://www.curseforge.com/wow/addons/petscout-forever/download/{file_id}/file'
-        def pets(raw):
-            with zipfile.ZipFile(io.BytesIO(raw)) as archive:
-                info = archive.getinfo('PetScoutForever/data/locations.lua')
-                if info.file_size > 10 * 1024 * 1024:
-                    raise ValueError('PetScout member exceeds limit')
-                text = archive.read(info).decode('utf-8')
-            build = re.search(r'build (1\.60\.\d+\.\d+)', text)
-            if not build:
-                raise ValueError('Not a Forever PetScout source')
-            return named('companion', supplements.petscout_names(text, 'Locations', build[1]))
-        attempt('petscout', url, pets, version=str(file_id))
-    except Exception as error:
-        outcomes.append(dict(source='petscout', status='skipped', reason=str(error)))
+    pet_result = petscout(fetcher, root, outcomes)
+    if pet_result is not None:
+        result.append(('petscout', pet_result))
     return result
 
 
@@ -308,12 +324,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=ROOT)
     parser.add_argument('--output', type=Path, default=ROOT / 'update-results')
-    parser.add_argument('--game-build', default='')
     parser.add_argument('--apply', action='store_true', help='Write accepted changes; no Git operations')
     parser.add_argument('--run-id', default=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ'))
     args = parser.parse_args()
-    if args.game_build and not re.fullmatch(r'1\.60\.\d+\.\d+', args.game_build):
-        parser.error('Expected an exact Forever build')
     if not re.fullmatch(r'[A-Za-z0-9_-]+', args.run_id):
         parser.error('Invalid run ID')
     path = args.root / 'EnglishLinks/NameData.lua'
@@ -323,7 +336,7 @@ def main():
     print('Checking Wowhead Forever...', flush=True)
     primary = wowhead(fetcher, current, args.root, outcomes)
     print('Checking supplemental sources...', flush=True)
-    additional = other_sources(fetcher, args.root, outcomes, args.game_build or None)
+    additional = other_sources(fetcher, args.root, outcomes)
     updated, changes = name_data.merge(current, primary, additional)
     report = dict(starting_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                   finished_at=now(), changed=bool(changes), changes=changes,

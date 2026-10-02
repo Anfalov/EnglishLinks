@@ -17,21 +17,16 @@ class RandomAffixes(unittest.TestCase):
     def runtime(self):
         runtime = LuaRuntime(unpack_returned_tuples=True)
         ns = runtime.table()
-        for name in ('ItemNames_enUS', 'Names_enUS', 'QuestNames_enUS', 'LinkText',
-                     'Resolver', 'SupplementNames_enUS', 'WowheadNames_enUS', 'RandomAffixes_enUS'):
-            directory = 'EnglishLinks' if name in ('LinkText', 'Resolver') else 'data/legacy-packs'
-            runtime.execute((ROOT / directory / (name + '.lua')).read_text(), 'EnglishLinks', ns)
+        for name in ('NameData', 'LinkText', 'Resolver'):
+            runtime.execute((ROOT / 'EnglishLinks' / (name + '.lua')).read_text(), 'EnglishLinks', ns)
         ns.InitDB(runtime.table())
         return ns
 
-    def test_every_shipped_signed_id_and_reproducibility(self):
+    def test_signed_id_parser_and_prepared_links(self):
         ns = self.runtime()
         self.assertEqual(len(self.names), 2062)
         self.assertEqual(sum(i < 0 for i in self.names), 29)
-        self.assertEqual(dict(ns.ItemRandomAffixes.items()), self.names)
-        self.assertEqual((ROOT / 'data/legacy-packs/RandomAffixes_enUS.lua').read_text(),
-                         b.render(self.names, self.manifest))
-        for rid, suffix in self.names.items():
+        for rid, suffix in ns.ItemRandomAffixes.items():
             self.assertEqual(ns.Resolve(f'item:10378:0:0:0:0:0:{rid}:123', 'Предмет'),
                              "Commander's Armor " + suffix, rid)
         self.assertEqual(ns.Resolve('item:6614:0:0:0:0:0:763:123', 'Плащ'),

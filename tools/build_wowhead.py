@@ -4,14 +4,13 @@ No downloaded JavaScript or Lua is executed. Other packs are fallback inputs;
 this pack loads last and overwrites their titles for every observed Wowhead ID.
 """
 import argparse
-import csv
 import hashlib
 import html
 import json
 from pathlib import Path
 import re
 import zipfile
-from build_packs import name_ok, lua
+from data_format import name_ok, lua
 
 
 def literal(text, start):
@@ -189,18 +188,14 @@ def render(names, bonuses, manifest):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--data-dir', type=Path, default=Path('data'))
-    p.add_argument('--output', type=Path, default=Path('EnglishLinks/WowheadNames_enUS.lua'))
+    p.add_argument('--output', type=Path, default=Path('dist/WowheadNames_enUS.lua'))
     args = p.parse_args()
     names, bonuses, manifest = compile_snapshot(args.data_dir / 'wowhead-sources')
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(render(names, bonuses, manifest), encoding='utf-8')
-    # Use the same fallback dictionaries as the existing pack builders.
-    from build_packs import compile_directory
     from build_quests import compile_quests
     from build_supplements import compile_supplements
-    fallback = compile_directory(args.data_dir, '1.60.1.70124')[0]
-    with (args.data_dir / 'ItemSparse.1.60.1.70124.csv').open(encoding='utf-8-sig') as f:
-        fallback['item'] = {int(r['ID']): r['Display_lang'] for r in csv.DictReader(f) if r['Display_lang'].strip()}
-    fallback['quest'] = compile_quests(args.data_dir / 'quest-sources', args.data_dir / 'QuestV2.1.60.1.70124.csv')[0]
+    fallback = {'quest': compile_quests(args.data_dir / 'quest-sources')[0]}
     for kind, rows in compile_supplements(args.data_dir)[0].items():
         for key, value in rows.items():
             fallback.setdefault(kind, {}).setdefault(key, value)
@@ -209,15 +204,9 @@ def main():
         old = fallback.get(kind, {})
         report['categories'][kind] = {'wowhead': len(rows), 'fallback': len(old.keys() - rows.keys()), 'total': len(old.keys() | rows.keys()),
             'overwritten': [{'id': k, 'fallback': old[k], 'wowhead': v} for k, v in sorted(rows.items()) if k in old and old[k] != v]}
-    with (args.data_dir / 'QuestV2.1.60.1.70124.csv').open() as f:
-        reference = {int(r['ID']) for r in csv.DictReader(f)}
-    quests = names['quest'].keys() | fallback['quest'].keys()
-    report['questv2'] = {'reference_count': len(reference), 'covered': len(reference & quests),
-        'missing_ids': sorted(reference - quests), 'outside_reference_ids': sorted(quests - reference)}
     report['item_bonuses'] = {'known': len(bonuses), 'with_suffix': sum(bool(v) for v in bonuses.values()), 'distinct_suffixes': len(set(bonuses.values()) - {''})}
     (args.data_dir / 'wowhead-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({k: {f:v for f,v in r.items() if f != 'overwritten'} for k,r in report['categories'].items()}))
-    print('QuestV2 covered:', report['questv2']['covered'], '/', len(reference), '; outside:', len(quests-reference))
     print('Item bonuses:', report['item_bonuses'])
 
 

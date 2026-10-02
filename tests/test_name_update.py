@@ -15,7 +15,7 @@ import package_release as package
 
 def baseline():
     return dict(names={'item': {1: 'Current', 2: 'Retained'}}, bonuses={10: ''},
-                random_affixes={-9: 'of the Owl'}, relations={})
+                random_affixes={-9: 'of the Owl'})
 
 
 class IncrementalUpdate(unittest.TestCase):
@@ -92,13 +92,6 @@ class IncrementalUpdate(unittest.TestCase):
             self.assertEqual(parsed['names']['item'], {1: 'Item 1', 2: 'Item 2', 3: 'Item 3'})
             self.assertTrue(any(s['status'] == 'skipped' and s['reason'] == 'Unavailable' for s in outcomes))
 
-    def test_wago_edition_and_csv_validation(self):
-        self.assertEqual(update.latest_forever_build(b'{"retail":"12.1.0.99999","old":"1.60.1.70124","new":"1.60.1.70170"}'), '1.60.1.70170')
-        self.assertIsNone(update.latest_forever_build(b'{"retail":"12.1.0.99999"}'))
-        self.assertEqual(update.wago_names(b'ID,Name_lang\n123,New spell\n', 'SpellName')['names']['spell'], {123: 'New spell'})
-        for raw in (b'<html>403</html>', b'ID,Name_lang\n123,A\n123,B\n', b'ID,Name_lang\n123,|Hbad\n'):
-            with self.assertRaises(ValueError):
-                update.wago_names(raw, 'SpellName')
 
 
 class PreparedAddon(unittest.TestCase):

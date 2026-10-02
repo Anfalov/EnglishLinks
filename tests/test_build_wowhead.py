@@ -1,4 +1,3 @@
-import csv
 import json
 import hashlib
 from pathlib import Path
@@ -19,33 +18,20 @@ class Wowhead(unittest.TestCase):
     def runtime(self):
         runtime = LuaRuntime(unpack_returned_tuples=True)
         ns = runtime.table()
-        for name in ('ItemNames_enUS', 'Names_enUS', 'QuestNames_enUS', 'LinkText',
-                     'Resolver', 'SupplementNames_enUS', 'WowheadNames_enUS', 'RandomAffixes_enUS'):
-            directory = 'EnglishLinks' if name in ('LinkText', 'Resolver') else 'data/legacy-packs'
-            runtime.execute((ROOT / directory / (name + '.lua')).read_text(), 'EnglishLinks', ns)
+        for name in ('NameData', 'LinkText', 'Resolver'):
+            runtime.execute((ROOT / 'EnglishLinks' / (name + '.lua')).read_text(), 'EnglishLinks', ns)
         ns.InitDB(runtime.table())
         return runtime, ns
 
-    def test_reproducible_authoritative_overlay(self):
-        self.assertEqual((ROOT / 'data/legacy-packs/WowheadNames_enUS.lua').read_text(), b.render(self.names, self.bonuses, self.manifest))
+    def test_prepared_names_and_overrides(self):
         runtime, ns = self.runtime()
-        report = json.loads((ROOT / 'data/wowhead-report.json').read_text())
-        for kind, rows in self.names.items():
-            final = dict(ns.Names[kind].items())
-            self.assertTrue(rows.items() <= final.items(), kind)
-            self.assertEqual(len(final), report['categories'][kind]['total'])
-            self.assertEqual(ns.PackMeta[kind].count, len(final))
-            self.assertEqual(ns.PackMeta[kind].primaryCount, len(rows))
+        for kind, rows in ns.Names.items():
+            self.assertEqual(ns.PackMeta[kind].count, len(list(rows.items())))
         self.assertEqual(ns.Resolve('quest:5641', 'Русское'), 'Chastise')
         self.assertEqual(ns.Resolve('quest:5644', 'Русское'), 'Dark Sacrifice')
         self.assertEqual(ns.Names.quest[2358], 'Horns of Nez\'ra')
         ns.DB.typedOverrides.quest[5641] = 'Manual title'
         self.assertEqual(ns.Resolve('quest:5641', 'Русское'), 'Manual title')
-        with (ROOT / 'data/QuestV2.1.60.1.70124.csv').open() as f:
-            reference = {int(r['ID']) for r in csv.DictReader(f)}
-        outside = self.names['quest'].keys() - reference
-        self.assertEqual(len(outside), 752)
-        self.assertTrue(all(ns.Names.quest[i] == self.names['quest'][i] for i in outside))
         self.assertEqual(ns.Names.uimap, None)
 
     def test_bonuses_preserve_variant_and_payload(self):

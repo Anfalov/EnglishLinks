@@ -22,7 +22,7 @@ ns.InitDB({})
 -- These are synthetic link tests; do not inherit real variant dictionaries.
 ns.ItemBonusSuffixes={}; ns.ItemRandomAffixes={}
 for _,kind in ipairs(ns.Kinds) do ns.Names[kind]={[10]=kind..' English'} end
-ns.Relations={talent={[20]={10,11}},recipe={[10]=10}}
+ns.Relations={talent={[20]={10,11}}}
 ns.Names.spell[11]='Second rank'
 local function link(payload,label,plain) return '|H'..payload..'|h'..(plain and label or '['..label..']')..'|h' end
 local function translate(payload,label,plain) return ns.TranslateAll(link(payload,label or 'Русское',plain),ns.Resolve) end

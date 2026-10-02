@@ -13,7 +13,7 @@ import re
 import urllib.request
 import zipfile
 from build_wowhead import literal
-from build_packs import lua, name_ok
+from data_format import lua, name_ok
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = 'https://nether.wowhead.com/forever/data/gear-planner?dv=59&db=1790292378'
@@ -139,7 +139,8 @@ def main():
     if args.fetch:
         fetch(directory)
     names, manifest = compile_snapshot(directory)
-    (ROOT / 'EnglishLinks/RandomAffixes_enUS.lua').write_text(render(names, manifest))
+    (ROOT / 'dist').mkdir(exist_ok=True)
+    (ROOT / 'dist/RandomAffixes_enUS.lua').write_text(render(names, manifest))
     print(json.dumps({'count': len(names), 'positive': sum(i > 0 for i in names),
                       'negative': sum(i < 0 for i in names),
                       'distinct_names': len(set(names.values()))}))

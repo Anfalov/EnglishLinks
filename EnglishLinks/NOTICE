@@ -32,7 +32,6 @@ public quest databases from its own license grant.
 
 EnglishLinks transformations, 2026-09-30:
 - Extract only quest ID/title pairs, without executing upstream Lua.
-- Use user-supplied Forever QuestV2 1.60.1.70124 for coverage diagnostics only.
 - Remove Completao's display-only chain numbering suffix, e.g. (1/2).
 - Apply the documented source priority and record individual provenance.
 - Omit quest descriptions, objectives, coordinates and conditions from the
@@ -53,7 +52,7 @@ Additional names in 0.4.0:
   Only Forever item ID/name pairs are extracted, without executing JavaScript.
 - PetScout Forever / noprog4ming, v0.1.1, CurseForge file 8940612.
   https://www.curseforge.com/wow/addons/petscout-forever
-  data/locations.lua and data/zones.lua: only speciesID/UiMapID and English names.
+  data/locations.lua: only speciesID and English names.
   MIT notice in licenses/PetScoutForever-MIT.txt; source build 1.60.1.69913.
 - TheWoWDB.com Forever currency pages: five factual ID/name pairs, with
   individual source URLs retained. No full table, descriptions or site code copied.

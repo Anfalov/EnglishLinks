@@ -1,7 +1,7 @@
 # Реестр источников и порядок обновления
 
 Текущий автоматический процесс: [AUTO-UPDATE.md](AUTO-UPDATE.md).
-Описанные ниже сборщики и снимки сохраняются как история происхождения.
+Снимки ниже фиксируют происхождение данных.
 Рабочая база теперь находится в `EnglishLinks/NameData.lua`; новые снимки
 автоматизации регистрируются в разделе `automatic_updates` реестра.
 
@@ -17,13 +17,12 @@ Wowhead Forever — основной источник; остальные доп
 | Источник | Что берём | Версия текущего источника | Сборка игры | Дата получения |
 | --- | --- | --- | --- | --- |
 | [Wowhead Forever](https://www.wowhead.com/forever/) | Названия всех поддерживаемых категорий и бонусные окончания | dataEnv=16; 132 ответов в архиве | Точная сборка неизвестна | 2026-10-02, время по отдельным ответам в manifest |
-| [Wago Tools](https://wago.tools/db2) | ItemSparse, SpellName, SkillLine, Achievement, SkillLineAbility, QuestV2 | Точная сборка CSV | 1.60.1.70124 / enUS | Исходная дата выгрузки пользователем неизвестна |
 | [QuestieDB](https://github.com/Questie/QuestieDB) | Названия заданий и дополнительные предметы Forever | commit `f521c36eb72a57d7f205a61ee212ad0ca9f51ed9` | Точная сборка не заявлена | Предметы: 2026-09-30; для снимков заданий не записана |
 | [Everything Quests](https://github.com/wheelbarrel00/EverythingQuests) | Дополнительные названия заданий | commit `8179e993726567ad26671cf117cc72f9c31140e2` | Точная сборка не заявлена | Не записана |
 | [Completao](https://github.com/LechuckThePirate/Completao) | Дополнительные названия заданий | commit `f4e93cf3fe704aa932521fd67eb0883cb8687a45` | Точная сборка не заявлена | Не записана |
 | [ElliotWood/Forever](https://github.com/ElliotWood/Forever) | Снимок Wowhead Forever gear planner: ID/имя предмета | commit `1e0474d94dc0ce7b38b4bf15f09416d20f797688` | `versionNum=16001`, точная сборка не заявлена | 2026-10-02 |
 | [TheWoWDB Forever](https://thewowdb.com/wow-forever/currencies/) | Пять валют, индивидуальные страницы ID/имя | Страницы без собственной версии | На страницах 1.60.1.70124 | 2026-09-30 |
-| [PetScout Forever](https://www.curseforge.com/wow/addons/petscout-forever/files/8940612) | 112 видов питомцев и 60 карт | `v0.1.1-forever`, CurseForge file `8940612`; опубликован 2026-09-21 | 1.60.1.69913 | 2026-09-30 |
+| [PetScout Forever](https://www.curseforge.com/wow/addons/petscout-forever/files/8940612) | 112 видов питомцев | `v0.1.1-forever`, CurseForge file `8940612`; опубликован 2026-09-21 | 1.60.1.69913 | 2026-09-30 |
 
 Для старых исторических скачиваний точное время неизвестно. В JSON это
 `retrieved_at: null`; известная дата отдельно записана в `retrieved_date`.
@@ -39,10 +38,6 @@ Wowhead Forever — основной источник; остальные доп
 
 ## Адреса и файлы для следующего обновления
 
-Wago CSV:
-`https://wago.tools/db2/{table}/csv?build={game_build}&locale=enUS`.
-Выбирать Forever 1.60.x.x; не брать другую редакцию игры вместо недоступной таблицы.
-
 | Репозиторий / архив | Файл |
 | --- | --- |
 | Questie/QuestieDB | `data/Forever/foreverQuestDB.lua` |
@@ -52,7 +47,6 @@ Wago CSV:
 | LechuckThePirate/Completao | `Data/Generated/ForeverNew.lua` |
 | ElliotWood/Forever | `assets/db_inputs/wowhead_forever_gearplanner.txt` |
 | PetScoutForever ZIP | `PetScoutForever/data/locations.lua` |
-| PetScoutForever ZIP | `PetScoutForever/data/zones.lua` |
 
 Для GitHub сначала определить актуальный коммит, затем скачать по полному SHA:
 `https://raw.githubusercontent.com/{owner}/{repo}/{commit}/{path}`.
@@ -95,40 +89,12 @@ Wago CSV:
 не заполняют время получения автоматически. Обновление реестра — обязательный
 шаг обновления данных.
 
-## Порядок обновления после релиза WoW
+## Обновление
 
-1. Зафиксировать целевую сборку Forever и собрать новые снимки в отдельную папку.
-   Сохранить сведения о скачивании сразу, до пересборки.
-2. Проверить заголовки/схемы, локаль, хеши, дубликаты ID и изменения названий.
-   Отсутствие записей в новой выгрузке не считать автоматическим удалением из игры.
-3. Обновить рабочие manifests и общий реестр. Сверить лицензии изменённых источников.
-4. Пересобрать item, typed, quest и supplement-пакеты, затем `tools/build_wowhead.py`.
-   Последний создаёт приоритетный пакет Wowhead. QuestV2 — только отчёт о покрытии.
-   Приоритеты и нормализация:
-   [QUEST-SOURCES.md](QUEST-SOURCES.md), [SUPPLEMENT-SOURCES.md](SUPPLEMENT-SOURCES.md).
-5. Проверить отчёты конфликтов, покрытие и несколько новых/изменённых ID.
-   Выполнить тесты и проверить ссылки в игре. Сохранить результат как новую версию
-   архива проекта, вместе с реестром и исходниками.
+Запускайте `Update addon names` вручную либо дождитесь понедельника/четверга,
+09:00 по Екатеринбургу. Локально — `python tools/update_names.py` для отчёта,
+с `--apply` для принятия изменений. Подробности: [AUTO-UPDATE.md](AUTO-UPDATE.md).
 
-Важное ограничение существующих сборщиков: `build_supplements.py` и часть проверок
-пока привязаны к 70124, PetScout 69913 и текущим числам записей. При новом релизе
-нужно явно обновить эти ограничения по проверенным источникам. Одной замены
-номера сборки в имени файла недостаточно. Старые источники нельзя помечать новой
-сборкой только потому, что обновился клиент.
-
-Наблюдения форматов ссылок пользователя: `data/link-observations.json`.
-Они хранятся отдельно от источников английских названий.
-
-## Случайные свойства rand
-
-`data/random-affix-sources/manifest.json` содержит URL, время завершения загрузки
-и хеш каждого ответа Wowhead Forever. У текущего снимка записано и время начала запросов.
-Сохранены gear-planner и семь проверочных ответов tooltip. Полная таблица
-`wow.gearPlanner.classicplus.randomEnchant` содержит 2 062 именованных знаковых ID; четыре записи без имени пропущены.
-Несмотря на внутреннее имя classicplus, ответ получен из `/forever/`; данные
-другого издания игры не подставляются.
-
-Пересборка без сети: `python tools/build_random_affixes.py`.
-Для новой выгрузки: `python tools/build_random_affixes.py --fetch --source-dir <новый-каталог>`.
-Существующий снимок не перезаписывается. При принятии нового снимка обновить
-его путь в сборке/тестах и реестр; прежний сохранить.
+PetScout скачивается с ForgeCDN. Если проверка списка новых файлов не удалась,
+известный ZIP остаётся резервным источником; отчёт явно отмечает это состояние.
+Wago и его CSV, QuestV2 и таблицы названий карт больше не используются.

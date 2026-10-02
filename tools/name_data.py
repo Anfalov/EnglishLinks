@@ -2,10 +2,10 @@
 from copy import deepcopy
 from pathlib import Path
 from lupa.lua51 import LuaRuntime
-from build_packs import lua, name_ok
+from data_format import lua, name_ok
 
 FIELDS = {'names': 'Names', 'bonuses': 'ItemBonusSuffixes',
-          'random_affixes': 'ItemRandomAffixes', 'relations': 'Relations'}
+          'random_affixes': 'ItemRandomAffixes'}
 KINDS = {'item', 'spell', 'quest', 'profession', 'achievement', 'currency',
          'companion', 'mount', 'talent'}
 
@@ -66,7 +66,6 @@ def render(data):
         lines.append('ns.' + FIELDS[key] + ' = {')
         lines += rows(data[key], '    ')
         lines.append('}')
-    lines.append('ns.Relations = ' + lua(data['relations']))
     lines += ['ns.PackMeta = {}', 'for kind, entries in pairs(ns.Names) do',
               '    local count = 0', '    for _ in pairs(entries) do count = count + 1 end',
               '    ns.PackMeta[kind] = {count=count, locale="enUS", coverage="prepared"}',

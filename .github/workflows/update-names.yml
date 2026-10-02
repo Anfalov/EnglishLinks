@@ -7,13 +7,9 @@ on:
         description: Check sources and test changes without publishing
         type: boolean
         default: false
-      game_build:
-        description: Optional exact Forever build for Wago (otherwise auto-detect)
-        type: string
-        required: false
   schedule:
-    # 09:00 Asia/Yekaterinburg. GitHub may delay scheduled starts.
-    - cron: '0 4 * * *'
+    # Monday and Thursday, 09:00 Asia/Yekaterinburg. GitHub may delay scheduled starts.
+    - cron: '0 4 * * 1,4'
 
 permissions:
   contents: write
@@ -41,10 +37,8 @@ jobs:
 
       - name: Fetch and merge names
         id: update
-        env:
-          GAME_BUILD: ${{ inputs.game_build }}
         run: |
-          python tools/update_names.py --apply --game-build "$GAME_BUILD" \
+          python tools/update_names.py --apply \
             --run-id "$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
           python - <<'PY'
           import json, os
@@ -54,6 +48,8 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as output:
               output.write(f"Name changes: {len(report['changes'])}\n\n")
               for source in report['sources']:
+                  if source.get('freshness') == 'pinned-fallback':
+                      output.write(f"- {source['source']}: using pinned file {source['version']}; latest version could not be checked/downloaded\n")
                   if source['status'] != 'parsed':
                       output.write(f"- {source['source']}: {source['status']} — {source.get('reason', '')}\n")
           PY
@@ -61,7 +57,7 @@ jobs:
       - name: Test prepared update
         if: steps.update.outputs.changed == 'true'
         run: |
-          python tests/run_tests.py --csv data/ItemSparse.1.60.1.70124.csv --data-dir data
+          python tests/run_tests.py
           python tools/package_release.py
 
       - name: Save source check report

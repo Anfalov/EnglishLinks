@@ -35,16 +35,5 @@
     "edition": "Forever",
     "license": "MIT",
     "retrieved": "2026-09-30"
-  },
-  {
-    "file": "petscout-zones.lua",
-    "sha256": "d44df6b9dc698e34ff0a8a4975a771e02fd92d507552a4e08bb39b85c77dc70d",
-    "url": "https://www.curseforge.com/wow/addons/petscout-forever/files/8940612",
-    "download_url": "https://edge.forgecdn.net/files/8940/612/PetScoutForever-v0.1.1-forever.zip",
-    "archive_sha256": "df8a931ad277f495850f95c4757c6ebe5bc2c772e050084e9d769b50b17c2f38",
-    "build": "1.60.1.69913",
-    "edition": "Forever",
-    "license": "MIT",
-    "retrieved": "2026-09-30"
   }
 ]

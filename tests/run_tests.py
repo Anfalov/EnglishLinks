@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """Developer test runner. Requires: python -m pip install lupa"""
 from pathlib import Path
-import argparse
-import csv
-import hashlib
 import subprocess
 import sys
 from lupa.lua51 import LuaRuntime
@@ -13,36 +10,12 @@ subprocess.run([sys.executable, '-m', 'unittest', 'discover', '-s', str(root / '
 lua = LuaRuntime(unpack_returned_tuples=True)
 lua.execute((root / 'tests/test_links.lua').read_text(), str(root))
 LuaRuntime(unpack_returned_tuples=True).execute((root / "tests/test_typed.lua").read_text(), str(root))
-# Load the entire shipped database in the same Lua version as the pure tests.
-ns = lua.table()
-lua.execute((root / 'data/legacy-packs/ItemNames_enUS.lua').read_text(), 'EnglishLinks', ns)
-assert ns.ItemNames[6948] == 'Hearthstone'
-assert ns.ItemNames[785] == 'Mageroyal'
-assert len(list(ns.ItemNames.keys())) == ns.ItemNamesMeta.count
-print('Historical item fixture loaded in Lua 5.1:', ns.ItemNamesMeta.count, 'names')
-
-assert ns.ItemNamesMeta.build == '1.60.1.70124'
-assert ns.ItemNamesMeta.coverage == 'forever'
-assert ns.ItemNames[260210] == 'A Bigger Shield'
-args = argparse.ArgumentParser()
-args.add_argument('--csv', type=Path, help='Verify every shipped ID and name against the original Wago export')
-args.add_argument('--data-dir', type=Path, help='Verify all extension packs against original CSVs')
-options = args.parse_args()
-if options.csv:
-    raw = options.csv.read_bytes()
-    with options.csv.open(encoding='utf-8-sig', newline='') as f:
-        expected = {int(row['ID']): row['Display_lang'] for row in csv.DictReader(f) if row['Display_lang'].strip()}
-    actual = dict(ns.ItemNames.items())
-    assert actual == expected, 'Shipped database differs from the input CSV'
-    assert ns.ItemNamesMeta.sha256 == hashlib.sha256(raw).hexdigest()
-    print('All', len(expected), 'IDs/names and source SHA-256 match the original CSV exactly')
-
 # Load and resolve real shipped data; fixture tables are isolated in other runtimes.
 real = LuaRuntime(unpack_returned_tuples=True)
 real.execute('GetLocale=function() return "ruRU" end; GetBuildInfo=function() return "1.60.1","70124" end')
 actual_ns = real.table()
-for name in ['ItemNames_enUS','Names_enUS','QuestNames_enUS','LinkText','Resolver','SupplementNames_enUS']:
-    real.execute((root / (('EnglishLinks/' if name in ('LinkText', 'Resolver') else 'data/legacy-packs/') + name + '.lua')).read_text(), 'EnglishLinks', actual_ns)
+for name in ['NameData', 'LinkText', 'Resolver']:
+    real.execute((root / 'EnglishLinks' / (name + '.lua')).read_text(), 'EnglishLinks', actual_ns)
 actual_ns.InitDB(real.table())
 for payload, expected in [
     ('item:6948::::::::::::','Hearthstone'),
@@ -63,9 +36,7 @@ for payload, expected in [
 ]:
     assert actual_ns.Resolve(payload, 'Русское', None) == expected, payload
 assert actual_ns.Resolve('quest:2147483647:60', 'Задание', None) is None
-assert actual_ns.Resolve('item:6948:0:0:0:0:0:-10:123', 'Суффикс', None) is None
-assert actual_ns.Lookup('spell', 2330, None) is None  # Not present in this Forever export.
-print('Historical link fixture smoke checks passed')
+print('Prepared addon link smoke checks passed')
 # Reproduce the reported recipe inputs with the actual shipped names. These
 # checks cover our output only; accepting/rendering it requires a live client.
 for recipe_id, localized, english in [
@@ -87,46 +58,11 @@ for recipe_id, localized, english in [
     assert actual_ns.Resolve(f'enchant:{recipe_id}', localized, None) == 'Custom Recipe'
     actual_ns.DB.typedOverrides.spell[recipe_id] = None
 print('Recipe label regressions passed (live confirmation recorded separately)')
-if options.data_dir:
-    sys.path.insert(0, str(root / 'tools'))
-    import build_packs
-    compiled = build_packs.compile_directory(options.data_dir, actual_ns.ItemNamesMeta.build)
-    assert (root / 'data/legacy-packs/Names_enUS.lua').read_text() == build_packs.render(compiled, actual_ns.ItemNamesMeta.build)
-    for kind, mapping in compiled[0].items():
-        assert dict(actual_ns.Names[kind].items()) == mapping
-        assert actual_ns.PackMeta[kind].count == len(mapping)
-    assert actual_ns.QuestIDs is None
-    assert dict(actual_ns.Relations.recipe.items()) == compiled[1]['recipe']
-    import build_quests
-    titles, provenance, report = build_quests.compile_quests(options.data_dir / 'quest-sources', options.data_dir / 'QuestV2.1.60.1.70124.csv')
-    assert len(titles) == 5000
-    assert report['conflicts'] == []
-    assert dict(actual_ns.Names.quest.items()) == titles
-    assert (root / 'data/legacy-packs/QuestNames_enUS.lua').read_text() == build_quests.render(titles, actual_ns.ItemNamesMeta.build, report)
-    print('Historical import fixtures and hashes match their inputs')
-    import build_supplements
-    extra, origins, report = build_supplements.compile_supplements(options.data_dir)
-    assert report['total_count'] == 24037
-    # The newer supplemental planner disagrees with older fallback names.
-    # Supplements must not overwrite those; the primary Wowhead overlay does.
-    assert {row['id'] for row in report['conflicts']} == {254696, 263411, 263412, 274749}
-    for row in report['conflicts']:
-        assert actual_ns.Names.item[row['id']] == row['selected']
-    assert actual_ns.PackMeta.item.count == 24037
-    assert actual_ns.ItemNamesMeta.count == 19224  # Original Wago metadata stays intact.
-    assert actual_ns.PackMeta.currency.count == 5
-    assert (root / 'data/legacy-packs/SupplementNames_enUS.lua').read_text() == build_supplements.render(extra)
-    assert dict(actual_ns.Names.item.items()) == dict(ns.ItemNames.items()) | extra['item']
-    assert dict(actual_ns.Names.currency.items()) == extra['currency']
-    assert dict(actual_ns.Names.companion.items()) == extra['companion']
-    assert actual_ns.Names.uimap is None
-    assert len(extra['companion']) == 112
-    real.execute('C_PetJournal=setmetatable({}, {__index=function() error("Unexpected pet API access") end})')
-    assert actual_ns.Resolve('nonbattlepet:39', 'Механическая белка', None) == 'Mechanical Squirrel'
-    assert actual_ns.Resolve('battlepet:39:1:2:100:10:10:BattlePet-0', 'Механическая белка', None) is None
-    assert actual_ns.Resolve('battlepet:39:1:2:100:10:10:BattlePet-0', 'Моя Белочка', None) is None
-    actual_ns.DB.typedOverrides.item[251485] = 'Manual name'
-    assert actual_ns.Resolve('item:251485', 'Предмет', None) == 'Manual name'
-    actual_ns.DB.types.mount = False
-    assert actual_ns.Resolve('mount:458:0', 'Лошадь', None) is None
-    print('Historical supplements and link regressions verified')
+real.execute('C_PetJournal=setmetatable({}, {__index=function() error("Unexpected pet API access") end})')
+assert actual_ns.Resolve('nonbattlepet:39', 'Механическая белка', None) == 'Mechanical Squirrel'
+assert actual_ns.Resolve('battlepet:39:1:2:100:10:10:BattlePet-0', 'Моя Белочка', None) is None
+actual_ns.DB.typedOverrides.item[251485] = 'Manual name'
+assert actual_ns.Resolve('item:251485', 'Предмет', None) == 'Manual name'
+actual_ns.DB.types.mount = False
+assert actual_ns.Resolve('mount:458:0', 'Лошадь', None) is None
+print('Prepared addon pet, override and type switch regressions passed')

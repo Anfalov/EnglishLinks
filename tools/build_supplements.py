@@ -5,8 +5,8 @@ import hashlib
 import json
 from pathlib import Path
 import re
-from build_names import lua_string
-from build_packs import name_ok, number
+from data_format import lua_string
+from data_format import name_ok, number
 
 STRING = r'("(?:\\.|[^"\\])*")'
 
@@ -87,9 +87,8 @@ def compile_supplements(data):
         if hashlib.sha256(raw).hexdigest() != entry['sha256']:
             raise ValueError('Source checksum mismatch: ' + entry['file'])
         snapshots[entry['file']] = raw.decode('utf-8')
-    with (data / 'ItemSparse.1.60.1.70124.csv').open(encoding='utf-8-sig', newline='') as f:
-        base = {int(r['ID']): r['Display_lang'] for r in csv.DictReader(f) if r['Display_lang'].strip()}
-    merged = dict(base)
+    base = {}
+    merged = {}
     additions, origins, counts, conflicts = {}, {}, {}, []
     for source, values in [
         ('questiedb-foreverBaseItem.lua', questie_items(snapshots['questiedb-foreverBaseItem.lua'])),
@@ -117,7 +116,7 @@ def compile_supplements(data):
 
 def render(names):
     lines = ['-- Generated offline by tools/build_supplements.py. See docs/SUPPLEMENT-SOURCES.md.',
-             'local _, ns = ...', '-- Load after Resolver.lua; preserve the original Wago pack and metadata.',
+             'local _, ns = ...', '-- Additional sources only fill missing names.',
              'local supplements = {']
     for kind, entries in sorted(names.items()):
         lines.append('    ' + kind + ' = {')
@@ -145,7 +144,8 @@ def main():
     root = Path(__file__).resolve().parents[1]
     data = root / 'data'
     names, origins, report = compile_supplements(data)
-    (root / 'EnglishLinks/SupplementNames_enUS.lua').write_text(render(names))
+    (root / 'dist').mkdir(exist_ok=True)
+    (root / 'dist/SupplementNames_enUS.lua').write_text(render(names))
     (data / 'supplement-report.json').write_text(json.dumps(report, indent=2) + '\n')
     with (data / 'ItemNames.community.csv').open('w', newline='') as f:
         writer = csv.writer(f); writer.writerow(['ID', 'Name', 'Source'])

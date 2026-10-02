@@ -1,5 +1,9 @@
 # История решений
 
+Current update (2026-10-02): Wago imports, QuestV2 checks and unused
+spell-to-profession/map datasets are removed. Earlier entries below record
+historical decisions. Current process: [AUTO-UPDATE.md](AUTO-UPDATE.md).
+
 ## 0.6.1 — поддержка случайного свойства rand
 
 Предыдущее исследование в 0.6.0 было неполным: наличие бонусного способа
