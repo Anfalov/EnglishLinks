@@ -3,7 +3,13 @@ name: Build and release addon
 on:
   push:
     branches: [main]
+    paths: ["EnglishLinks/**"]
   workflow_dispatch:
+    inputs:
+      source_sha:
+        description: Exact main commit (empty means current main)
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -22,14 +28,18 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
-          ref: ${{ github.sha }}
+          ref: ${{ inputs.source_sha || github.sha }}
 
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
 
-      - name: Install test dependency
-        run: python -m pip install lupa==2.6
+      - name: Record release source
+        id: source
+        run: |
+          source_sha=$(git rev-parse HEAD)
+          git merge-base --is-ancestor "$source_sha" origin/main
+          echo "sha=$source_sha" >> "$GITHUB_OUTPUT"
 
       - name: Prepare version
         id: release
@@ -37,12 +47,9 @@ jobs:
           python tools/prepare_release.py
           --run-number "$GITHUB_RUN_NUMBER"
           --run-id "$GITHUB_RUN_ID"
-          --source "$GITHUB_SHA"
+          --source "${{ steps.source.outputs.sha }}"
 
-      - name: Verify addon and release automation
-        run: python tests/run_tests.py --csv data/ItemSparse.1.60.1.70124.csv --data-dir data
-
-      - name: Build ZIP files
+      - name: Package prepared addon
         run: python tools/package_release.py
 
       - name: Upload installable ZIP
@@ -54,7 +61,7 @@ jobs:
           overwrite: true
           retention-days: 90
 
-      - name: Tag verified release snapshot
+      - name: Tag release snapshot
         env:
           TAG: ${{ steps.release.outputs.tag }}
           VERSION: ${{ steps.release.outputs.version }}
@@ -74,15 +81,14 @@ jobs:
           GH_REPO: ${{ github.repository }}
           TAG: ${{ steps.release.outputs.tag }}
           VERSION: ${{ steps.release.outputs.version }}
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
         run: |
           if ! gh release view "$TAG" >/dev/null 2>&1; then
-            printf 'Automatic build from commit %s.\n\nInstall **EnglishLinks-%s.zip**. The CurseForge kit is for the author, not for installation.\n' \
-              "$GITHUB_SHA" "$VERSION" > dist/release-notes.md
+            printf 'Automatic build from commit %s.\n\nInstall **EnglishLinks-%s.zip**.\n' \
+              "$SOURCE_SHA" "$VERSION" > dist/release-notes.md
             gh release create "$TAG" --verify-tag --draft \
               --title "EnglishLinks $VERSION" --notes-file dist/release-notes.md
           fi
           gh release upload "$TAG" \
-            "dist/EnglishLinks-$VERSION.zip" \
-            "dist/EnglishLinks-$VERSION-CurseForge-kit.zip" \
-            "dist/EnglishLinks-$VERSION-SHA256SUMS.txt" --clobber
+            "dist/EnglishLinks-$VERSION.zip" --clobber
           gh release edit "$TAG" --draft=false

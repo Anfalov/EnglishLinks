@@ -98,7 +98,9 @@ local function coverage()
             local meta = ns.PackMeta[kind] or {}
             local source = tostring(meta.build or meta.sourceBuild or "community")
             if (meta.communityAdded or 0) > 0 then source = source .. "; community=" .. meta.communityAdded end
-            if meta.primaryCount then
+            if meta.coverage == "prepared" then
+                say(kind .. ": database=" .. count)
+            elseif meta.primaryCount then
                 say(kind .. ": database=" .. count .. "; Wowhead Forever=" .. meta.primaryCount
                     .. "; fallback=" .. meta.fallbackCount .. "; snapshot=" .. meta.sourceDate)
             else

@@ -19,14 +19,15 @@ class Wowhead(unittest.TestCase):
     def runtime(self):
         runtime = LuaRuntime(unpack_returned_tuples=True)
         ns = runtime.table()
-        for filename in (ROOT / 'EnglishLinks/EnglishLinks.toc').read_text().splitlines():
-            if filename.endswith('.lua') and filename != 'EnglishLinks.lua':
-                runtime.execute((ROOT / 'EnglishLinks' / filename).read_text(), 'EnglishLinks', ns)
+        for name in ('ItemNames_enUS', 'Names_enUS', 'QuestNames_enUS', 'LinkText',
+                     'Resolver', 'SupplementNames_enUS', 'WowheadNames_enUS', 'RandomAffixes_enUS'):
+            directory = 'EnglishLinks' if name in ('LinkText', 'Resolver') else 'data/legacy-packs'
+            runtime.execute((ROOT / directory / (name + '.lua')).read_text(), 'EnglishLinks', ns)
         ns.InitDB(runtime.table())
         return runtime, ns
 
     def test_reproducible_authoritative_overlay(self):
-        self.assertEqual((ROOT / 'EnglishLinks/WowheadNames_enUS.lua').read_text(), b.render(self.names, self.bonuses, self.manifest))
+        self.assertEqual((ROOT / 'data/legacy-packs/WowheadNames_enUS.lua').read_text(), b.render(self.names, self.bonuses, self.manifest))
         runtime, ns = self.runtime()
         report = json.loads((ROOT / 'data/wowhead-report.json').read_text())
         for kind, rows in self.names.items():

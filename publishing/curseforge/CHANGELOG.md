@@ -1,3 +1,13 @@
+## 0.6.4 — 2026-10-02
+
+- Load one prepared name dictionary instead of merging source packs in the game.
+- Add independent manual/daily name updates: Wowhead may add or rename entries;
+  supplemental sources only fill missing IDs. Unavailable sources are skipped.
+- Release only when addon files change. Package the prepared addon without
+  downloading, rebuilding or comparing source databases.
+- Publish one installable ZIP; omit author kits, separate checksum files and
+  installation READMEs. Retain required licenses and attribution.
+
 ## 0.6.3 — 2026-10-02
 
 - Refresh English names after WoW Forever build 1.60.1.70170: add 40 items,

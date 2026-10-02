@@ -71,5 +71,5 @@ No additional license is asserted for Wowhead or Blizzard content.
 Random-property source added in 0.6.1:
 Wowhead Forever gear-planner randomEnchant table (2,062 named signed IDs; refreshed 2026-10-02).
 Raw response and tooltip evidence: data/random-affix-sources/manifest.json.
-Only ID/name mappings are shipped in RandomAffixes_enUS.lua; the source
+Only ID/name mappings are shipped in NameData.lua; the source
 response remains a build input, not executable addon code.

@@ -15,11 +15,11 @@ lua.execute((root / 'tests/test_links.lua').read_text(), str(root))
 LuaRuntime(unpack_returned_tuples=True).execute((root / "tests/test_typed.lua").read_text(), str(root))
 # Load the entire shipped database in the same Lua version as the pure tests.
 ns = lua.table()
-lua.execute((root / 'EnglishLinks/ItemNames_enUS.lua').read_text(), 'EnglishLinks', ns)
+lua.execute((root / 'data/legacy-packs/ItemNames_enUS.lua').read_text(), 'EnglishLinks', ns)
 assert ns.ItemNames[6948] == 'Hearthstone'
 assert ns.ItemNames[785] == 'Mageroyal'
 assert len(list(ns.ItemNames.keys())) == ns.ItemNamesMeta.count
-print('Full shipped database loaded in Lua 5.1:', ns.ItemNamesMeta.count, 'names')
+print('Historical item fixture loaded in Lua 5.1:', ns.ItemNamesMeta.count, 'names')
 
 assert ns.ItemNamesMeta.build == '1.60.1.70124'
 assert ns.ItemNamesMeta.coverage == 'forever'
@@ -42,7 +42,7 @@ real = LuaRuntime(unpack_returned_tuples=True)
 real.execute('GetLocale=function() return "ruRU" end; GetBuildInfo=function() return "1.60.1","70124" end')
 actual_ns = real.table()
 for name in ['ItemNames_enUS','Names_enUS','QuestNames_enUS','LinkText','Resolver','SupplementNames_enUS']:
-    real.execute((root / ('EnglishLinks/' + name + '.lua')).read_text(), 'EnglishLinks', actual_ns)
+    real.execute((root / (('EnglishLinks/' if name in ('LinkText', 'Resolver') else 'data/legacy-packs/') + name + '.lua')).read_text(), 'EnglishLinks', actual_ns)
 actual_ns.InitDB(real.table())
 for payload, expected in [
     ('item:6948::::::::::::','Hearthstone'),
@@ -65,7 +65,7 @@ for payload, expected in [
 assert actual_ns.Resolve('quest:2147483647:60', 'Задание', None) is None
 assert actual_ns.Resolve('item:6948:0:0:0:0:0:-10:123', 'Суффикс', None) is None
 assert actual_ns.Lookup('spell', 2330, None) is None  # Not present in this Forever export.
-print('Real shipped link smoke checks passed')
+print('Historical link fixture smoke checks passed')
 # Reproduce the reported recipe inputs with the actual shipped names. These
 # checks cover our output only; accepting/rendering it requires a live client.
 for recipe_id, localized, english in [
@@ -91,7 +91,7 @@ if options.data_dir:
     sys.path.insert(0, str(root / 'tools'))
     import build_packs
     compiled = build_packs.compile_directory(options.data_dir, actual_ns.ItemNamesMeta.build)
-    assert (root / 'EnglishLinks/Names_enUS.lua').read_text() == build_packs.render(compiled, actual_ns.ItemNamesMeta.build)
+    assert (root / 'data/legacy-packs/Names_enUS.lua').read_text() == build_packs.render(compiled, actual_ns.ItemNamesMeta.build)
     for kind, mapping in compiled[0].items():
         assert dict(actual_ns.Names[kind].items()) == mapping
         assert actual_ns.PackMeta[kind].count == len(mapping)
@@ -102,8 +102,8 @@ if options.data_dir:
     assert len(titles) == 5000
     assert report['conflicts'] == []
     assert dict(actual_ns.Names.quest.items()) == titles
-    assert (root / 'EnglishLinks/QuestNames_enUS.lua').read_text() == build_quests.render(titles, actual_ns.ItemNamesMeta.build, report)
-    print('All typed names, quest titles, recipe relations and source hashes match their inputs')
+    assert (root / 'data/legacy-packs/QuestNames_enUS.lua').read_text() == build_quests.render(titles, actual_ns.ItemNamesMeta.build, report)
+    print('Historical import fixtures and hashes match their inputs')
     import build_supplements
     extra, origins, report = build_supplements.compile_supplements(options.data_dir)
     assert report['total_count'] == 24037
@@ -115,7 +115,7 @@ if options.data_dir:
     assert actual_ns.PackMeta.item.count == 24037
     assert actual_ns.ItemNamesMeta.count == 19224  # Original Wago metadata stays intact.
     assert actual_ns.PackMeta.currency.count == 5
-    assert (root / 'EnglishLinks/SupplementNames_enUS.lua').read_text() == build_supplements.render(extra)
+    assert (root / 'data/legacy-packs/SupplementNames_enUS.lua').read_text() == build_supplements.render(extra)
     assert dict(actual_ns.Names.item.items()) == dict(ns.ItemNames.items()) | extra['item']
     assert dict(actual_ns.Names.currency.items()) == extra['currency']
     assert dict(actual_ns.Names.companion.items()) == extra['companion']
@@ -129,4 +129,4 @@ if options.data_dir:
     assert actual_ns.Resolve('item:251485', 'Предмет', None) == 'Manual name'
     actual_ns.DB.types.mount = False
     assert actual_ns.Resolve('mount:458:0', 'Лошадь', None) is None
-    print('Community names, source hashes, priority and mount/currency links verified')
+    print('Historical supplements and link regressions verified')

@@ -7,7 +7,7 @@ ns.Names = ns.Names or {}
 ns.Names.item = ns.Names.item or {}
 for id, name in pairs(ns.ItemNames or {}) do ns.Names.item[id] = name end
 ns.PackMeta = ns.PackMeta or {}
-ns.PackMeta.item = ns.ItemNamesMeta or {}
+if ns.ItemNamesMeta then ns.PackMeta.item = ns.ItemNamesMeta end
 ns.Relations = ns.Relations or {}
 
 function ns.Split(payload)

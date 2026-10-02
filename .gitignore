@@ -11,3 +11,5 @@ dist/
 !data/random-affix-sources/snapshot.zip
 !data/source-history/**/snapshot.zip
 !data/source-checks/**/evidence.zip
+!data/auto-updates/**/sources.zip
+update-results/

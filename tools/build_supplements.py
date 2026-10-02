@@ -62,8 +62,9 @@ def gear_items(text):
     return names
 
 
-def petscout_names(text, table):
-    if 'build 1.60.1.69913' not in text or 'ns.' + table + ' = {' not in text:
+def petscout_names(text, table, expected_build='1.60.1.69913'):
+    if (not re.fullmatch(r'1\.60\.\d+\.\d+', expected_build)
+            or 'build ' + expected_build not in text or 'ns.' + table + ' = {' not in text):
         raise ValueError('Unexpected PetScout source')
     text = text[text.index('ns.' + table + ' = {'):]
     names = {}

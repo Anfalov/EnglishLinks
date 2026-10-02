@@ -7,12 +7,7 @@
 ## IconTexture: Interface\AddOns\EnglishLinks\Icon
 ## SavedVariables: EnglishLinksDB
 
-ItemNames_enUS.lua
-Names_enUS.lua
-QuestNames_enUS.lua
+NameData.lua
 LinkText.lua
 Resolver.lua
-SupplementNames_enUS.lua
-WowheadNames_enUS.lua
-RandomAffixes_enUS.lua
 EnglishLinks.lua

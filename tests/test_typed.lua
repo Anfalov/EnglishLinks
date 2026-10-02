@@ -12,13 +12,15 @@ CreateFrame=function()
     function f:SetScript(event,fn) self.scripts[event]=fn end
     frames[#frames+1]=f; return f
 end
-for _,file in ipairs({'LinkText','Names_enUS','Resolver'}) do
+for _,file in ipairs({'LinkText','NameData','Resolver'}) do
     assert(loadfile(root..'/EnglishLinks/'..file..'.lua'))('EnglishLinks',ns)
 end
 ns.Say=function(s) messages[#messages+1]=s end
 ns.InitDB({enabled=false,overrides={[1]='Old override'}})
 eq(ns.DB.enabled,false,'preserve disabled');eq(ns.DB.typedOverrides.item[1],'Old override','migration')
 ns.InitDB({})
+-- These are synthetic link tests; do not inherit real variant dictionaries.
+ns.ItemBonusSuffixes={}; ns.ItemRandomAffixes={}
 for _,kind in ipairs(ns.Kinds) do ns.Names[kind]={[10]=kind..' English'} end
 ns.Relations={talent={[20]={10,11}},recipe={[10]=10}}
 ns.Names.spell[11]='Second rank'
