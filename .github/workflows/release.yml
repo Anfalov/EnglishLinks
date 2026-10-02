@@ -70,7 +70,7 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git add --update
-            git commit -m "Release $VERSION" -m "Release-Run-ID: $GITHUB_RUN_ID"
+            git commit --allow-empty -m "Release $VERSION" -m "Release-Run-ID: $GITHUB_RUN_ID"
             git tag "$TAG"
             git push origin "refs/tags/$TAG"
           fi

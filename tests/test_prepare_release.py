@@ -53,6 +53,14 @@ class ReleaseTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             release.version_for_run(config, 0)
 
+    def test_major_release_starts_at_zero_and_increments(self):
+        config = {"base_version": "1.0.0", "run_number_offset": 6}
+        self.assertEqual(release.version_for_run(config, 6), "1.0.0")
+        self.assertEqual(release.version_for_run(config, 7), "1.0.1")
+        self.assertEqual(release.version_for_run(config, 6), "1.0.0")
+        with self.assertRaises(ValueError):
+            release.version_for_run(config, 5)
+
     def test_stamp_updates_runtime_and_metadata_but_preserves_history(self):
         version, tag = release.prepare(self.root, 1, "123", self.source)
         self.assertEqual((version, tag), ("0.6.2", "v0.6.2"))

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0 — 2026-10-03
+
+- First stable 1.0 release, including the verified fixes for item links from
+  profession windows and appearance collections.
+
 ## 0.6.6 — 2026-10-03
 
 - Translate item links inserted from profession output icons and wardrobe

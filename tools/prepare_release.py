@@ -15,8 +15,8 @@ def version_for_run(config, run_number):
     if not match:
         raise ValueError("base_version must be a plain major.minor.patch version")
     offset = config["run_number_offset"]
-    if type(offset) is not int or offset < 0 or run_number <= offset:
-        raise ValueError("run_number must be greater than the nonnegative offset")
+    if type(offset) is not int or offset < 0 or run_number < 1 or run_number < offset:
+        raise ValueError("run_number must be positive and at least the nonnegative offset")
     major, minor, patch = map(int, match.groups())
     return f"{major}.{minor}.{patch + run_number - offset}"
 
