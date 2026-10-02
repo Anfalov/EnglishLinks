@@ -1,4 +1,4 @@
-# EnglishLinks 0.6.1
+# EnglishLinks 0.6.2
 
 English names in outgoing game links for WoW Forever 1.60.1.
 

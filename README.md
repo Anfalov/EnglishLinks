@@ -1,4 +1,4 @@
-# EnglishLinks 0.6.1 — WoW Forever
+# EnglishLinks 0.6.2 — WoW Forever
 
 <img src="docs/images/englishlinks-icon.png" alt="EnglishLinks" width="96" height="96">
 
