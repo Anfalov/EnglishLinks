@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Upload an existing release ZIP to CurseForge; never build or modify it."""
 import argparse
+import csv
 import hashlib
 import json
 import os
@@ -12,6 +13,50 @@ import uuid
 from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def parse_blizzard_version(text, region):
+    lines = [line.strip() for line in text.splitlines()
+             if line.strip() and not line.lstrip().startswith("#")]
+    if not lines:
+        raise ValueError("Blizzard returned an empty versions table")
+    rows = csv.reader(lines, delimiter="|")
+    fields = [field.split("!", 1)[0] for field in next(rows)]
+    if not {"Region", "VersionsName", "BuildId"}.issubset(fields):
+        raise ValueError("Blizzard versions table is missing required columns")
+    matches = []
+    for row in rows:
+        if len(row) != len(fields):
+            raise ValueError("Malformed Blizzard versions row")
+        record = dict(zip(fields, row))
+        if record["Region"] == region:
+            full = record["VersionsName"]
+            match = re.fullmatch(r"(\d+\.\d+\.\d+)\.(\d+)", full)
+            if not match or match[2] != record["BuildId"]:
+                raise ValueError("Invalid Blizzard version or inconsistent build ID")
+            matches.append((match[1], full))
+    if len(matches) != 1:
+        raise ValueError(f"Expected exactly one Blizzard versions row for region {region}")
+    return matches[0]
+
+
+def current_game_version(source):
+    product, region = source["product"], source["region"]
+    if not isinstance(product, str) or not re.fullmatch(r"[a-z0-9_]+", product):
+        raise ValueError("Invalid Blizzard product code")
+    if region not in {"eu", "us", "kr", "tw", "cn"}:
+        raise ValueError("Invalid Blizzard region")
+    # This table includes all regions; select the configured row, not the newest globally.
+    url = f"https://us.version.battle.net/v2/products/{product}/versions"
+    req = request.Request(url, headers={"User-Agent": "EnglishLinks-release"})
+    try:
+        with request.urlopen(req, timeout=30) as response:
+            text = response.read().decode("utf-8-sig")
+    except (error.URLError, TimeoutError, OSError, UnicodeError):
+        raise RuntimeError("Cannot obtain current Blizzard version; upload stopped before sending to CurseForge") from None
+    version, full = parse_blizzard_version(text, region)
+    print(f"Blizzard {product} ({region}): {full}; CurseForge gameVersionNames: [{version}]")
+    return version
 
 
 def release_notes(text, version):
@@ -34,14 +79,12 @@ def prepare_upload(root, archive, version):
         lua = package.read("EnglishLinks/EnglishLinks.lua").decode()
         if f"## Version: {version}\n" not in toc or f'local VERSION = "{version}"' not in lua:
             raise ValueError("ZIP runtime version does not match release")
-    versions = config["game_versions"]
-    if not versions or not all(isinstance(v, str) and v for v in versions):
-        raise ValueError("Game versions must be explicit names")
+    game_version = current_game_version(config["game_version_source"])
     changelog = (root / "publishing/curseforge/CHANGELOG.md").read_text()
     metadata = {
         "displayName": f"English Links {version}",
         "releaseType": "release",
-        "gameVersionNames": versions,
+        "gameVersionNames": [game_version],
         "changelogType": "markdown",
         "changelog": release_notes(changelog, version),
     }

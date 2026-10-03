@@ -12,9 +12,10 @@
   "display_name": "EnglishLinks 1.0.0",
   "release_type": "Release",
   "game_flavor": "Forever",
-  "game_versions": [
-    "1.60.1"
-  ],
+  "game_version_source": {
+    "product": "wow_classic_beta",
+    "region": "eu"
+  },
   "interface": 16001,
   "required_dependencies": [],
   "upload_file": "EnglishLinks-1.0.0.zip",

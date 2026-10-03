@@ -6,6 +6,8 @@
   in the in-game addon list.
 - Shorten the English and Russian addon descriptions to the first sentence.
 - Upload the existing GitHub release ZIP directly to CurseForge.
+- Detect the current EU game version from Blizzard when uploading to CurseForge;
+  keep the Battle.net product channel configurable.
 
 ## 1.0.0 — 2026-10-03
 
