@@ -22,6 +22,9 @@ concurrency:
 jobs:
   release:
     if: github.ref == 'refs/heads/main'
+    outputs:
+      version: ${{ steps.release.outputs.version }}
+      tag: ${{ steps.release.outputs.tag }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -92,3 +95,34 @@ jobs:
           gh release upload "$TAG" \
             "dist/EnglishLinks-$VERSION.zip" --clobber
           gh release edit "$TAG" --draft=false
+
+  curseforge:
+    name: Upload release ZIP to CurseForge
+    needs: release
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ needs.release.outputs.tag }}
+          persist-credentials: false
+
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Download the published GitHub ZIP
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ needs.release.outputs.tag }}
+          VERSION: ${{ needs.release.outputs.version }}
+        run: gh release download "$TAG" --pattern "EnglishLinks-$VERSION.zip" --dir dist
+
+      - name: Upload the same ZIP to CurseForge
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          VERSION: ${{ needs.release.outputs.version }}
+        run: python tools/upload_curseforge.py --version "$VERSION" --zip "dist/EnglishLinks-$VERSION.zip"
