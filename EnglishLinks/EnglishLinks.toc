@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: EnglishLinks
-## Notes: English names in outgoing game links. Use /el coverage to check installed name packs.
-## Notes-ruRU: Английские названия в игровых ссылках. Загруженные базы: /el coverage.
+## Notes: English names in outgoing game links.
+## Notes-ruRU: Английские названия в игровых ссылках.
 ## Author: Anfalov
 ## Version: 1.0.0
 ## IconTexture: Interface\AddOns\EnglishLinks\Icon

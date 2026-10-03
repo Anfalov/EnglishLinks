@@ -1,3 +1,7 @@
+## Unreleased
+
+- Correct the icon orientation in the addon list and shorten its description.
+
 ## 1.0.0 — 2026-10-03
 
 - First stable 1.0 release, including the verified fixes for item links from

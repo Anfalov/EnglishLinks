@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Store the addon icon as a top-origin TGA to address its inverted appearance
+  in the in-game addon list.
+- Shorten the English and Russian addon descriptions to the first sentence.
+- Upload the existing GitHub release ZIP directly to CurseForge.
+
 ## 1.0.0 — 2026-10-03
 
 - First stable 1.0 release, including the verified fixes for item links from

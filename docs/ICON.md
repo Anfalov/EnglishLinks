@@ -4,7 +4,15 @@ Original icon generated for EnglishLinks with the built-in image generation
 tool on 2026-10-01 (Asia/Yekaterinburg).
 
 - `images/englishlinks-icon.png`: 400×400 PNG for CurseForge and README.
-- `../EnglishLinks/Icon.tga`: 256×256 uncompressed true-color TGA for WoW.
+- `../EnglishLinks/Icon.tga`: 256×256 uncompressed 24-bit true-color TGA for WoW,
+  top-left origin (descriptor `0x20`) with rows stored top-to-bottom.
+
+On 2026-10-03 the user reported that the addon-list icon appeared upside down
+in Forever. The original TGA used bottom-left origin and bottom-to-top rows.
+It was repacked with top-to-bottom rows and the matching origin flag; decoding
+both files with a format-aware reader produces identical pixels. This addresses
+the observed orientation mismatch without changing the artwork. Live-client
+confirmation of the repacked texture is still pending.
 
 The generated composition was resized and format-converted for these targets;
 its artwork was not retouched. The game screenshot is a separate user-provided
