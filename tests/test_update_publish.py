@@ -1,10 +1,13 @@
 import os
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 import unittest
 
 SCRIPT = Path(__file__).resolve().parents[1] / 'tools/publish_update.sh'
+sys.path.insert(0, str(SCRIPT.parent))
+from resolve_update_source import resolve
 
 
 class PublishUpdate(unittest.TestCase):
@@ -72,6 +75,58 @@ class PublishUpdate(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(self.git(self.remote, 'rev-parse', 'develop'), user_head)
         self.assertNotEqual(self.git(self.remote, 'rev-parse', 'main'), user_head)
+
+    def test_initial_source_and_no_change_result(self):
+        expected = dict(source_sha=self.initial, prepared=False, changed=False)
+        self.assertEqual(resolve(self.repo, self.initial, '123'), expected)
+        self.assertEqual(resolve(self.repo, '', '123'), expected)
+
+    def test_stale_release_source_is_rejected(self):
+        latest = self.advance('main')
+        self.git(self.repo, 'fetch', 'origin', 'main')
+        with self.assertRaisesRegex(ValueError, 'main advanced'):
+            resolve(self.repo, self.initial, '123')
+        self.assertEqual(resolve(self.repo, '', '123')['source_sha'], latest)
+
+    def test_retry_reuses_published_update_even_after_main_advances(self):
+        result = self.publish()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        updated = self.git(self.repo, 'rev-parse', 'HEAD')
+        self.advance('main')
+        self.git(self.repo, 'fetch', 'origin', 'main')
+        self.assertEqual(resolve(self.repo, self.initial, '123'),
+                         dict(source_sha=updated, prepared=True, changed=True))
+        self.assertEqual(resolve(self.repo, '', '123')['source_sha'], updated)
+        # Similar run IDs must not match the retry marker.
+        with self.assertRaisesRegex(ValueError, 'main advanced'):
+            resolve(self.repo, self.initial, '12')
+        with self.assertRaisesRegex(ValueError, 'requested source'):
+            resolve(self.repo, updated, '123')
+
+    def tag_release(self, source):
+        self.git(self.repo, 'reset', '--hard', source)
+        self.git(self.repo, 'commit', '--allow-empty', '-m', 'Release 1.0.1',
+                 '-m', 'Release-Run-ID: 123')
+        self.git(self.repo, 'tag', 'v1.0.1')
+
+    def test_retry_reuses_tag_when_names_did_not_change(self):
+        self.tag_release(self.initial)
+        self.advance('main')
+        self.git(self.repo, 'fetch', 'origin', 'main')
+        self.assertEqual(resolve(self.repo, self.initial, '123'),
+                         dict(source_sha=self.initial, prepared=True, changed=False))
+
+    def test_retry_reuses_tag_after_name_update(self):
+        result = self.publish()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        updated = self.git(self.repo, 'rev-parse', 'HEAD')
+        self.tag_release(updated)
+        self.assertEqual(resolve(self.repo, self.initial, '123'),
+                         dict(source_sha=updated, prepared=True, changed=True))
+
+    def test_source_must_be_full_sha(self):
+        with self.assertRaisesRegex(ValueError, 'full commit SHA'):
+            resolve(self.repo, 'main', '123')
 
 
 if __name__ == '__main__':

@@ -6,6 +6,10 @@ on:
     paths: ["EnglishLinks/**"]
   workflow_dispatch:
     inputs:
+      update_names:
+        description: Refresh names before releasing
+        type: boolean
+        default: true
       source_sha:
         description: Exact main commit (empty means current main)
         required: false
@@ -14,14 +18,25 @@ on:
 permissions:
   contents: write
 
-# Different pushes must all build; only attempts of the SAME run share a lock.
+# Keep run numbers independent. Name preparation has a shared publication lock
+# and rejects stale main snapshots instead of overwriting concurrent work.
 concurrency:
   group: addon-release-${{ github.run_id }}
   cancel-in-progress: false
 
 jobs:
+  update:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || inputs.update_names == true)
+    uses: ./.github/workflows/prepare-names.yml
+    with:
+      source_sha: ${{ inputs.source_sha || github.sha }}
+
   release:
-    if: github.ref == 'refs/heads/main'
+    needs: update
+    # A deliberately skipped update must not skip the release; a failure must.
+    if: >-
+      always() && !cancelled() && github.ref == 'refs/heads/main' &&
+      (needs.update.result == 'success' || needs.update.result == 'skipped')
     outputs:
       version: ${{ steps.release.outputs.version }}
       tag: ${{ steps.release.outputs.tag }}
@@ -31,7 +46,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
-          ref: ${{ inputs.source_sha || github.sha }}
+          ref: ${{ needs.update.outputs.source_sha || inputs.source_sha || github.sha }}
 
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
@@ -99,6 +114,7 @@ jobs:
   curseforge:
     name: Upload release ZIP to CurseForge
     needs: release
+    if: ${{ !cancelled() && needs.release.result == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:

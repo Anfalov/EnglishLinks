@@ -1,0 +1,108 @@
+name: Prepare addon names
+
+on:
+  workflow_call:
+    inputs:
+      source_sha:
+        description: Exact main commit; empty selects current main
+        type: string
+        default: ''
+      dry_run:
+        type: boolean
+        default: false
+    outputs:
+      changed:
+        description: Whether names changed
+        value: ${{ jobs.prepare.outputs.changed }}
+      source_sha:
+        description: Exact commit to release (only published when not a dry run)
+        value: ${{ jobs.prepare.outputs.source_sha }}
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    concurrency:
+      group: englishlinks-name-preparation
+      cancel-in-progress: false
+    outputs:
+      changed: ${{ steps.resolve.outputs.changed == 'true' || steps.update.outputs.changed == 'true' }}
+      source_sha: ${{ steps.publish.outputs.sha || steps.resolve.outputs.source_sha }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.source_sha || github.sha }}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Resolve source or resume this run
+        id: resolve
+        env:
+          SOURCE_SHA: ${{ inputs.source_sha }}
+        run: |
+          git fetch origin main --tags
+          python tools/resolve_update_source.py --source "$SOURCE_SHA" --run-id "$GITHUB_RUN_ID"
+
+      - name: Checkout resolved source
+        env:
+          SOURCE_SHA: ${{ steps.resolve.outputs.source_sha }}
+        run: git checkout --detach "$SOURCE_SHA"
+
+      - name: Install updater/test dependency
+        if: steps.resolve.outputs.prepared != 'true'
+        run: python -m pip install lupa==2.6
+
+      - name: Fetch and merge names
+        id: update
+        if: steps.resolve.outputs.prepared != 'true'
+        run: |
+          python tools/update_names.py --apply \
+            --run-id "$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          python - <<'PY'
+          import json, os
+          report = json.load(open('update-results/report.json'))
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('changed=' + str(report['changed']).lower() + '\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as output:
+              output.write(f"Name changes: {len(report['changes'])}\n\n")
+              for source in report['sources']:
+                  if source.get('freshness') == 'pinned-fallback':
+                      output.write(f"- {source['source']}: using pinned file {source['version']}; latest version could not be checked/downloaded\n")
+                  if source['status'] != 'parsed':
+                      output.write(f"- {source['source']}: {source['status']} — {source.get('reason', '')}\n")
+          PY
+
+      - name: Test prepared update
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          python tests/run_tests.py
+          python tools/package_release.py
+
+      - name: Save source check report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          path: update-results/report.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Publish verified update
+        id: publish
+        if: steps.update.outputs.changed == 'true' && inputs.dry_run != true
+        run: bash tools/publish_update.sh
+
+      - name: Check source is still current when no commit was needed
+        if: steps.resolve.outputs.prepared != 'true' && steps.update.outputs.changed != 'true' && !inputs.dry_run
+        env:
+          SOURCE_SHA: ${{ steps.resolve.outputs.source_sha }}
+        run: |
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$SOURCE_SHA" ]; then
+            echo '::error::main advanced during the update; rerun from current main.'
+            exit 1
+          fi

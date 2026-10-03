@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Refresh names before code releases through a shared preparation workflow;
+  scheduled updates release their prepared commit without a second refresh.
+- Preserve prepared commits on workflow retries and reject stale main updates.
 - Store the addon icon as a top-origin TGA to address its inverted appearance
   in the in-game addon list.
 - Shorten the English and Russian addon descriptions to the first sentence.

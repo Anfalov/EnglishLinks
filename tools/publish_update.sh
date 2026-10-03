@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Both scheduled updates and releases use this script. Do not publish a result
+# prepared against an old main, even if another updater has just finished.
+git fetch origin main
+if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+    echo '::error::main advanced during preparation; start again from current main.'
+    exit 1
+fi
+
 git config user.name 'github-actions[bot]'
 git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 git checkout -B autoupdate
