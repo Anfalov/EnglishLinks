@@ -428,5 +428,15 @@
       "checked_at": "2026-10-02T16:28:23.865732+00:00",
       "report": "data/source-checks/2026-10-02-70170/checks.json"
     }
+  ],
+  "automatic_updates": [
+    {
+      "id": "37105499329-1",
+      "report": "data/auto-updates/37105499329-1/report.json",
+      "archive": "data/auto-updates/37105499329-1/sources.zip",
+      "archive_sha256": "937bc4a285da7547c0055e685e5f98c866f88bb694985430f862e87325806973",
+      "before_sha256": "82b2c3e554162beb02a595564c99c345f5ff7107ce62c4db17daf01beffd462b",
+      "after_sha256": "c12d42426f0377c8cc3687960740bce9041d17b346f34db39379c287282df3ef"
+    }
   ]
 }

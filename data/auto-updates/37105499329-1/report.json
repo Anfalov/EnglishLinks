@@ -1,0 +1,3244 @@
+{
+  "starting_sha256": "82b2c3e554162beb02a595564c99c345f5ff7107ce62c4db17daf01beffd462b",
+  "finished_at": "2026-10-03T07:11:44.405814+00:00",
+  "changed": true,
+  "changes": [
+    {
+      "section": "names",
+      "kind": "achievement",
+      "id": 64208,
+      "before": null,
+      "after": "<Hidden> Completed New Player Experience (Account)",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 1727,
+      "before": null,
+      "after": "Sword of Decay",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 1975,
+      "before": null,
+      "after": "Pysan's Old Greatsword",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 4980,
+      "before": null,
+      "after": "Prospector Gloves",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 5180,
+      "before": null,
+      "after": "Necklace of Harmony",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 5245,
+      "before": null,
+      "after": "Summoner's Wand",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 5257,
+      "before": null,
+      "after": "Dark Hooded Cape",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 5819,
+      "before": null,
+      "after": "Sunblaze Coif",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 7712,
+      "before": null,
+      "after": "Mantle of Doan",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 7728,
+      "before": null,
+      "after": "Beguiler Robes",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 7729,
+      "before": null,
+      "after": "Chesterfall Musket",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 7756,
+      "before": null,
+      "after": "Dog Training Gloves",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 7761,
+      "before": null,
+      "after": "Steelclaw Reaver",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 7787,
+      "before": null,
+      "after": "Resplendent Guardian",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 8226,
+      "before": null,
+      "after": "The Butcher",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 9456,
+      "before": null,
+      "after": "Glass Shooter",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 9457,
+      "before": null,
+      "after": "Royal Diplomatic Scepter",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 9485,
+      "before": null,
+      "after": "Vibroblade",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 9508,
+      "before": null,
+      "after": "Mechbuilder's Overalls",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 9588,
+      "before": null,
+      "after": "Nogg's Gold Ring",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 13133,
+      "before": null,
+      "after": "Drakesfire Epaulets",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 211293,
+      "before": null,
+      "after": "Crimson Trophy Quill",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 212347,
+      "before": null,
+      "after": "Illari's Key",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 212982,
+      "before": null,
+      "after": "Squall-breakers Potion",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 270059,
+      "before": null,
+      "after": "Restorer's Fine Gloves",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 270060,
+      "before": null,
+      "after": "Excavator Gauntlets",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 279837,
+      "before": null,
+      "after": "Fallen Guard's Pendant",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 279838,
+      "before": null,
+      "after": "Arcane Infused Rod",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "item",
+      "id": 285095,
+      "before": null,
+      "after": "Twitching Eye",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 78092,
+      "before": null,
+      "after": "It Must Be Destroyed",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 78676,
+      "before": null,
+      "after": "The Eye of Bhossca",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 79358,
+      "before": null,
+      "after": "Storm, Earth, and Fire",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 79360,
+      "before": null,
+      "after": "Elemental Aid",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 79361,
+      "before": null,
+      "after": "Storm, Earth, and Fire",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 79366,
+      "before": null,
+      "after": "Heed My Call",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 79624,
+      "before": null,
+      "after": "Anyone Can Cook",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 92432,
+      "before": null,
+      "after": "An Alarming Request",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 92457,
+      "before": null,
+      "after": "Starving Arcane",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 92458,
+      "before": null,
+      "after": "Heart of Disruption",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 92707,
+      "before": null,
+      "after": "The Giant in the Den",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 93176,
+      "before": null,
+      "after": "My Little Friends",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 93680,
+      "before": null,
+      "after": "Key to the City",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 96135,
+      "before": null,
+      "after": "Heed My Call",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 96264,
+      "before": null,
+      "after": "Elemental Aid",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 96774,
+      "before": null,
+      "after": "Ancient Gurubashi Idol",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 96800,
+      "before": null,
+      "after": "Past Due",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 97265,
+      "before": null,
+      "after": "Hate the Hatefury",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 97539,
+      "before": null,
+      "after": "Silky Sutures",
+      "source": "wowhead"
+    },
+    {
+      "section": "names",
+      "kind": "quest",
+      "id": 98155,
+      "before": null,
+      "after": "Pristine Pesterhide Pelts",
+      "source": "wowhead"
+    }
+  ],
+  "sources": [
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=1122,1123,1124,1125,1128,1157,1162,1163,1165,1170,1174,1184,1186,1192,1253,1255,1258,1259,1266,1267,1268,1269,1272,1279,1281,1298,1311,1312,1313,1321,1323,1324,1335,1350,1354,1363,1371,1379,1385,1392,1397,1398,1403,1424,1432,1435,1444,1472,1492,1500,1508,1527,1533,1535,1544,1545,1599,1612,1622,1638,1649,1654,1655,1663,1672,1684,1689,1690,1691,1692,1693,1694,1695,1698,1699,1700,1704,1719,1724,1736,1854,1878,1880,1895,1896,1897,1899,1900,1901,1902,1903,1904,1905,1906,1907,1908,1909,1910,1911,1912",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/currencies",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=11021,11025,11041,11042,11087,11132,11170,11264,11314,11317,11321,11322,11323,11342,11343,11365,11369,11383,11424,11443,11505,11506,11542,11585,11586,11587,11588,11589,11591,11762,11763,11838,12063,12142,12182,12183,12186,12187,12188,12189,12244,12245,12285,12290,12294,12297,12298,12304,12322,12328,12329,12331,12332,12338,12348,12385,12403,12421,12442,12443,12452,12453,12454,12456,12461,12482,12502,12523,12526,12591,12593,12629,12742,12743,12744,12745,12746,12747,12748,12749,12750,12751,12754,12755,12786,12787,12788,12789,12801,12850,12851,12852,12853,12854,12855,12856,12857,12858,12859,12860",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=13214,13219,13220,13221,13222,13242,13262,13290,13291,13292,13293,13312,13316,13318,13319,13336,13337,13338,13339,13341,13406,13407,13503,13504,13543,13586,13604,13605,13606,13607,13608,13609,13610,13611,13612,13622,13623,13625,13627,13628,13629,13630,13631,13632,13642,13643,13644,13645,13646,13647",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=12861,12862,12863,12864,12865,12866,12867,12868,12869,12870,12882,12883,12889,12890,12892,12893,12901,12902,12931,12932,12933,12934,12937,12941,12943,12944,12947,12949,12950,12951,12959,12961,12962,12971,12972,12980,12981,12991,12993,12995,13050,13061,13069,13078,13092,13104,13147,13150,13160,13165,13214,13219,13220,13221,13222,13242,13262,13290,13291,13292,13293,13312,13316,13318,13319,13336,13337,13338,13339,13341,13406,13407,13503,13504,13543,13586,13604,13605,13606,13607,13608,13609,13610,13611,13612,13622,13623,13625,13627,13628,13629,13630,13631,13632,13642,13643,13644,13645,13646,13647",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=12329,12331,12332,12338,12348,12385,12403,12421,12442,12443,12452,12453,12454,12456,12461,12482,12502,12523,12526,12591,12593,12629,12742,12743,12744,12745,12746,12747,12748,12749,12750,12751,12754,12755,12786,12787,12788,12789,12801,12850,12851,12852,12853,12854,12855,12856,12857,12858,12859,12860",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=13648,13649,13650,13651,13652,13653,13654,13655,13656,13657,13658,13659,13660,13661,13662,13663,13664,13665,13666,13667,13668,13669,13670,13671,13672,13673,13674,13675,13676,13677,13678,13679,13680,13681,13682,13683,13684,13685,13686,13687,13688,13689,13690,13691,13692,13693,13694,13695,13696,13697,13698,13705,13706,13707,13708,13709,13710,13711,13712,13713,13714,13715,13716,13717,13718,13719,13720,13721,13722,13723,13726,13727,13728,13729,13730,13731,13732,13733,13734,13735,13736,13737,13741,13742,13743,13744,13745,13746,13747,13748,13749,13750,13751,13753,13762,13763,13764,13765,13766,13767",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=13698,13705,13706,13707,13708,13709,13710,13711,13712,13713,13714,13715,13716,13717,13718,13719,13720,13721,13722,13723,13726,13727,13728,13729,13730,13731,13732,13733,13734,13735,13736,13737,13741,13742,13743,13744,13745,13746,13747,13748,13749,13750,13751,13753,13762,13763,13764,13765,13766,13767",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=13768,13769,13770,13771,13772,13773,13777,13778,13779,13780,13781,13782,13783,13784,13785,13786,13787,13788,13789,13790,13791,13792,13793,13794,13795,13796,13797,13798,13799,13800,13801,13802,13803,13804,13805,13806,13807,13808,13809,13814,13842,13843,13844,13845,13846,13847,13848,13849,13854,13855,13859,13861,13862,13894,13922,13923,13924,13925,13936,14082,14084,14085,14092,14105,14118,14363,14382,14383,14388,14389,14390,14475,14524,14527,14532,14533,14534,14535,14575,14586,14597,14609,14618,14642,14643,14691,14696,14706,14707,14818,14820,14822,14823,14824,14836,14837,14845,14870,14871,14873",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/achievements",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=13859,13861,13862,13894,13922,13923,13924,13925,13936,14082,14084,14085,14092,14105,14118,14363,14382,14383,14388,14389,14390,14475,14524,14527,14532,14533,14534,14535,14575,14586,14597,14609,14618,14642,14643,14691,14696,14706,14707,14818,14820,14822,14823,14824,14836,14837,14845,14870,14871,14873",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=14874,14875,14876,14877,14878,14879,14880,14881,14882,14883,14884,14885,14886,14887,14888,14889,14890,14891,14892,14893,15102,15103,15141,15460,15888,15889,15910,16024,16026,16027,16028,16029,16030,16031,16033,16034,16035,16038,16067,16068,16069,16070,16071,16074,16075,16076,16077,16078,16079,16080,16081,16086,16102,16103,16105,16106,16107,16108,16109,16121,16123,16124,16125,16160,16161,16173,16174,16175,16176,16177,16178,16179,16180,16181,16182,16183,16184,16185,16186,16187,16188,16211,16212,16213,16582,16785,17040,17041,17122,17123,17142,17162,17163,17282,17283,17342,17343,17382,17383,17462",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=16081,16086,16102,16103,16105,16106,16107,16108,16109,16121,16123,16124,16125,16160,16161,16173,16174,16175,16176,16177,16178,16179,16180,16181,16182,16183,16184,16185,16186,16187,16188,16211,16212,16213,16582,16785,17040,17041,17122,17123,17142,17162,17163,17282,17283,17342,17343,17382,17383,17462",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=1508,1527,1533,1535,1544,1545,1599,1612,1622,1638,1649,1654,1655,1663,1672,1684,1689,1690,1691,1692,1693,1694,1695,1698,1699,1700,1704,1719,1724,1736,1854,1878,1880,1895,1896,1897,1899,1900,1901,1902,1903,1904,1905,1906,1907,1908,1909,1910,1911,1912",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=17463,17482,17769,17782,17783,17802,17824,17825,17826,17831,17832,17833,17834,17835,17836,17837,17838,17839,17840,17841,17842,17843,17844,17845,17846,17847,17848,17851,17852,17853,17854,17855,17856,17857,17858,17859,17860,17861,17862,17942,18002,18023,18062,18063,18105,18106,18122,18123,18161,18162,18163,18164,18165,18166,18167,18293,18355,18419,18565,18566,18582,18583,18584,18589,18596,18644,18747,18763,18764,18765,18800,18801,18881,18882,18951,18968,18970,18971,18982,18983,18985,19014,19015,19053,19065,19122,19129,19158,19184,19185,19186,19187,19188,19189,19190,19191,19192,19193,19194,19195",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=18163,18164,18165,18166,18167,18293,18355,18419,18565,18566,18582,18583,18584,18589,18596,18644,18747,18763,18764,18765,18800,18801,18881,18882,18951,18968,18970,18971,18982,18983,18985,19014,19015,19053,19065,19122,19129,19158,19184,19185,19186,19187,19188,19189,19190,19191,19192,19193,19194,19195",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=1914,1915,1918,1924,1940,1948,1950,1957,1960,1961,1963,1969,1983,1984,1985,1995,1999,2002,2003,2012,2023,2038,2045,2050,2051,2052,2053,2060,2071,2081,2103,2104,2106,2107,2115,2147,2170,2176,2177,2178,2179,2180,2181,2182,2183,2184,2189,2191,2196,2197,2198,2199,2200,2201,2202,2206,2255,2275,2305,2306,2322,2323,2363,2404,2405,2412,2461,2462,2478,2513,2517,2518,2550,2551,2552,2554,2557,2558,2559,2573,2574,2588,2599,2600,2602,2638,2647,2655,2695,2703,2704,2705,2706,2707,2708,2709,2710,2711,2714,2715",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=19196,19197,19198,19199,19200,19201,19214,19226,19286,19313,19314,19404,19427,19428,19455,19456,19457,19485,19486,19487,19488,19489,19490,19502,19503,19504,19622,19623,19662,19742,19743,19762,19763,19809,19810,19811,19837,19844,19847,19868,19916,19917,19924,19926,19932,19966,19971,19980,19981,19983,19986,19987,19988,19989,20003,20005,20135,20136,20137,20138,20139,20140,20141,20142,20143,20144,20145,20146,20149,20238,20239,20240,20241,20242,20245,20246,20247,20248,20249,20250,20251,20252,20267,20268,20269,20270,20271,20272,20273,20274,20275,20276,20277,20278,20279,20280,20281,20282,20283,20284",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=20285,20286,20287,20288,20289,20290,20291,20292,20297,20298,20299,20300,20301,20302,20303,20304,20305,20306,20307,20308,20309,20311,20312,20313,20314,20315,20316,20317,20318,20319,20320,20321,20322,20323,20324,20325,20326,20327,20328,20329,20330,20331,20332,20333,20334,20335,20336,20338,20339,20340,20341,20342,20343,20344,20345,20346,20347,20348,20349,20350,20351,20352,20353,20354,20355,20356,20357,20358,20359,20360,20361,20362,20363,20364,20368,20370,20372,20412,20417,20445,20446,20468,20488,20502,20524,20718,20719,20738,20739,20740,21101,21102,21121,21122,21123,21124,21127,21129,21192,21238",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=19986,19987,19988,19989,20003,20005,20135,20136,20137,20138,20139,20140,20141,20142,20143,20144,20145,20146,20149,20238,20239,20240,20241,20242,20245,20246,20247,20248,20249,20250,20251,20252,20267,20268,20269,20270,20271,20272,20273,20274,20275,20276,20277,20278,20279,20280,20281,20282,20283,20284",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=20341,20342,20343,20344,20345,20346,20347,20348,20349,20350,20351,20352,20353,20354,20355,20356,20357,20358,20359,20360,20361,20362,20363,20364,20368,20370,20372,20412,20417,20445,20446,20468,20488,20502,20524,20718,20719,20738,20739,20740,21101,21102,21121,21122,21123,21124,21127,21129,21192,21238",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=21274,21276,21286,21339,21419,21420,21421,21422,21423,21424,21425,21426,21427,21428,21429,21430,21431,21432,21433,21434,21435,21437,21439,21440,21441,21442,21443,21444,21445,21446,21447,21448,21449,21450,21451,21465,21516,21518,21549,21550,21551,21553,21554,21555,21564,21572,21573,21580,21584,21587,21588,21594,21612,21613,21614,21628,21629,21630,21631,21632,21633,21634,21636,21637,21638,21641,21642,21643,21644,21646,21649,21653,21655,21656,21657,21658,21659,21660,21661,21662,21782,21794,21795,21796,21857,22045,22199,22210,22211,22213,22215,22230,22273,22316,22341,22346,22391,22485,22486,22596",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=21588,21594,21612,21613,21614,21628,21629,21630,21631,21632,21633,21634,21636,21637,21638,21641,21642,21643,21644,21646,21649,21653,21655,21656,21657,21658,21659,21660,21661,21662,21782,21794,21795,21796,21857,22045,22199,22210,22211,22213,22215,22230,22273,22316,22341,22346,22391,22485,22486,22596",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=2198,2199,2200,2201,2202,2206,2255,2275,2305,2306,2322,2323,2363,2404,2405,2412,2461,2462,2478,2513,2517,2518,2550,2551,2552,2554,2557,2558,2559,2573,2574,2588,2599,2600,2602,2638,2647,2655,2695,2703,2704,2705,2706,2707,2708,2709,2710,2711,2714,2715",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=2716,2717,2718,2789,2790,2791,2792,2793,2803,2804,2809,2810,2811,2812,2813,2814,2826,2827,2884,2918,2931,2948,2993,2994,2995,3001,3007,3015,3032,3034,3044,3046,3050,3051,3052,3054,3059,3060,3061,3062,3063,3064,3068,3077,3145,3147,3148,3149,3150,3159,3215,3219,3221,3226,3232,3242,3243,3244,3245,3246,3247,3249,3271,3298,3320,3326,3333,3338,3346,3350,3351,3361,3362,3364,3366,3367,3368,3410,3432,3433,3436,3441,3459,3494,3500,3501,3503,3504,3507,3513,3519,3522,3523,3524,3525,3526,3527,3528,3529,3532",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=22709,22724,22738,22805,22814,22817,22933,23034,23058,23086,23162,23328,23356,23369,23582,23583,23656,23743,24071,24358",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=3533,3534,3536,3537,3538,3539,3540,3541,3542,3543,3544,3547,3548,3549,3568,3580,3584,3624,3646,3677,3686,3687,3694,3695,3696,3697,3698,3699,3705,3746,3756,3757,3768,3773,3774,3865,3878,3881,3883,3884,3885,3886,3887,3888,3895,3933,3934,4156,4163,4191,4192,4193,4222,4224,4227,4229,4418,4427,4431,4442,4451,4452,4475,4486,4501,4523,4573,4578,4579,4620,4657,4664,4667,4670,4673,4679,4682,4685,4688,4691,4730,4754,4761,4764,4773,4774,4811,4812,4815,4839,4842,4853,4855,4856,4857,4858,4868,4884,4885,4889",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=3215,3219,3221,3226,3232,3242,3243,3244,3245,3246,3247,3249,3271,3298,3320,3326,3333,3338,3346,3350,3351,3361,3362,3364,3366,3367,3368,3410,3432,3433,3436,3441,3459,3494,3500,3501,3503,3504,3507,3513,3519,3522,3523,3524,3525,3526,3527,3528,3529,3532",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=4899,4900,4901,4902,4912,4927,4934,4943,4950,4955,4956,4985,4991,4993,4994,4996,4997,5041,5053,5090,5091,5106,5144,5146,5157,5159,5161,5162,5171,5222,5226,5228,5230,5231,5258,5259,5260,5261,5262,5276,5277,5278,5280,5281,5282,5283,5284,5285,5286,5287,5288,5289,5291,5292,5293,5294,5295,5296,5297,5298,5300,5301,5303,5304,5305,5307,5308,5333,5358,5365,5372,5378,5384,5407,5408,5409,5417,5418,5434,5436,5449,5450,5453,5454,5491,5495,5502,5515,5531,5532,5545,5546,5548,5549,5550,5551,5552,5553,5554,5555",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=5556,5557,5558,5559,5560,5561,5562,5563,5564,5597,5598,5599,5600,5607,5625,5651,5652,5653,5688,5745,5746,5747,5828,5896,5953,5954,6036,6224,6225,6227,6228,6229,6230,6231,6232,6233,6234,6235,6236,6237,6254,6322,6334,6434,6618,6639,6673,6674,6680,6698,6707,6708,6711,6724,6728,6896,6946,7171,7248,7299,7612,7706,7707,7725,7826,7948,7949,7950,7951,7952,7953,8164,8527,8688,9464,9572,9659,9700,9701,9702,9888,10555,10568,10591,10596,10611,10612,10613,10614,10615,10616,10617,10618,10619,10685,10756,10825,10878,10898,11019",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=5288,5289,5291,5292,5293,5294,5295,5296,5297,5298,5300,5301,5303,5304,5305,5307,5308,5333,5358,5365,5372,5378,5384,5407,5408,5409,5417,5418,5434,5436,5449,5450,5453,5454,5491,5495,5502,5515,5531,5532,5545,5546,5548,5549,5550,5551,5552,5553,5554,5555",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=4192,4193,4222,4224,4227,4229,4418,4427,4431,4442,4451,4452,4475,4486,4501,4523,4573,4578,4579,4620,4657,4664,4667,4670,4673,4679,4682,4685,4688,4691,4730,4754,4761,4764,4773,4774,4811,4812,4815,4839,4842,4853,4855,4856,4857,4858,4868,4884,4885,4889",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=6707,6708,6711,6724,6728,6896,6946,7171,7248,7299,7612,7706,7707,7725,7826,7948,7949,7950,7951,7952,7953,8164,8527,8688,9464,9572,9659,9700,9701,9702,9888,10555,10568,10591,10596,10611,10612,10613,10614,10615,10616,10617,10618,10619,10685,10756,10825,10878,10898,11019",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=77,86,87,88,89,91,94,95,97,98,99,100,101,102,103,104,105,113,114,115,119,123,124,125,126,128,130,131,132,133,134,135,136,138,143,149,150,151,155,156,157,184,527,734,741,746,751,761,784,786,788,806,807,808,823,836,842,855,877,883,894,898,900,902,903,906,907,908,909,917,930,931,941,951,956,958,960,964,965,996,1016,1018,1020,1021,1022,1023,1024,1025,1026,1027,1028,1042,1043,1044,1046,1047,1078,1099,1115,1117",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/gatherer?items=788,806,807,808,823,836,842,855,877,883,894,898,900,902,903,906,907,908,909,917,930,931,941,951,956,958,960,964,965,996,1016,1018,1020,1021,1022,1023,1024,1025,1026,1027,1028,1042,1043,1044,1046,1047,1078,1099,1115,1117",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;12846:13883",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;0:1496",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;11588:12845",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;10231:11587",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;1497:2473",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;15577:16500",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;16501:18237",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;13884:14817",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;18238:19424",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;14818:15576",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;19425:20378",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;20379:21429",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;209626:220359",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;21430:22658",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;227205:239221",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;22659:209625",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;220360:227204",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;250586:253923",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;239222:250585",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;2474:3242",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;253924:264126",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;272053:273483",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;273484:275437",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;264127:272052",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;279229:284699",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;275438:279228",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;284700:2147483647",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;3243:3956",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;3957:4668",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;4669:5390",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;6250:7115",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;5391:6249",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;7116:8311",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;8312:9334",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;9335:10230",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;4782:7652",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;0:742",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;7653:8460",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;1823:4781",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;743:1822",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;8461:9268",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/skills",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;98341:2147483647",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spell=400104",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spell=402861",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spell=403446",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spell=416084",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;11413:12833",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1213336:1218576",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;9269:98340",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;0:1809",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1218577:1220264",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1225503:1231764",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1231765:1237719",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1237720:1250941",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1220265:1225502",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1257460:1271422",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1271423:1289680",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1250942:1257459",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;12834:14422",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1297608:1306683",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1289681:1297607",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1317849:2147483647",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1306684:1317848",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;15571:16635",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;14423:15570",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1810:3492",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;16636:17766",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;17767:18818",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;20111:21186",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;18819:20110",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;23517:24485",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;21187:22659",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;24486:25717",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;22660:23516",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;25718:26536",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;29255:367985",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;26537:28140",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;28141:29254",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;3493:4701",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;367986:409751",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;409752:423139",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;431567:437621",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;437622:445799",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;423140:431566",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;445800:456221",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;456222:461686",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;461687:468064",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;468065:1213335",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;4702:6089",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;6090:7412",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://nether.wowhead.com/forever/data/mount?dv=10",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://nether.wowhead.com/forever/data/petspecies?dv=8",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://nether.wowhead.com/forever/data/item-bonuses?dv=19",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;8408:9973",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://nether.wowhead.com/forever/data/gear-planner?dv=59",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;9974:11412",
+      "status": "parsed"
+    },
+    {
+      "source": "wowhead-forever",
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;7413:8407",
+      "status": "parsed"
+    },
+    {
+      "source": "Questie/QuestieDB",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/cac1eff815923f896d082764d023cf812454a023/src/corrections/Forever/generated/foreverBaseQuest.lua",
+      "status": "parsed"
+    },
+    {
+      "source": "Questie/QuestieDB",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/cac1eff815923f896d082764d023cf812454a023/data/Forever/foreverQuestDB.lua",
+      "status": "parsed"
+    },
+    {
+      "source": "wheelbarrel00/EverythingQuests",
+      "url": "https://raw.githubusercontent.com/wheelbarrel00/EverythingQuests/5044142504baf75e69e67a46158cca5f889325cc/Data/QuestAvailable_Forever.lua",
+      "status": "parsed"
+    },
+    {
+      "source": "LechuckThePirate/Completao",
+      "url": "https://raw.githubusercontent.com/LechuckThePirate/Completao/6233a1f9dc2cb6f6764d7c90b6d6278db35fcf46/Data/Generated/ForeverNew.lua",
+      "status": "parsed"
+    },
+    {
+      "source": "Questie/QuestieDB",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/cac1eff815923f896d082764d023cf812454a023/src/corrections/Forever/generated/foreverBaseItem.lua",
+      "status": "parsed"
+    },
+    {
+      "source": "ElliotWood/Forever",
+      "url": "https://raw.githubusercontent.com/ElliotWood/Forever/9b97945c6c2fcc896cfe3dc1a629b58294f57d9c/assets/db_inputs/wowhead_forever_gearplanner.txt",
+      "status": "parsed"
+    },
+    {
+      "source": "thewowdb",
+      "url": "https://thewowdb.com/wow-forever/currency/darkmoon-prize-ticket-515/",
+      "status": "parsed"
+    },
+    {
+      "source": "thewowdb",
+      "url": "https://thewowdb.com/wow-forever/currency/honor-points-1792/",
+      "status": "parsed"
+    },
+    {
+      "source": "thewowdb",
+      "url": "https://thewowdb.com/wow-forever/currency/merchant-s-favor-3402/",
+      "status": "parsed"
+    },
+    {
+      "source": "thewowdb",
+      "url": "https://thewowdb.com/wow-forever/currency/rank-points-3468/",
+      "status": "parsed"
+    },
+    {
+      "source": "thewowdb",
+      "url": "https://thewowdb.com/wow-forever/currency/tarnished-undermine-real-3469/",
+      "status": "parsed"
+    },
+    {
+      "source": "petscout",
+      "url": "https://edge.forgecdn.net/files/8940/612/PetScoutForever-v0.1.1-forever.zip",
+      "version": "8940612",
+      "status": "parsed",
+      "freshness": "latest-listed"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=1122,1123,1124,1125,1128,1157,1162,1163,1165,1170,1174,1184,1186,1192,1253,1255,1258,1259,1266,1267,1268,1269,1272,1279,1281,1298,1311,1312,1313,1321,1323,1324,1335,1350,1354,1363,1371,1379,1385,1392,1397,1398,1403,1424,1432,1435,1444,1472,1492,1500,1508,1527,1533,1535,1544,1545,1599,1612,1622,1638,1649,1654,1655,1663,1672,1684,1689,1690,1691,1692,1693,1694,1695,1698,1699,1700,1704,1719,1724,1736,1854,1878,1880,1895,1896,1897,1899,1900,1901,1902,1903,1904,1905,1906,1907,1908,1909,1910,1911,1912",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.121893+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=1122,1123,1124,1125,1128,1157,1162,1163,1165,1170,1174,1184,1186,1192,1253,1255,1258,1259,1266,1267,1268,1269,1272,1279,1281,1298,1311,1312,1313,1321,1323,1324,1335,1350,1354,1363,1371,1379,1385,1392,1397,1398,1403,1424,1432,1435,1444,1472,1492,1500,1508,1527,1533,1535,1544,1545,1599,1612,1622,1638,1649,1654,1655,1663,1672,1684,1689,1690,1691,1692,1693,1694,1695,1698,1699,1700,1704,1719,1724,1736,1854,1878,1880,1895,1896,1897,1899,1900,1901,1902,1903,1904,1905,1906,1907,1908,1909,1910,1911,1912",
+      "retrieved_at": "2026-10-03T07:11:14.382650+00:00",
+      "sha256": "a004aeae0fbc928e61fb3c1b3d7779af52440d995f58698a5ffe609a332f8620",
+      "size_bytes": 26943,
+      "archive_member": "raw/a004aeae0fbc928e61fb3c1b3d7779af52440d995f58698a5ffe609a332f8620"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/currencies",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.120741+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/currencies",
+      "retrieved_at": "2026-10-03T07:11:14.387694+00:00",
+      "sha256": "09905a063504c6a6c83dbb16ec9ba65d7d4478bd18c35a0f1af77f5f4b46412f",
+      "size_bytes": 23797,
+      "archive_member": "raw/09905a063504c6a6c83dbb16ec9ba65d7d4478bd18c35a0f1af77f5f4b46412f"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=11021,11025,11041,11042,11087,11132,11170,11264,11314,11317,11321,11322,11323,11342,11343,11365,11369,11383,11424,11443,11505,11506,11542,11585,11586,11587,11588,11589,11591,11762,11763,11838,12063,12142,12182,12183,12186,12187,12188,12189,12244,12245,12285,12290,12294,12297,12298,12304,12322,12328,12329,12331,12332,12338,12348,12385,12403,12421,12442,12443,12452,12453,12454,12456,12461,12482,12502,12523,12526,12591,12593,12629,12742,12743,12744,12745,12746,12747,12748,12749,12750,12751,12754,12755,12786,12787,12788,12789,12801,12850,12851,12852,12853,12854,12855,12856,12857,12858,12859,12860",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.121242+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=11021,11025,11041,11042,11087,11132,11170,11264,11314,11317,11321,11322,11323,11342,11343,11365,11369,11383,11424,11443,11505,11506,11542,11585,11586,11587,11588,11589,11591,11762,11763,11838,12063,12142,12182,12183,12186,12187,12188,12189,12244,12245,12285,12290,12294,12297,12298,12304,12322,12328,12329,12331,12332,12338,12348,12385,12403,12421,12442,12443,12452,12453,12454,12456,12461,12482,12502,12523,12526,12591,12593,12629,12742,12743,12744,12745,12746,12747,12748,12749,12750,12751,12754,12755,12786,12787,12788,12789,12801,12850,12851,12852,12853,12854,12855,12856,12857,12858,12859,12860",
+      "retrieved_at": "2026-10-03T07:11:14.454480+00:00",
+      "sha256": "b569559208a81ea334b591dc08d3aa2c5e875a4560b5e75c92c8a99b496e48ef",
+      "size_bytes": 36577,
+      "archive_member": "raw/b569559208a81ea334b591dc08d3aa2c5e875a4560b5e75c92c8a99b496e48ef"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=13214,13219,13220,13221,13222,13242,13262,13290,13291,13292,13293,13312,13316,13318,13319,13336,13337,13338,13339,13341,13406,13407,13503,13504,13543,13586,13604,13605,13606,13607,13608,13609,13610,13611,13612,13622,13623,13625,13627,13628,13629,13630,13631,13632,13642,13643,13644,13645,13646,13647",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.461947+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=13214,13219,13220,13221,13222,13242,13262,13290,13291,13292,13293,13312,13316,13318,13319,13336,13337,13338,13339,13341,13406,13407,13503,13504,13543,13586,13604,13605,13606,13607,13608,13609,13610,13611,13612,13622,13623,13625,13627,13628,13629,13630,13631,13632,13642,13643,13644,13645,13646,13647",
+      "retrieved_at": "2026-10-03T07:11:14.705978+00:00",
+      "sha256": "a1d9c20bc239dcc3ac30ecc465e323e7fe11119234a5a6ac671bb8c19d2ae99c",
+      "size_bytes": 33872,
+      "archive_member": "raw/a1d9c20bc239dcc3ac30ecc465e323e7fe11119234a5a6ac671bb8c19d2ae99c"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=12861,12862,12863,12864,12865,12866,12867,12868,12869,12870,12882,12883,12889,12890,12892,12893,12901,12902,12931,12932,12933,12934,12937,12941,12943,12944,12947,12949,12950,12951,12959,12961,12962,12971,12972,12980,12981,12991,12993,12995,13050,13061,13069,13078,13092,13104,13147,13150,13160,13165,13214,13219,13220,13221,13222,13242,13262,13290,13291,13292,13293,13312,13316,13318,13319,13336,13337,13338,13339,13341,13406,13407,13503,13504,13543,13586,13604,13605,13606,13607,13608,13609,13610,13611,13612,13622,13623,13625,13627,13628,13629,13630,13631,13632,13642,13643,13644,13645,13646,13647",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.388049+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=12861,12862,12863,12864,12865,12866,12867,12868,12869,12870,12882,12883,12889,12890,12892,12893,12901,12902,12931,12932,12933,12934,12937,12941,12943,12944,12947,12949,12950,12951,12959,12961,12962,12971,12972,12980,12981,12991,12993,12995,13050,13061,13069,13078,13092,13104,13147,13150,13160,13165,13214,13219,13220,13221,13222,13242,13262,13290,13291,13292,13293,13312,13316,13318,13319,13336,13337,13338,13339,13341,13406,13407,13503,13504,13543,13586,13604,13605,13606,13607,13608,13609,13610,13611,13612,13622,13623,13625,13627,13628,13629,13630,13631,13632,13642,13643,13644,13645,13646,13647",
+      "retrieved_at": "2026-10-03T07:11:14.716113+00:00",
+      "sha256": "b2e3a42a888131c84bf5d1a603eb76c23e6f9fe0da21ba09d0ab0e94f020fc4a",
+      "size_bytes": 37041,
+      "archive_member": "raw/b2e3a42a888131c84bf5d1a603eb76c23e6f9fe0da21ba09d0ab0e94f020fc4a"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=12329,12331,12332,12338,12348,12385,12403,12421,12442,12443,12452,12453,12454,12456,12461,12482,12502,12523,12526,12591,12593,12629,12742,12743,12744,12745,12746,12747,12748,12749,12750,12751,12754,12755,12786,12787,12788,12789,12801,12850,12851,12852,12853,12854,12855,12856,12857,12858,12859,12860",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.387601+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=12329,12331,12332,12338,12348,12385,12403,12421,12442,12443,12452,12453,12454,12456,12461,12482,12502,12523,12526,12591,12593,12629,12742,12743,12744,12745,12746,12747,12748,12749,12750,12751,12754,12755,12786,12787,12788,12789,12801,12850,12851,12852,12853,12854,12855,12856,12857,12858,12859,12860",
+      "retrieved_at": "2026-10-03T07:11:14.749669+00:00",
+      "sha256": "a1874eba18d36cb46f26cb35dbc072a4b0622e87ace171edfac86a99a1188c6b",
+      "size_bytes": 35975,
+      "archive_member": "raw/a1874eba18d36cb46f26cb35dbc072a4b0622e87ace171edfac86a99a1188c6b"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=13648,13649,13650,13651,13652,13653,13654,13655,13656,13657,13658,13659,13660,13661,13662,13663,13664,13665,13666,13667,13668,13669,13670,13671,13672,13673,13674,13675,13676,13677,13678,13679,13680,13681,13682,13683,13684,13685,13686,13687,13688,13689,13690,13691,13692,13693,13694,13695,13696,13697,13698,13705,13706,13707,13708,13709,13710,13711,13712,13713,13714,13715,13716,13717,13718,13719,13720,13721,13722,13723,13726,13727,13728,13729,13730,13731,13732,13733,13734,13735,13736,13737,13741,13742,13743,13744,13745,13746,13747,13748,13749,13750,13751,13753,13762,13763,13764,13765,13766,13767",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.711373+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=13648,13649,13650,13651,13652,13653,13654,13655,13656,13657,13658,13659,13660,13661,13662,13663,13664,13665,13666,13667,13668,13669,13670,13671,13672,13673,13674,13675,13676,13677,13678,13679,13680,13681,13682,13683,13684,13685,13686,13687,13688,13689,13690,13691,13692,13693,13694,13695,13696,13697,13698,13705,13706,13707,13708,13709,13710,13711,13712,13713,13714,13715,13716,13717,13718,13719,13720,13721,13722,13723,13726,13727,13728,13729,13730,13731,13732,13733,13734,13735,13736,13737,13741,13742,13743,13744,13745,13746,13747,13748,13749,13750,13751,13753,13762,13763,13764,13765,13766,13767",
+      "retrieved_at": "2026-10-03T07:11:14.887594+00:00",
+      "sha256": "43a36cfa0e6ac6006716f5971e061c74a06ce0781796be4bb37411aba2eb6d01",
+      "size_bytes": 23517,
+      "archive_member": "raw/43a36cfa0e6ac6006716f5971e061c74a06ce0781796be4bb37411aba2eb6d01"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=13698,13705,13706,13707,13708,13709,13710,13711,13712,13713,13714,13715,13716,13717,13718,13719,13720,13721,13722,13723,13726,13727,13728,13729,13730,13731,13732,13733,13734,13735,13736,13737,13741,13742,13743,13744,13745,13746,13747,13748,13749,13750,13751,13753,13762,13763,13764,13765,13766,13767",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.722177+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=13698,13705,13706,13707,13708,13709,13710,13711,13712,13713,13714,13715,13716,13717,13718,13719,13720,13721,13722,13723,13726,13727,13728,13729,13730,13731,13732,13733,13734,13735,13736,13737,13741,13742,13743,13744,13745,13746,13747,13748,13749,13750,13751,13753,13762,13763,13764,13765,13766,13767",
+      "retrieved_at": "2026-10-03T07:11:14.935922+00:00",
+      "sha256": "923f9fdccc76a07e61ce746e997014fd751aa86f96f3d328b7a1dd6c35e2423e",
+      "size_bytes": 34469,
+      "archive_member": "raw/923f9fdccc76a07e61ce746e997014fd751aa86f96f3d328b7a1dd6c35e2423e"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=13768,13769,13770,13771,13772,13773,13777,13778,13779,13780,13781,13782,13783,13784,13785,13786,13787,13788,13789,13790,13791,13792,13793,13794,13795,13796,13797,13798,13799,13800,13801,13802,13803,13804,13805,13806,13807,13808,13809,13814,13842,13843,13844,13845,13846,13847,13848,13849,13854,13855,13859,13861,13862,13894,13922,13923,13924,13925,13936,14082,14084,14085,14092,14105,14118,14363,14382,14383,14388,14389,14390,14475,14524,14527,14532,14533,14534,14535,14575,14586,14597,14609,14618,14642,14643,14691,14696,14706,14707,14818,14820,14822,14823,14824,14836,14837,14845,14870,14871,14873",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.755525+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=13768,13769,13770,13771,13772,13773,13777,13778,13779,13780,13781,13782,13783,13784,13785,13786,13787,13788,13789,13790,13791,13792,13793,13794,13795,13796,13797,13798,13799,13800,13801,13802,13803,13804,13805,13806,13807,13808,13809,13814,13842,13843,13844,13845,13846,13847,13848,13849,13854,13855,13859,13861,13862,13894,13922,13923,13924,13925,13936,14082,14084,14085,14092,14105,14118,14363,14382,14383,14388,14389,14390,14475,14524,14527,14532,14533,14534,14535,14575,14586,14597,14609,14618,14642,14643,14691,14696,14706,14707,14818,14820,14822,14823,14824,14836,14837,14845,14870,14871,14873",
+      "retrieved_at": "2026-10-03T07:11:15.018054+00:00",
+      "sha256": "13330580524025b418d14f826daada46c8fc0a6c1937ee3969e053263f3d3b60",
+      "size_bytes": 31932,
+      "archive_member": "raw/13330580524025b418d14f826daada46c8fc0a6c1937ee3969e053263f3d3b60"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/achievements",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.120077+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/achievements",
+      "retrieved_at": "2026-10-03T07:11:15.092915+00:00",
+      "sha256": "abdba786da2d828bf3c45930cd7b1002bef571bca89e91f4eb14c23879fb9cac",
+      "size_bytes": 164271,
+      "archive_member": "raw/abdba786da2d828bf3c45930cd7b1002bef571bca89e91f4eb14c23879fb9cac"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=13859,13861,13862,13894,13922,13923,13924,13925,13936,14082,14084,14085,14092,14105,14118,14363,14382,14383,14388,14389,14390,14475,14524,14527,14532,14533,14534,14535,14575,14586,14597,14609,14618,14642,14643,14691,14696,14706,14707,14818,14820,14822,14823,14824,14836,14837,14845,14870,14871,14873",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.891295+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=13859,13861,13862,13894,13922,13923,13924,13925,13936,14082,14084,14085,14092,14105,14118,14363,14382,14383,14388,14389,14390,14475,14524,14527,14532,14533,14534,14535,14575,14586,14597,14609,14618,14642,14643,14691,14696,14706,14707,14818,14820,14822,14823,14824,14836,14837,14845,14870,14871,14873",
+      "retrieved_at": "2026-10-03T07:11:15.123838+00:00",
+      "sha256": "5596e9d554041c459c44808b5497134cfc0372ad3524cf9c2d85187747e702e0",
+      "size_bytes": 36773,
+      "archive_member": "raw/5596e9d554041c459c44808b5497134cfc0372ad3524cf9c2d85187747e702e0"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=14874,14875,14876,14877,14878,14879,14880,14881,14882,14883,14884,14885,14886,14887,14888,14889,14890,14891,14892,14893,15102,15103,15141,15460,15888,15889,15910,16024,16026,16027,16028,16029,16030,16031,16033,16034,16035,16038,16067,16068,16069,16070,16071,16074,16075,16076,16077,16078,16079,16080,16081,16086,16102,16103,16105,16106,16107,16108,16109,16121,16123,16124,16125,16160,16161,16173,16174,16175,16176,16177,16178,16179,16180,16181,16182,16183,16184,16185,16186,16187,16188,16211,16212,16213,16582,16785,17040,17041,17122,17123,17142,17162,17163,17282,17283,17342,17343,17382,17383,17462",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:14.941488+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=14874,14875,14876,14877,14878,14879,14880,14881,14882,14883,14884,14885,14886,14887,14888,14889,14890,14891,14892,14893,15102,15103,15141,15460,15888,15889,15910,16024,16026,16027,16028,16029,16030,16031,16033,16034,16035,16038,16067,16068,16069,16070,16071,16074,16075,16076,16077,16078,16079,16080,16081,16086,16102,16103,16105,16106,16107,16108,16109,16121,16123,16124,16125,16160,16161,16173,16174,16175,16176,16177,16178,16179,16180,16181,16182,16183,16184,16185,16186,16187,16188,16211,16212,16213,16582,16785,17040,17041,17122,17123,17142,17162,17163,17282,17283,17342,17343,17382,17383,17462",
+      "retrieved_at": "2026-10-03T07:11:15.130703+00:00",
+      "sha256": "d90c68fbb339db5dc41f6cfa10e8de68f343ab9e4725717a06da50f875018695",
+      "size_bytes": 31228,
+      "archive_member": "raw/d90c68fbb339db5dc41f6cfa10e8de68f343ab9e4725717a06da50f875018695"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=16081,16086,16102,16103,16105,16106,16107,16108,16109,16121,16123,16124,16125,16160,16161,16173,16174,16175,16176,16177,16178,16179,16180,16181,16182,16183,16184,16185,16186,16187,16188,16211,16212,16213,16582,16785,17040,17041,17122,17123,17142,17162,17163,17282,17283,17342,17343,17382,17383,17462",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.095705+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=16081,16086,16102,16103,16105,16106,16107,16108,16109,16121,16123,16124,16125,16160,16161,16173,16174,16175,16176,16177,16178,16179,16180,16181,16182,16183,16184,16185,16186,16187,16188,16211,16212,16213,16582,16785,17040,17041,17122,17123,17142,17162,17163,17282,17283,17342,17343,17382,17383,17462",
+      "retrieved_at": "2026-10-03T07:11:15.239901+00:00",
+      "sha256": "1d4381ee843dbb89f81bdf0ae6aa770439e94a6413ae86fb45196a91d5142e56",
+      "size_bytes": 27739,
+      "archive_member": "raw/1d4381ee843dbb89f81bdf0ae6aa770439e94a6413ae86fb45196a91d5142e56"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=1508,1527,1533,1535,1544,1545,1599,1612,1622,1638,1649,1654,1655,1663,1672,1684,1689,1690,1691,1692,1693,1694,1695,1698,1699,1700,1704,1719,1724,1736,1854,1878,1880,1895,1896,1897,1899,1900,1901,1902,1903,1904,1905,1906,1907,1908,1909,1910,1911,1912",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.023143+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=1508,1527,1533,1535,1544,1545,1599,1612,1622,1638,1649,1654,1655,1663,1672,1684,1689,1690,1691,1692,1693,1694,1695,1698,1699,1700,1704,1719,1724,1736,1854,1878,1880,1895,1896,1897,1899,1900,1901,1902,1903,1904,1905,1906,1907,1908,1909,1910,1911,1912",
+      "retrieved_at": "2026-10-03T07:11:15.282516+00:00",
+      "sha256": "a879ffd9914d120c9af9071e31386f8f6f7520c4f972805fbd04c980b6f41ae0",
+      "size_bytes": 29057,
+      "archive_member": "raw/a879ffd9914d120c9af9071e31386f8f6f7520c4f972805fbd04c980b6f41ae0"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=17463,17482,17769,17782,17783,17802,17824,17825,17826,17831,17832,17833,17834,17835,17836,17837,17838,17839,17840,17841,17842,17843,17844,17845,17846,17847,17848,17851,17852,17853,17854,17855,17856,17857,17858,17859,17860,17861,17862,17942,18002,18023,18062,18063,18105,18106,18122,18123,18161,18162,18163,18164,18165,18166,18167,18293,18355,18419,18565,18566,18582,18583,18584,18589,18596,18644,18747,18763,18764,18765,18800,18801,18881,18882,18951,18968,18970,18971,18982,18983,18985,19014,19015,19053,19065,19122,19129,19158,19184,19185,19186,19187,19188,19189,19190,19191,19192,19193,19194,19195",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.129843+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=17463,17482,17769,17782,17783,17802,17824,17825,17826,17831,17832,17833,17834,17835,17836,17837,17838,17839,17840,17841,17842,17843,17844,17845,17846,17847,17848,17851,17852,17853,17854,17855,17856,17857,17858,17859,17860,17861,17862,17942,18002,18023,18062,18063,18105,18106,18122,18123,18161,18162,18163,18164,18165,18166,18167,18293,18355,18419,18565,18566,18582,18583,18584,18589,18596,18644,18747,18763,18764,18765,18800,18801,18881,18882,18951,18968,18970,18971,18982,18983,18985,19014,19015,19053,19065,19122,19129,19158,19184,19185,19186,19187,19188,19189,19190,19191,19192,19193,19194,19195",
+      "retrieved_at": "2026-10-03T07:11:15.336036+00:00",
+      "sha256": "09255a5bf4a88a32c7a5421953acceb431b4e36bb4acbbe930281c6dd8b4ecd5",
+      "size_bytes": 26435,
+      "archive_member": "raw/09255a5bf4a88a32c7a5421953acceb431b4e36bb4acbbe930281c6dd8b4ecd5"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=18163,18164,18165,18166,18167,18293,18355,18419,18565,18566,18582,18583,18584,18589,18596,18644,18747,18763,18764,18765,18800,18801,18881,18882,18951,18968,18970,18971,18982,18983,18985,19014,19015,19053,19065,19122,19129,19158,19184,19185,19186,19187,19188,19189,19190,19191,19192,19193,19194,19195",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.136273+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=18163,18164,18165,18166,18167,18293,18355,18419,18565,18566,18582,18583,18584,18589,18596,18644,18747,18763,18764,18765,18800,18801,18881,18882,18951,18968,18970,18971,18982,18983,18985,19014,19015,19053,19065,19122,19129,19158,19184,19185,19186,19187,19188,19189,19190,19191,19192,19193,19194,19195",
+      "retrieved_at": "2026-10-03T07:11:15.345550+00:00",
+      "sha256": "1c1318430880e9d220bcf4f6b0522da8d565ec56dc5fd8788eb9dba223631324",
+      "size_bytes": 34373,
+      "archive_member": "raw/1c1318430880e9d220bcf4f6b0522da8d565ec56dc5fd8788eb9dba223631324"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=1914,1915,1918,1924,1940,1948,1950,1957,1960,1961,1963,1969,1983,1984,1985,1995,1999,2002,2003,2012,2023,2038,2045,2050,2051,2052,2053,2060,2071,2081,2103,2104,2106,2107,2115,2147,2170,2176,2177,2178,2179,2180,2181,2182,2183,2184,2189,2191,2196,2197,2198,2199,2200,2201,2202,2206,2255,2275,2305,2306,2322,2323,2363,2404,2405,2412,2461,2462,2478,2513,2517,2518,2550,2551,2552,2554,2557,2558,2559,2573,2574,2588,2599,2600,2602,2638,2647,2655,2695,2703,2704,2705,2706,2707,2708,2709,2710,2711,2714,2715",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.244446+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=1914,1915,1918,1924,1940,1948,1950,1957,1960,1961,1963,1969,1983,1984,1985,1995,1999,2002,2003,2012,2023,2038,2045,2050,2051,2052,2053,2060,2071,2081,2103,2104,2106,2107,2115,2147,2170,2176,2177,2178,2179,2180,2181,2182,2183,2184,2189,2191,2196,2197,2198,2199,2200,2201,2202,2206,2255,2275,2305,2306,2322,2323,2363,2404,2405,2412,2461,2462,2478,2513,2517,2518,2550,2551,2552,2554,2557,2558,2559,2573,2574,2588,2599,2600,2602,2638,2647,2655,2695,2703,2704,2705,2706,2707,2708,2709,2710,2711,2714,2715",
+      "retrieved_at": "2026-10-03T07:11:15.436454+00:00",
+      "sha256": "20f449975f1a794ec27b938c93210d38b7020208451190fb8f74179c5b514b79",
+      "size_bytes": 30022,
+      "archive_member": "raw/20f449975f1a794ec27b938c93210d38b7020208451190fb8f74179c5b514b79"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=19196,19197,19198,19199,19200,19201,19214,19226,19286,19313,19314,19404,19427,19428,19455,19456,19457,19485,19486,19487,19488,19489,19490,19502,19503,19504,19622,19623,19662,19742,19743,19762,19763,19809,19810,19811,19837,19844,19847,19868,19916,19917,19924,19926,19932,19966,19971,19980,19981,19983,19986,19987,19988,19989,20003,20005,20135,20136,20137,20138,20139,20140,20141,20142,20143,20144,20145,20146,20149,20238,20239,20240,20241,20242,20245,20246,20247,20248,20249,20250,20251,20252,20267,20268,20269,20270,20271,20272,20273,20274,20275,20276,20277,20278,20279,20280,20281,20282,20283,20284",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.287320+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=19196,19197,19198,19199,19200,19201,19214,19226,19286,19313,19314,19404,19427,19428,19455,19456,19457,19485,19486,19487,19488,19489,19490,19502,19503,19504,19622,19623,19662,19742,19743,19762,19763,19809,19810,19811,19837,19844,19847,19868,19916,19917,19924,19926,19932,19966,19971,19980,19981,19983,19986,19987,19988,19989,20003,20005,20135,20136,20137,20138,20139,20140,20141,20142,20143,20144,20145,20146,20149,20238,20239,20240,20241,20242,20245,20246,20247,20248,20249,20250,20251,20252,20267,20268,20269,20270,20271,20272,20273,20274,20275,20276,20277,20278,20279,20280,20281,20282,20283,20284",
+      "retrieved_at": "2026-10-03T07:11:15.511041+00:00",
+      "sha256": "dfed783e425939bd5820ee573471e235f8f6a65530357cb38000846a940be6d5",
+      "size_bytes": 34677,
+      "archive_member": "raw/dfed783e425939bd5820ee573471e235f8f6a65530357cb38000846a940be6d5"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=20285,20286,20287,20288,20289,20290,20291,20292,20297,20298,20299,20300,20301,20302,20303,20304,20305,20306,20307,20308,20309,20311,20312,20313,20314,20315,20316,20317,20318,20319,20320,20321,20322,20323,20324,20325,20326,20327,20328,20329,20330,20331,20332,20333,20334,20335,20336,20338,20339,20340,20341,20342,20343,20344,20345,20346,20347,20348,20349,20350,20351,20352,20353,20354,20355,20356,20357,20358,20359,20360,20361,20362,20363,20364,20368,20370,20372,20412,20417,20445,20446,20468,20488,20502,20524,20718,20719,20738,20739,20740,21101,21102,21121,21122,21123,21124,21127,21129,21192,21238",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.351131+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=20285,20286,20287,20288,20289,20290,20291,20292,20297,20298,20299,20300,20301,20302,20303,20304,20305,20306,20307,20308,20309,20311,20312,20313,20314,20315,20316,20317,20318,20319,20320,20321,20322,20323,20324,20325,20326,20327,20328,20329,20330,20331,20332,20333,20334,20335,20336,20338,20339,20340,20341,20342,20343,20344,20345,20346,20347,20348,20349,20350,20351,20352,20353,20354,20355,20356,20357,20358,20359,20360,20361,20362,20363,20364,20368,20370,20372,20412,20417,20445,20446,20468,20488,20502,20524,20718,20719,20738,20739,20740,21101,21102,21121,21122,21123,21124,21127,21129,21192,21238",
+      "retrieved_at": "2026-10-03T07:11:15.555062+00:00",
+      "sha256": "f97c4435ff280206867d16aebfd301a455e1e14d87c39122a42061c8208e5625",
+      "size_bytes": 28031,
+      "archive_member": "raw/f97c4435ff280206867d16aebfd301a455e1e14d87c39122a42061c8208e5625"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=19986,19987,19988,19989,20003,20005,20135,20136,20137,20138,20139,20140,20141,20142,20143,20144,20145,20146,20149,20238,20239,20240,20241,20242,20245,20246,20247,20248,20249,20250,20251,20252,20267,20268,20269,20270,20271,20272,20273,20274,20275,20276,20277,20278,20279,20280,20281,20282,20283,20284",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.340265+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=19986,19987,19988,19989,20003,20005,20135,20136,20137,20138,20139,20140,20141,20142,20143,20144,20145,20146,20149,20238,20239,20240,20241,20242,20245,20246,20247,20248,20249,20250,20251,20252,20267,20268,20269,20270,20271,20272,20273,20274,20275,20276,20277,20278,20279,20280,20281,20282,20283,20284",
+      "retrieved_at": "2026-10-03T07:11:15.561532+00:00",
+      "sha256": "69b4fa8075e917da617c00fc014a92bbc521d3699692d5b635f40aa6bc101dda",
+      "size_bytes": 30735,
+      "archive_member": "raw/69b4fa8075e917da617c00fc014a92bbc521d3699692d5b635f40aa6bc101dda"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=20341,20342,20343,20344,20345,20346,20347,20348,20349,20350,20351,20352,20353,20354,20355,20356,20357,20358,20359,20360,20361,20362,20363,20364,20368,20370,20372,20412,20417,20445,20446,20468,20488,20502,20524,20718,20719,20738,20739,20740,21101,21102,21121,21122,21123,21124,21127,21129,21192,21238",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.441477+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=20341,20342,20343,20344,20345,20346,20347,20348,20349,20350,20351,20352,20353,20354,20355,20356,20357,20358,20359,20360,20361,20362,20363,20364,20368,20370,20372,20412,20417,20445,20446,20468,20488,20502,20524,20718,20719,20738,20739,20740,21101,21102,21121,21122,21123,21124,21127,21129,21192,21238",
+      "retrieved_at": "2026-10-03T07:11:15.675999+00:00",
+      "sha256": "8625033c416c3dbd531e3c1280f7fdb39d581df0036116d6f32a4322c0f4a4c7",
+      "size_bytes": 31347,
+      "archive_member": "raw/8625033c416c3dbd531e3c1280f7fdb39d581df0036116d6f32a4322c0f4a4c7"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=21274,21276,21286,21339,21419,21420,21421,21422,21423,21424,21425,21426,21427,21428,21429,21430,21431,21432,21433,21434,21435,21437,21439,21440,21441,21442,21443,21444,21445,21446,21447,21448,21449,21450,21451,21465,21516,21518,21549,21550,21551,21553,21554,21555,21564,21572,21573,21580,21584,21587,21588,21594,21612,21613,21614,21628,21629,21630,21631,21632,21633,21634,21636,21637,21638,21641,21642,21643,21644,21646,21649,21653,21655,21656,21657,21658,21659,21660,21661,21662,21782,21794,21795,21796,21857,22045,22199,22210,22211,22213,22215,22230,22273,22316,22341,22346,22391,22485,22486,22596",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.516659+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=21274,21276,21286,21339,21419,21420,21421,21422,21423,21424,21425,21426,21427,21428,21429,21430,21431,21432,21433,21434,21435,21437,21439,21440,21441,21442,21443,21444,21445,21446,21447,21448,21449,21450,21451,21465,21516,21518,21549,21550,21551,21553,21554,21555,21564,21572,21573,21580,21584,21587,21588,21594,21612,21613,21614,21628,21629,21630,21631,21632,21633,21634,21636,21637,21638,21641,21642,21643,21644,21646,21649,21653,21655,21656,21657,21658,21659,21660,21661,21662,21782,21794,21795,21796,21857,22045,22199,22210,22211,22213,22215,22230,22273,22316,22341,22346,22391,22485,22486,22596",
+      "retrieved_at": "2026-10-03T07:11:15.683754+00:00",
+      "sha256": "40a91ed93ce5141ecfb9493005e6dbd2238aef9ec5c8e924ee8b04fc96aa6e1f",
+      "size_bytes": 32397,
+      "archive_member": "raw/40a91ed93ce5141ecfb9493005e6dbd2238aef9ec5c8e924ee8b04fc96aa6e1f"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=21588,21594,21612,21613,21614,21628,21629,21630,21631,21632,21633,21634,21636,21637,21638,21641,21642,21643,21644,21646,21649,21653,21655,21656,21657,21658,21659,21660,21661,21662,21782,21794,21795,21796,21857,22045,22199,22210,22211,22213,22215,22230,22273,22316,22341,22346,22391,22485,22486,22596",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.559850+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=21588,21594,21612,21613,21614,21628,21629,21630,21631,21632,21633,21634,21636,21637,21638,21641,21642,21643,21644,21646,21649,21653,21655,21656,21657,21658,21659,21660,21661,21662,21782,21794,21795,21796,21857,22045,22199,22210,22211,22213,22215,22230,22273,22316,22341,22346,22391,22485,22486,22596",
+      "retrieved_at": "2026-10-03T07:11:15.725053+00:00",
+      "sha256": "225a757213be2dc2587a34d060519c85d3963f7eee8d1d1f178b7f2e8b2bdd0d",
+      "size_bytes": 28228,
+      "archive_member": "raw/225a757213be2dc2587a34d060519c85d3963f7eee8d1d1f178b7f2e8b2bdd0d"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=2198,2199,2200,2201,2202,2206,2255,2275,2305,2306,2322,2323,2363,2404,2405,2412,2461,2462,2478,2513,2517,2518,2550,2551,2552,2554,2557,2558,2559,2573,2574,2588,2599,2600,2602,2638,2647,2655,2695,2703,2704,2705,2706,2707,2708,2709,2710,2711,2714,2715",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.566770+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=2198,2199,2200,2201,2202,2206,2255,2275,2305,2306,2322,2323,2363,2404,2405,2412,2461,2462,2478,2513,2517,2518,2550,2551,2552,2554,2557,2558,2559,2573,2574,2588,2599,2600,2602,2638,2647,2655,2695,2703,2704,2705,2706,2707,2708,2709,2710,2711,2714,2715",
+      "retrieved_at": "2026-10-03T07:11:15.730259+00:00",
+      "sha256": "94a539ac674640585511be35817237b9c6a98095697f9f73d18fc0b484341264",
+      "size_bytes": 31554,
+      "archive_member": "raw/94a539ac674640585511be35817237b9c6a98095697f9f73d18fc0b484341264"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=2716,2717,2718,2789,2790,2791,2792,2793,2803,2804,2809,2810,2811,2812,2813,2814,2826,2827,2884,2918,2931,2948,2993,2994,2995,3001,3007,3015,3032,3034,3044,3046,3050,3051,3052,3054,3059,3060,3061,3062,3063,3064,3068,3077,3145,3147,3148,3149,3150,3159,3215,3219,3221,3226,3232,3242,3243,3244,3245,3246,3247,3249,3271,3298,3320,3326,3333,3338,3346,3350,3351,3361,3362,3364,3366,3367,3368,3410,3432,3433,3436,3441,3459,3494,3500,3501,3503,3504,3507,3513,3519,3522,3523,3524,3525,3526,3527,3528,3529,3532",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.688944+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=2716,2717,2718,2789,2790,2791,2792,2793,2803,2804,2809,2810,2811,2812,2813,2814,2826,2827,2884,2918,2931,2948,2993,2994,2995,3001,3007,3015,3032,3034,3044,3046,3050,3051,3052,3054,3059,3060,3061,3062,3063,3064,3068,3077,3145,3147,3148,3149,3150,3159,3215,3219,3221,3226,3232,3242,3243,3244,3245,3246,3247,3249,3271,3298,3320,3326,3333,3338,3346,3350,3351,3361,3362,3364,3366,3367,3368,3410,3432,3433,3436,3441,3459,3494,3500,3501,3503,3504,3507,3513,3519,3522,3523,3524,3525,3526,3527,3528,3529,3532",
+      "retrieved_at": "2026-10-03T07:11:15.846159+00:00",
+      "sha256": "dec12b6a2729e1eb8f0a85b92a860a070e66d5532f62d3087adc1b018a505d8a",
+      "size_bytes": 29062,
+      "archive_member": "raw/dec12b6a2729e1eb8f0a85b92a860a070e66d5532f62d3087adc1b018a505d8a"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=22709,22724,22738,22805,22814,22817,22933,23034,23058,23086,23162,23328,23356,23369,23582,23583,23656,23743,24071,24358",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.681215+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=22709,22724,22738,22805,22814,22817,22933,23034,23058,23086,23162,23328,23356,23369,23582,23583,23656,23743,24071,24358",
+      "retrieved_at": "2026-10-03T07:11:15.870218+00:00",
+      "sha256": "a1c5cb244a26850bbdabb68fd53e6ba81a64aeb3e3585e9dc6a2e091546e455a",
+      "size_bytes": 13654,
+      "archive_member": "raw/a1c5cb244a26850bbdabb68fd53e6ba81a64aeb3e3585e9dc6a2e091546e455a"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=3533,3534,3536,3537,3538,3539,3540,3541,3542,3543,3544,3547,3548,3549,3568,3580,3584,3624,3646,3677,3686,3687,3694,3695,3696,3697,3698,3699,3705,3746,3756,3757,3768,3773,3774,3865,3878,3881,3883,3884,3885,3886,3887,3888,3895,3933,3934,4156,4163,4191,4192,4193,4222,4224,4227,4229,4418,4427,4431,4442,4451,4452,4475,4486,4501,4523,4573,4578,4579,4620,4657,4664,4667,4670,4673,4679,4682,4685,4688,4691,4730,4754,4761,4764,4773,4774,4811,4812,4815,4839,4842,4853,4855,4856,4857,4858,4868,4884,4885,4889",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.735620+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=3533,3534,3536,3537,3538,3539,3540,3541,3542,3543,3544,3547,3548,3549,3568,3580,3584,3624,3646,3677,3686,3687,3694,3695,3696,3697,3698,3699,3705,3746,3756,3757,3768,3773,3774,3865,3878,3881,3883,3884,3885,3886,3887,3888,3895,3933,3934,4156,4163,4191,4192,4193,4222,4224,4227,4229,4418,4427,4431,4442,4451,4452,4475,4486,4501,4523,4573,4578,4579,4620,4657,4664,4667,4670,4673,4679,4682,4685,4688,4691,4730,4754,4761,4764,4773,4774,4811,4812,4815,4839,4842,4853,4855,4856,4857,4858,4868,4884,4885,4889",
+      "retrieved_at": "2026-10-03T07:11:15.884703+00:00",
+      "sha256": "5205d15042f51e614d8803cfa94ee839b4d35eeaf9e6b48403c5504738325219",
+      "size_bytes": 27981,
+      "archive_member": "raw/5205d15042f51e614d8803cfa94ee839b4d35eeaf9e6b48403c5504738325219"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=3215,3219,3221,3226,3232,3242,3243,3244,3245,3246,3247,3249,3271,3298,3320,3326,3333,3338,3346,3350,3351,3361,3362,3364,3366,3367,3368,3410,3432,3433,3436,3441,3459,3494,3500,3501,3503,3504,3507,3513,3519,3522,3523,3524,3525,3526,3527,3528,3529,3532",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.729862+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=3215,3219,3221,3226,3232,3242,3243,3244,3245,3246,3247,3249,3271,3298,3320,3326,3333,3338,3346,3350,3351,3361,3362,3364,3366,3367,3368,3410,3432,3433,3436,3441,3459,3494,3500,3501,3503,3504,3507,3513,3519,3522,3523,3524,3525,3526,3527,3528,3529,3532",
+      "retrieved_at": "2026-10-03T07:11:15.950822+00:00",
+      "sha256": "44229e4d129da70400e123ef40b9ec9d0cb67794e943bd2771d62be7c833957e",
+      "size_bytes": 27595,
+      "archive_member": "raw/44229e4d129da70400e123ef40b9ec9d0cb67794e943bd2771d62be7c833957e"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=4899,4900,4901,4902,4912,4927,4934,4943,4950,4955,4956,4985,4991,4993,4994,4996,4997,5041,5053,5090,5091,5106,5144,5146,5157,5159,5161,5162,5171,5222,5226,5228,5230,5231,5258,5259,5260,5261,5262,5276,5277,5278,5280,5281,5282,5283,5284,5285,5286,5287,5288,5289,5291,5292,5293,5294,5295,5296,5297,5298,5300,5301,5303,5304,5305,5307,5308,5333,5358,5365,5372,5378,5384,5407,5408,5409,5417,5418,5434,5436,5449,5450,5453,5454,5491,5495,5502,5515,5531,5532,5545,5546,5548,5549,5550,5551,5552,5553,5554,5555",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.872623+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=4899,4900,4901,4902,4912,4927,4934,4943,4950,4955,4956,4985,4991,4993,4994,4996,4997,5041,5053,5090,5091,5106,5144,5146,5157,5159,5161,5162,5171,5222,5226,5228,5230,5231,5258,5259,5260,5261,5262,5276,5277,5278,5280,5281,5282,5283,5284,5285,5286,5287,5288,5289,5291,5292,5293,5294,5295,5296,5297,5298,5300,5301,5303,5304,5305,5307,5308,5333,5358,5365,5372,5378,5384,5407,5408,5409,5417,5418,5434,5436,5449,5450,5453,5454,5491,5495,5502,5515,5531,5532,5545,5546,5548,5549,5550,5551,5552,5553,5554,5555",
+      "retrieved_at": "2026-10-03T07:11:16.134229+00:00",
+      "sha256": "7ec7457be0ed080efa6a4297770fa083166ad9f8a0dda92e081152506df19a2a",
+      "size_bytes": 31474,
+      "archive_member": "raw/7ec7457be0ed080efa6a4297770fa083166ad9f8a0dda92e081152506df19a2a"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=5556,5557,5558,5559,5560,5561,5562,5563,5564,5597,5598,5599,5600,5607,5625,5651,5652,5653,5688,5745,5746,5747,5828,5896,5953,5954,6036,6224,6225,6227,6228,6229,6230,6231,6232,6233,6234,6235,6236,6237,6254,6322,6334,6434,6618,6639,6673,6674,6680,6698,6707,6708,6711,6724,6728,6896,6946,7171,7248,7299,7612,7706,7707,7725,7826,7948,7949,7950,7951,7952,7953,8164,8527,8688,9464,9572,9659,9700,9701,9702,9888,10555,10568,10591,10596,10611,10612,10613,10614,10615,10616,10617,10618,10619,10685,10756,10825,10878,10898,11019",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.955406+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=5556,5557,5558,5559,5560,5561,5562,5563,5564,5597,5598,5599,5600,5607,5625,5651,5652,5653,5688,5745,5746,5747,5828,5896,5953,5954,6036,6224,6225,6227,6228,6229,6230,6231,6232,6233,6234,6235,6236,6237,6254,6322,6334,6434,6618,6639,6673,6674,6680,6698,6707,6708,6711,6724,6728,6896,6946,7171,7248,7299,7612,7706,7707,7725,7826,7948,7949,7950,7951,7952,7953,8164,8527,8688,9464,9572,9659,9700,9701,9702,9888,10555,10568,10591,10596,10611,10612,10613,10614,10615,10616,10617,10618,10619,10685,10756,10825,10878,10898,11019",
+      "retrieved_at": "2026-10-03T07:11:16.170802+00:00",
+      "sha256": "6a609de0d668c93ba8d8c10e21776ac30ae841573ed5bc395964c60434c2c4fe",
+      "size_bytes": 32877,
+      "archive_member": "raw/6a609de0d668c93ba8d8c10e21776ac30ae841573ed5bc395964c60434c2c4fe"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=5288,5289,5291,5292,5293,5294,5295,5296,5297,5298,5300,5301,5303,5304,5305,5307,5308,5333,5358,5365,5372,5378,5384,5407,5408,5409,5417,5418,5434,5436,5449,5450,5453,5454,5491,5495,5502,5515,5531,5532,5545,5546,5548,5549,5550,5551,5552,5553,5554,5555",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.889392+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=5288,5289,5291,5292,5293,5294,5295,5296,5297,5298,5300,5301,5303,5304,5305,5307,5308,5333,5358,5365,5372,5378,5384,5407,5408,5409,5417,5418,5434,5436,5449,5450,5453,5454,5491,5495,5502,5515,5531,5532,5545,5546,5548,5549,5550,5551,5552,5553,5554,5555",
+      "retrieved_at": "2026-10-03T07:11:16.207080+00:00",
+      "sha256": "a88ad159e2b53c56d3aace9081394cd1ba682366f7138453e14657bd11f6ccd5",
+      "size_bytes": 30842,
+      "archive_member": "raw/a88ad159e2b53c56d3aace9081394cd1ba682366f7138453e14657bd11f6ccd5"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=4192,4193,4222,4224,4227,4229,4418,4427,4431,4442,4451,4452,4475,4486,4501,4523,4573,4578,4579,4620,4657,4664,4667,4670,4673,4679,4682,4685,4688,4691,4730,4754,4761,4764,4773,4774,4811,4812,4815,4839,4842,4853,4855,4856,4857,4858,4868,4884,4885,4889",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:15.850975+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=4192,4193,4222,4224,4227,4229,4418,4427,4431,4442,4451,4452,4475,4486,4501,4523,4573,4578,4579,4620,4657,4664,4667,4670,4673,4679,4682,4685,4688,4691,4730,4754,4761,4764,4773,4774,4811,4812,4815,4839,4842,4853,4855,4856,4857,4858,4868,4884,4885,4889",
+      "retrieved_at": "2026-10-03T07:11:16.212439+00:00",
+      "sha256": "14030080ccb5e30be241af01404b3048cf93f026e75946fda9c58a2ad3da35b8",
+      "size_bytes": 25494,
+      "archive_member": "raw/14030080ccb5e30be241af01404b3048cf93f026e75946fda9c58a2ad3da35b8"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=6707,6708,6711,6724,6728,6896,6946,7171,7248,7299,7612,7706,7707,7725,7826,7948,7949,7950,7951,7952,7953,8164,8527,8688,9464,9572,9659,9700,9701,9702,9888,10555,10568,10591,10596,10611,10612,10613,10614,10615,10616,10617,10618,10619,10685,10756,10825,10878,10898,11019",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:16.139405+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=6707,6708,6711,6724,6728,6896,6946,7171,7248,7299,7612,7706,7707,7725,7826,7948,7949,7950,7951,7952,7953,8164,8527,8688,9464,9572,9659,9700,9701,9702,9888,10555,10568,10591,10596,10611,10612,10613,10614,10615,10616,10617,10618,10619,10685,10756,10825,10878,10898,11019",
+      "retrieved_at": "2026-10-03T07:11:16.301334+00:00",
+      "sha256": "1f13a5377ed7af20e8539f61d4fe711956375999744f97e631b55520dcf6a943",
+      "size_bytes": 33208,
+      "archive_member": "raw/1f13a5377ed7af20e8539f61d4fe711956375999744f97e631b55520dcf6a943"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=77,86,87,88,89,91,94,95,97,98,99,100,101,102,103,104,105,113,114,115,119,123,124,125,126,128,130,131,132,133,134,135,136,138,143,149,150,151,155,156,157,184,527,734,741,746,751,761,784,786,788,806,807,808,823,836,842,855,877,883,894,898,900,902,903,906,907,908,909,917,930,931,941,951,956,958,960,964,965,996,1016,1018,1020,1021,1022,1023,1024,1025,1026,1027,1028,1042,1043,1044,1046,1047,1078,1099,1115,1117",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:16.176121+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=77,86,87,88,89,91,94,95,97,98,99,100,101,102,103,104,105,113,114,115,119,123,124,125,126,128,130,131,132,133,134,135,136,138,143,149,150,151,155,156,157,184,527,734,741,746,751,761,784,786,788,806,807,808,823,836,842,855,877,883,894,898,900,902,903,906,907,908,909,917,930,931,941,951,956,958,960,964,965,996,1016,1018,1020,1021,1022,1023,1024,1025,1026,1027,1028,1042,1043,1044,1046,1047,1078,1099,1115,1117",
+      "retrieved_at": "2026-10-03T07:11:16.335160+00:00",
+      "sha256": "2faee78b170db50406f78f0a19cc284611333b272a393b3e2bb3be3d29b116f9",
+      "size_bytes": 25031,
+      "archive_member": "raw/2faee78b170db50406f78f0a19cc284611333b272a393b3e2bb3be3d29b116f9"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/gatherer?items=788,806,807,808,823,836,842,855,877,883,894,898,900,902,903,906,907,908,909,917,930,931,941,951,956,958,960,964,965,996,1016,1018,1020,1021,1022,1023,1024,1025,1026,1027,1028,1042,1043,1044,1046,1047,1078,1099,1115,1117",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:16.212081+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/gatherer?items=788,806,807,808,823,836,842,855,877,883,894,898,900,902,903,906,907,908,909,917,930,931,941,951,956,958,960,964,965,996,1016,1018,1020,1021,1022,1023,1024,1025,1026,1027,1028,1042,1043,1044,1046,1047,1078,1099,1115,1117",
+      "retrieved_at": "2026-10-03T07:11:16.353554+00:00",
+      "sha256": "2b194c03737ba40657812eeb57d905845a4c6f61a04c3d44e7a12eb30438e7dd",
+      "size_bytes": 25352,
+      "archive_member": "raw/2b194c03737ba40657812eeb57d905845a4c6f61a04c3d44e7a12eb30438e7dd"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;12846:13883",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:16.357816+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;12846:13883",
+      "retrieved_at": "2026-10-03T07:11:16.745082+00:00",
+      "sha256": "273b98a739d1e8bec9f5a5024b072f7417aee301175a2ae79260a4420e75ab01",
+      "size_bytes": 493653,
+      "archive_member": "raw/273b98a739d1e8bec9f5a5024b072f7417aee301175a2ae79260a4420e75ab01"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;0:1496",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:16.216754+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151;4;1496",
+      "retrieved_at": "2026-10-03T07:11:16.903861+00:00",
+      "sha256": "c24174c4ff8e61249bd4dcdcc5a4d89891a6efdd689a085a017fab6f2d99b8a5",
+      "size_bytes": 577062,
+      "archive_member": "raw/c24174c4ff8e61249bd4dcdcc5a4d89891a6efdd689a085a017fab6f2d99b8a5"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;11588:12845",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:16.339324+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;11588:12845",
+      "retrieved_at": "2026-10-03T07:11:17.111713+00:00",
+      "sha256": "b2f7efa9301359d49d26117127a42e53e43fdc2bf9622a09946bfb30a5e14c76",
+      "size_bytes": 627560,
+      "archive_member": "raw/b2f7efa9301359d49d26117127a42e53e43fdc2bf9622a09946bfb30a5e14c76"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;10231:11587",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:16.306726+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;10231:11587",
+      "retrieved_at": "2026-10-03T07:11:17.319927+00:00",
+      "sha256": "a3f04f0b9f5036286963d81a9e10708c3372f0ab6d625e125690a9888715c7f2",
+      "size_bytes": 629356,
+      "archive_member": "raw/a3f04f0b9f5036286963d81a9e10708c3372f0ab6d625e125690a9888715c7f2"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;1497:2473",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:17.159618+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;1497:2473",
+      "retrieved_at": "2026-10-03T07:11:17.520333+00:00",
+      "sha256": "2dc9d7e2ca7ea9eed794d5828d31395844cd4a0f27630e1ec1c6eeec9d34b05b",
+      "size_bytes": 653056,
+      "archive_member": "raw/2dc9d7e2ca7ea9eed794d5828d31395844cd4a0f27630e1ec1c6eeec9d34b05b"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;15577:16500",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:17.368384+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;15577:16500",
+      "retrieved_at": "2026-10-03T07:11:17.733155+00:00",
+      "sha256": "82a00e2da1d9203758846e1398a4e149d04c88cfe77c27c2a32ebee331d5670a",
+      "size_bytes": 688018,
+      "archive_member": "raw/82a00e2da1d9203758846e1398a4e149d04c88cfe77c27c2a32ebee331d5670a"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;16501:18237",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:17.570771+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;16501:18237",
+      "retrieved_at": "2026-10-03T07:11:18.013111+00:00",
+      "sha256": "54441bed2783c9a02cf5f1a1a2dea473c19b8ae50b636526dd16c43ac26982fd",
+      "size_bytes": 682113,
+      "archive_member": "raw/54441bed2783c9a02cf5f1a1a2dea473c19b8ae50b636526dd16c43ac26982fd"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;13884:14817",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:16.780279+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;13884:14817",
+      "retrieved_at": "2026-10-03T07:11:18.114524+00:00",
+      "sha256": "bc1a56342a58ae41ca58c56e0f2d3d448a3aaf7a7629e265a83f1e3e2ad012eb",
+      "size_bytes": 710091,
+      "archive_member": "raw/bc1a56342a58ae41ca58c56e0f2d3d448a3aaf7a7629e265a83f1e3e2ad012eb"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;18238:19424",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:17.784477+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;18238:19424",
+      "retrieved_at": "2026-10-03T07:11:18.167391+00:00",
+      "sha256": "f7ce446dbdea3644cf8d584447d1c14c511e21525f77bfd8329bf0f230284de5",
+      "size_bytes": 655760,
+      "archive_member": "raw/f7ce446dbdea3644cf8d584447d1c14c511e21525f77bfd8329bf0f230284de5"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;14818:15576",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:16.945457+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;14818:15576",
+      "retrieved_at": "2026-10-03T07:11:18.266282+00:00",
+      "sha256": "f14cf80815d73e0f2b4a57f99e2dacee5a73913418139ba4fbd6588deeec309f",
+      "size_bytes": 758034,
+      "archive_member": "raw/f14cf80815d73e0f2b4a57f99e2dacee5a73913418139ba4fbd6588deeec309f"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;19425:20378",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:18.068886+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;19425:20378",
+      "retrieved_at": "2026-10-03T07:11:18.394846+00:00",
+      "sha256": "b290540d0135956949f70e5ca9d7c1797b722653a1c19c45b54b89767a7c9d04",
+      "size_bytes": 617466,
+      "archive_member": "raw/b290540d0135956949f70e5ca9d7c1797b722653a1c19c45b54b89767a7c9d04"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;20379:21429",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:18.171214+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;20379:21429",
+      "retrieved_at": "2026-10-03T07:11:18.547502+00:00",
+      "sha256": "305f68a292d5bfe82be25b24a36da5984046e255b114db6d55b343168fdfa1ba",
+      "size_bytes": 647680,
+      "archive_member": "raw/305f68a292d5bfe82be25b24a36da5984046e255b114db6d55b343168fdfa1ba"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;209626:220359",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:18.223832+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;209626:220359",
+      "retrieved_at": "2026-10-03T07:11:18.587413+00:00",
+      "sha256": "0aac0e420f3ce8c8a62e87f03373d92379012572aaf6a7ed274f4172fcf0f280",
+      "size_bytes": 643639,
+      "archive_member": "raw/0aac0e420f3ce8c8a62e87f03373d92379012572aaf6a7ed274f4172fcf0f280"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;21430:22658",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:18.326435+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;21430:22658",
+      "retrieved_at": "2026-10-03T07:11:18.687621+00:00",
+      "sha256": "7ec05047fe79bde27d23d2e4b7ab4df5ae6f565b9ec0343de103b4f536c94c27",
+      "size_bytes": 629345,
+      "archive_member": "raw/7ec05047fe79bde27d23d2e4b7ab4df5ae6f565b9ec0343de103b4f536c94c27"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;227205:239221",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:18.645262+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;227205:239221",
+      "retrieved_at": "2026-10-03T07:11:19.038366+00:00",
+      "sha256": "d2ebf4aa0fbed064834b178a0238ff597d04798efff2cd78d334829273564e94",
+      "size_bytes": 763440,
+      "archive_member": "raw/d2ebf4aa0fbed064834b178a0238ff597d04798efff2cd78d334829273564e94"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;22659:209625",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:18.597083+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;22659:209625",
+      "retrieved_at": "2026-10-03T07:11:19.156135+00:00",
+      "sha256": "4d0ff4262cb89b63d05a0e02b69b53fb57c586be117cdb512d20692cc78d72db",
+      "size_bytes": 666654,
+      "archive_member": "raw/4d0ff4262cb89b63d05a0e02b69b53fb57c586be117cdb512d20692cc78d72db"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;220360:227204",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:18.442416+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;220360:227204",
+      "retrieved_at": "2026-10-03T07:11:19.282954+00:00",
+      "sha256": "aeaaf5a86edde65a299cd2761a7a7aa57a73426e4af209f3b68066276b587f4c",
+      "size_bytes": 835225,
+      "archive_member": "raw/aeaaf5a86edde65a299cd2761a7a7aa57a73426e4af209f3b68066276b587f4c"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;250586:253923",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:19.207686+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;250586:253923",
+      "retrieved_at": "2026-10-03T07:11:19.509528+00:00",
+      "sha256": "94fc006fad61a0705b235fea1057db9d53356e16e11d3a736143959d296992a5",
+      "size_bytes": 667031,
+      "archive_member": "raw/94fc006fad61a0705b235fea1057db9d53356e16e11d3a736143959d296992a5"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;239222:250585",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:18.747299+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;239222:250585",
+      "retrieved_at": "2026-10-03T07:11:19.559697+00:00",
+      "sha256": "0ce8011174d9e28345d81ce66a533e81393d924fd0b684717be33a105a1d6301",
+      "size_bytes": 755703,
+      "archive_member": "raw/0ce8011174d9e28345d81ce66a533e81393d924fd0b684717be33a105a1d6301"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;2474:3242",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:19.096208+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;2474:3242",
+      "retrieved_at": "2026-10-03T07:11:19.651964+00:00",
+      "sha256": "a072f65dc94ebac9fe72395a75f97a0b291c33b3f99da1dc5a28e37d86878d2d",
+      "size_bytes": 643391,
+      "archive_member": "raw/a072f65dc94ebac9fe72395a75f97a0b291c33b3f99da1dc5a28e37d86878d2d"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;253924:264126",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:19.352709+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;253924:264126",
+      "retrieved_at": "2026-10-03T07:11:19.750867+00:00",
+      "sha256": "1025ed1bd577dcd71b207d1bb0bc03482b186ef9fbb6d44b5bcd3061a4533f77",
+      "size_bytes": 637972,
+      "archive_member": "raw/1025ed1bd577dcd71b207d1bb0bc03482b186ef9fbb6d44b5bcd3061a4533f77"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;272053:273483",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:19.619559+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;272053:273483",
+      "retrieved_at": "2026-10-03T07:11:20.028253+00:00",
+      "sha256": "e0191a4864c8d0adbb7bb3d4c0ad1118afec331c41453c25d8fe4f43292c3486",
+      "size_bytes": 768251,
+      "archive_member": "raw/e0191a4864c8d0adbb7bb3d4c0ad1118afec331c41453c25d8fe4f43292c3486"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;273484:275437",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:19.702071+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;273484:275437",
+      "retrieved_at": "2026-10-03T07:11:20.157046+00:00",
+      "sha256": "76e9da72e7f6e14281f9023aba1a7bc9f8c215dc612c3447ba69943d932eee94",
+      "size_bytes": 667537,
+      "archive_member": "raw/76e9da72e7f6e14281f9023aba1a7bc9f8c215dc612c3447ba69943d932eee94"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;264127:272052",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:19.559004+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;264127:272052",
+      "retrieved_at": "2026-10-03T07:11:20.287038+00:00",
+      "sha256": "d7eb7590bbd1c7dd6184196186de03600b54333a99e96f8bf53c1d2c7285b45d",
+      "size_bytes": 629641,
+      "archive_member": "raw/d7eb7590bbd1c7dd6184196186de03600b54333a99e96f8bf53c1d2c7285b45d"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;279229:284699",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:20.086792+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;279229:284699",
+      "retrieved_at": "2026-10-03T07:11:20.503261+00:00",
+      "sha256": "e1876fc11cb445976fc730831bc1263bb248900e639f93b14ff3f44f34b9acb4",
+      "size_bytes": 688505,
+      "archive_member": "raw/e1876fc11cb445976fc730831bc1263bb248900e639f93b14ff3f44f34b9acb4"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;275438:279228",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:19.799296+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;275438:279228",
+      "retrieved_at": "2026-10-03T07:11:20.628478+00:00",
+      "sha256": "6123bc1515e27d6684cf3d88978551b076b8cbe878248d686bd4a5cb2ad19184",
+      "size_bytes": 669494,
+      "archive_member": "raw/6123bc1515e27d6684cf3d88978551b076b8cbe878248d686bd4a5cb2ad19184"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;284700:2147483647",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:20.206352+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151;2;284700",
+      "retrieved_at": "2026-10-03T07:11:20.715081+00:00",
+      "sha256": "a46eab0db80986dbf64dfe25d3411cc191657cf4f9fdcb20349ef994beaa708d",
+      "size_bytes": 300838,
+      "archive_member": "raw/a46eab0db80986dbf64dfe25d3411cc191657cf4f9fdcb20349ef994beaa708d"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;3243:3956",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:20.332822+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;3243:3956",
+      "retrieved_at": "2026-10-03T07:11:20.715147+00:00",
+      "sha256": "9f73017ed003bfc70c22431dfbbea0f15371f543c66c3b4cebf9b79cba82c061",
+      "size_bytes": 615978,
+      "archive_member": "raw/9f73017ed003bfc70c22431dfbbea0f15371f543c66c3b4cebf9b79cba82c061"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;3957:4668",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:20.555935+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;3957:4668",
+      "retrieved_at": "2026-10-03T07:11:20.884974+00:00",
+      "sha256": "aab3203410ad0dea3090e1a6b8b8451daddaca687b460ed0aeafa92f1a9955c2",
+      "size_bytes": 665944,
+      "archive_member": "raw/aab3203410ad0dea3090e1a6b8b8451daddaca687b460ed0aeafa92f1a9955c2"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;4669:5390",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:20.679422+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;4669:5390",
+      "retrieved_at": "2026-10-03T07:11:21.073467+00:00",
+      "sha256": "a3a101dcb47ef9ff89c33a13cfc1137cebd8eb77d3c8a2554360d3ca41a7bd62",
+      "size_bytes": 591603,
+      "archive_member": "raw/a3a101dcb47ef9ff89c33a13cfc1137cebd8eb77d3c8a2554360d3ca41a7bd62"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;6250:7115",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:20.778174+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;6250:7115",
+      "retrieved_at": "2026-10-03T07:11:21.155451+00:00",
+      "sha256": "d2f8fc58bca9489c01c3afa1030b52f33f011dfeec8095d5d9a6f123109d7c5b",
+      "size_bytes": 696644,
+      "archive_member": "raw/d2f8fc58bca9489c01c3afa1030b52f33f011dfeec8095d5d9a6f123109d7c5b"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;5391:6249",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:20.731521+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;5391:6249",
+      "retrieved_at": "2026-10-03T07:11:21.197419+00:00",
+      "sha256": "08c4b278fe7846419d03e28062e3e2693a46d1a4ebbab7b6f7b1ff8e5872bf14",
+      "size_bytes": 592616,
+      "archive_member": "raw/08c4b278fe7846419d03e28062e3e2693a46d1a4ebbab7b6f7b1ff8e5872bf14"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;7116:8311",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:20.935456+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;7116:8311",
+      "retrieved_at": "2026-10-03T07:11:21.386891+00:00",
+      "sha256": "5dcb376147363db92e91d7571c746b63fdc567eaa946f7aa05ab95d5fc383939",
+      "size_bytes": 722817,
+      "archive_member": "raw/5dcb376147363db92e91d7571c746b63fdc567eaa946f7aa05ab95d5fc383939"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;8312:9334",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:21.117845+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;8312:9334",
+      "retrieved_at": "2026-10-03T07:11:21.478417+00:00",
+      "sha256": "8f5d4aed15bc44c687be6d5dbea4f4fbba7c213ad990fb0b82678aa4f0498169",
+      "size_bytes": 599353,
+      "archive_member": "raw/8f5d4aed15bc44c687be6d5dbea4f4fbba7c213ad990fb0b82678aa4f0498169"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;9335:10230",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:21.209709+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/items?filter=151:151;2:4;9335:10230",
+      "retrieved_at": "2026-10-03T07:11:21.653969+00:00",
+      "sha256": "301d59d8ba35b3e8904c5c9f89e2d8b1135470642d98e4582a00ee2bc2fc32d9",
+      "size_bytes": 746737,
+      "archive_member": "raw/301d59d8ba35b3e8904c5c9f89e2d8b1135470642d98e4582a00ee2bc2fc32d9"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;4782:7652",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:21.521196+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;4782:7652",
+      "retrieved_at": "2026-10-03T07:11:22.395224+00:00",
+      "sha256": "b9edd403e1f40742f7c73486c0836a257beee2e25cdaf8b2e475589a53e158e2",
+      "size_bytes": 477707,
+      "archive_member": "raw/b9edd403e1f40742f7c73486c0836a257beee2e25cdaf8b2e475589a53e158e2"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;0:742",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:21.253662+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/quests?filter=30;4;742",
+      "retrieved_at": "2026-10-03T07:11:22.481735+00:00",
+      "sha256": "22f92fffdfa01ff9b0ee65ca840eb231196d1cde64733e5b5ebda84ff6eb7f7f",
+      "size_bytes": 506740,
+      "archive_member": "raw/22f92fffdfa01ff9b0ee65ca840eb231196d1cde64733e5b5ebda84ff6eb7f7f"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;7653:8460",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:22.448673+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;7653:8460",
+      "retrieved_at": "2026-10-03T07:11:23.227994+00:00",
+      "sha256": "45f7714bbab3673ba0e563ba412463c2f59c862cca2b1c633c812cbf3c500805",
+      "size_bytes": 347649,
+      "archive_member": "raw/45f7714bbab3673ba0e563ba412463c2f59c862cca2b1c633c812cbf3c500805"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;1823:4781",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:21.445373+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;1823:4781",
+      "retrieved_at": "2026-10-03T07:11:23.266878+00:00",
+      "sha256": "c0fe756b7a1076bba3deec246cb26706e49a900c54d1eb189f53c116c037e56d",
+      "size_bytes": 470228,
+      "archive_member": "raw/c0fe756b7a1076bba3deec246cb26706e49a900c54d1eb189f53c116c037e56d"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;743:1822",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:21.712750+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;743:1822",
+      "retrieved_at": "2026-10-03T07:11:23.368818+00:00",
+      "sha256": "df8a26f9e18273359e553e13c5a54c275413f469cc9627fe149ffe816184ece0",
+      "size_bytes": 508975,
+      "archive_member": "raw/df8a26f9e18273359e553e13c5a54c275413f469cc9627fe149ffe816184ece0"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;8461:9268",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:22.529124+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;8461:9268",
+      "retrieved_at": "2026-10-03T07:11:23.492462+00:00",
+      "sha256": "c13ab8b4fb5fee76cef5aa9a7ad87cbd19644208fd389fb4ec8ecc7cc01452e3",
+      "size_bytes": 483070,
+      "archive_member": "raw/c13ab8b4fb5fee76cef5aa9a7ad87cbd19644208fd389fb4ec8ecc7cc01452e3"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/skills",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:23.419351+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/skills",
+      "retrieved_at": "2026-10-03T07:11:23.608676+00:00",
+      "sha256": "5604983891cc6760fd32f2474ca21374e3c6a9eb747c1c15833fe48c5804af38",
+      "size_bytes": 56859,
+      "archive_member": "raw/5604983891cc6760fd32f2474ca21374e3c6a9eb747c1c15833fe48c5804af38"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;98341:2147483647",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:23.318065+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/quests?filter=30;2;98341",
+      "retrieved_at": "2026-10-03T07:11:23.661668+00:00",
+      "sha256": "3c80b9d422e13ecefaaf2faf475a0650e4f6f040682e9905eee89d44374579be",
+      "size_bytes": 89335,
+      "archive_member": "raw/3c80b9d422e13ecefaaf2faf475a0650e4f6f040682e9905eee89d44374579be"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spell=400104",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:23.538884+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spell=400104/engrave-pants-shadowstep",
+      "retrieved_at": "2026-10-03T07:11:23.850937+00:00",
+      "sha256": "929441a717e684f55e751b15888fe680f7eed6938cecba9c240ff298a25fc700",
+      "size_bytes": 39230,
+      "archive_member": "raw/929441a717e684f55e751b15888fe680f7eed6938cecba9c240ff298a25fc700"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spell=402861",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:23.609536+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spell=402861/engrave-pants-shadowfiend",
+      "retrieved_at": "2026-10-03T07:11:23.853794+00:00",
+      "sha256": "e07ad2bc51e6d5706d283c4b965948a2a2edd768bf8b41caac186e369ec5fb7e",
+      "size_bytes": 39281,
+      "archive_member": "raw/e07ad2bc51e6d5706d283c4b965948a2a2edd768bf8b41caac186e369ec5fb7e"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spell=403446",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:23.667420+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spell=403446/engrave-pants-commanding-shout",
+      "retrieved_at": "2026-10-03T07:11:23.877465+00:00",
+      "sha256": "0fd5e359062b2a6c6e8ec7be1f84bf020c0b1bc33eb4706385a7cf3d0e768fa9",
+      "size_bytes": 39334,
+      "archive_member": "raw/0fd5e359062b2a6c6e8ec7be1f84bf020c0b1bc33eb4706385a7cf3d0e768fa9"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spell=416084",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:23.851206+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spell=416084/engrave-belt-aspect-of-the-viper",
+      "retrieved_at": "2026-10-03T07:11:24.120399+00:00",
+      "sha256": "fdc9ef5520360d838a43acc04c68c3437422a86223ef51b04926d57499fe2561",
+      "size_bytes": 41355,
+      "archive_member": "raw/fdc9ef5520360d838a43acc04c68c3437422a86223ef51b04926d57499fe2561"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;11413:12833",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:23.877656+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;11413:12833",
+      "retrieved_at": "2026-10-03T07:11:24.657492+00:00",
+      "sha256": "76aff4942d667b85d4a93fbafcc907c4fa4f461d636236e0863acc262cf08c82",
+      "size_bytes": 522547,
+      "archive_member": "raw/76aff4942d667b85d4a93fbafcc907c4fa4f461d636236e0863acc262cf08c82"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1213336:1218576",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:24.120813+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1213336:1218576",
+      "retrieved_at": "2026-10-03T07:11:24.921991+00:00",
+      "sha256": "a351d31d777d458322a74b0167078d9fe026765397f3ab13b1472cc9b1df7449",
+      "size_bytes": 409779,
+      "archive_member": "raw/a351d31d777d458322a74b0167078d9fe026765397f3ab13b1472cc9b1df7449"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;9269:98340",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:23.266413+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/quests?filter=30:30;2:4;9269:98340",
+      "retrieved_at": "2026-10-03T07:11:25.115672+00:00",
+      "sha256": "d003d9d49990b233c5e4ae6887ff9849010d4ad2537cbdccd1161b51246d3fa5",
+      "size_bytes": 526933,
+      "archive_member": "raw/d003d9d49990b233c5e4ae6887ff9849010d4ad2537cbdccd1161b51246d3fa5"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;0:1809",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:23.853998+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14;4;1809",
+      "retrieved_at": "2026-10-03T07:11:25.380438+00:00",
+      "sha256": "85719905583b9c4786a26b6de0ab44060d76550dd81a91ba15c1e3267dae0037",
+      "size_bytes": 465276,
+      "archive_member": "raw/85719905583b9c4786a26b6de0ab44060d76550dd81a91ba15c1e3267dae0037"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1218577:1220264",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:24.697687+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1218577:1220264",
+      "retrieved_at": "2026-10-03T07:11:25.640289+00:00",
+      "sha256": "3c5f03c4dc74e53c40a53abee9e999c7a7ec8794685128f6a0b929f675f8ac41",
+      "size_bytes": 470300,
+      "archive_member": "raw/3c5f03c4dc74e53c40a53abee9e999c7a7ec8794685128f6a0b929f675f8ac41"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1225503:1231764",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:25.177032+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1225503:1231764",
+      "retrieved_at": "2026-10-03T07:11:26.022941+00:00",
+      "sha256": "65a5fb334d9a40083c16a4a7f1ea0fe4cf436927cd890e0e319cd5f112a0a5f2",
+      "size_bytes": 429130,
+      "archive_member": "raw/65a5fb334d9a40083c16a4a7f1ea0fe4cf436927cd890e0e319cd5f112a0a5f2"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1231765:1237719",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:25.419418+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1231765:1237719",
+      "retrieved_at": "2026-10-03T07:11:26.149868+00:00",
+      "sha256": "8caee9de4be4be3ff69bd02a17818d752c7c95fa33ca618a9d8c4df6be880c9c",
+      "size_bytes": 376168,
+      "archive_member": "raw/8caee9de4be4be3ff69bd02a17818d752c7c95fa33ca618a9d8c4df6be880c9c"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1237720:1250941",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:25.668914+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1237720:1250941",
+      "retrieved_at": "2026-10-03T07:11:26.467540+00:00",
+      "sha256": "213ddb507ac64545d8c3f8d3077e4286ee9b9279d508072411530b3b8399e3c6",
+      "size_bytes": 470870,
+      "archive_member": "raw/213ddb507ac64545d8c3f8d3077e4286ee9b9279d508072411530b3b8399e3c6"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1220265:1225502",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:24.950289+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1220265:1225502",
+      "retrieved_at": "2026-10-03T07:11:26.789848+00:00",
+      "sha256": "ac94bb2eee597b8cf5ed7a5f616432bd3b85dce3669222ef484b47c86b65cfac",
+      "size_bytes": 387116,
+      "archive_member": "raw/ac94bb2eee597b8cf5ed7a5f616432bd3b85dce3669222ef484b47c86b65cfac"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1257460:1271422",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:26.177231+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1257460:1271422",
+      "retrieved_at": "2026-10-03T07:11:26.972148+00:00",
+      "sha256": "02007357f75b29b7512b014d1e4676fcdb85d336f497c2ea387cf793f97429aa",
+      "size_bytes": 443694,
+      "archive_member": "raw/02007357f75b29b7512b014d1e4676fcdb85d336f497c2ea387cf793f97429aa"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1271423:1289680",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:26.495427+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1271423:1289680",
+      "retrieved_at": "2026-10-03T07:11:27.323263+00:00",
+      "sha256": "03a9440dadaa5f17a6d5abe86e4a8f10b36c4347db239888465b7434c055d789",
+      "size_bytes": 351708,
+      "archive_member": "raw/03a9440dadaa5f17a6d5abe86e4a8f10b36c4347db239888465b7434c055d789"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1250942:1257459",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:26.052329+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1250942:1257459",
+      "retrieved_at": "2026-10-03T07:11:27.507230+00:00",
+      "sha256": "2fc95656276bb3ea20f861bf4964981e7c1e8eb76753ce36b6a79c668f1e96f9",
+      "size_bytes": 602122,
+      "archive_member": "raw/2fc95656276bb3ea20f861bf4964981e7c1e8eb76753ce36b6a79c668f1e96f9"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;12834:14422",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:26.816199+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;12834:14422",
+      "retrieved_at": "2026-10-03T07:11:28.652118+00:00",
+      "sha256": "a5263841c0fc7ce1ef05afb811d61fd244c25e3c2c8a2d07cce4c73552dfa38c",
+      "size_bytes": 504830,
+      "archive_member": "raw/a5263841c0fc7ce1ef05afb811d61fd244c25e3c2c8a2d07cce4c73552dfa38c"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1297608:1306683",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:27.347227+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1297608:1306683",
+      "retrieved_at": "2026-10-03T07:11:28.901292+00:00",
+      "sha256": "2097863d3739f3135603b37566bfc81f4a7cf2d7545b0c4a74e370b4855438dd",
+      "size_bytes": 454627,
+      "archive_member": "raw/2097863d3739f3135603b37566bfc81f4a7cf2d7545b0c4a74e370b4855438dd"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1289681:1297607",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:26.998892+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1289681:1297607",
+      "retrieved_at": "2026-10-03T07:11:28.971905+00:00",
+      "sha256": "6386526879911c4ae1fa22eb4fbcc1758139dbca658d03d3427d4c07f355dde0",
+      "size_bytes": 425463,
+      "archive_member": "raw/6386526879911c4ae1fa22eb4fbcc1758139dbca658d03d3427d4c07f355dde0"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1317849:2147483647",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:28.693143+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14;2;1317849",
+      "retrieved_at": "2026-10-03T07:11:29.198101+00:00",
+      "sha256": "406918d1e2aafd7befe1fede715870b22dbd8e0a7bbdd36465110088293605f9",
+      "size_bytes": 212984,
+      "archive_member": "raw/406918d1e2aafd7befe1fede715870b22dbd8e0a7bbdd36465110088293605f9"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1306684:1317848",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:27.541315+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1306684:1317848",
+      "retrieved_at": "2026-10-03T07:11:29.238724+00:00",
+      "sha256": "2f52c0e426027963f4859208777484a8bbf0a29f5210c37c650de148fc6d4f87",
+      "size_bytes": 388628,
+      "archive_member": "raw/2f52c0e426027963f4859208777484a8bbf0a29f5210c37c650de148fc6d4f87"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;15571:16635",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:28.996394+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;15571:16635",
+      "retrieved_at": "2026-10-03T07:11:29.796271+00:00",
+      "sha256": "46f14a6f0c5fc00a1a8b6eb3f3b608b868ab5d3f0934e634676be8e5ba8022dc",
+      "size_bytes": 420468,
+      "archive_member": "raw/46f14a6f0c5fc00a1a8b6eb3f3b608b868ab5d3f0934e634676be8e5ba8022dc"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;14423:15570",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:28.927827+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;14423:15570",
+      "retrieved_at": "2026-10-03T07:11:30.389062+00:00",
+      "sha256": "6a4ce1d98c48766fbbecad8d91021f861b3c52d034bb6420d86c22b5b73a40de",
+      "size_bytes": 401352,
+      "archive_member": "raw/6a4ce1d98c48766fbbecad8d91021f861b3c52d034bb6420d86c22b5b73a40de"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1810:3492",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:29.827637+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;1810:3492",
+      "retrieved_at": "2026-10-03T07:11:30.586359+00:00",
+      "sha256": "fddfb28d770f71a4961cb46bd7074abb56877d610b1dea481e54ea095270136f",
+      "size_bytes": 495733,
+      "archive_member": "raw/fddfb28d770f71a4961cb46bd7074abb56877d610b1dea481e54ea095270136f"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;16636:17766",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:29.207300+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;16636:17766",
+      "retrieved_at": "2026-10-03T07:11:30.743057+00:00",
+      "sha256": "20f3b2295f06b64f09d51b3f65ad6b864569e3c7075f7e87b6981530025754e8",
+      "size_bytes": 491142,
+      "archive_member": "raw/20f3b2295f06b64f09d51b3f65ad6b864569e3c7075f7e87b6981530025754e8"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;17767:18818",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:29.264049+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;17767:18818",
+      "retrieved_at": "2026-10-03T07:11:31.127047+00:00",
+      "sha256": "2f7dc30c2fe641789030ae105cb002aa61b7dd636b41a34b091e9225b9f28855",
+      "size_bytes": 462971,
+      "archive_member": "raw/2f7dc30c2fe641789030ae105cb002aa61b7dd636b41a34b091e9225b9f28855"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;20111:21186",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:30.622757+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;20111:21186",
+      "retrieved_at": "2026-10-03T07:11:31.444079+00:00",
+      "sha256": "c2e3a96f4f00dd35efc8f8f2c70b3fc66eae40985f3efc6390ff69bf73d5c15f",
+      "size_bytes": 490981,
+      "archive_member": "raw/c2e3a96f4f00dd35efc8f8f2c70b3fc66eae40985f3efc6390ff69bf73d5c15f"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;18819:20110",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:30.419336+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;18819:20110",
+      "retrieved_at": "2026-10-03T07:11:31.877599+00:00",
+      "sha256": "001ce5c76284d72dee9002f62acca6e3e4d96e4412daee8f9f61d6e1e47db8b3",
+      "size_bytes": 536018,
+      "archive_member": "raw/001ce5c76284d72dee9002f62acca6e3e4d96e4412daee8f9f61d6e1e47db8b3"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;23517:24485",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:31.481049+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;23517:24485",
+      "retrieved_at": "2026-10-03T07:11:32.370489+00:00",
+      "sha256": "1b3d3d7897c62ea4ddec3d2337bb0144d03009be11d9387c89bea968abf26c5c",
+      "size_bytes": 471163,
+      "archive_member": "raw/1b3d3d7897c62ea4ddec3d2337bb0144d03009be11d9387c89bea968abf26c5c"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;21187:22659",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:30.781746+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;21187:22659",
+      "retrieved_at": "2026-10-03T07:11:32.660308+00:00",
+      "sha256": "feb51f7827a7c2cac59fcdaa61fcb1771a3b57ee84365a5487ae87106ea9f1b5",
+      "size_bytes": 399538,
+      "archive_member": "raw/feb51f7827a7c2cac59fcdaa61fcb1771a3b57ee84365a5487ae87106ea9f1b5"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;24486:25717",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:31.918320+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;24486:25717",
+      "retrieved_at": "2026-10-03T07:11:32.728248+00:00",
+      "sha256": "57b61e32f1134cc22f1f5304f90f69e03f1b403e357745fe5b49e50a64801d29",
+      "size_bytes": 456842,
+      "archive_member": "raw/57b61e32f1134cc22f1f5304f90f69e03f1b403e357745fe5b49e50a64801d29"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;22660:23516",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:31.176318+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;22660:23516",
+      "retrieved_at": "2026-10-03T07:11:33.066635+00:00",
+      "sha256": "7fbfb4274e9b5b4eccb6807fbc0c7c52a8984395d7ad7b5162928d6fe080785d",
+      "size_bytes": 441101,
+      "archive_member": "raw/7fbfb4274e9b5b4eccb6807fbc0c7c52a8984395d7ad7b5162928d6fe080785d"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;25718:26536",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:32.402314+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;25718:26536",
+      "retrieved_at": "2026-10-03T07:11:33.241237+00:00",
+      "sha256": "70dd7de82bb8bc37db443858ce67bd763dd530d86746b39f860c938f9b93cf43",
+      "size_bytes": 413159,
+      "archive_member": "raw/70dd7de82bb8bc37db443858ce67bd763dd530d86746b39f860c938f9b93cf43"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;29255:367985",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:33.096912+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;29255:367985",
+      "retrieved_at": "2026-10-03T07:11:34.087948+00:00",
+      "sha256": "17f2b39beb6eff8c01509205bcfe273f950e505c15e9376434c28e5b115ec25e",
+      "size_bytes": 371288,
+      "archive_member": "raw/17f2b39beb6eff8c01509205bcfe273f950e505c15e9376434c28e5b115ec25e"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;26537:28140",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:32.688848+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;26537:28140",
+      "retrieved_at": "2026-10-03T07:11:34.269335+00:00",
+      "sha256": "65243943491276319f7c6ce5bbd512d088b65a0ccb26f815b669f654d8e6129e",
+      "size_bytes": 426642,
+      "archive_member": "raw/65243943491276319f7c6ce5bbd512d088b65a0ccb26f815b669f654d8e6129e"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;28141:29254",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:32.762347+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;28141:29254",
+      "retrieved_at": "2026-10-03T07:11:34.618101+00:00",
+      "sha256": "db42d725339b8007e6d208edbb38655bd80d15a72f309bc6bf5db937dc516939",
+      "size_bytes": 415823,
+      "archive_member": "raw/db42d725339b8007e6d208edbb38655bd80d15a72f309bc6bf5db937dc516939"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;3493:4701",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:33.273171+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;3493:4701",
+      "retrieved_at": "2026-10-03T07:11:34.693919+00:00",
+      "sha256": "377eadd20824d68337466a434eeffe1b21faa02591f6b19ff8843850e07713a8",
+      "size_bytes": 459698,
+      "archive_member": "raw/377eadd20824d68337466a434eeffe1b21faa02591f6b19ff8843850e07713a8"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;367986:409751",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:34.116075+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;367986:409751",
+      "retrieved_at": "2026-10-03T07:11:35.574036+00:00",
+      "sha256": "bfefc71ef752ded51f9925a9ba2744cf4575837f6d364642e561a04da44cc4e1",
+      "size_bytes": 579374,
+      "archive_member": "raw/bfefc71ef752ded51f9925a9ba2744cf4575837f6d364642e561a04da44cc4e1"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;409752:423139",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:34.300260+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;409752:423139",
+      "retrieved_at": "2026-10-03T07:11:36.168265+00:00",
+      "sha256": "e34dbe34cd3b1eb85acbcb2999bc55c898801d654c774e14f4f7f791d6988a75",
+      "size_bytes": 559032,
+      "archive_member": "raw/e34dbe34cd3b1eb85acbcb2999bc55c898801d654c774e14f4f7f791d6988a75"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;431567:437621",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:34.725210+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;431567:437621",
+      "retrieved_at": "2026-10-03T07:11:36.251523+00:00",
+      "sha256": "05bc18f35cd5a1d9966a372d79cd55d2bbcfd8f0c9d232d78959c5ea8e332062",
+      "size_bytes": 447096,
+      "archive_member": "raw/05bc18f35cd5a1d9966a372d79cd55d2bbcfd8f0c9d232d78959c5ea8e332062"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;437622:445799",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:35.613280+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;437622:445799",
+      "retrieved_at": "2026-10-03T07:11:36.445246+00:00",
+      "sha256": "089a90aa7f24817374d8ea94a881a493188de6106a3e6b746667911aaec0c262",
+      "size_bytes": 430180,
+      "archive_member": "raw/089a90aa7f24817374d8ea94a881a493188de6106a3e6b746667911aaec0c262"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;423140:431566",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:34.647627+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;423140:431566",
+      "retrieved_at": "2026-10-03T07:11:36.518575+00:00",
+      "sha256": "71e063b174bc31349d5686e63d9814f63b99fb8aaa6c477b1272891b71b54a86",
+      "size_bytes": 519719,
+      "archive_member": "raw/71e063b174bc31349d5686e63d9814f63b99fb8aaa6c477b1272891b71b54a86"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;445800:456221",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:36.203544+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;445800:456221",
+      "retrieved_at": "2026-10-03T07:11:37.025559+00:00",
+      "sha256": "ab6f0a8e8db15e907c08f3c790c6b9ce5580d2408a5705768398a4d3c6d847f3",
+      "size_bytes": 417846,
+      "archive_member": "raw/ab6f0a8e8db15e907c08f3c790c6b9ce5580d2408a5705768398a4d3c6d847f3"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;456222:461686",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:36.279311+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;456222:461686",
+      "retrieved_at": "2026-10-03T07:11:37.159544+00:00",
+      "sha256": "89bf3bfb653f746714f4c4e3f18ad2ec438e2d9ee430108f67c8f2103e885219",
+      "size_bytes": 398167,
+      "archive_member": "raw/89bf3bfb653f746714f4c4e3f18ad2ec438e2d9ee430108f67c8f2103e885219"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;461687:468064",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:36.474378+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;461687:468064",
+      "retrieved_at": "2026-10-03T07:11:37.367832+00:00",
+      "sha256": "3efd9922b43e3817952b3cb2d8be2ca3e4ff2bab9e1d556456d3a72ff51a25aa",
+      "size_bytes": 397385,
+      "archive_member": "raw/3efd9922b43e3817952b3cb2d8be2ca3e4ff2bab9e1d556456d3a72ff51a25aa"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;468065:1213335",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:36.548720+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;468065:1213335",
+      "retrieved_at": "2026-10-03T07:11:37.510433+00:00",
+      "sha256": "e913c0cd4e415612be82bc3e24f179b3f692ef2bdb711afd4f480f5bd953a124",
+      "size_bytes": 399987,
+      "archive_member": "raw/e913c0cd4e415612be82bc3e24f179b3f692ef2bdb711afd4f480f5bd953a124"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;4702:6089",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:37.052127+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;4702:6089",
+      "retrieved_at": "2026-10-03T07:11:37.772227+00:00",
+      "sha256": "f514b2581006a7d223194e113ed786ae9b3b1ab27b929f7640e5852f94545828",
+      "size_bytes": 414644,
+      "archive_member": "raw/f514b2581006a7d223194e113ed786ae9b3b1ab27b929f7640e5852f94545828"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;6090:7412",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:37.187237+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;6090:7412",
+      "retrieved_at": "2026-10-03T07:11:37.963123+00:00",
+      "sha256": "903692db3886de0c7022c031602bd9d94aac267902da00d1c9aba62e6bfc1c2b",
+      "size_bytes": 460860,
+      "archive_member": "raw/903692db3886de0c7022c031602bd9d94aac267902da00d1c9aba62e6bfc1c2b"
+    },
+    {
+      "url": "https://nether.wowhead.com/forever/data/mount?dv=10",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:37.997907+00:00",
+      "status": 200,
+      "final_url": "https://nether.wowhead.com/forever/data/mount?dv=10",
+      "retrieved_at": "2026-10-03T07:11:38.083494+00:00",
+      "sha256": "0d3dbe558d230125133e659c20b0afb1f60f0d037d42449e845a600a0841e427",
+      "size_bytes": 73389,
+      "archive_member": "raw/0d3dbe558d230125133e659c20b0afb1f60f0d037d42449e845a600a0841e427"
+    },
+    {
+      "url": "https://nether.wowhead.com/forever/data/petspecies?dv=8",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:38.095108+00:00",
+      "status": 200,
+      "final_url": "https://nether.wowhead.com/forever/data/petspecies?dv=8",
+      "retrieved_at": "2026-10-03T07:11:38.147701+00:00",
+      "sha256": "105a0fcbaf849092e2df5a7c6678dc1597e88bbb06b0765f1f088b8e08f54257",
+      "size_bytes": 57026,
+      "archive_member": "raw/105a0fcbaf849092e2df5a7c6678dc1597e88bbb06b0765f1f088b8e08f54257"
+    },
+    {
+      "url": "https://nether.wowhead.com/forever/data/item-bonuses?dv=19",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:38.157315+00:00",
+      "status": 200,
+      "final_url": "https://nether.wowhead.com/forever/data/item-bonuses?dv=19",
+      "retrieved_at": "2026-10-03T07:11:38.254327+00:00",
+      "sha256": "92d054f6ad7191668409b71435cd87d2bf1dfa432caac263ac635b70e9583a79",
+      "size_bytes": 55367,
+      "archive_member": "raw/92d054f6ad7191668409b71435cd87d2bf1dfa432caac263ac635b70e9583a79"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;8408:9973",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:37.537167+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;8408:9973",
+      "retrieved_at": "2026-10-03T07:11:38.259811+00:00",
+      "sha256": "90d07548f3364e519b246930a101135d4636cf839b53ff659257f6f33007d09b",
+      "size_bytes": 518105,
+      "archive_member": "raw/90d07548f3364e519b246930a101135d4636cf839b53ff659257f6f33007d09b"
+    },
+    {
+      "url": "https://nether.wowhead.com/forever/data/gear-planner?dv=59",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:38.259229+00:00",
+      "status": 200,
+      "final_url": "https://nether.wowhead.com/forever/data/gear-planner?dv=59",
+      "retrieved_at": "2026-10-03T07:11:38.428080+00:00",
+      "sha256": "30a4accc59e35df5a1fb731f09527a1c1f61f0ad7826bca36e34e713ded83cdb",
+      "size_bytes": 7216400,
+      "archive_member": "raw/30a4accc59e35df5a1fb731f09527a1c1f61f0ad7826bca36e34e713ded83cdb"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;9974:11412",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:37.803099+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;9974:11412",
+      "retrieved_at": "2026-10-03T07:11:38.629721+00:00",
+      "sha256": "c365fdef54dc5fc12bfd7158f92523f67d022201f20ba430b16f9b0488cefccf",
+      "size_bytes": 584689,
+      "archive_member": "raw/c365fdef54dc5fc12bfd7158f92523f67d022201f20ba430b16f9b0488cefccf"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;7413:8407",
+      "source_id": "wowhead-forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:37.393959+00:00",
+      "status": 200,
+      "final_url": "https://www.wowhead.com/forever/spells?filter=14:14;2:4;7413:8407",
+      "retrieved_at": "2026-10-03T07:11:38.813074+00:00",
+      "sha256": "2a8c0d512e8eb915519e86bc4f727f87873d9bb554560618b83085dc18c8c961",
+      "size_bytes": 474921,
+      "archive_member": "raw/2a8c0d512e8eb915519e86bc4f727f87873d9bb554560618b83085dc18c8c961"
+    },
+    {
+      "url": "https://api.github.com/repos/Questie/QuestieDB/commits/HEAD",
+      "source_id": "Questie/QuestieDB",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:38.870695+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/Questie/QuestieDB/commits/HEAD",
+      "retrieved_at": "2026-10-03T07:11:39.166953+00:00",
+      "sha256": "f9250ca036deef1e161139e1cb758b29df468d806c5509bd1d886e1bf4b78c27",
+      "size_bytes": 147980,
+      "archive_member": "raw/f9250ca036deef1e161139e1cb758b29df468d806c5509bd1d886e1bf4b78c27"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/cac1eff815923f896d082764d023cf812454a023/src/corrections/Forever/generated/foreverBaseQuest.lua",
+      "source_id": "Questie/QuestieDB",
+      "source_version": "cac1eff815923f896d082764d023cf812454a023",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:39.167525+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/Questie/QuestieDB/cac1eff815923f896d082764d023cf812454a023/src/corrections/Forever/generated/foreverBaseQuest.lua",
+      "retrieved_at": "2026-10-03T07:11:39.472703+00:00",
+      "sha256": "db7845684eac678edb47d8c530fcc0c321b835e257e35795e516aaf6bb674643",
+      "size_bytes": 499107,
+      "archive_member": "raw/db7845684eac678edb47d8c530fcc0c321b835e257e35795e516aaf6bb674643"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/cac1eff815923f896d082764d023cf812454a023/data/Forever/foreverQuestDB.lua",
+      "source_id": "Questie/QuestieDB",
+      "source_version": "cac1eff815923f896d082764d023cf812454a023",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:39.478118+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/Questie/QuestieDB/cac1eff815923f896d082764d023cf812454a023/data/Forever/foreverQuestDB.lua",
+      "retrieved_at": "2026-10-03T07:11:39.733962+00:00",
+      "sha256": "d5be8516877505334f02073826ea0f22a394ddbf604bb5a33f5a39de5bb1ee87",
+      "size_bytes": 1057548,
+      "archive_member": "raw/d5be8516877505334f02073826ea0f22a394ddbf604bb5a33f5a39de5bb1ee87"
+    },
+    {
+      "url": "https://api.github.com/repos/wheelbarrel00/EverythingQuests/commits/HEAD",
+      "source_id": "wheelbarrel00/EverythingQuests",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:39.754750+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/wheelbarrel00/EverythingQuests/commits/HEAD",
+      "retrieved_at": "2026-10-03T07:11:40.288875+00:00",
+      "sha256": "4a5ca063962ea03bc4ac78769deb1ad2fcc925becf4354157edbad620c9c667b",
+      "size_bytes": 281868,
+      "archive_member": "raw/4a5ca063962ea03bc4ac78769deb1ad2fcc925becf4354157edbad620c9c667b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wheelbarrel00/EverythingQuests/5044142504baf75e69e67a46158cca5f889325cc/Data/QuestAvailable_Forever.lua",
+      "source_id": "wheelbarrel00/EverythingQuests",
+      "source_version": "5044142504baf75e69e67a46158cca5f889325cc",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:40.290847+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/wheelbarrel00/EverythingQuests/5044142504baf75e69e67a46158cca5f889325cc/Data/QuestAvailable_Forever.lua",
+      "retrieved_at": "2026-10-03T07:11:40.503522+00:00",
+      "sha256": "bb19c404f88c0bf2eddfcce4718720e5030493276acdce32714ec75153b15d95",
+      "size_bytes": 517185,
+      "archive_member": "raw/bb19c404f88c0bf2eddfcce4718720e5030493276acdce32714ec75153b15d95"
+    },
+    {
+      "url": "https://api.github.com/repos/LechuckThePirate/Completao/commits/HEAD",
+      "source_id": "LechuckThePirate/Completao",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:40.521203+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/LechuckThePirate/Completao/commits/HEAD",
+      "retrieved_at": "2026-10-03T07:11:40.870593+00:00",
+      "sha256": "323d94a50c97c158f507617d2d587d69bf726580daeb802ec7a2add026ffa43c",
+      "size_bytes": 7101,
+      "archive_member": "raw/323d94a50c97c158f507617d2d587d69bf726580daeb802ec7a2add026ffa43c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LechuckThePirate/Completao/6233a1f9dc2cb6f6764d7c90b6d6278db35fcf46/Data/Generated/ForeverNew.lua",
+      "source_id": "LechuckThePirate/Completao",
+      "source_version": "6233a1f9dc2cb6f6764d7c90b6d6278db35fcf46",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:40.870890+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/LechuckThePirate/Completao/6233a1f9dc2cb6f6764d7c90b6d6278db35fcf46/Data/Generated/ForeverNew.lua",
+      "retrieved_at": "2026-10-03T07:11:41.186725+00:00",
+      "sha256": "c82f7097488826ea357d1d0c1cb9d45b8a2c7f13265c17c3c9bf07767865cc65",
+      "size_bytes": 487701,
+      "archive_member": "raw/c82f7097488826ea357d1d0c1cb9d45b8a2c7f13265c17c3c9bf07767865cc65"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/cac1eff815923f896d082764d023cf812454a023/src/corrections/Forever/generated/foreverBaseItem.lua",
+      "source_id": "Questie/QuestieDB",
+      "source_version": "cac1eff815923f896d082764d023cf812454a023",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:41.190917+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/Questie/QuestieDB/cac1eff815923f896d082764d023cf812454a023/src/corrections/Forever/generated/foreverBaseItem.lua",
+      "retrieved_at": "2026-10-03T07:11:41.485095+00:00",
+      "sha256": "e7712eec044cd3e126294673d648c0da8ea419f608fa7a90aca4cb4efbde13eb",
+      "size_bytes": 2471956,
+      "archive_member": "raw/e7712eec044cd3e126294673d648c0da8ea419f608fa7a90aca4cb4efbde13eb"
+    },
+    {
+      "url": "https://api.github.com/repos/ElliotWood/Forever/commits/HEAD",
+      "source_id": "ElliotWood/Forever",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:41.553626+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/ElliotWood/Forever/commits/HEAD",
+      "retrieved_at": "2026-10-03T07:11:41.870189+00:00",
+      "sha256": "7a2ad833a3e8082e64d16aca66fedd5eebcd8b2b2dcd3f90a95de3ee29596d3a",
+      "size_bytes": 6363,
+      "archive_member": "raw/7a2ad833a3e8082e64d16aca66fedd5eebcd8b2b2dcd3f90a95de3ee29596d3a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ElliotWood/Forever/9b97945c6c2fcc896cfe3dc1a629b58294f57d9c/assets/db_inputs/wowhead_forever_gearplanner.txt",
+      "source_id": "ElliotWood/Forever",
+      "source_version": "9b97945c6c2fcc896cfe3dc1a629b58294f57d9c",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:41.870481+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/ElliotWood/Forever/9b97945c6c2fcc896cfe3dc1a629b58294f57d9c/assets/db_inputs/wowhead_forever_gearplanner.txt",
+      "retrieved_at": "2026-10-03T07:11:42.427555+00:00",
+      "sha256": "81db2183e00ea4857250da80f335de90aa6c4ad43b5937b3889ce76082c9b3d5",
+      "size_bytes": 7241623,
+      "archive_member": "raw/81db2183e00ea4857250da80f335de90aa6c4ad43b5937b3889ce76082c9b3d5"
+    },
+    {
+      "url": "https://thewowdb.com/wow-forever/currencies/",
+      "source_id": "thewowdb",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:42.554518+00:00",
+      "status": 200,
+      "final_url": "https://thewowdb.com/wow-forever/currencies/",
+      "retrieved_at": "2026-10-03T07:11:43.008178+00:00",
+      "sha256": "faff3dd3c7c0b3e5150adbffbbfbf3b7a3df905e4f2ac58aaf82d2148cb45e9a",
+      "size_bytes": 27712,
+      "archive_member": "raw/faff3dd3c7c0b3e5150adbffbbfbf3b7a3df905e4f2ac58aaf82d2148cb45e9a"
+    },
+    {
+      "url": "https://thewowdb.com/wow-forever/currency/darkmoon-prize-ticket-515/",
+      "source_id": "thewowdb",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:43.008584+00:00",
+      "status": 200,
+      "final_url": "https://thewowdb.com/wow-forever/currency/darkmoon-prize-ticket-515/",
+      "retrieved_at": "2026-10-03T07:11:43.089165+00:00",
+      "sha256": "672e6c60de8eed6e10b07772adcd5542968863e874b7712826df2b5796d9162f",
+      "size_bytes": 21777,
+      "archive_member": "raw/672e6c60de8eed6e10b07772adcd5542968863e874b7712826df2b5796d9162f"
+    },
+    {
+      "url": "https://thewowdb.com/wow-forever/currency/honor-points-1792/",
+      "source_id": "thewowdb",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:43.089404+00:00",
+      "status": 200,
+      "final_url": "https://thewowdb.com/wow-forever/currency/honor-points-1792/",
+      "retrieved_at": "2026-10-03T07:11:43.151317+00:00",
+      "sha256": "cc3f540aefde57c930a91e2d67dfa14f64533b84c0d82d8cd5f9c7ebebc55e42",
+      "size_bytes": 24304,
+      "archive_member": "raw/cc3f540aefde57c930a91e2d67dfa14f64533b84c0d82d8cd5f9c7ebebc55e42"
+    },
+    {
+      "url": "https://thewowdb.com/wow-forever/currency/merchant-s-favor-3402/",
+      "source_id": "thewowdb",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:43.151486+00:00",
+      "status": 200,
+      "final_url": "https://thewowdb.com/wow-forever/currency/merchant-s-favor-3402/",
+      "retrieved_at": "2026-10-03T07:11:43.202493+00:00",
+      "sha256": "e1f246e06d09a2153dbe6a91a9dd1ea99e4a3e0ad164b6a1ada71a43f5157514",
+      "size_bytes": 22256,
+      "archive_member": "raw/e1f246e06d09a2153dbe6a91a9dd1ea99e4a3e0ad164b6a1ada71a43f5157514"
+    },
+    {
+      "url": "https://thewowdb.com/wow-forever/currency/rank-points-3468/",
+      "source_id": "thewowdb",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:43.202640+00:00",
+      "status": 200,
+      "final_url": "https://thewowdb.com/wow-forever/currency/rank-points-3468/",
+      "retrieved_at": "2026-10-03T07:11:43.267198+00:00",
+      "sha256": "9ca9d8c1c170c976747b7ff5e71e805d15e4d8a74b408f148356442f6b878bfa",
+      "size_bytes": 24214,
+      "archive_member": "raw/9ca9d8c1c170c976747b7ff5e71e805d15e4d8a74b408f148356442f6b878bfa"
+    },
+    {
+      "url": "https://thewowdb.com/wow-forever/currency/tarnished-undermine-real-3469/",
+      "source_id": "thewowdb",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:43.267338+00:00",
+      "status": 200,
+      "final_url": "https://thewowdb.com/wow-forever/currency/tarnished-undermine-real-3469/",
+      "retrieved_at": "2026-10-03T07:11:43.331616+00:00",
+      "sha256": "10aea2c620332e61b6568e200e1b941f8ae21d482cf3a82bab7fa37f5a53f71e",
+      "size_bytes": 22308,
+      "archive_member": "raw/10aea2c620332e61b6568e200e1b941f8ae21d482cf3a82bab7fa37f5a53f71e"
+    },
+    {
+      "url": "https://www.curseforge.com/wow/addons/petscout-forever/files/all",
+      "source_id": "petscout-discovery",
+      "source_version": null,
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:43.331861+00:00",
+      "status": 200,
+      "final_url": "https://www.curseforge.com/wow/addons/petscout-forever/files/all",
+      "retrieved_at": "2026-10-03T07:11:43.669754+00:00",
+      "sha256": "81217224b105c0622ec3d343b731e5ef018578319423700254bf2634e400673a",
+      "size_bytes": 185903,
+      "archive_member": "raw/81217224b105c0622ec3d343b731e5ef018578319423700254bf2634e400673a"
+    },
+    {
+      "url": "https://edge.forgecdn.net/files/8940/612/PetScoutForever-v0.1.1-forever.zip",
+      "source_id": "petscout",
+      "source_version": "8940612",
+      "game_build": null,
+      "locale": "enUS",
+      "retrieval_started_at": "2026-10-03T07:11:43.670395+00:00",
+      "status": 200,
+      "final_url": "https://mediafilez.forgecdn.net/files/8940/612/PetScoutForever-v0.1.1-forever.zip",
+      "retrieved_at": "2026-10-03T07:11:44.274921+00:00",
+      "sha256": "df8a931ad277f495850f95c4757c6ebe5bc2c772e050084e9d769b50b17c2f38",
+      "size_bytes": 2466550,
+      "archive_member": "raw/df8a931ad277f495850f95c4757c6ebe5bc2c772e050084e9d769b50b17c2f38"
+    }
+  ]
+}
