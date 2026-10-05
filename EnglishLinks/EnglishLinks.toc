@@ -3,7 +3,7 @@
 ## Notes: English names in outgoing game links.
 ## Notes-ruRU: Английские названия в игровых ссылках.
 ## Author: Anfalov
-## Version: 1.0.0
+## Version: 1.0.2
 ## IconTexture: Interface\AddOns\EnglishLinks\Icon
 ## SavedVariables: EnglishLinksDB
 
