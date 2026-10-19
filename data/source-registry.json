@@ -469,6 +469,14 @@
       "archive_sha256": "a9edbaed457dd4334455d6f8c64391660d7c3a162739fc816377c22ea174303e",
       "before_sha256": "55673a17501945e1710f9568444bdcdc98cecdd77970d393dc9ef06daed8ec7d",
       "after_sha256": "4a258c79254f05f7f0c2e90b59abe88218cba55bd8f47ff76009ab8b25f9d500"
+    },
+    {
+      "id": "39231175522-1",
+      "report": "data/auto-updates/39231175522-1/report.json",
+      "archive": "data/auto-updates/39231175522-1/sources.zip",
+      "archive_sha256": "bf11ad43c0ab60a87a2fb350c0e5a098f2962a295eacb216f2145317f4ad20a3",
+      "before_sha256": "4a258c79254f05f7f0c2e90b59abe88218cba55bd8f47ff76009ab8b25f9d500",
+      "after_sha256": "13e2ae5924416d530be7c88be9409d7da79acb44d28d4f2f27eea2bd5b2530d2"
     }
   ]
 }
