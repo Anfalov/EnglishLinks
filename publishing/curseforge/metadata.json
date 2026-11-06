@@ -13,7 +13,7 @@
   "release_type": "Release",
   "game_flavor": "Forever",
   "game_version_source": {
-    "product": "wow_classic_beta",
+    "product": "wowf",
     "region": "eu"
   },
   "interface": 16001,

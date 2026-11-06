@@ -25,7 +25,7 @@ class UploadTests(unittest.TestCase):
         pub.mkdir(parents=True)
         (pub / 'metadata.json').write_text(json.dumps({
             'project_id': 1721401,
-            'game_version_source': {'product': 'wow_classic_beta', 'region': 'eu'}}))
+            'game_version_source': {'product': 'wowf', 'region': 'eu'}}))
         (pub / 'CHANGELOG.md').write_text('## 1.0.1 — today\n\nNew fix.\n\n## 1.0.0\n\nOld change.\n')
         self.archive = self.root / 'EnglishLinks-1.0.1.zip'
         with ZipFile(self.archive, 'w') as z:
@@ -35,7 +35,7 @@ class UploadTests(unittest.TestCase):
     def test_exact_zip_and_metadata_are_sent(self):
         with patch.object(upload, 'current_game_version', return_value='1.60.2') as latest:
             project, metadata = upload.prepare_upload(self.root, self.archive, '1.0.1')
-            latest.assert_called_once_with({'product': 'wow_classic_beta', 'region': 'eu'})
+            latest.assert_called_once_with({'product': 'wowf', 'region': 'eu'})
         original = self.archive.read_bytes()
         with patch.object(upload.request, 'build_opener') as factory:
             opener = factory.return_value
@@ -121,4 +121,4 @@ class BlizzardVersionTests(unittest.TestCase):
     def test_network_failure_stops_instead_of_using_a_stale_version(self):
         with patch.object(upload.request, 'urlopen', side_effect=TimeoutError()):
             with self.assertRaisesRegex(RuntimeError, 'upload stopped'):
-                upload.current_game_version({'product': 'wow_classic_beta', 'region': 'eu'})
+                upload.current_game_version({'product': 'wowf', 'region': 'eu'})
