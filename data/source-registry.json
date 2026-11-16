@@ -501,6 +501,14 @@
       "archive_sha256": "b8dd1dc739410cc04892cd02c306e59feda95cee59f225fdab7e2f10fdd58ac8",
       "before_sha256": "a854b2de86a309a0dd2a73cb3b3d9bf85c30b717f7480d900cce95b7915d7093",
       "after_sha256": "a435c66118f66fe53921fde4219c50143cb0b8418493edd829905c7a4f02a0bb"
+    },
+    {
+      "id": "43866401924-1",
+      "report": "data/auto-updates/43866401924-1/report.json",
+      "archive": "data/auto-updates/43866401924-1/sources.zip",
+      "archive_sha256": "cbd97ca8405938b101e496c41e71887a79891a09a0c9dc37d4d21e0251712917",
+      "before_sha256": "a435c66118f66fe53921fde4219c50143cb0b8418493edd829905c7a4f02a0bb",
+      "after_sha256": "db1f9984e130759d13a2201c8f66c6f7eb5da2309c9d9a5e649a68bd410ace0e"
     }
   ]
 }
