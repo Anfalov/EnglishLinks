@@ -24,6 +24,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     uses: ./.github/workflows/prepare-names.yml
     with:
+      extended_scan: true
       dry_run: ${{ inputs.dry_run == true }}
 
   source-health:

@@ -1,11 +1,11 @@
-name: Check full quest coverage
+name: Check catalog updates
 on:
   push:
     branches: [develop]
     paths:
       - '.github/workflows/check-quest-coverage.yml'
       - 'tools/update_names.py'
-      - 'tools/quest_sitemap.py'
+      - 'tools/catalog_sources.py'
   workflow_dispatch:
 
 permissions:
@@ -14,9 +14,10 @@ permissions:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: ${{ github.event_name == 'workflow_dispatch' && 120 || 15 }}
     steps:
-      - run: echo "QUEST_DEADLINE_EPOCH=$(( $(date +%s) + 2700 ))" >> "$GITHUB_ENV"
+      # Exercise the real cutoff, queue and package on develop. Manual runs use the scheduled budget.
+      - run: echo "SCAN_DEADLINE_EPOCH=$(( $(date +%s) + ${{ github.event_name == 'workflow_dispatch' && 6300 || 180 }} ))" >> "$GITHUB_ENV"
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
@@ -25,7 +26,7 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install lupa==2.6
       - name: Run updater in disposable checkout
-        run: python tools/update_names.py --apply
+        run: python tools/update_names.py --apply --scan-progress "$RUNNER_TEMP/pending.json"
       - run: python tools/source_health.py
       - run: python tests/run_tests.py && python tools/package_release.py
       - name: Save scan report
@@ -34,13 +35,32 @@ jobs:
         with:
           path: update-results/report.json
           retention-days: 14
-      - name: Verify quest discovery and full tooltip coverage
+      - name: Verify catalog routes and saved progress
+        env:
+          FULL_SCAN: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
           python - <<'PY'
-          import json
-          rows = json.load(open('update-results/report.json'))['sources']
-          discovery = [r for r in rows if r['source'] == 'wowhead-quest-sitemap']
-          scan = [r for r in rows if r['source'] == 'wowhead-forever-quest-tooltip' and 'total' in r]
-          if not discovery or any(r['status'] != 'parsed' for r in discovery + scan):
-              raise SystemExit('Quest coverage incomplete; see report and job summary')
+          import json, os
+          from pathlib import Path
+          rows = json.loads(Path('update-results/report.json').read_text())['sources']
+          def complete(source):
+              matches = [r for r in rows if r['source'] == source]
+              return matches and all(r['status'] == 'parsed' for r in matches)
+          for kind in ['quest', 'item', 'spell', 'achievement', 'currency', 'profession']:
+              if not complete(f'wowhead-{kind}-sitemap'):
+                  raise SystemExit(f'{kind} discovery failed')
+          for kind in ['item', 'achievement', 'currency', 'profession']:
+              if not complete(f'wowhead-bulk-{kind}'):
+                  raise SystemExit(f'{kind} bulk names unavailable')
+          scans = [r for r in rows if r['source'].endswith('-tooltip') and 'total' in r]
+          pending = json.loads((Path(os.environ['RUNNER_TEMP'])/'pending.json').read_text())
+          expected = {(r['source'].split('-')[-2], i) for r in scans for i in r['pending_ids']}
+          if expected != set(map(tuple, pending)):
+              raise SystemExit('Incomplete checkpoint')
+          if any(r['missing_unrequested'] for r in scans):
+              raise SystemExit('Did not reach every missing name; see report')
+          if any(r['requested'] and not r['parsed'] for r in scans):
+              raise SystemExit('No usable names for a requested tooltip type')
+          if os.environ['FULL_SCAN'] == 'true' and pending:
+              raise SystemExit('Full catalog check incomplete; see summary')
           PY

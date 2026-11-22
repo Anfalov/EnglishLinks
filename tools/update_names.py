@@ -24,7 +24,7 @@ import build_supplements as supplements
 import build_quests as quests
 from data_format import name_ok
 import name_data
-import quest_sitemap
+import catalog_sources as catalogs
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -65,7 +65,7 @@ class Fetcher:
         try:
             host = urllib.parse.urlsplit(url).hostname
             with self.lock:
-                scope = (host, 'sitemap') if source == 'wowhead-quest-sitemap' else host
+                scope = (host, source) if source.endswith('-sitemap') else host
                 if host in self.blocked_hosts or scope in self.blocked_hosts:
                     record['request_skipped'] = True
                     raise SourceBlockedError(host, self.blocked_hosts.get(host) or self.blocked_hosts[scope])
@@ -81,7 +81,7 @@ class Fetcher:
             host = urllib.parse.urlsplit(error.url).hostname
             if host in ('www.wowhead.com', 'nether.wowhead.com') and error.code in (403, 429):
                 with self.lock:
-                    key = (host, 'sitemap') if error.code == 403 and source == 'wowhead-quest-sitemap' else host
+                    key = (host, source) if error.code == 403 and source.endswith('-sitemap') else host
                     self.blocked_hosts[key] = error.code
             record.update(status=error.code, final_url=error.url,
                           failed_at=now(), error=str(error))
@@ -179,11 +179,12 @@ def fresh_url(url):
     return urllib.parse.urlunsplit(parts._replace(query=urllib.parse.urlencode(query, safe=':;,=')))
 
 
-def wowhead(fetcher, current, root, outcomes):
+def wowhead(fetcher, current, root, outcomes, bulk_parts=()):
     entries = json.loads((root / 'data/wowhead-sources/manifest.json').read_text())['files']
     entry = next(e for e in json.loads((root / 'data/random-affix-sources/manifest.json').read_text())['files']
                  if e['parser'] == 'randomEnchant')
-    entries = entries + [entry]
+    if not any(part['random_affixes'] for part in bulk_parts):
+        entries = entries + [entry]
 
     def read(entry, depth=0):
         url = fresh_url(entry['url'])
@@ -214,6 +215,7 @@ def wowhead(fetcher, current, root, outcomes):
 
     with ThreadPoolExecutor(max_workers=4) as pool:
         parts = [part for batch in pool.map(read, entries) for part in batch]
+    parts.extend(bulk_parts)
     primary, conflicts = combine_primary(parts)
     # Also refresh item IDs acquired from supplements on earlier runs.
     missing = sorted(current['names'].get('item', {}).keys() - primary['names'].get('item', {}).keys())
@@ -235,37 +237,49 @@ def named(kind, rows):
 TOOLTIP_WORKERS = 12
 
 
-def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.1,
-                  sitemap_ids=(), pending=(), deadline=None):
-    """Check missing names first, preserving the previous queue within each group."""
-    known = current['names'].get('quest', {})
-    candidates = set(known) | set(sitemap_ids) | set(pending)
-    for _, data in additional:
-        candidates.update(data.get('names', {}).get('quest', {}))
-    candidates.difference_update(primary['names'].get('quest', {}))
-    order = [i for i in pending if i in candidates]
-    order.extend(sorted(candidates.difference(order)))
-    order.sort(key=known.__contains__)  # Stable: pending IDs stay first within each group.
+def tooltip_scan(fetcher, current, primary, additional, outcomes, maps, pending=(),
+                 deadline=None, interval=0.1, kinds=catalogs.KINDS):
+    """One admission clock, deadline and typed resume queue across all catalogs."""
+    known, candidates = set(), set()
+    conflicts = {(kind, ident) for row in outcomes if row['status'] == 'conflicts-kept-current'
+                 for section, kind, ident in row['ids'] if section == 'names'}
+    for kind in kinds:
+        existing = current['names'].get(kind, {})
+        known.update((kind, i) for i in existing)
+        ids = set(existing) | set(maps.get(kind, ()))
+        ids.update(i for k, i in pending if k == kind)
+        for _, extra in additional:
+            ids.update(extra.get('names', {}).get(kind, {}))
+        ids.difference_update(primary['names'].get(kind, {}))
+        if kind == 'profession':
+            if ids:
+                outcomes.append(dict(source='wowhead-skill-coverage', status='partial', missing_ids=sorted(ids),
+                                     reason=f'{len(ids)} skills missing from name tables; no skill tooltip'))
+            continue
+        candidates.update((kind, i) for i in ids if (kind, i) not in conflicts)
+    order = [key for key in pending if key in candidates]
+    order.extend(sorted(candidates.difference(order), key=lambda key: (key[1], key[0])))
+    order.sort(key=known.__contains__)
     if not order:
-        return primary
+        return primary, []
 
     stop = threading.Event()
-    def read(identifier):
-        url = f'https://nether.wowhead.com/forever/tooltip/quest/{identifier}?locale=0'
+    def read(key):
+        kind, identifier = key
+        source = f'wowhead-forever-{kind}-tooltip'
+        url = f'https://nether.wowhead.com/forever/tooltip/{kind}/{identifier}?locale=0'
         try:
-            raw = fetcher.get(url, 'wowhead-forever-quest-tooltip')
-            data = json.loads(raw)
-            if not isinstance(data, dict) or data.get('error') or 'name' not in data:
-                raise ValueError('Missing quest tooltip name')
-            return named('quest', {identifier: data['name']}), None
+            data = json.loads(fetcher.get(url, source))
+            if not isinstance(data, dict) or data.get('error') or not isinstance(data.get('name'), str) or not name_ok(data['name']):
+                raise ValueError(f'Missing or invalid {kind} tooltip name')
+            return data['name'], None
         except Exception as error:
             if isinstance(error, (urllib.error.HTTPError, SourceBlockedError)) and error.code in (403, 429):
                 stop.set()
-            return None, dict(source='wowhead-forever-quest-tooltip', url=url,
-                              status='skipped', reason=str(error))
+            return None, dict(source=source, url=url, status='skipped', reason=str(error))
 
-    print(f'Checking {len(order)} known quest IDs via Wowhead tooltips...', flush=True)
-    parts, failed, active = [], set(), {}
+    print(f'Checking {len(order)} IDs via Wowhead tooltips ({len(candidates-known)} missing names)...', flush=True)
+    names, failed, active = {}, set(), {}
     requested, next_start = 0, 0.0
     started = time.monotonic()
     with ThreadPoolExecutor(max_workers=TOOLTIP_WORKERS) as pool:
@@ -281,6 +295,8 @@ def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.1
                 identifier = order[requested]
                 active[pool.submit(read, identifier)] = identifier
                 requested += 1
+                if requested % 5000 == 0:
+                    print(f'Started {requested}/{len(order)} tooltip requests', flush=True)
                 next_start = time.monotonic() + interval
                 continue
             if not active:
@@ -293,19 +309,55 @@ def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.1
                     failed.add(identifier)
                     outcomes.append(error)
                 else:
-                    parts.append(part)
-    updated, conflicts = combine_primary([primary] + parts)
+                    names[identifier] = part
+    fresh = empty()
+    for (kind, ident), name in names.items():
+        fresh['names'].setdefault(kind, {})[ident] = name
+    updated, conflicts = combine_primary([primary, fresh])
     if conflicts:
-        raise ValueError('Unexpected quest tooltip conflict')
+        raise ValueError('Unexpected tooltip conflict')
     remaining = order[requested:] + [i for i in order[:requested] if i in failed]
     reason = ('HTTP 403/429' if stop.is_set() else 'time budget reached' if requested < len(order)
               else 'some tooltips failed' if failed else '')
-    outcomes.append(dict(source='wowhead-forever-quest-tooltip',
-                         status='partial' if remaining else 'parsed', reason=reason,
-                         total=len(order), requested=requested, parsed=len(parts), failed=len(failed),
-                         not_requested=len(order)-requested, pending_ids=remaining,
-                         elapsed_seconds=round(time.monotonic()-started, 2)))
-    return updated
+    unsent = set(order[requested:])
+    for kind in kinds:
+        planned = [i for k, i in order if k == kind]
+        if not planned:
+            continue
+        tail = [i for k, i in remaining if k == kind]
+        errors = sum(k == kind for k, _ in failed)
+        parsed = len(planned)-len(tail)
+        outcomes.append(dict(source=f'wowhead-forever-{kind}-tooltip',
+                             status='partial' if tail else 'parsed', reason=reason if tail else '',
+                             total=len(planned), requested=parsed+errors, parsed=parsed,
+                             missing_total=sum((kind, i) not in known for i in planned),
+                             missing_unrequested=sum((kind, i) in unsent and (kind, i) not in known for i in tail),
+                             failed=errors, not_requested=len(tail)-errors, pending_ids=tail,
+                             elapsed_seconds=round(time.monotonic()-started, 2)))
+    return updated, remaining
+
+
+def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.1,
+                  sitemap_ids=(), pending=(), deadline=None):
+    return tooltip_scan(fetcher, current, primary, additional, outcomes, {'quest': sitemap_ids},
+                        [('quest', i) for i in pending], deadline, interval, ('quest',))[0]
+
+
+def read_progress(path):
+    raw = json.loads(path.read_text()) if path and path.exists() else []
+    if not isinstance(raw, list):
+        raise ValueError('Invalid scan queue')
+    queue = []
+    for entry in raw:
+        # Previous versions saved a plain list of quest IDs.
+        pair = ['quest', entry] if type(entry) is int else entry
+        if (not isinstance(pair, list) or len(pair) != 2 or pair[0] not in catalogs.KINDS
+                or type(pair[1]) is not int or not 0 < pair[1] <= 2147483647):
+            raise ValueError('Invalid scan queue entry')
+        queue.append(tuple(pair))
+    if len(set(queue)) != len(queue):
+        raise ValueError('Duplicate scan queue entry')
+    return queue
 
 
 def petscout_archive(raw):
@@ -446,16 +498,11 @@ def main():
     parser.add_argument('--output', type=Path, default=ROOT / 'update-results')
     parser.add_argument('--apply', action='store_true', help='Write accepted changes; no Git operations')
     parser.add_argument('--run-id', default=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ'))
-    parser.add_argument('--quest-progress', type=Path, help='Read/write pending IDs outside the addon')
+    parser.add_argument('--scan-progress', '--quest-progress', type=Path, help='Read/write typed pending IDs outside the addon')
     args = parser.parse_args()
-    deadline_epoch = os.environ.get('QUEST_DEADLINE_EPOCH')
+    deadline_epoch = os.environ.get('SCAN_DEADLINE_EPOCH')
     deadline = time.monotonic() + (float(deadline_epoch) - time.time() if deadline_epoch else 45 * 60)
-    pending = []
-    if args.quest_progress and args.quest_progress.exists():
-        pending = json.loads(args.quest_progress.read_text())
-        if (not isinstance(pending, list) or any(type(i) is not int or not 0 < i <= 2147483647 for i in pending)
-                or len(set(pending)) != len(pending)):
-            raise ValueError('Invalid quest progress file')
+    pending = read_progress(args.scan_progress)
     if not re.fullmatch(r'[A-Za-z0-9_-]+', args.run_id):
         parser.error('Invalid run ID')
     path = args.root / 'EnglishLinks/NameData.lua'
@@ -463,12 +510,19 @@ def main():
     args.output.mkdir(parents=True, exist_ok=True)
     fetcher, outcomes = Fetcher(args.output), []
     print('Checking Wowhead Forever...', flush=True)
-    sitemap_ids = quest_sitemap.discover(fetcher, outcomes)
-    primary = wowhead(fetcher, current, args.root, outcomes)
+    maps = catalogs.discover(fetcher, outcomes)
+    bulk_parts = catalogs.bulk(fetcher, outcomes)
+    primary = wowhead(fetcher, current, args.root, outcomes, bulk_parts)
     print('Checking supplemental sources...', flush=True)
     additional = other_sources(fetcher, args.root, outcomes)
-    primary = quest_tooltips(fetcher, current, primary, additional, outcomes, sitemap_ids=sitemap_ids,
-                             pending=pending, deadline=deadline)
+    primary, remaining = tooltip_scan(fetcher, current, primary, additional, outcomes, maps, pending, deadline)
+    # Do not let a supplement settle a disagreement between fresh Wowhead responses.
+    for row in outcomes:
+        if row['status'] == 'conflicts-kept-current':
+            for section, kind, ident in row['ids']:
+                for _, part in additional:
+                    groups = part['names'].get(kind, {}) if section == 'names' else part[section]
+                    groups.pop(ident, None)
     updated, changes = name_data.merge(current, primary, additional)
     report = dict(starting_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                   finished_at=now(), changed=bool(changes), changes=changes,
@@ -491,9 +545,8 @@ def main():
             archive_sha256=hashlib.sha256((destination / 'sources.zip').read_bytes()).hexdigest(),
             before_sha256=report['starting_sha256'], after_sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
         registry_path.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + '\n')
-    if args.quest_progress:
-        remaining = next((row['pending_ids'] for row in outcomes if 'pending_ids' in row), [])
-        args.quest_progress.write_text(json.dumps(remaining) + '\n')
+    if args.scan_progress:
+        args.scan_progress.write_text(json.dumps(remaining) + '\n')
     print(json.dumps(dict(changed=bool(changes), additions=sum(c['before'] is None for c in changes),
                           renamed=sum(c['before'] is not None for c in changes),
                           skipped=sum(s['status'] == 'skipped' for s in outcomes))))

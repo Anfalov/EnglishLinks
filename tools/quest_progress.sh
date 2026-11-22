@@ -28,7 +28,7 @@ case "$1" in
       exit 0
     fi
     tree=$(printf '100644 blob %s\tpending.json\n' "$blob" | git mktree)
-    sha=$(git -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit-tree "$tree" "${parents[@]}" -m 'Record pending Forever quest IDs')
+    sha=$(git -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit-tree "$tree" "${parents[@]}" -m 'Record pending Forever catalog IDs')
     git push origin "$sha:$ref"
     ;;
   *) exit 2 ;;

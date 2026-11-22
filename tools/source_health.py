@@ -25,10 +25,11 @@ def main():
     with open('update-results/report.json') as report:
         data = json.load(report)
     counts = problems(data['sources'])
-    scan = next((r for r in data['sources'] if r['source'] == 'wowhead-forever-quest-tooltip'
-                 and 'total' in r), None)
-    coverage = (f"Quest tooltips {scan['parsed']}/{scan['total']}; "
-                f"not requested {scan['not_requested']}; failed {scan['failed']}") if scan else ''
+    scans = [r for r in data['sources'] if r['source'].endswith('-tooltip') and 'total' in r]
+    def total(field):
+        return sum(r[field] for r in scans)
+    coverage = (f"Tooltips {total('parsed')}/{total('total')}; "
+                f"not requested {total('not_requested')}; failed {total('failed')}") if scans else ''
     with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
         print('coverage=' + coverage, file=output)
         print('changed=' + str(data['changed']).lower(), file=output)
@@ -38,6 +39,12 @@ def main():
         if coverage:
             print(coverage, file=summary)
             print(coverage)
+            for r in scans:
+                line = (f"{r['source']}: {r['parsed']}/{r['total']}; "
+                        f"not requested {r['not_requested']}; failed {r['failed']}; "
+                        f"new IDs not requested {r['missing_unrequested']}/{r['missing_total']}")
+                print('- ' + line, file=summary)
+                print(line)
         if counts:
             print('\nIncomplete source checks (see report.json for URLs):\n', file=summary)
         for (source, host, status, reason), count in sorted(counts.items()):
