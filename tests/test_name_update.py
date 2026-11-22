@@ -150,7 +150,7 @@ class IncrementalUpdate(unittest.TestCase):
                     '--apply', '--run-id', 'test']
             primary = update.named('item', {1: 'New primary'})
             with patch.object(sys, 'argv', args), patch.object(update, 'wowhead', return_value=primary), \
-                    patch.object(update, 'other_sources', return_value=[]):
+                    patch.object(update, 'other_sources', return_value=[]), patch.object(update.quest_sitemap, 'discover', return_value=set()):
                 update.main()
                 saved = path.read_bytes(), registry.read_bytes()
                 update.main()

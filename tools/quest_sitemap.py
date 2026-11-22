@@ -23,3 +23,32 @@ def quest_ids(raw):
     if not ids:
         raise ValueError('Empty quest sitemap')
     return ids
+
+
+def discover(fetcher, outcomes):
+    """Always check page 1; the global index advertises any additional pages."""
+    ids = set()
+    source = 'wowhead-quest-sitemap'
+
+    def page(n):
+        url = PAGE + str(n)
+        try:
+            found = quest_ids(fetcher.get(url, source))
+            ids.update(found)
+            outcomes.append(dict(source=source, url=url, status='parsed', count=len(found)))
+        except Exception as error:
+            outcomes.append(dict(source=source, url=url, status='skipped', reason=str(error)))
+
+    page(1)
+    url = 'https://www.wowhead.com/sitemap'
+    try:
+        pages = {int(m[1]) for loc in locations(fetcher.get(url, source), 'sitemapindex', 'sitemap')
+                 if (m := re.fullmatch(re.escape(PAGE) + r'([1-9][0-9]*)', loc))}
+        if 1 not in pages:
+            raise ValueError('Index has no Forever quest sitemap')
+        outcomes.append(dict(source=source, url=url, status='parsed', pages=len(pages)))
+        for n in sorted(pages - {1}):
+            page(n)
+    except Exception as error:
+        outcomes.append(dict(source=source, url=url, status='skipped', reason=str(error)))
+    return ids

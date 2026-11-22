@@ -31,6 +31,17 @@ jobs:
     with:
       source_sha: ${{ inputs.source_sha || github.sha }}
 
+  source-health:
+    name: Incomplete name sources (see Prepare addon names summary)
+    needs: update
+    if: needs.update.outputs.degraded == 'true'
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - run: |
+          echo '::error::Some name sources could not be refreshed. See the preparation summary and report.json artifact.'
+          exit 1
+
   release:
     needs: update
     # A deliberately skipped update must not skip the release; a failure must.

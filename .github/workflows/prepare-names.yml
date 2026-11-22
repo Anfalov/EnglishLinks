@@ -11,6 +11,9 @@ on:
         type: boolean
         default: false
     outputs:
+      degraded:
+        description: Whether any source check was incomplete
+        value: ${{ jobs.prepare.outputs.degraded }}
       changed:
         description: Whether names changed
         value: ${{ jobs.prepare.outputs.changed }}
@@ -31,6 +34,7 @@ jobs:
       group: englishlinks-name-preparation
       cancel-in-progress: false
     outputs:
+      degraded: ${{ steps.update.outputs.degraded }}
       changed: ${{ steps.resolve.outputs.changed == 'true' || steps.update.outputs.changed == 'true' }}
       source_sha: ${{ steps.publish.outputs.sha || steps.resolve.outputs.source_sha }}
     steps:
@@ -64,19 +68,7 @@ jobs:
         run: |
           python tools/update_names.py --apply \
             --run-id "$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
-          python - <<'PY'
-          import json, os
-          report = json.load(open('update-results/report.json'))
-          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
-              output.write('changed=' + str(report['changed']).lower() + '\n')
-          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as output:
-              output.write(f"Name changes: {len(report['changes'])}\n\n")
-              for source in report['sources']:
-                  if source.get('freshness') == 'pinned-fallback':
-                      output.write(f"- {source['source']}: using pinned file {source['version']}; latest version could not be checked/downloaded\n")
-                  if source['status'] != 'parsed':
-                      output.write(f"- {source['source']}: {source['status']} — {source.get('reason', '')}\n")
-          PY
+          python tools/source_health.py
 
       - name: Test prepared update
         if: steps.update.outputs.changed == 'true'

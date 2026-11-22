@@ -23,6 +23,7 @@ import build_supplements as supplements
 import build_quests as quests
 from data_format import name_ok
 import name_data
+import quest_sitemap
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -63,9 +64,10 @@ class Fetcher:
         try:
             host = urllib.parse.urlsplit(url).hostname
             with self.lock:
-                if host in self.blocked_hosts:
+                scope = (host, 'sitemap') if source == 'wowhead-quest-sitemap' else host
+                if host in self.blocked_hosts or scope in self.blocked_hosts:
                     record['request_skipped'] = True
-                    raise SourceBlockedError(host, self.blocked_hosts[host])
+                    raise SourceBlockedError(host, self.blocked_hosts.get(host) or self.blocked_hosts[scope])
             request = urllib.request.Request(url, headers={'User-Agent': 'EnglishLinks source updater'})
             with urllib.request.urlopen(request, timeout=30) as response:
                 raw = response.read(50 * 1024 * 1024 + 1)
@@ -78,7 +80,8 @@ class Fetcher:
             host = urllib.parse.urlsplit(error.url).hostname
             if host in ('www.wowhead.com', 'nether.wowhead.com') and error.code in (403, 429):
                 with self.lock:
-                    self.blocked_hosts[host] = error.code
+                    key = (host, 'sitemap') if error.code == 403 and source == 'wowhead-quest-sitemap' else host
+                    self.blocked_hosts[key] = error.code
             record.update(status=error.code, final_url=error.url,
                           failed_at=now(), error=str(error))
             try:
@@ -228,7 +231,7 @@ def named(kind, rows):
     return result
 
 
-def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.25):
+def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.25, sitemap_ids=()):
     """Confirm known quest IDs through Wowhead's public English tooltip service.
 
     List pages discover IDs; this endpoint only answers IDs we already know.
@@ -236,6 +239,7 @@ def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.2
     here, before the final primary-first merge.
     """
     candidates = set(current['names'].get('quest', {}))
+    candidates.update(sitemap_ids)
     for _, data in additional:
         candidates.update(data.get('names', {}).get('quest', {}))
     candidates.difference_update(primary['names'].get('quest', {}))
@@ -280,7 +284,7 @@ def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.2
 
     print(f'Checking {len(candidates)} known quest IDs via Wowhead tooltips...', flush=True)
     with ThreadPoolExecutor(max_workers=2) as pool:
-        parts = [part for part in pool.map(read, sorted(candidates)) if part is not None]
+        parts = [part for part in pool.map(read, sorted(candidates, key=lambda i: (i in current['names'].get('quest', {}), i))) if part is not None]
     updated, conflicts = combine_primary([primary] + parts)
     if conflicts:
         raise ValueError('Unexpected quest tooltip conflict')
@@ -436,10 +440,11 @@ def main():
     args.output.mkdir(parents=True, exist_ok=True)
     fetcher, outcomes = Fetcher(args.output), []
     print('Checking Wowhead Forever...', flush=True)
+    sitemap_ids = quest_sitemap.discover(fetcher, outcomes)
     primary = wowhead(fetcher, current, args.root, outcomes)
     print('Checking supplemental sources...', flush=True)
     additional = other_sources(fetcher, args.root, outcomes)
-    primary = quest_tooltips(fetcher, current, primary, additional, outcomes)
+    primary = quest_tooltips(fetcher, current, primary, additional, outcomes, sitemap_ids=sitemap_ids)
     updated, changes = name_data.merge(current, primary, additional)
     report = dict(starting_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                   finished_at=now(), changed=bool(changes), changes=changes,

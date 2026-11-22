@@ -26,6 +26,17 @@ jobs:
     with:
       dry_run: ${{ inputs.dry_run == true }}
 
+  source-health:
+    name: Incomplete name sources (see Prepare addon names summary)
+    needs: update
+    if: needs.update.outputs.degraded == 'true'
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - run: |
+          echo '::error::Some name sources could not be refreshed. See the preparation summary and report.json artifact.'
+          exit 1
+
   release:
     needs: update
     if: needs.update.outputs.changed == 'true' && inputs.dry_run != true

@@ -52,3 +52,5 @@ Git publishing tests exercise concurrent pushes and branch synchronization.
 Offline tests do not establish server acceptance, recipient display, combat taint
 behavior or compatibility with other addons. Recipes and basic item links were
 previously confirmed in the client; this change has no new live-client test.
+
+On 2026-11-22 the maintainer confirmed the Questie fix worked in game with the test ZIP.
