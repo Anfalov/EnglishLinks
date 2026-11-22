@@ -28,10 +28,17 @@ end
 local function transformBox(box)
     if not db or not db.enabled or changing[box] or not box:HasFocus() then return end
     local text = box:GetText()
-    if secret(text) or type(text) ~= "string" or not text:find("|H", 1, true) then return end
+    if secret(text) or type(text) ~= "string" then return end
+    local questie = type(Questie) == "table" and Questie.started
+    if not text:find("|H", 1, true) and not questie then return end
     local cursor = box:GetCursorPosition()
     if secret(cursor) then return end
     local converted, newCursor, count = ns.TranslateAll(text, ns.Resolve, cursor, noteMissing)
+    if questie then
+        local questCount
+        converted, newCursor, questCount = ns.TranslateQuestie(converted, ns.Resolve, newCursor, noteMissing)
+        count = count + questCount
+    end
     if count == 0 then return end
     -- Never allow SetText to truncate a link or the user's message.
     local maxBytes = box.GetMaxBytes and box:GetMaxBytes() or 0

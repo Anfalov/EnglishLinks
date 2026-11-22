@@ -12,6 +12,14 @@
 - `EnglishLinks.lua`: hooks chat edit boxes while preserving normal insertion,
   focus checks, recursion guards and client length limits.
 
+When Questie is running, `TranslateQuestie` also recognizes its outgoing plain
+`[Title (ID)]` and `[[Level] Title (ID)]` formats from the tracker and Journey.
+It replaces the title in the edit box before sending; level and ID survive.
+This path uses the usual quest switch/overrides and never rewrites native link
+payloads or incoming messages. Questie's receiving filter may independently
+relocalize the display. Automatic announcements bypassing the edit box are not
+covered. Fixtures follow Questie commit `7df91a1a793c37d2378fa0e722f709f830832e7a`.
+
 ## Sources and updates
 
 `tools/update_names.py` reads the installed dictionary, retrieves Wowhead Forever

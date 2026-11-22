@@ -6,6 +6,8 @@ on:
     paths:
       - '.github/workflows/check-wowhead.yml'
       - 'tools/check_wowhead.py'
+      - 'EnglishLinks/**'
+      - 'tests/**'
   workflow_dispatch:
 
 permissions:

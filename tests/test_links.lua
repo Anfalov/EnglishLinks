@@ -162,5 +162,27 @@ equal(EnglishLinksDB.overrides[6948], "Custom Hearthstone")
 SlashCmdList.ENGLISHLINKS("unset 6948")
 equal(EnglishLinksDB.overrides[6948], nil)
 SlashCmdList.ENGLISHLINKS("status")
+-- Questie's tracker inserts plain text. Verify the outgoing edit-box contents,
+-- not a receiving filter: a recipient without Questie gets this exact string.
+ns.Names.quest = {[7]='Kobold Camp Cleanup'}
+_G.Questie = {started=true}
+local questBox = box()
+ChatFrameUtil.ActivateChat(questBox)
+ChatFrameUtil.InsertLink('До [[2] Уборка в лагере кобольдов (7)] после')
+equal(questBox.text, 'До [[2] Kobold Camp Cleanup (7)] после', 'Questie outgoing text')
+equal(questBox.cursor, #questBox.text, 'Questie outgoing cursor')
+equal(questBox.writes, 2, 'Questie does not recurse')
+SlashCmdList.ENGLISHLINKS('type quest off')
+questBox:SetText('[Уборка (7)]')
+equal(questBox.text, '[Уборка (7)]', 'Questie respects quest switch')
+SlashCmdList.ENGLISHLINKS('type quest on')
+local questLimited = box()
+questLimited.maxBytes = #'[X (7)]'
+ChatFrameUtil.ActivateChat(questLimited)
+ChatFrameUtil.InsertLink('[X (7)]')
+equal(questLimited.text, '[X (7)]', 'Questie never truncates long output')
+_G.Questie = nil
+questBox:SetText('[Уборка (7)]')
+equal(questBox.text, '[Уборка (7)]', 'Plain text unchanged without Questie')
 equal(#errors, 0, "No integration errors")
 print(tests .. " Lua assertions passed")

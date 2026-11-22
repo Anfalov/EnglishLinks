@@ -101,3 +101,62 @@ function ns.TranslateAll(text, resolve, cursor, onMissing)
     chunks[#chunks + 1] = text:sub(scan)
     return table.concat(chunks), mapped, count
 end
+
+-- Questie's tracker/Journey insert [Title (ID)] or [[Level] Title (ID)]
+-- as plain text. Translate only the title, retaining its ID and level for
+-- Questie's receiving filter. The caller enables this path when Questie runs.
+function ns.TranslateQuestie(text, resolve, cursor, onMissing)
+    if type(text) ~= "string" then return text, cursor, 0 end
+    local protected = {}
+    local position = 1
+    while true do
+        local first = text:find("|H", position, true)
+        if not first then break end
+        local matched, last = text:find("|H[^|]+|h.-|h", first)
+        if matched ~= first then last = #text end
+        protected[#protected + 1] = {first, last}
+        position = last + 1
+    end
+    for _, pattern in ipairs({"()|T.-|t()", "()|A.-|a()"}) do
+        for first, after in text:gmatch(pattern) do
+            protected[#protected + 1] = {first, after - 1}
+        end
+    end
+    local chunks, scan, count, mapped = {}, 1, 0, cursor
+    while true do
+        local first, last, body, id = text:find("%[([^|]-) %((%d+)%)%]", scan)
+        if not first then break end
+        local level, label = body:match("^(%[%-?%d+%] )(.+)$")
+        level, label = level or "", label or body
+        local nested = label:find("[%[%]]")
+        local blocked = false
+        for _, range in ipairs(protected) do
+            if first <= range[2] and last >= range[1] then blocked = true; break end
+        end
+        if nested and not blocked then
+            -- An unrelated earlier '[' must not swallow the following link.
+            chunks[#chunks + 1] = text:sub(scan, first)
+            scan = first + 1
+        else
+            local name = not blocked and ns.IsSafeName(label)
+                and resolve("quest:" .. id, label, onMissing) or nil
+            chunks[#chunks + 1] = text:sub(scan, first - 1)
+            if ns.IsSafeName(name) and name ~= label then
+                chunks[#chunks + 1] = "[" .. level .. name .. " (" .. id .. ")]"
+                local start = first + #level
+                local finish = start + #label
+                if cursor then
+                    if cursor >= finish then mapped = mapped + #name - #label
+                    elseif cursor > start then mapped = mapped + start + #name - cursor end
+                end
+                count = count + 1
+            else
+                chunks[#chunks + 1] = text:sub(first, last)
+            end
+            scan = last + 1
+        end
+    end
+    if count == 0 then return text, cursor, 0 end
+    chunks[#chunks + 1] = text:sub(scan)
+    return table.concat(chunks), mapped, count
+end
