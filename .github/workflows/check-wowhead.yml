@@ -22,7 +22,7 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install lupa==2.6
       - name: Request and parse public Wowhead data
-        run: python tools/check_wowhead.py
+        run: python tools/check_wowhead.py --tooltips
       - name: Save responses and diagnostics
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7

@@ -12,16 +12,29 @@ def main():
     output = root / 'wowhead-check'
     fetcher = update.Fetcher(output)
     manifest = json.loads((root / 'data/wowhead-sources/manifest.json').read_text())['files']
-    entries = [next(e for e in manifest if e.get('kind') == kind and e['parser'] == 'list')
-               for kind in ('quest', 'item')]
-    entries.append(next(e for e in manifest if e['parser'] == 'mounts'))
+    if '--tooltips' in sys.argv:
+        entries = [dict(parser='tooltip', kind=kind, id=identifier,
+                        url=f'https://nether.wowhead.com/forever/tooltip/{kind}/{identifier}?locale=0')
+                   for kind, identifier in [('quest', 7), ('quest', 1425), ('quest', 92485),
+                                            ('item', 6948), ('spell', 133)]]
+    else:
+        entries = [next(e for e in manifest if e.get('kind') == kind and e['parser'] == 'list')
+                   for kind in ('quest', 'item')]
+        entries.append(next(e for e in manifest if e['parser'] == 'mounts'))
     outcomes = []
     for entry in entries:
         url = update.fresh_url(entry['url'])
         result = {'url': url}
         try:
             raw = fetcher.get(url, 'wowhead-forever')
-            parsed = update.parse_wowhead(entry, raw)
+            if entry['parser'] == 'tooltip':
+                data = json.loads(raw)
+                if data.get('error'):
+                    raise ValueError(str(data['error']))
+                parsed = update.named(entry['kind'], {entry['id']: data['name']})
+                result['name'] = data['name']
+            else:
+                parsed = update.parse_wowhead(entry, raw)
             result.update(status='parsed', counts={k: len(v) for k, v in parsed['names'].items()})
         except Exception as error:
             result.update(status='failed', error=str(error))
