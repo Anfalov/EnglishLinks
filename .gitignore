@@ -13,3 +13,4 @@ dist/
 !data/source-checks/**/evidence.zip
 !data/auto-updates/**/sources.zip
 update-results/
+wowhead-check/

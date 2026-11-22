@@ -11,6 +11,7 @@ from pathlib import Path
 import re
 import shutil
 import threading
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -30,11 +31,18 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
+class SourceBlockedError(RuntimeError):
+    def __init__(self, host, code):
+        self.code = code
+        super().__init__(f'{host}: requests stopped after HTTP {code} in this run')
+
+
 class Fetcher:
     def __init__(self, output):
         self.output = output
         self.records = []
         self.lock = threading.Lock()
+        self.blocked_hosts = {}
         (output / 'raw').mkdir(parents=True, exist_ok=True)
 
     def save_response(self, record, response, raw):
@@ -53,6 +61,11 @@ class Fetcher:
         record = dict(url=url, source_id=source, source_version=version,
                       game_build=build, locale='enUS', retrieval_started_at=now())
         try:
+            host = urllib.parse.urlsplit(url).hostname
+            with self.lock:
+                if host in self.blocked_hosts:
+                    record['request_skipped'] = True
+                    raise SourceBlockedError(host, self.blocked_hosts[host])
             request = urllib.request.Request(url, headers={'User-Agent': 'EnglishLinks source updater'})
             with urllib.request.urlopen(request, timeout=30) as response:
                 raw = response.read(50 * 1024 * 1024 + 1)
@@ -62,6 +75,10 @@ class Fetcher:
                 self.save_response(record, response, raw)
             return raw
         except urllib.error.HTTPError as error:
+            host = urllib.parse.urlsplit(error.url).hostname
+            if host in ('www.wowhead.com', 'nether.wowhead.com') and error.code in (403, 429):
+                with self.lock:
+                    self.blocked_hosts[host] = error.code
             record.update(status=error.code, final_url=error.url,
                           failed_at=now(), error=str(error))
             try:
@@ -209,6 +226,68 @@ def named(kind, rows):
     result = dict(empty(), names={kind: rows})
     name_data.validate(result)
     return result
+
+
+def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.25):
+    """Confirm known quest IDs through Wowhead's public English tooltip service.
+
+    List pages discover IDs; this endpoint only answers IDs we already know.
+    Supplemental names do not overwrite anything: only their IDs are consulted
+    here, before the final primary-first merge.
+    """
+    candidates = set(current['names'].get('quest', {}))
+    for _, data in additional:
+        candidates.update(data.get('names', {}).get('quest', {}))
+    candidates.difference_update(primary['names'].get('quest', {}))
+    if not candidates:
+        return primary
+    stop = threading.Event()
+    lock = threading.Lock()
+    next_request = 0.0
+    counts = dict(requested=0, parsed=0, failed=0, not_requested=0)
+
+    def read(identifier):
+        nonlocal next_request
+        with lock:
+            if stop.is_set():
+                counts['not_requested'] += 1
+                return None
+            delay = next_request - time.monotonic()
+            if delay > 0:
+                time.sleep(delay)
+            next_request = time.monotonic() + interval
+            counts['requested'] += 1
+        url = f'https://nether.wowhead.com/forever/tooltip/quest/{identifier}?locale=0'
+        try:
+            raw = fetcher.get(url, 'wowhead-forever-quest-tooltip')
+            data = json.loads(raw)
+            if not isinstance(data, dict) or data.get('error') or 'name' not in data:
+                raise ValueError('Missing quest tooltip name')
+            parsed = named('quest', {identifier: data['name']})
+            with lock:
+                counts['parsed'] += 1
+            return parsed
+        except Exception as error:
+            # Do not keep sending requests to an endpoint that refuses access
+            # or asks us to slow down. Existing names remain intact.
+            if isinstance(error, (urllib.error.HTTPError, SourceBlockedError)) and error.code in (403, 429):
+                stop.set()
+            with lock:
+                counts['failed'] += 1
+                outcomes.append(dict(source='wowhead-forever-quest-tooltip', url=url,
+                                     status='skipped', reason=str(error)))
+            return None
+
+    print(f'Checking {len(candidates)} known quest IDs via Wowhead tooltips...', flush=True)
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        parts = [part for part in pool.map(read, sorted(candidates)) if part is not None]
+    updated, conflicts = combine_primary([primary] + parts)
+    if conflicts:
+        raise ValueError('Unexpected quest tooltip conflict')
+    outcomes.append(dict(source='wowhead-forever-quest-tooltip',
+                         status='partial' if counts['failed'] or counts['not_requested'] else 'parsed',
+                         reason='Known IDs only; list-page discovery may be unavailable', **counts))
+    return updated
 
 
 def petscout_archive(raw):
@@ -360,6 +439,7 @@ def main():
     primary = wowhead(fetcher, current, args.root, outcomes)
     print('Checking supplemental sources...', flush=True)
     additional = other_sources(fetcher, args.root, outcomes)
+    primary = quest_tooltips(fetcher, current, primary, additional, outcomes)
     updated, changes = name_data.merge(current, primary, additional)
     report = dict(starting_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                   finished_at=now(), changed=bool(changes), changes=changes,

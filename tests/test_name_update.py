@@ -22,6 +22,20 @@ def baseline():
 
 
 class FetchDiagnostics(unittest.TestCase):
+    def test_wowhead_refusal_stops_further_requests_to_that_host(self):
+        url = 'https://www.wowhead.com/forever/quests'
+        error = urllib.error.HTTPError(url, 403, 'Forbidden', Message(), io.BytesIO(b'Blocked'))
+        with tempfile.TemporaryDirectory() as temp:
+            fetcher = update.Fetcher(Path(temp))
+            with patch.object(update.urllib.request, 'urlopen', side_effect=error) as request:
+                with self.assertRaises(urllib.error.HTTPError):
+                    fetcher.get(url, 'wowhead-forever')
+                with self.assertRaises(update.SourceBlockedError):
+                    fetcher.get(url + '?filter=test', 'wowhead-forever')
+                self.assertEqual(request.call_count, 1)
+            self.assertTrue(fetcher.records[1]['request_skipped'])
+            self.assertNotIn('nether.wowhead.com', fetcher.blocked_hosts)
+
     def test_forbidden_response_is_archived_but_still_fails(self):
         headers = Message()
         headers['Content-Type'] = 'text/html'
@@ -62,6 +76,48 @@ class FetchDiagnostics(unittest.TestCase):
 
 
 class IncrementalUpdate(unittest.TestCase):
+    def test_quest_tooltips_restore_primary_priority_without_deletions(self):
+        current = update.named('quest', {7: 'Old', 8: 'Retained', 9: 'Listed before'})
+        primary = update.named('quest', {9: 'Fresh list title'})
+        additional = [('community', update.named('quest', {7: 'Wrong', 10: 'Fallback title'}))]
+        requested = []
+        class Fake:
+            def get(self, url, source):
+                identifier = int(url.split('/')[-1].split('?')[0])
+                requested.append(identifier)
+                if identifier == 8:
+                    return b'{"error": "Not found"}'
+                return json.dumps({'name': {7: 'Wowhead renamed', 10: 'Wowhead new'}[identifier]}).encode()
+        outcomes = []
+        primary = update.quest_tooltips(Fake(), current, primary, additional, outcomes, interval=0)
+        merged, changes = data.merge(current, primary, additional)
+        self.assertEqual(merged['names']['quest'], {
+            7: 'Wowhead renamed', 8: 'Retained', 9: 'Fresh list title', 10: 'Wowhead new'})
+        self.assertCountEqual(requested, [7, 8, 10])
+        self.assertTrue(all(change['source'] == 'wowhead' for change in changes))
+        self.assertEqual(outcomes[-1]['failed'], 1)
+
+    def test_quest_tooltips_stop_after_access_or_rate_limit_refusal(self):
+        for status in (403, 429):
+            current = update.named('quest', {i: f'Existing {i}' for i in range(1, 30)})
+            class Fake:
+                def get(self, url, source):
+                    raise urllib.error.HTTPError(url, status, 'Refused', Message(), None)
+            outcomes = []
+            primary = update.quest_tooltips(Fake(), current, update.empty(), [], outcomes, interval=0)
+            self.assertEqual(data.merge(current, primary, [])[0], current)
+            self.assertLessEqual(outcomes[-1]['requested'], 2)
+            self.assertGreater(outcomes[-1]['not_requested'], 0)
+
+    def test_quest_tooltip_invalid_names_do_not_replace_existing_data(self):
+        current = update.named('quest', {7: 'Good'})
+        for response in [b'{}', b'{"name":"|Hquest:8"}', b'<html>Challenge</html>']:
+            class Fake:
+                def get(self, *args):
+                    return response
+            primary = update.quest_tooltips(Fake(), current, update.empty(), [], [], interval=0)
+            self.assertEqual(data.merge(current, primary, [])[0], current)
+
     def test_primary_replaces_supplement_only_fills_and_nothing_is_deleted(self):
         original = baseline()
         primary = dict(names={'item': {1: 'Wowhead', 3: 'New primary'}}, random_affixes={-10: 'of the Bear'})

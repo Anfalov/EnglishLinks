@@ -11,6 +11,20 @@ def main():
     root = Path(__file__).resolve().parents[1]
     output = root / 'wowhead-check'
     fetcher = update.Fetcher(output)
+    if '--quest-fallback' in sys.argv:
+        current = update.named('quest', {7: 'Old title', 1425: 'Deliver the Shipment'})
+        additional = [('ID discovery fixture', update.named('quest', {92485: 'Untrusted title'}))]
+        outcomes = []
+        primary = update.quest_tooltips(fetcher, current, update.empty(), additional, outcomes)
+        merged, changes = update.name_data.merge(current, primary, additional)
+        expected = {7: 'Kobold Camp Cleanup', 1425: 'Deliver the First Shipment',
+                    92485: 'A Student of Nature'}
+        passed = merged['names']['quest'] == expected and all(c['source'] == 'wowhead' for c in changes)
+        report = {'passed': passed, 'names': merged['names']['quest'],
+                  'checks': outcomes, 'downloads': fetcher.records}
+        (output / 'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+        print(json.dumps(report), flush=True)
+        return 0 if passed else 1
     manifest = json.loads((root / 'data/wowhead-sources/manifest.json').read_text())['files']
     if '--tooltips' in sys.argv:
         entries = [dict(parser='tooltip', kind=kind, id=identifier,
