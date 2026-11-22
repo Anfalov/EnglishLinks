@@ -5,12 +5,23 @@ from pathlib import Path
 import sys
 
 import update_names as update
+import quest_sitemap
 
 
 def main():
     root = Path(__file__).resolve().parents[1]
     output = root / 'wowhead-check'
     fetcher = update.Fetcher(output)
+    if '--sitemap' in sys.argv:
+        url = quest_sitemap.PAGE + '1'
+        try:
+            ids = quest_sitemap.quest_ids(fetcher.get(url, 'wowhead-quest-sitemap'))
+            print(f'{url}: {len(ids)} distinct Forever quest IDs ({min(ids)}..{max(ids)})')
+            return 0
+        finally:
+            report = {'downloads': fetcher.records}
+            (output / 'sitemap-report.json').write_text(json.dumps(report, indent=2))
+            print(json.dumps(report), flush=True)
     if '--quest-fallback' in sys.argv:
         current = update.named('quest', {7: 'Old title', 1425: 'Deliver the Shipment'})
         additional = [('ID discovery fixture', update.named('quest', {92485: 'Untrusted title'}))]

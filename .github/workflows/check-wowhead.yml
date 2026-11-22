@@ -27,6 +27,8 @@ jobs:
         run: python tests/run_tests.py
       - name: Request and parse public Wowhead data
         run: python tools/check_wowhead.py --quest-fallback
+      - name: Check Forever quest XML sitemap
+        run: python tools/check_wowhead.py --sitemap
       - name: Save responses and diagnostics
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
