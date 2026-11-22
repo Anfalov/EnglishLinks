@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/check-wowhead.yml'
       - 'tools/check_wowhead.py'
+      - 'tools/check_catalog_routes.py'
       - 'EnglishLinks/**'
       - 'tests/**'
   workflow_dispatch:
@@ -29,6 +30,8 @@ jobs:
         run: python tools/check_wowhead.py --quest-fallback
       - name: Check Forever quest XML sitemap
         run: python tools/check_wowhead.py --sitemap
+      - name: Compare non-quest sitemaps, bulk names and sample tooltips
+        run: python tools/check_catalog_routes.py
       - name: Save responses and diagnostics
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7

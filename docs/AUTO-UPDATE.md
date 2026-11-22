@@ -36,6 +36,26 @@ HTTP 200 и словарь не изменился. В сводке и имен�
 
 При изменениях загрузчика в `develop` workflow **Check full quest coverage** выполняет полный пробный прогон на GitHub, сохраняет отчёт и проверяет полноту без публикации.
 
+## Другие каталоги: проверенные источники Wowhead Forever
+
+Это диагностика, а не часть релизного обновлятора. В `develop` шаг
+`Compare non-quest sitemaps, bulk names and sample tooltips` читает общий XML-индекс
+`https://www.wowhead.com/sitemap` и объявленные страницы `/forever/sitemap/{type}`.
+ID берутся из ссылок; английские названия из URL не восстанавливаются.
+
+| Тип | Пакетный источник на `nether.wowhead.com/forever/data/` | Остальные ID |
+| --- | --- | --- |
+| Предметы | `gear-planner`, таблица `wow.gearPlanner.classicplus.item`, только часть предметов | `/forever/tooltip/item/{id}?locale=0` |
+| Заклинания | Полный пакет названий не подтверждён | `/forever/tooltip/spell/{id}?locale=0` |
+| Достижения | `achievements`, записи `g_achievements`, покрытие частичное | `/forever/tooltip/achievement/{id}?locale=0` |
+| Валюты | `global`, таблица `wow.currency.namesAndIcons` | Тултип `currency` также содержит название |
+| Навыки | `global`, таблица `wow.skill.names` (именно ID навыка, а не заклинания) | Полнота проверяется по карте `skill` |
+
+Версии пакетов опубликованы в `url.dataPageVersions` внутри `global`.
+Диагностика сравнивает множества ID, проверяет выборочные тултипы и сохраняет
+числа и названия в артефакт `wowhead-access-check/catalogs/summary.json`. Это
+не свидетельство успешной загрузки всех отдельных тултипов.
+
 ## Запуск
 
 В GitHub: **Actions → Update addon names → Run workflow**, ветка `main`.
