@@ -11,6 +11,7 @@ from pathlib import Path
 import re
 import shutil
 import threading
+import urllib.error
 import urllib.parse
 import urllib.request
 import zipfile
@@ -36,6 +37,18 @@ class Fetcher:
         self.lock = threading.Lock()
         (output / 'raw').mkdir(parents=True, exist_ok=True)
 
+    def save_response(self, record, response, raw):
+        # Keep only diagnostic headers, never cookies or authorization details.
+        record.update(status=response.status, final_url=response.url,
+                      response_headers={name: response.headers[name] for name in (
+                          'Content-Type', 'Server', 'X-Cache', 'X-Amzn-Waf-Action', 'Retry-After'
+                      ) if response.headers.get(name) is not None})
+        digest = hashlib.sha256(raw).hexdigest()
+        record.update(retrieved_at=now(), sha256=digest, size_bytes=len(raw),
+                      archive_member='raw/' + digest)
+        with self.lock:
+            (self.output / record['archive_member']).write_bytes(raw)
+
     def get(self, url, source, version=None, build=None):
         record = dict(url=url, source_id=source, source_version=version,
                       game_build=build, locale='enUS', retrieval_started_at=now())
@@ -44,15 +57,25 @@ class Fetcher:
             with urllib.request.urlopen(request, timeout=30) as response:
                 raw = response.read(50 * 1024 * 1024 + 1)
                 record.update(status=response.status, final_url=response.url)
-            if len(raw) > 50 * 1024 * 1024:
-                raise ValueError('Response exceeds 50 MiB')
-            digest = hashlib.sha256(raw).hexdigest()
-            record.update(retrieved_at=now(), sha256=digest, size_bytes=len(raw),
-                          archive_member='raw/' + digest)
-            # Shared hashes are serialized so a reader never sees a partial file.
-            with self.lock:
-                (self.output / record['archive_member']).write_bytes(raw)
+                if len(raw) > 50 * 1024 * 1024:
+                    raise ValueError('Response exceeds 50 MiB')
+                self.save_response(record, response, raw)
             return raw
+        except urllib.error.HTTPError as error:
+            record.update(status=error.code, final_url=error.url,
+                          failed_at=now(), error=str(error))
+            try:
+                with error:
+                    raw = error.read(64 * 1024 + 1)
+                    record['body_truncated'] = len(raw) > 64 * 1024
+                    # The workflow retains report.json even when names did not
+                    # change, so include enough text to identify the error page.
+                    record['error_body_preview'] = raw[:4096].decode('utf-8', errors='replace')
+                    self.save_response(record, error, raw[:64 * 1024])
+            except Exception as diagnostic_error:
+                # Failure to save diagnostics must not obscure the HTTP error.
+                record['diagnostic_error'] = str(diagnostic_error)
+            raise
         except Exception as error:
             record.update(failed_at=now(), error=str(error))
             raise

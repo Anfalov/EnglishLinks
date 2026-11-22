@@ -1,0 +1,32 @@
+name: Check Wowhead access
+
+on:
+  push:
+    branches: [develop]
+    paths:
+      - '.github/workflows/check-wowhead.yml'
+      - 'tools/check_wowhead.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install lupa==2.6
+      - name: Request and parse public Wowhead data
+        run: python tools/check_wowhead.py
+      - name: Save responses and diagnostics
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: wowhead-access-check
+          path: wowhead-check/
+          retention-days: 14

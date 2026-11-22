@@ -1,8 +1,11 @@
 import json
+import io
+from email.message import Message
 from pathlib import Path
 import sys
 import tempfile
 import unittest
+import urllib.error
 from unittest.mock import patch
 from lupa.lua51 import LuaRuntime
 
@@ -16,6 +19,46 @@ import package_release as package
 def baseline():
     return dict(names={'item': {1: 'Current', 2: 'Retained'}}, bonuses={10: ''},
                 random_affixes={-9: 'of the Owl'})
+
+
+class FetchDiagnostics(unittest.TestCase):
+    def test_forbidden_response_is_archived_but_still_fails(self):
+        headers = Message()
+        headers['Content-Type'] = 'text/html'
+        headers['X-Cache'] = 'Error from cloudfront'
+        headers['Set-Cookie'] = 'private=value'
+        url = 'https://www.wowhead.com/forever/quests'
+        error = urllib.error.HTTPError(url, 403, 'Forbidden', headers,
+                                       io.BytesIO(b'<html>Request blocked</html>'))
+        with tempfile.TemporaryDirectory() as temp:
+            fetcher = update.Fetcher(Path(temp))
+            with patch.object(update.urllib.request, 'urlopen', side_effect=error):
+                with self.assertRaises(urllib.error.HTTPError) as raised:
+                    fetcher.get(url, 'wowhead-forever')
+            self.assertIs(raised.exception, error)
+            record, = fetcher.records
+            self.assertEqual(record['status'], 403)
+            self.assertEqual(record['final_url'], url)
+            self.assertIn('failed_at', record)
+            self.assertFalse(record['body_truncated'])
+            self.assertEqual(record['error_body_preview'], '<html>Request blocked</html>')
+            self.assertEqual(record['response_headers'], {
+                'Content-Type': 'text/html', 'X-Cache': 'Error from cloudfront'})
+            self.assertEqual((Path(temp) / record['archive_member']).read_bytes(),
+                             b'<html>Request blocked</html>')
+
+    def test_error_response_body_is_bounded(self):
+        error = urllib.error.HTTPError('https://example.com', 503, 'Unavailable',
+                                       Message(), io.BytesIO(b'x' * (128 * 1024)))
+        with tempfile.TemporaryDirectory() as temp:
+            fetcher = update.Fetcher(Path(temp))
+            with patch.object(update.urllib.request, 'urlopen', side_effect=error):
+                with self.assertRaises(urllib.error.HTTPError):
+                    fetcher.get(error.url, 'test')
+            record, = fetcher.records
+            self.assertTrue(record['body_truncated'])
+            self.assertEqual(record['size_bytes'], 64 * 1024)
+            self.assertEqual(len(record['error_body_preview']), 4096)
 
 
 class IncrementalUpdate(unittest.TestCase):
