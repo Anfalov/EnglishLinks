@@ -3,9 +3,6 @@ name: Prepare addon names
 on:
   workflow_call:
     inputs:
-      extended_scan:
-        type: boolean
-        default: false
       source_sha:
         description: Exact main commit; empty selects current main
         type: string
@@ -35,7 +32,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     # Reserve 15 minutes for validation, archiving and publication.
-    timeout-minutes: ${{ inputs.extended_scan && 120 || 60 }}
+    timeout-minutes: 120
     concurrency:
       group: englishlinks-name-preparation
       cancel-in-progress: false
@@ -46,7 +43,7 @@ jobs:
       source_sha: ${{ steps.publish.outputs.sha || steps.resolve.outputs.source_sha }}
     steps:
       - name: Set catalog scan deadline
-        run: echo "SCAN_DEADLINE_EPOCH=$(( $(date +%s) + ${{ inputs.extended_scan && 6300 || 2700 }} ))" >> "$GITHUB_ENV"
+        run: echo "SCAN_DEADLINE_EPOCH=$(( $(date +%s) + 105 * 60 ))" >> "$GITHUB_ENV"
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
