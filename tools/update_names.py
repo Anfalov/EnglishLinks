@@ -237,14 +237,15 @@ TOOLTIP_WORKERS = 12
 
 def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.1,
                   sitemap_ids=(), pending=(), deadline=None):
-    """Start at most ten requests/sec; keep the unvisited tail ahead of retries."""
+    """Check missing names first, preserving the previous queue within each group."""
     known = current['names'].get('quest', {})
     candidates = set(known) | set(sitemap_ids) | set(pending)
     for _, data in additional:
         candidates.update(data.get('names', {}).get('quest', {}))
     candidates.difference_update(primary['names'].get('quest', {}))
     order = [i for i in pending if i in candidates]
-    order.extend(sorted(candidates.difference(order), key=lambda i: (i in known, i)))
+    order.extend(sorted(candidates.difference(order)))
+    order.sort(key=known.__contains__)  # Stable: pending IDs stay first within each group.
     if not order:
         return primary
 

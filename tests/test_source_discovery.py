@@ -74,3 +74,17 @@ class Discovery(unittest.TestCase):
             update.quest_tooltips(Fake(), base, update.empty(), [], rows, interval=0, pending=pending)
             self.assertEqual(calls, [3, 4, 5, 1, 2])
             self.assertEqual(rows[-1]['pending_ids'], [])
+
+    def test_missing_names_precede_even_pending_known_ids(self):
+        calls = []
+        class Fake:
+            def get(self, url, source):
+                calls.append(int(url.split('/')[-1].split('?')[0]))
+                return b'{"name":"Fresh name"}'
+        current = update.named('quest', {1: 'Known', 2: 'Known'})
+        primary = update.named('quest', {30: 'Already fetched'})
+        extra = [('community', update.named('quest', {25: 'Community name'}))]
+        with patch.object(update, 'TOOLTIP_WORKERS', 1):
+            update.quest_tooltips(Fake(), current, primary, extra, [], interval=0,
+                                  sitemap_ids={20, 30}, pending=[2, 29, 30, 28])
+        self.assertEqual(calls, [29, 28, 20, 25, 2, 1])
