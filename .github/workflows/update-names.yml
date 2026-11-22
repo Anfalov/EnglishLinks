@@ -27,7 +27,7 @@ jobs:
       dry_run: ${{ inputs.dry_run == true }}
 
   source-health:
-    name: Incomplete name sources (see Prepare addon names summary)
+    name: Incomplete name sources — ${{ needs.update.outputs.coverage || 'see preparation summary' }}
     needs: update
     if: needs.update.outputs.degraded == 'true'
     runs-on: ubuntu-latest

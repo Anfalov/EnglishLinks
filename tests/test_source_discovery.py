@@ -1,4 +1,6 @@
+import json
 import sys
+from unittest.mock import patch
 import unittest
 from pathlib import Path
 
@@ -48,3 +50,27 @@ class Discovery(unittest.TestCase):
         ])
         self.assertEqual(sum(health.values()), 3)
         self.assertTrue(any(reason == 'HTTP 403' for _, _, _, reason in health))
+
+    def test_deadline_with_healthy_server_reports_and_resumes_unvisited_ids_first(self):
+        calls = []
+        clock = [0.]
+        class Fake:
+            def get(self, url, source):
+                key = int(url.split('/')[-1].split('?')[0])
+                calls.append(key)
+                clock[0] += 1
+                return json.dumps({'name': f'Title {key}'}).encode()
+        with patch.object(update, 'TOOLTIP_WORKERS', 1), patch.object(update.time, 'monotonic', lambda: clock[0]):
+            rows = []
+            base = update.named('quest', {i: f'Title {i}' for i in range(1, 6)})
+            first = update.quest_tooltips(Fake(), base, update.empty(), [], rows, interval=0, deadline=2.)
+            self.assertFalse(update.name_data.merge(base, first, [])[1])  # no name changes
+            self.assertTrue(source_health.problems(rows))
+            self.assertEqual((rows[-1]['reason'], rows[-1]['parsed'], rows[-1]['not_requested']),
+                             ('time budget reached', 2, 3))
+            pending = rows[-1]['pending_ids']
+            self.assertEqual(pending, [3, 4, 5])
+            calls.clear()
+            update.quest_tooltips(Fake(), base, update.empty(), [], rows, interval=0, pending=pending)
+            self.assertEqual(calls, [3, 4, 5, 1, 2])
+            self.assertEqual(rows[-1]['pending_ids'], [])

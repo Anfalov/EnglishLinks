@@ -32,7 +32,7 @@ jobs:
       source_sha: ${{ inputs.source_sha || github.sha }}
 
   source-health:
-    name: Incomplete name sources (see Prepare addon names summary)
+    name: Incomplete name sources — ${{ needs.update.outputs.coverage || 'see preparation summary' }}
     needs: update
     if: needs.update.outputs.degraded == 'true'
     runs-on: ubuntu-latest

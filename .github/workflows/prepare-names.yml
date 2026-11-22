@@ -14,6 +14,9 @@ on:
       degraded:
         description: Whether any source check was incomplete
         value: ${{ jobs.prepare.outputs.degraded }}
+      coverage:
+        description: Quest tooltip coverage for the alert job
+        value: ${{ jobs.prepare.outputs.coverage }}
       changed:
         description: Whether names changed
         value: ${{ jobs.prepare.outputs.changed }}
@@ -28,16 +31,19 @@ jobs:
   prepare:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    # The quest tooltip fallback is limited to four requests per second.
+    # Stop admitting tooltip requests after minute 45; reserve time for validation/publication.
     timeout-minutes: 60
     concurrency:
       group: englishlinks-name-preparation
       cancel-in-progress: false
     outputs:
-      degraded: ${{ steps.update.outputs.degraded }}
+      degraded: ${{ steps.update.outputs.degraded == 'true' || steps.load_queue.outcome == 'failure' || steps.save_queue.outcome == 'failure' }}
+      coverage: ${{ steps.update.outputs.coverage }}
       changed: ${{ steps.resolve.outputs.changed == 'true' || steps.update.outputs.changed == 'true' }}
       source_sha: ${{ steps.publish.outputs.sha || steps.resolve.outputs.source_sha }}
     steps:
+      - name: Set quest scan deadline
+        run: echo "QUEST_DEADLINE_EPOCH=$(( $(date +%s) + 2700 ))" >> "$GITHUB_ENV"
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
@@ -62,11 +68,22 @@ jobs:
         if: steps.resolve.outputs.prepared != 'true'
         run: python -m pip install lupa==2.6
 
+      - name: Load pending quests from previous checks
+        id: load_queue
+        continue-on-error: true
+        if: steps.resolve.outputs.prepared != 'true'
+        run: |
+          if ! bash tools/quest_progress.sh load; then
+            rm -f "$RUNNER_TEMP/quest-pending.json"
+            echo "::error::Cannot load previous quest queue; scanning without changing stored progress."
+            exit 1
+          fi
+
       - name: Fetch and merge names
         id: update
         if: steps.resolve.outputs.prepared != 'true'
         run: |
-          python tools/update_names.py --apply \
+          python tools/update_names.py --apply --quest-progress "$RUNNER_TEMP/quest-pending.json" \
             --run-id "$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
           python tools/source_health.py
 
@@ -99,3 +116,9 @@ jobs:
             echo '::error::main advanced during the update; rerun from current main.'
             exit 1
           fi
+
+      - name: Save pending quests even when no addon names changed
+        id: save_queue
+        continue-on-error: true
+        if: steps.load_queue.outcome == 'success' && !inputs.dry_run
+        run: bash tools/quest_progress.sh save

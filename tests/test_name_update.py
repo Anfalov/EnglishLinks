@@ -106,7 +106,7 @@ class IncrementalUpdate(unittest.TestCase):
             outcomes = []
             primary = update.quest_tooltips(Fake(), current, update.empty(), [], outcomes, interval=0)
             self.assertEqual(data.merge(current, primary, [])[0], current)
-            self.assertLessEqual(outcomes[-1]['requested'], 2)
+            self.assertLessEqual(outcomes[-1]['requested'], update.TOOLTIP_WORKERS)
             self.assertGreater(outcomes[-1]['not_requested'], 0)
 
     def test_quest_tooltip_invalid_names_do_not_replace_existing_data(self):

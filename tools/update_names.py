@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Refresh the installed dictionary; unavailable sources never erase old names."""
 import argparse
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from datetime import datetime, timezone
 import hashlib
 import html
 import io
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -231,66 +232,78 @@ def named(kind, rows):
     return result
 
 
-def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.25, sitemap_ids=()):
-    """Confirm known quest IDs through Wowhead's public English tooltip service.
+TOOLTIP_WORKERS = 12
 
-    List pages discover IDs; this endpoint only answers IDs we already know.
-    Supplemental names do not overwrite anything: only their IDs are consulted
-    here, before the final primary-first merge.
-    """
-    candidates = set(current['names'].get('quest', {}))
-    candidates.update(sitemap_ids)
+
+def quest_tooltips(fetcher, current, primary, additional, outcomes, interval=0.1,
+                  sitemap_ids=(), pending=(), deadline=None):
+    """Start at most ten requests/sec; keep the unvisited tail ahead of retries."""
+    known = current['names'].get('quest', {})
+    candidates = set(known) | set(sitemap_ids) | set(pending)
     for _, data in additional:
         candidates.update(data.get('names', {}).get('quest', {}))
     candidates.difference_update(primary['names'].get('quest', {}))
-    if not candidates:
+    order = [i for i in pending if i in candidates]
+    order.extend(sorted(candidates.difference(order), key=lambda i: (i in known, i)))
+    if not order:
         return primary
-    stop = threading.Event()
-    lock = threading.Lock()
-    next_request = 0.0
-    counts = dict(requested=0, parsed=0, failed=0, not_requested=0)
 
+    stop = threading.Event()
     def read(identifier):
-        nonlocal next_request
-        with lock:
-            if stop.is_set():
-                counts['not_requested'] += 1
-                return None
-            delay = next_request - time.monotonic()
-            if delay > 0:
-                time.sleep(delay)
-            next_request = time.monotonic() + interval
-            counts['requested'] += 1
         url = f'https://nether.wowhead.com/forever/tooltip/quest/{identifier}?locale=0'
         try:
             raw = fetcher.get(url, 'wowhead-forever-quest-tooltip')
             data = json.loads(raw)
             if not isinstance(data, dict) or data.get('error') or 'name' not in data:
                 raise ValueError('Missing quest tooltip name')
-            parsed = named('quest', {identifier: data['name']})
-            with lock:
-                counts['parsed'] += 1
-            return parsed
+            return named('quest', {identifier: data['name']}), None
         except Exception as error:
-            # Do not keep sending requests to an endpoint that refuses access
-            # or asks us to slow down. Existing names remain intact.
             if isinstance(error, (urllib.error.HTTPError, SourceBlockedError)) and error.code in (403, 429):
                 stop.set()
-            with lock:
-                counts['failed'] += 1
-                outcomes.append(dict(source='wowhead-forever-quest-tooltip', url=url,
-                                     status='skipped', reason=str(error)))
-            return None
+            return None, dict(source='wowhead-forever-quest-tooltip', url=url,
+                              status='skipped', reason=str(error))
 
-    print(f'Checking {len(candidates)} known quest IDs via Wowhead tooltips...', flush=True)
-    with ThreadPoolExecutor(max_workers=2) as pool:
-        parts = [part for part in pool.map(read, sorted(candidates, key=lambda i: (i in current['names'].get('quest', {}), i))) if part is not None]
+    print(f'Checking {len(order)} known quest IDs via Wowhead tooltips...', flush=True)
+    parts, failed, active = [], set(), {}
+    requested, next_start = 0, 0.0
+    started = time.monotonic()
+    with ThreadPoolExecutor(max_workers=TOOLTIP_WORKERS) as pool:
+        while active or requested < len(order):
+            now_mono = time.monotonic()
+            can_start = (requested < len(order) and not stop.is_set()
+                         and (deadline is None or now_mono < deadline))
+            if can_start and len(active) < TOOLTIP_WORKERS:
+                if now_mono < next_start:
+                    until = min(next_start, deadline) if deadline is not None else next_start
+                    stop.wait(max(0, until - now_mono))
+                    continue
+                identifier = order[requested]
+                active[pool.submit(read, identifier)] = identifier
+                requested += 1
+                next_start = time.monotonic() + interval
+                continue
+            if not active:
+                break
+            done, _ = wait(active, return_when=FIRST_COMPLETED)
+            for future in done:
+                identifier = active.pop(future)
+                part, error = future.result()
+                if error:
+                    failed.add(identifier)
+                    outcomes.append(error)
+                else:
+                    parts.append(part)
     updated, conflicts = combine_primary([primary] + parts)
     if conflicts:
         raise ValueError('Unexpected quest tooltip conflict')
+    remaining = order[requested:] + [i for i in order[:requested] if i in failed]
+    reason = ('HTTP 403/429' if stop.is_set() else 'time budget reached' if requested < len(order)
+              else 'some tooltips failed' if failed else '')
     outcomes.append(dict(source='wowhead-forever-quest-tooltip',
-                         status='partial' if counts['failed'] or counts['not_requested'] else 'parsed',
-                         reason='Known IDs only; list-page discovery may be unavailable', **counts))
+                         status='partial' if remaining else 'parsed', reason=reason,
+                         total=len(order), requested=requested, parsed=len(parts), failed=len(failed),
+                         not_requested=len(order)-requested, pending_ids=remaining,
+                         elapsed_seconds=round(time.monotonic()-started, 2)))
     return updated
 
 
@@ -432,7 +445,16 @@ def main():
     parser.add_argument('--output', type=Path, default=ROOT / 'update-results')
     parser.add_argument('--apply', action='store_true', help='Write accepted changes; no Git operations')
     parser.add_argument('--run-id', default=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ'))
+    parser.add_argument('--quest-progress', type=Path, help='Read/write pending IDs outside the addon')
     args = parser.parse_args()
+    deadline_epoch = os.environ.get('QUEST_DEADLINE_EPOCH')
+    deadline = time.monotonic() + (float(deadline_epoch) - time.time() if deadline_epoch else 45 * 60)
+    pending = []
+    if args.quest_progress and args.quest_progress.exists():
+        pending = json.loads(args.quest_progress.read_text())
+        if (not isinstance(pending, list) or any(type(i) is not int or not 0 < i <= 2147483647 for i in pending)
+                or len(set(pending)) != len(pending)):
+            raise ValueError('Invalid quest progress file')
     if not re.fullmatch(r'[A-Za-z0-9_-]+', args.run_id):
         parser.error('Invalid run ID')
     path = args.root / 'EnglishLinks/NameData.lua'
@@ -444,7 +466,8 @@ def main():
     primary = wowhead(fetcher, current, args.root, outcomes)
     print('Checking supplemental sources...', flush=True)
     additional = other_sources(fetcher, args.root, outcomes)
-    primary = quest_tooltips(fetcher, current, primary, additional, outcomes, sitemap_ids=sitemap_ids)
+    primary = quest_tooltips(fetcher, current, primary, additional, outcomes, sitemap_ids=sitemap_ids,
+                             pending=pending, deadline=deadline)
     updated, changes = name_data.merge(current, primary, additional)
     report = dict(starting_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                   finished_at=now(), changed=bool(changes), changes=changes,
@@ -467,6 +490,9 @@ def main():
             archive_sha256=hashlib.sha256((destination / 'sources.zip').read_bytes()).hexdigest(),
             before_sha256=report['starting_sha256'], after_sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
         registry_path.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + '\n')
+    if args.quest_progress:
+        remaining = next((row['pending_ids'] for row in outcomes if 'pending_ids' in row), [])
+        args.quest_progress.write_text(json.dumps(remaining) + '\n')
     print(json.dumps(dict(changed=bool(changes), additions=sum(c['before'] is None for c in changes),
                           renamed=sum(c['before'] is not None for c in changes),
                           skipped=sum(s['status'] == 'skipped' for s in outcomes))))
