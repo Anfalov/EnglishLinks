@@ -533,6 +533,14 @@
       "archive_sha256": "766b6c1795ed2b0c2f2a63967c9c5e03ee422662342d337c4b4948da970ff1e6",
       "before_sha256": "c215b099ac910da1a59a7898aa8593f4de44ba808372b6b75cd977dac2afe6b6",
       "after_sha256": "55028079feb1e39e47801754330497b70cee956669b3a363ebeb6dd85999b7b8"
+    },
+    {
+      "id": "45830028416-1",
+      "report": "data/auto-updates/45830028416-1/report.json",
+      "archive": "data/auto-updates/45830028416-1/sources.zip",
+      "archive_sha256": "e568fec9d6cd12fe709166413d4999791221af948297c1de22df15b5faf5fe5d",
+      "before_sha256": "55028079feb1e39e47801754330497b70cee956669b3a363ebeb6dd85999b7b8",
+      "after_sha256": "2452b5f66f32aa049c17e355ae9921dd6041eacb7f347db1bf459d5c87e391b6"
     }
   ]
 }
